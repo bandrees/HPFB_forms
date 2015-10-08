@@ -2,7 +2,7 @@
 <hpfb:schema xmlns:hpfb="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 
 	<!-- ****************************** -->
-	<!-- ELEMENT DECLARATIONS -->
+	<!-- ELEMENT DECLARATIONS  VERSION 1.0--> 
 	<!-- ****************************** -->
 
 	<hpfb:element name="DMF" type="fee_content"/>
