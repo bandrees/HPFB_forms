@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<hpfb:schema xmlns:hpfb="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<!-- ****************************** -->
+	<!-- ELEMENT DECLARATIONS -->
+	<!-- ****************************** -->
+
+	<hpfb:element name="DMF" type="fee_content"/>
+	<hpfb:element name="language" type="language_content"/>
+	<hpfb:element name="version" type="hpfb:decimal"/>
+	<!-- Owner content -->
+	<hpfb:element name="owner" type="owner_content"/>
+	<hpfb:element name="filename" type="char_1_2000_Content" />
+	<hpfb:element name="company_name"  type="char_1_2000_Content" />
+	<!-- Calculateion of payment content -->
+	<hpfb:element name="calc_payment" type="calc_payment_content"/>
+	<hpfb:element name="new_registration" type="integer_Content_0_99" />
+	<hpfb:element name="binnual_update" type="integer_Content_0_99"/>
+	<hpfb:element name="letters_access" type="integer_Content_0_99" />
+	<hpfb:element name="account_num"  type="number_Content_5_5" />
+	<hpfb:element name="dmf_num"  type="dmfnumber_Content" />
+
+	<!--Payment methods content -->
+	<hpfb:element name="payment_method" type="payment_method_content"/>
+	<hpfb:element name="cheque_choice" type="YES_NO_Content"/>
+	<hpfb:element name="credit_card_choice" type="YES_NO_Content"/>
+	<hpfb:element name="bank_draft_choice" type="YES_NO_Content"/>
+	<hpfb:element name="existing_credit_choice" type="YES_NO_Content"/>
+	<hpfb:element name="bank_wire_choice" type="YES_NO_Content"/>
+	<hpfb:element name="money_order_choice" type="YES_NO_Content"/>
+	<hpfb:element name="paid_by" type="feesPaid_Content"/>
+	<hpfb:element name="paid_by_other" type="char_1_2000_Content"/>
+	<hpfb:element name="cheque_number" type="char_1_2000_Content" />
+	<hpfb:element name="draft_number" type="char_1_2000_Content"/>
+	<!-- existing credit and details-->
+	<hpfb:element name="existing_credit" type="existing_credit_details"/>
+	<hpfb:element name="account_number" type="number_Content_5_5"/>
+	<hpfb:element name="existing_credit_amount" type="number_content_0_10"/>
+	<hpfb:element name="credit_applied_amount" type="number_content_0_10"/>
+	<!-- bank wire and details-->
+	<hpfb:element name="bank_wire" type="bank_wire_details"/>
+	<hpfb:element name="date_wired" type="yyyymmdd_date_Content"/>
+	<hpfb:element name="bank_name" type="char_1_2000_Content"/>
+	<hpfb:element name="amount_wired" type="number_content_0_10"/>
+	<hpfb:element name="transaction_receipt" type="YES_NO_Content"/>
+	<!-- credit card and details-->
+	<hpfb:element name="credit_card" type="credit_card_details"/>
+	<hpfb:element name="cc_company_name" type="char_1_2000_Content"/>
+	<hpfb:element name="cc_dmf_name" type="char_1_2000_Content"/>
+	<hpfb:element name="cc_type" type="ccType_content"/>
+	<hpfb:element name="cc_number" type="number_Content_1_15"/>
+	<hpfb:element name="cc_expiry_month" type="month_content"/>
+	<hpfb:element name="cc_expiry_year"  type="hpfb:gYear"/>
+	<hpfb:element name="cc_holder_name" type="char_1_2000_Content"/>
+	<hpfb:element name="cc_holder_phone" type="char_1_2000_Content"/>
+	<hpfb:element name="cc_holder_address" type="char_1_2000_Content"/>
+	<hpfb:element name="cc_signature_image"/>	
+	<!-- certification and details-->
+	<hpfb:element name="certification" type="certification_content"/>
+	<hpfb:element name="certified_amount" type="number_content_0_10_b"/>		
+	<hpfb:element name="signing_official" type="char_1_2000_Content"/>
+	<hpfb:element name="signature_choice" type="signatureType_content"/>		
+	<hpfb:element name="image_signature"/>
+	<hpfb:element name="date_signature" type="yyyymmdd_date_Content"/>				
+
+	<!-- ****************************** -->
+	<!-- ELEMENT TYPE DECLARATIONS -->
+	<!-- ****************************** -->
+		<!-- main form structure-->
+		<hpfb:complexType name="fee_content">
+		<hpfb:sequence>
+			<hpfb:element ref="language"/>
+			<hpfb:element ref="version"/>
+			<hpfb:element ref="owner"/>
+			<hpfb:element ref="calc_payment"/>
+			<hpfb:element ref="payment_method"/>
+			<hpfb:element ref="certification"/>
+		</hpfb:sequence>
+	</hpfb:complexType>
+
+	<hpfb:complexType name="certification_content">
+		<hpfb:sequence>
+			<hpfb:element ref="certified_amount"/>
+			<hpfb:element ref="signing_official"/>
+			<hpfb:element ref="signature_choice"/>
+			<hpfb:element ref="image_signature"/>
+			<hpfb:element ref="date_signature"/>
+		</hpfb:sequence>
+	</hpfb:complexType>
+	
+	<hpfb:complexType name="credit_card_details">
+		<hpfb:sequence>
+			<hpfb:element ref="cc_company_name"/>
+			<hpfb:element ref="cc_dmf_name"/>
+			<hpfb:element ref="cc_type"/>
+			<hpfb:element ref="cc_number"/>
+			<hpfb:element ref="cc_expiry_month"/>
+			<hpfb:element ref="cc_expiry_year"/>
+			<hpfb:element ref="cc_holder_name"/>
+			<hpfb:element ref="cc_holder_phone"/>
+			<hpfb:element ref="cc_holder_address"/>
+			<hpfb:element ref="cc_signature_image"/>
+		</hpfb:sequence>
+	</hpfb:complexType>
+
+	<hpfb:complexType name="owner_content">
+		<hpfb:sequence>
+			<hpfb:element ref="filename"/>
+			<hpfb:element ref="company_name"/>
+		</hpfb:sequence>
+	</hpfb:complexType>
+
+
+	<hpfb:complexType name="calc_payment_content">
+		<hpfb:sequence>
+			<hpfb:element ref="new_registration" />
+			<hpfb:element ref="binnual_update" />
+			<hpfb:element ref="letters_access" />
+			<hpfb:element ref="account_num"/>
+			<hpfb:element ref="dmf_num" />
+		</hpfb:sequence>
+	</hpfb:complexType>
+
+	<hpfb:complexType name="payment_method_content">
+		<hpfb:sequence>
+		<hpfb:element ref="cheque_choice"/>
+		<hpfb:element ref="credit_card_choice"/>
+		<hpfb:element ref="bank_draft_choice"/>
+		<hpfb:element ref="existing_credit_choice"/>
+		<hpfb:element ref="bank_wire_choice"/>
+		<hpfb:element ref="money_order_choice"/>
+		<hpfb:element ref="paid_by"/>
+		<hpfb:element ref="paid_by_other"/>
+		<hpfb:element ref="cheque_number" />
+		<hpfb:element ref="draft_number"/>
+		<hpfb:element ref="bank_wire" minOccurs="0" maxOccurs="1"/>
+		<hpfb:element ref="credit_card" minOccurs="0" maxOccurs="1"/>
+		<hpfb:element ref="existing_credit" minOccurs="0" maxOccurs="1"/>
+		</hpfb:sequence>
+	</hpfb:complexType>
+	
+	
+	<hpfb:complexType name="existing_credit_details">
+		<hpfb:sequence>
+			<hpfb:element ref="company_name"/>
+			<hpfb:element ref="account_number"/>
+			<hpfb:element ref="existing_credit_amount"/>
+			<hpfb:element ref="credit_applied_amount"/>
+		</hpfb:sequence>
+	</hpfb:complexType>
+
+	<hpfb:complexType name="bank_wire_details">
+		<hpfb:sequence>
+			<hpfb:element ref="date_wired"/>
+			<hpfb:element ref="bank_name"/>
+			<hpfb:element ref="amount_wired"/>
+			<hpfb:element ref="transaction_receipt"/>
+		</hpfb:sequence>
+	</hpfb:complexType>
+
+	<hpfb:simpleType name="char_1_2000_Content">
+		<hpfb:restriction base="hpfb:string">
+		<hpfb:minLength value="1"/>
+		<hpfb:maxLength value="2000"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>
+	
+	<!-- allows for leading zeros-->
+	<hpfb:simpleType name="number_Content_5_5">
+		<hpfb:restriction base="hpfb:string">
+			<hpfb:pattern value="[0-9]{5,5}"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>
+	 
+	<hpfb:simpleType name="number_Content_1_15">
+		<hpfb:restriction base="hpfb:string">
+			<hpfb:pattern value="[0-9]{1,15}"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>
+
+
+	<hpfb:simpleType name="number_content_0_10">
+		<hpfb:restriction base="hpfb:decimal">
+		<hpfb:minInclusive value="0"/>
+			<hpfb:maxInclusive value="99999999"/>
+		<hpfb:fractionDigits value="2"/></hpfb:restriction>
+	</hpfb:simpleType>
+	<hpfb:simpleType name="number_content_0_10_b">
+		<hpfb:restriction base="hpfb:string">
+		<hpfb:pattern value="[0-9]{0-9}.[0-9]{2}"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>
+
+	<hpfb:simpleType name="integer_Content_0_99">
+		<hpfb:restriction base="hpfb:integer">
+		<hpfb:minInclusive value="0"/>
+		<hpfb:maxInclusive value="99"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>
+
+	<hpfb:simpleType name="feesPaid_Content">
+		<hpfb:restriction base="hpfb:string">
+			<hpfb:enumeration value="DMFO"/>
+			<hpfb:enumeration value="DMFA"/>
+			<hpfb:enumeration value="OTH"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>
+
+	<hpfb:simpleType name="YES_NO_Content">
+		<hpfb:restriction base="hpfb:string">
+			<hpfb:pattern value="[y|Y]{1}|[n|N]{1}"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>
+
+	<hpfb:simpleType name="language_content">
+		<hpfb:restriction base="hpfb:string">
+			<hpfb:pattern value="[en]{2}|[fr]{2}"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>
+
+	<hpfb:simpleType name="yyyymmdd_date_Content">
+	<hpfb:restriction base="hpfb:date">
+		<hpfb:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+	</hpfb:restriction>
+	</hpfb:simpleType>
+
+	<hpfb:simpleType name="dmfnumber_Content">
+		<hpfb:restriction base="hpfb:string">
+			<hpfb:pattern value="[0-9]{4}-[0-9]{2}"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>
+
+	<hpfb:simpleType name="year_content">
+		<hpfb:restriction base="hpfb:gYear">
+		</hpfb:restriction>
+	</hpfb:simpleType>
+
+		<hpfb:simpleType name="ccType_content">
+		<hpfb:restriction base="hpfb:string">
+			<hpfb:enumeration value="VISA"/>
+			<hpfb:enumeration value="MC"/>
+			<hpfb:enumeration value="AMEX"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>	
+
+	<hpfb:simpleType name="month_content">
+		<hpfb:restriction base="hpfb:string">
+			<hpfb:enumeration value="01"/>
+			<hpfb:enumeration value="02"/>
+			<hpfb:enumeration value="03"/>
+			<hpfb:enumeration value="04"/>
+			<hpfb:enumeration value="05"/>
+			<hpfb:enumeration value="06"/>
+			<hpfb:enumeration value="07"/>
+			<hpfb:enumeration value="08"/>
+			<hpfb:enumeration value="09"/>
+			<hpfb:enumeration value="10"/>
+			<hpfb:enumeration value="11"/>
+			<hpfb:enumeration value="12"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>
+	
+	<hpfb:simpleType name="signatureType_content">
+		<hpfb:restriction base="hpfb:string">
+			<hpfb:enumeration value="DIG_SIG"/>
+			<hpfb:enumeration value="IMG_SIG"/>
+			
+		</hpfb:restriction>
+	</hpfb:simpleType>	
+
+
+
+
+</hpfb:schema>
