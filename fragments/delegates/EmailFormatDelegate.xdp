@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <subform name="form1" locale="en_CA" layout="tb">
+      <pageSet>
+         <pageArea>
+            <contentArea w="203.2mm" h="249.476mm" x="6.351mm" y="16.198mm" name="contentArea"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+         </pageArea>
+      </pageSet>
+      <subform>
+         <variables>
+            <script contentType="application/x-javascript" name="EmailFormatDelegate">
+//
+/*******************************************************************************
+ * An object that responds to information requests sent to an email FormNode.
+ *
+ * Implements FormNodeDelegateInterface.
+ */
+
+//imports
+var cLog = script.core.util.Log;
+var cResourceManager = 		script.core.lang.ResourceManager;
+var cConfigurationManager = script.core.util.ConfigurationManager;
+var cUiUtil = 						script.core.util.UiUtil;
+var cValidationFailure = 			script.core.validation.ValidationFailure;
+
+
+var _EMAIL_FORMAT_TYPE = "email";
+
+/*******************************************************************************
+ * Gets a new EmailDelegate. Adobe does not allow object instances to be
+ * created outside of their packaging, so it must be done here.
+ * Note that this is only intended for use by FormNodeFactory. All instances
+ * should be created by that class.
+ * @return the new EmailDelegate instance
+ */
+function createInstance()
+{
+	return new EmailFormatDelegateClass();
+}
+
+/**
+ * Class implementation
+ */
+function EmailFormatDelegateClass(somExpression)
+{
+	this.className = "EmailFormatDelegate";
+	this.errorResourceAlias="";
+	this.formNode;
+	
+	
+	/**
+	 * Sets custom error text 
+	 *
+	 * @param aFormNode the FormNode that is using this delegate.
+	 */
+	this.setErrorText = function(aliasName)
+    {    	
+    	this.errorResourceAlias=aliasName;
+    }
+	
+
+	/**
+	 * Gets this node's default value, which is an internationalized value.
+	 * This returns null since this uses a picklist.
+	 * @param aNode the Adobe Node instance who's default value is required.
+	 * @return a String that contains the internationalized default value for
+	 *		   the passed Node. Null if this is not applicable.
+	 */
+    this.getDefaultValue = function(aNode)
+    {
+    	return null;
+	}
+		
+	/**
+	 * Gets the type of format validation to be applied to data entered into
+	 * this node in the UI.
+	 * @param aNode the Adobe Node instance who's value must conform to a 
+	 *		  specific format.
+	 * @return a String that contains the type of format validation to be
+	 *		   applied to data entered into this node in the UI. These must be
+	 *		   types that are supported by the currently installed 
+	 *		   FormatValidator. Null if this is not applicable.
+	 */
+    this.getFormatType = function(aNode)
+    {
+    	return null;
+	}
+
+	/**
+	 * Gets this node's label to be displayed in the UI, which is an
+	 * internationalized value.
+	 * @param aNode the Adobe Node instance who's label is required.
+	 * @return a String that contains the internationalized UI label for the
+	 *		   passed Node. Null if this is not applicable.
+	 */
+    this.getLabel = function(aNode)
+    {
+    	return null;
+   	}
+
+	/**
+	 * Gets whether this node is mandatory (required).
+	 * @param aNode the Adobe Node instance who's mandatory setting is required.
+	 * @return a boolean - true if the country is Canada or the US, false if it
+	 *		   is any other value, null if there was no node passed.
+	 */
+	this.isMandatory = function(aNode)
+	{
+		return null;
+	}
+		
+	/**
+	 * Gets a string that defines the pick list to be displayed in the UI for
+	 * this node.
+	 * @param aNode the Adobe Node instance who's pick list is required.
+	 * @return a String that contains the definition of the pick list to be
+	 *		   displayed in the UI for this node. The format is:
+	 *		   "displayValue1, code1, displayValue2, code2...". Null if
+	 *		   this is not applicable.
+	 */
+    this.getPickListValues = function(aNode)
+    {
+    	return null;
+	}
+		
+	/**
+	 * Gets this node's tool tip to be displayed in the UI, which is an
+	 * internationalized value. In this case it is null, since these are
+	 * dependant on the subform that the field is in (must be handled by the
+	 * FormNode itself).
+	 * @param aNode the Adobe Node instance who's tool tip is required.
+	 * @return a String that contains the internationalized UI tool tip for the
+	 *		   passed Node. Null if this is not applicable.
+	 */
+    this.getToolTip = function(aNode)
+    {
+    	return null;
+	}
+
+	/**
+	 * Sets the FormNode that is using this delegate. It is mandatory that this
+	 * is set to allow the delegate to access items in the FormNode as required.
+	 * @param aFormNode the FormNode that is using this delegate.
+	 */
+    this.setFormNode = function(aFormNode)
+    {
+    	this.formNode = aFormNode;
+	}
+
+	/**
+	 * Gets whether this delegate is used to validate node instances (e.g.
+	 * mandatory fields, etc.) as well as their child nodes.
+	 * @return a boolean -true if this should be called to perform validation.
+	 */
+	this.isUsedToValidateNodes = function()
+	{
+		return true;
+	}
+	
+	/**
+	 * Dummy function stub so the interface requirements are met.
+	 */
+	this.validateNode = function(aNodeInstance, updateDisplay,
+								 aValidationFailure)
+	{
+		if(!aNodeInstance.isNull){
+		
+			var regExpress=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+			var resourceError=cResourceManager.get("error_emailFormat");
+			
+			if(!regExpress.test(aNodeInstance.rawValue)){
+				if(updateDisplay===true){
+					cUiUtil.setColour(aNodeInstance,
+										cConfigurationManager.get("colourError"))
+				}						
+				var errorMsg=cResourceManager.get(this.errorResourceAlias)+resourceError;						
+				var newValidationFailure = cValidationFailure.createInstance(
+										"EmailValidation",errorMsg);
+				if (aValidationFailure != null)
+				{
+					aValidationFailure.addNestedValidationFailure(newValidationFailure);
+				}
+				else
+				{
+					aValidationFailure = newValidationFailure;
+				}						
+			}else{
+				cUiUtil.resetColour(aNodeInstance); //In case it previously failed
+			}
+		}			
+		return aValidationFailure;
+	}
+			
+    /**
+     * Describes this object. This is implemented in all objects since their
+     * toString() cannot be overridden!
+     * @return the description of this object.
+     */
+    this.asString = function()
+	{
+		var buffer = this.className + "[";
+		
+	    if (this.formNode != null)
+	    {
+	    	buffer += "formNode.somExpression= " + this.formNode.somExpression;
+	    }
+	    else
+	    {
+	    	buffer += "formNode= null";
+	    }
+		buffer += "]";
+		return buffer;
+	}
+}
+
+               <?templateDesigner isFragment yes?>
+               <?templateDesigner fragmentTitle EmailFormatDelegate?>
+               <?templateDesigner fragmentDescription Validaties the format of an email address?></script>
+         </variables>
+      </subform>
+   </subform>
+</template>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <lcd:fragmentCatalog>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <dc:title>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">EmailFormatDelegate</rdf:li>
+                     </rdf:Alt>
+                  </dc:title>
+                  <dc:description>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">Validaties the format of an email address</rdf:li>
+                     </rdf:Alt>
+                  </dc:description>
+                  <dc:identifier>$template.form1.#subform.#variables.EmailFormatDelegate</dc:identifier>
+                  <lcd:fragmentRole>ScriptObject</lcd:fragmentRole>
+               </rdf:li>
+            </rdf:Seq>
+         </lcd:fragmentCatalog>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>
