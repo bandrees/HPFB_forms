@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <subform name="form1" locale="en_CA" layout="tb">
+      <pageSet>
+         <pageArea>
+            <contentArea w="203.2mm" h="249.476mm" x="6.351mm" y="16.198mm" name="contentArea"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+         </pageArea>
+      </pageSet>
+      <subform>
+         <variables>
+            <script contentType="application/x-javascript" name="AddressUtil">
+/* This script object should contain ONLY utility functions used by address blocks*/
+
+
+/*dependencies should only be core or config or resource*/
+
+var cLog = script.core.util.Log;
+var cControllerUtil = script.core.util.ControllerUtil;
+var cResourceManager = script.core.lang.ResourceManager;
+var cFormNodeManager = script.core.model.FormNodeManager;
+var cInstanceManagerUtil = script.core.util.InstanceManagerUtil; 
+var cTypeEnforcer=script.core.util.TypeEnforcer;
+var cTypeChecker=script.core.util.TypeChecker;
+var cUiUtil=script.core.util.UiUtil;
+var cStringUtil=script.core.util.StringUtil;
+var cException = script.core.util.Exception;
+var cConfigurationManager = script.core.util.ConfigurationManager;
+
+
+
+//Config Variables
+var CANADA=	cConfigurationManager.get("CANADA");
+var  USA=	cConfigurationManager.get("USA");
+
+
+
+/*
+*	relies on the core delegate for updating  province droplist and postal code labels based on Country
+*	@param province_formNode- the province droplist to update
+*	@param postal_formNode- the postal code textbox to update
+*	@returns null
+*
+*
+*
+**/
+function countryChanged(provinceDdl_formNode,postal_formNode){
+	// Update correct labels to province/state and postal/state code and
+	// clear the value entered in the postal/state code field
+	provinceDdl_formNode.updateUI();
+	postal_formNode.updateUI();
+}//end fun
+
+
+/*
+*	Toggles between the state textbox and the province droplist
+*   When the country is Canada or the US, shows the droplist, otherwise shows the textbox
+* 	@param countryValue- the value of the country to test against
+*	@param provinceDdlInstance- the adobe node of the province/state droplist
+*	@param provinceTextInstance- the adobe node of the state textbox
+*	@returns null
+*	@requires: CANADA and USA as configuration variables in the form
+*
+*
+**/
+function setProvinceUIState(countryValue,provinceDdlInstance,provinceTextInstance){
+	if(countryValue===CANADA || countryValue===USA){
+		//make droplist instance visible
+		provinceTextInstance.rawValue="";
+		cUiUtil.hide(provinceTextInstance);
+		cUiUtil.show(provinceDdlInstance);
+	}else{
+		//make text box visible
+		provinceDdlInstance.rawValue=null;
+		cUiUtil.show(provinceTextInstance);
+		cUiUtil.hide(provinceDdlInstance);
+	}
+
+}//end fn
+               
+               
+               
+               <?templateDesigner isFragment yes?>
+               <?templateDesigner fragmentTitle AddressUtil?>
+               <?templateDesigner fragmentDescription Utility functions for address. 
+Place this fragment under the util subform?></script>
+         </variables>
+      </subform>
+   </subform>
+</template>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <lcd:fragmentCatalog>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <dc:title>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">AddressUtil</rdf:li>
+                     </rdf:Alt>
+                  </dc:title>
+                  <dc:description>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">Utility functions for address. 
+Place this fragment under the util subform</rdf:li>
+                     </rdf:Alt>
+                  </dc:description>
+                  <dc:identifier>$template.form1.#subform.#variables.AddressUtil</dc:identifier>
+                  <lcd:fragmentRole>ScriptObject</lcd:fragmentRole>
+               </rdf:li>
+            </rdf:Seq>
+         </lcd:fragmentCatalog>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>
