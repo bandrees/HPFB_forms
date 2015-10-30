@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2015-09-04T14:49:08Z" uuid="7a153e4d-572f-4357-a423-34e440643f0a">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2015-10-30T16:22:37Z" uuid="36d02643-2ddb-48ac-891d-04105192646a">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -668,86 +668,174 @@ UFBQrq6u+Pj4/////v7+////////////////////////////////////////////////////////
                <?templateDesigner expand 1?></draw>
             <draw name="imgHCLogo_fr" y="6.35mm" x="6.35mm" w="47.625mm" h="6.35mm">
                <value>
-                  <image href="..\..\..\Users\hcuser\Desktop\eForms\FIP logos\print-fip-sig-fra.gif" contentType="image/gif"/>
+                  <image href="..\..\FIP logos\print-fip-sig-fra0.gif" contentType="image/gif"/>
                </value>
                <ui>
                   <imageEdit/>
                </ui>
             </draw>
-            <draw h="11.1125mm" name="imgCanada" w="38.1mm" y="268.048mm">
+            <draw h="6.352mm" name="imgCanada" w="20.744mm" y="268.392mm" x="6.136mm">
                <ui>
                   <imageEdit/>
                </ui>
                <desc>
-                  <text name="embeddedHref">G:\dev\images\Canada_wordmark_bw.gif</text>
+                  <text name="embeddedHref">..\..\Images\wordmark.gif</text>
                </desc>
                <value>
-                  <image contentType="image/gif">R0lGODlh4AA9APcAAP///wAAAPz8/P7+/vr6+ri4uPv7+2VlZfT09NPT0/39/ff399vb2+vr6wMD
-AxgYGBkZGWBgYJqamjQ0NNbW1vLy8gYGBqCgoBwcHAQEBG5ubgUFBQEBAXp6euLi4h8fH6amptXV
-1QgICA0NDfn5+QICAufn5+jo6CMjIxUVFfb29hoaGr29vW9vbxISEg8PDy0tLfPz893d3erq6ioq
-KgkJCfX19Q4ODubm5h0dHd/f319fX21tbXJyctDQ0NTU1CAgIKOjowwMDE1NTS4uLh4eHjs7OwsL
-CzAwMBQUFO/v76enp3FxcVJSUlZWVhAQEMnJyeXl5a2trT4+PlVVVfj4+M7OzvHx8VtbW8/Pz9nZ
-2TU1NZOTk+Pj4+7u7unp6UlJSXV1dVBQUBYWFvDw8AcHB+Tk5BsbG0BAQGlpaezs7LCwsLa2tru7
-u2dnZ4GBgYWFhbW1tX9/f4uLiygoKKKioiYmJsLCwoeHhywsLNfX156enpWVlUhISHR0dOHh4UdH
-R4aGhqysrJeXlzo6OmhoaAoKCtjY2Hh4eJKSkkNDQ8DAwISEhKmpqV1dXcjIyDg4OEFBQbKysr+/
-vzExMSsrKykpKSEhIc3NzZ+fn3l5eV5eXi8vLxcXF4qKisfHx3Nzc8zMzGpqajIyMktLSyIiInd3
-d8XFxVhYWJaWljY2NkVFRWZmZldXV76+vlpaWoCAgNzc3NHR0T8/PzMzM8vLy7e3t7OzsxMTE5SU
-lH5+foiIiDc3N0xMTE9PT52dnUpKSlxcXMPDwxEREYKCgiQkJO3t7aurq2RkZMbGxpmZmWxsbERE
-RKqqqllZWTw8PLS0tMTExHZ2dkJCQqioqN7e3pGRkbq6uq6uricnJ9LS0j09Pa+vr2FhYWtra6Sk
-pGJiYsHBwX19fXBwcJiYmI2Njdra2nx8fLm5uZycnFNTU7GxsWNjY1FRUaWlpYmJiY+Pj+Dg4Jub
-m4ODg05OTkZGRjk5OVRUVCUlJcrKyqGhoQAAAAAAAAAAAAAAAAAAACwAAAAA4AA9AAAI/wABCBxI
-sKDBgwgTKlzIsKHDhxAjSpxIsaLFixgzatzIsaPHjyBDihxJsqTJkyhTqlzJsqXLlzBjypxJs6bN
-mzhz6tzJs6fPn0ALGlhAlCiJoEiTQpwBZQ0cUBqi8pBzK5wOAgP/hDiqtOvPAZi4oOrEIcCNCbQI
-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</image>
+                  <image contentType="image/gif">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
+D7UgCAAAOw==</image>
                </value>
             </draw>
-            <field access="protected" h="6.35mm" name="txtFinalizeDate" w="44.45mm" x="79.375mm" y="273.098mm">
+            <field access="protected" h="6.35mm" name="txtFinalizeDate" w="36.108mm" x="87.718mm" y="273.098mm">
                <font typeface="Myriad Pro" size="8pt"/>
                <margin bottomInset="1mm" leftInset="0mm" rightInset="0mm" topInset="1mm"/>
                <para vAlign="middle"/>
@@ -851,7 +939,7 @@ if (language == "en") {
 </script>
                </event>
             </field>
-            <field access="protected" name="Pages" x="9.523mm" y="269.24mm" minW="44.45mm" minH="3.528mm">
+            <field access="protected" name="Pages" x="41.523mm" y="269.24mm" minW="44.45mm" minH="3.528mm">
                <font typeface="Myriad Pro"/>
                <margin bottomInset="1mm" leftInset="0mm" rightInset="0mm" topInset="1mm"/>
                <para vAlign="middle"/>
@@ -867,7 +955,7 @@ if (language == "en") {
                   <picture>9999999</picture>
                </format>
                <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
+                  <script contentType="application/x-javascript">/*
 var cHCeFormModel=script.HCeForm.model.HCeFormMain;
 var language = cHCeFormModel.getLanguage();
 
@@ -876,7 +964,7 @@ if (language == "en") {
 } else {
     this.rawValue = "Page "+xfa.layout.page(this)+" sur "+xfa.layout.pageCount();
 }
-
+*/
 </script>
                </event>
                <event activity="ready" ref="$layout" name="event__layout_ready">
@@ -941,7 +1029,7 @@ this.rawValue = HCeForm.desc.version.value.replace(/\$/g, "");
                </calculate>
                <bind match="none"/>
             </field>
-            <?templateDesigner expand 1?></pageArea>
+            <?templateDesigner expand 0?></pageArea>
          <?templateDesigner expand 1?></pageSet>
       <subform w="576pt" name="sfPage1" layout="lr-tb">
          <subform w="203.2mm" name="sfMainHeader" h="25.376mm">
@@ -1061,7 +1149,7 @@ catch(exception)
                <validate scriptTest="warning"/>
                <?templateDesigner expand 1?></exclGroup>
             <event activity="ready" ref="$layout" name="event__layout_ready">
-               <script contentType="application/x-javascript">
+               <script contentType="application/x-javascript">/*
 var cHCeFormModel=script.HCeForm.model.HCeFormMain;
 var language = cHCeFormModel.getLanguage();
 
@@ -1078,10 +1166,37 @@ var cFormNodeManager = script.core.model.FormNodeManager;
 var PAGE1_SF_FN = cFormNodeManager.getFormNodeForKey("sfPage1");
 var cAccessibility = this.resolveNode("script.Accessibility");
 cAccessibility.updateColorErrorsForAccessibility(PAGE1_SF_FN.getNodeInstance().parent);
+*/
 </script>
             </event>
+            <field name="Button1" y="4.97mm" x="163.193mm" w="28.575mm" h="6mm">
+               <ui>
+                  <button highlight="inverted"/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <caption>
+                  <value>
+                     <text>Button</text>
+                  </value>
+                  <para vAlign="middle" hAlign="center"/>
+               </caption>
+               <border hand="right">
+                  <edge stroke="raised"/>
+                  <fill>
+                     <color value="212,208,200"/>
+                  </fill>
+               </border>
+               <bind match="none"/>
+               <event activity="click" name="event__click">
+                  <script contentType="application/x-javascript">
+
+this.sdfsdf.sdfsdf.sdfsdf=foo;
+zxczczczzcxczxcz zxczxc
+</script>
+               </event>
+            </field>
             <?templateDesigner expand 1?></subform>
-         <draw name="lblMandatory" w="203.248mm" h="12.7mm" colSpan="2">
+         <draw name="lblMandatory" w="8in" h="12.7mm" colSpan="2">
             <ui>
                <textEdit/>
             </ui>
@@ -1094,7 +1209,7 @@ cAccessibility.updateColorErrorsForAccessibility(PAGE1_SF_FN.getNodeInstance().p
             <assist>
                <speak disable="1"/>
             </assist>
-            <?renderCache.bounds 573302 33166 0 0 1417 1417 0 0?>
+            <?renderCache.bounds 573166 33166 0 0 1417 1417 0 0?>
             <?renderCache.textRun 4 Text 0 1417 20000 0 0 0 "Myriad Pro" 0 0 8000 ISO-8859-1?></draw>
          <subform w="203.2mm" name="sfInstructions" layout="lr-tb">
             <field name="btnViewInstructions" w="31.75mm" h="6.35mm" relevant="-print">
@@ -1118,11 +1233,23 @@ cAccessibility.updateColorErrorsForAccessibility(PAGE1_SF_FN.getNodeInstance().p
                </border>
                <bind match="none"/>
                <event activity="click" name="event__click">
-                  <script contentType="application/x-javascript">//this.resolveNode("HCeForm.sfPage1.sfInstructions.sfInstructionsContent").presence = "visible";
-
-HCeForm.sfPage1.sfInstructionsContent.presence = "visible";
-this.access="readOnly";
-this.fillColor = "230,230,230";
+                  <script contentType="application/x-javascript">
+var cFormHandler=	script.HCeForm.control.FormHandler;
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+try
+{
+		// set up event object
+		var actionName = cFormHandler.SHOW_INSTRUCTIONS;
+		var anActionEvent = cActionEvent.createInstance(actionName, this);
+		// deploy event to controller
+		cFormHandler.actionPerformed(anActionEvent);
+	
+}
+catch(exception)
+{
+	cLog.warn("Problem with show instructions ::click", exception);
+}
 </script>
                </event>
             </field>
@@ -1154,15 +1281,28 @@ this.fillColor = "230,230,230";
                </border>
                <bind match="none"/>
                <event activity="click" name="event__click">
-                  <script contentType="application/x-javascript">//this.resolveNode("HCeForm.sfPage1.sfInstructions.sfInstructionsContent").presence = "hidden";
-HCeForm.sfPage1.sfInstructionsContent.presence = "hidden";
-btnViewInstructions.access = "open";
-btnViewInstructions.fillColor = "212,208,200";
+                  <script contentType="application/x-javascript">var cFormHandler=	script.HCeForm.control.FormHandler;
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+try
+{
+		// set up event object
+		var actionName =  cFormHandler.HIDE_INSTRUCTIONS;
+		var anActionEvent = cActionEvent.createInstance(actionName, this);
+		// deploy event to controller
+		cFormHandler.actionPerformed(anActionEvent);
+	
+}
+catch(exception)
+{
+	cLog.warn("Problem with hide instructions ::click", exception);
+}
+
 </script>
                </event>
                <event activity="ready" ref="$layout" name="event__layout_ready">
                   <script contentType="application/x-javascript">
-
+/*
 if(btnViewInstructions.access == "open"){
 this.access = "readOnly";
 this.fillColor = "230,230,230";
@@ -1180,6 +1320,7 @@ this.access="readOnly"
 this.fillColor = "230,230,230";
 //this.resolveNode("sfHCInstruction").presence = "hidden";
 }
+*/
 </script>
                </event>
             </field>
@@ -1189,7 +1330,7 @@ this.fillColor = "230,230,230";
             </border>
             <margin bottomInset="5.08mm"/>
             <?templateDesigner expand 0?></subform>
-         <subform w="203.2mm" layout="lr-tb" name="sfInstructionsContent" presence="hidden">
+         <subform w="203.2mm" layout="lr-tb" name="sfInstructionsContent">
             <draw name="lblInstructionsHead" w="8in" h="6.249mm">
                <ui>
                   <textEdit/>
@@ -1210,7 +1351,8 @@ this.fillColor = "230,230,230";
                      <color value="255,255,153"/>
                   </fill>
                </border>
-            </draw>
+               <?renderCache.bounds 573166 16274 0 0 1417 720 0 0?>
+               <?renderCache.textRun 12 INSTRUCTIONS 0 1417 11857 0 0 0 "Myriad Pro" 1 0 12000 ISO-8859-1?></draw>
             <draw name="lblInstructions" w="8in" y="3mm" minH="40.64mm">
                <ui>
                   <textEdit/>
@@ -1231,7 +1373,7 @@ this.fillColor = "230,230,230";
                <corner thickness="0.175mm" presence="hidden"/>
             </border>
             <margin topInset="0mm" bottomInset="5.08mm"/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform w="203.199mm" name="sfPart1" layout="lr-tb">
             <draw name="lblProtocol" w="7.999958in" h="7.62mm">
                <ui>
@@ -1272,24 +1414,12 @@ this.fillColor = "230,230,230";
                      </value>
                      <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
                   </caption>
-                  <items>
-                     <text>Clinical Trial Application (CTA)</text>
-                     <text>Clinical Trial Application Amendment (CTA-A)</text>
-                  </items>
-                  <items save="1" presence="hidden">
-                     <text>1</text>
-                     <text>2</text>
-                  </items>
+                  <items/>
+                  <items save="1" presence="hidden"/>
                   <border>
                      <edge/>
                      <corner thickness="0.175mm"/>
                   </border>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">
-this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
-
-</script>
-                  </event>
                   <validate nullTest="error"/>
                </field>
                <field name="txtProtocolTitle" w="203.2mm" minH="13.903mm">
@@ -1316,14 +1446,11 @@ this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
                      <corner thickness="0.175mm"/>
                   </border>
                   <validate nullTest="error"/>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
-</script>
-                  </event>
+                  <keep intact="contentArea"/>
                </field>
                <field name="txtProtocolNo" w="203.2mm" h="16.142mm">
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -1346,10 +1473,6 @@ this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
                   </border>
                   <validate nullTest="error"/>
                   <keep intact="contentArea"/>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
-</script>
-                  </event>
                </field>
                <?templateDesigner expand 1?></subform>
             <border>
@@ -1402,7 +1525,7 @@ this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
                   <?renderCache.textRun 27 A) Drug Product Information 0 1417 8917 0 0 0 "Myriad Pro" 1 0 10000 ISO-8859-1?></draw>
                <field name="txtBrand" w="203.2mm" h="11.913mm">
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -1424,15 +1547,11 @@ this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
                      <corner thickness="0.175mm"/>
                   </border>
                   <validate nullTest="error"/>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
-
-</script>
-                  </event>
+                  <keep intact="contentArea"/>
                </field>
                <field name="txtIngredient" w="203.2mm" h="12.368mm">
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -1454,13 +1573,9 @@ this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
                      <corner thickness="0.175mm"/>
                   </border>
                   <validate nullTest="error"/>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
-
-</script>
-                  </event>
+                  <keep intact="contentArea"/>
                </field>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?></subform>
             <subform w="203.2mm" name="sfSponsorInfoSectionB" layout="lr-tb">
                <draw name="lblSectionB" w="203.2mm" h="6.604mm">
                   <ui>
@@ -1501,7 +1616,7 @@ this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
                   <margin bottomInset="1mm" leftInset="1.0008mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -1509,10 +1624,7 @@ this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
                      </textEdit>
                   </ui>
                   <validate nullTest="error"/>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
-</script>
-                  </event>
+                  <keep intact="contentArea"/>
                </field>
                <field h="11.43mm" name="txtAddress" w="203.2mm">
                   <border>
@@ -1530,7 +1642,7 @@ this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -1538,10 +1650,7 @@ this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
                      </textEdit>
                   </ui>
                   <validate nullTest="error"/>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
-</script>
-                  </event>
+                  <keep intact="contentArea"/>
                </field>
                <field h="11.43mm" name="txtCity" w="50.8mm">
                   <border>
@@ -1559,7 +1668,7 @@ this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -1567,10 +1676,7 @@ this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
                      </textEdit>
                   </ui>
                   <validate nullTest="error"/>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
-</script>
-                  </event>
+                  <keep intact="contentArea"/>
                </field>
                <field h="11.43mm" name="ddlCountry" w="50.8mm">
                   <border>
@@ -1599,40 +1705,32 @@ this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
                   </ui>
                   <validate nullTest="error"/>
                   <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
-</script>
-                  </event>
-                  <event activity="change" name="event__change">
-                     <script contentType="application/x-javascript">if(xfa.event.prevText!=xfa.event.newText){
+                     <script contentType="application/x-javascript">
 var cActionEvent = script.core.event.ActionEvent;
 var cLog = script.core.util.Log;
-var cAddressHandler = script.RegulatoryAddresses.control.RegulatoryAddressHandler;
-//app.alert(this.boundItem(xfa.event.newText));
+var cAddressHandler = script.HCeForm.control.RegulatoryAddressHandler;
+var cSystem = script.core.System;
 try
 {
-	// set up event object
-	var actionName =  cAddressHandler.SPONSOR_COUNTRY_CHANGED_ACTION;
-	this.rawValue=this.boundItem(xfa.event.newText);
-	var anActionEvent = cActionEvent.createInstance(actionName, this,this.boundItem(xfa.event.newText));
-	// deploy event to controller
-	cAddressHandler.actionPerformed(anActionEvent);
+	if(cSystem.hasCurrentFieldValueChanged(this)){
+		// set up event object
+		var actionName =  cAddressHandler.SPONSOR_COUNTRY_CHANGED_ACTION;
+		cLog.trace("This is the action "+actionName);
+		var anActionEvent = cActionEvent.createInstance(actionName, this,this.rawValue);
+		// deploy event to controller
+		cAddressHandler.actionPerformed(anActionEvent);
+	}
 }
 catch(exception)
 {
-	cLog.warn("Problem with Manufacturer Country selection ::exit", exception);
+	cLog.warn("Problem with sponsorInfo country ::exit", exception);
 }
+</script>
+                  </event>
+                  <event activity="enter" name="event__enter">
+                     <script contentType="application/x-javascript">var cSystem = script.core.System;
 
-//
-
-if(this.boundItem(xfa.event.newText) =="CA" || this.boundItem(xfa.event.newText) =="US"){
-this.resolveNode("ddlProvince").presence = "visible"; 
-this.resolveNode("txtProvince").presence = "hidden";
-}else{
-this.resolveNode("ddlProvince").presence = "hidden"; 
-this.resolveNode("txtProvince").presence = "visible";
-}
-}
-
+cSystem.setCurrentField(this);
 </script>
                   </event>
                </field>
@@ -1641,7 +1739,7 @@ this.resolveNode("txtProvince").presence = "visible";
                      <corner thickness="0.1753mm"/>
                      <edge/>
                   </border>
-                  <caption placement="top" reserve="3.175mm">
+                  <caption placement="top" reserve="3.3942mm">
                      <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
                      <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
                      <value>
@@ -1661,9 +1759,9 @@ this.resolveNode("txtProvince").presence = "visible";
                   </ui>
                   <validate nullTest="error"/>
                </field>
-               <field name="txtProvince" w="50.8mm" h="11.138mm" presence="hidden">
+               <field name="txtProvince" w="50.8mm" h="11.138mm">
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -1673,7 +1771,7 @@ this.resolveNode("txtProvince").presence = "visible";
                   <font typeface="Myriad Pro" size="8pt"/>
                   <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
                   <para vAlign="middle"/>
-                  <caption reserve="2.6495mm" placement="top">
+                  <caption reserve="3.3934mm" placement="top">
                      <para vAlign="middle"/>
                      <value>
                         <text>Province - State*</text>
@@ -1683,13 +1781,14 @@ this.resolveNode("txtProvince").presence = "visible";
                      <edge/>
                      <corner thickness="0.175mm"/>
                   </border>
+                  <keep intact="contentArea"/>
                </field>
                <field h="11.43mm" name="txtPostalCode" w="50.8mm">
                   <border>
                      <corner thickness="0.1753mm"/>
                      <edge/>
                   </border>
-                  <caption placement="top" reserve="2.91mm">
+                  <caption placement="top" reserve="3.271mm">
                      <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
                      <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
                      <value>
@@ -1700,7 +1799,7 @@ this.resolveNode("txtProvince").presence = "visible";
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -1708,14 +1807,9 @@ this.resolveNode("txtProvince").presence = "visible";
                      </textEdit>
                   </ui>
                   <validate nullTest="error"/>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">//xfa.host.setFocus (this); 
-var cGlobalRequirement = script.core.validation.GlobalRequirement;
-cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
-</script>
-                  </event>
+                  <keep intact="contentArea"/>
                </field>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?></subform>
             <subform w="203.2mm" name="sfContactInfoSectionC" layout="lr-tb">
                <draw name="lblSectionC" w="203.2mm" h="6.604mm">
                   <ui>
@@ -1764,10 +1858,6 @@ cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
                      <corner thickness="0.175mm"/>
                      <edge/>
                   </border>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
-</script>
-                  </event>
                   <validate nullTest="error"/>
                </field>
                <field h="11.43mm" name="txtGivenName" w="35.385mm">
@@ -1786,7 +1876,7 @@ cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -1794,12 +1884,6 @@ cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
                      </textEdit>
                   </ui>
                   <validate nullTest="error"/>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
-
-
-</script>
-                  </event>
                </field>
                <field h="11.43mm" name="txtInitials" w="13.97mm">
                   <border>
@@ -1817,7 +1901,7 @@ cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -1841,7 +1925,7 @@ cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -1849,12 +1933,6 @@ cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
                      </textEdit>
                   </ui>
                   <validate nullTest="error"/>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
-
-
-</script>
-                  </event>
                </field>
                <field h="11.43mm" name="txtTitle" w="38.1mm">
                   <border>
@@ -1872,7 +1950,7 @@ cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -1880,12 +1958,6 @@ cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
                      </textEdit>
                   </ui>
                   <validate nullTest="error"/>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
-
-
-</script>
-                  </event>
                </field>
                <field h="11.43mm" name="ddlLangPref" w="35.56mm">
                   <border>
@@ -1912,10 +1984,6 @@ cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
                      </choiceList>
                   </ui>
                   <validate nullTest="error"/>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
-</script>
-                  </event>
                </field>
                <field h="13.151mm" name="txtCompanyName" w="203.2mm">
                   <border>
@@ -1933,7 +2001,7 @@ cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
                   <margin bottomInset="1mm" leftInset="1.0008mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -1941,10 +2009,6 @@ cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
                      </textEdit>
                   </ui>
                   <validate nullTest="error"/>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
-</script>
-                  </event>
                </field>
                <field h="11.233mm" name="txtAddress" w="203.2mm">
                   <border>
@@ -1962,7 +2026,7 @@ cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -1970,11 +2034,6 @@ cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
                      </textEdit>
                   </ui>
                   <validate nullTest="error"/>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
-
-</script>
-                  </event>
                </field>
                <field h="11.233mm" name="txtCity" w="50.8mm">
                   <border>
@@ -1992,7 +2051,7 @@ cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -2001,7 +2060,7 @@ cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
                   </ui>
                   <validate nullTest="error"/>
                   <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
+                     <script contentType="application/x-javascript">//this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
 
 </script>
                   </event>
@@ -2011,7 +2070,7 @@ cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
                      <corner thickness="0.1753mm"/>
                      <edge/>
                   </border>
-                  <caption placement="top" reserve="3.5401mm">
+                  <caption placement="top" reserve="3.175mm">
                      <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
                      <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
                      <value>
@@ -2033,44 +2092,31 @@ cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
                   </ui>
                   <validate nullTest="error"/>
                   <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
-var cGlobalRequirement = script.core.validation.GlobalRequirement;
-cGlobalRequirement.isPhoneValid(txtTelephone, this.rawValue);
-cGlobalRequirement.isFaxValid(txtFax, this.rawValue);
-</script>
-                  </event>
-                  <event activity="change" name="event__change">
-                     <script contentType="application/x-javascript">if(xfa.event.prevText!=xfa.event.newText){
-var cActionEvent = script.core.event.ActionEvent;
+                     <script contentType="application/x-javascript">var cActionEvent = script.core.event.ActionEvent;
 var cLog = script.core.util.Log;
-var cAddressHandler = script.RegulatoryAddresses.control.RegulatoryAddressHandler;
-//app.alert(this.boundItem(xfa.event.newText));
+var cAddressHandler = script.HCeForm.control.RegulatoryAddressHandler;
+var cSystem = script.core.System;
 try
 {
-	// set up event object
-	var actionName =  cAddressHandler.CLINICAL_COUNTRY_CHANGED_ACTION;
-	this.rawValue=this.boundItem(xfa.event.newText);
-	var anActionEvent = cActionEvent.createInstance(actionName, this,this.boundItem(xfa.event.newText));
-	// deploy event to controller
-	cAddressHandler.actionPerformed(anActionEvent);
+	if(cSystem.hasCurrentFieldValueChanged(this)){
+		// set up event object
+		var actionName =  cAddressHandler.CLINICAL_COUNTRY_CHANGED_ACTION;
+		var anActionEvent = cActionEvent.createInstance(actionName, this,this.rawValue);
+		// deploy event to controller
+		cAddressHandler.actionPerformed(anActionEvent);
+	}
 }
 catch(exception)
 {
-	cLog.warn("Problem with Manufacturer Country selection ::exit", exception);
+	cLog.warn("Problem with contact country ::exit", exception);
 }
+</script>
+                  </event>
+                  <event activity="enter" name="event__enter">
+                     <script contentType="application/x-javascript">
+var cSystem = script.core.System;
 
-//
-
-if(this.boundItem(xfa.event.newText) =="CA" || this.boundItem(xfa.event.newText) =="US"){
-this.resolveNode("ddlProvince").presence = "visible"; 
-this.resolveNode("txtProvince").presence = "hidden";
-}else{
-this.resolveNode("ddlProvince").presence = "hidden"; 
-this.resolveNode("txtProvince").presence = "visible";
-}
-}
-
-
+cSystem.setCurrentField(this);
 </script>
                   </event>
                </field>
@@ -2099,9 +2145,9 @@ this.resolveNode("txtProvince").presence = "visible";
                   </ui>
                   <validate nullTest="error"/>
                </field>
-               <field name="txtProvince" w="50.8mm" h="11.43mm" presence="hidden">
+               <field name="txtProvince" w="50.8mm" h="11.43mm">
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <?templateDesigner StyleID aped3?>
                            <edge stroke="lowered"/>
@@ -2139,7 +2185,7 @@ this.resolveNode("txtProvince").presence = "visible";
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -2147,11 +2193,6 @@ this.resolveNode("txtProvince").presence = "visible";
                      </textEdit>
                   </ui>
                   <validate nullTest="error"/>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">var cGlobalRequirement = script.core.validation.GlobalRequirement;
-cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
-</script>
-                  </event>
                </field>
                <field h="11.43mm" name="txtTelephone" w="38.1mm">
                   <border>
@@ -2178,8 +2219,8 @@ cGlobalRequirement.isPostalcodeValid(this, ddlCountry.rawValue);
                   </ui>
                   <validate nullTest="error"/>
                   <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">var cGlobalRequirement = script.core.validation.GlobalRequirement;
-cGlobalRequirement .isPhoneValid(this, ddlCountry.rawValue);
+                     <script contentType="application/x-javascript">//var cGlobalRequirement = script.core.validation.GlobalRequirement;
+//cGlobalRequirement .isPhoneValid(this, ddlCountry.rawValue);
 </script>
                   </event>
                </field>
@@ -2231,8 +2272,8 @@ cGlobalRequirement .isPhoneValid(this, ddlCountry.rawValue);
                      </textEdit>
                   </ui>
                   <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">var cGlobalRequirement = script.core.validation.GlobalRequirement;
-cGlobalRequirement .isFaxValid(this, ddlCountry.rawValue);
+                     <script contentType="application/x-javascript">//var cGlobalRequirement = script.core.validation.GlobalRequirement;
+//cGlobalRequirement .isFaxValid(this, ddlCountry.rawValue);
 </script>
                   </event>
                </field>
@@ -2261,13 +2302,13 @@ cGlobalRequirement .isFaxValid(this, ddlCountry.rawValue);
                   </ui>
                   <validate nullTest="error"/>
                   <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">var cGlobalRequirement = script.core.validation.GlobalRequirement;
-cGlobalRequirement.isEmailValid(this);
+                     <script contentType="application/x-javascript">//var cGlobalRequirement = script.core.validation.GlobalRequirement;
+//cGlobalRequirement.isEmailValid(this);
 </script>
                   </event>
                </field>
                <keep intact="contentArea"/>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?></subform>
             <border>
                <edge presence="hidden"/>
                <corner thickness="0.175mm" presence="hidden"/>
@@ -2334,7 +2375,7 @@ cGlobalRequirement.isEmailValid(this);
                   <margin bottomInset="1mm" leftInset="1.0008mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -2343,7 +2384,7 @@ cGlobalRequirement.isEmailValid(this);
                   </ui>
                   <validate nullTest="error"/>
                   <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
+                     <script contentType="application/x-javascript">//this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
 
 </script>
                   </event>
@@ -2364,7 +2405,7 @@ cGlobalRequirement.isEmailValid(this);
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -2373,7 +2414,7 @@ cGlobalRequirement.isEmailValid(this);
                   </ui>
                   <validate nullTest="error"/>
                   <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
+                     <script contentType="application/x-javascript">//this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
 
 </script>
                   </event>
@@ -2394,7 +2435,7 @@ cGlobalRequirement.isEmailValid(this);
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -2403,7 +2444,7 @@ cGlobalRequirement.isEmailValid(this);
                   </ui>
                   <validate nullTest="error"/>
                   <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
+                     <script contentType="application/x-javascript">//this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
 </script>
                   </event>
                </field>
@@ -2432,7 +2473,7 @@ cGlobalRequirement.isEmailValid(this);
                      <edge/>
                   </border>
                   <value>
-                     <text>Canada</text>
+                     <text>CA</text>
                   </value>
                </field>
                <field h="11.43mm" name="ddlProvince" w="50.8mm">
@@ -2440,7 +2481,7 @@ cGlobalRequirement.isEmailValid(this);
                      <corner thickness="0.1753mm"/>
                      <edge/>
                   </border>
-                  <caption placement="top" reserve="3.175mm">
+                  <caption placement="top" reserve="3.271mm">
                      <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
                      <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
                      <value>
@@ -2459,12 +2500,6 @@ cGlobalRequirement.isEmailValid(this);
                      </choiceList>
                   </ui>
                   <validate nullTest="error"/>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">
-
-this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
-</script>
-                  </event>
                </field>
                <field h="11.392mm" name="txtPostalCode" w="50.8mm">
                   <border>
@@ -2482,7 +2517,7 @@ this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -2490,12 +2525,8 @@ this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
                      </textEdit>
                   </ui>
                   <validate nullTest="error"/>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">var cGlobalRequirement = script.core.validation.GlobalRequirement;
-cGlobalRequirement.isPostalcodeValid(this, "CA");// ddlCountry.rawValue);
-</script>
-                  </event>
                </field>
+               <keep intact="contentArea"/>
                <?templateDesigner expand 1?></subform>
             <subform w="203.2mm" name="sfQISectionB" layout="lr-tb">
                <draw name="lblSectionB" w="203.2mm" h="6.604mm">
@@ -2574,7 +2605,7 @@ this.rawValue = "dr";
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -2583,12 +2614,36 @@ this.rawValue = "dr";
                   </ui>
                   <validate nullTest="error"/>
                   <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
+                     <script contentType="application/x-javascript">var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+var cFormHandler = script.HCeForm.control.FormHandler; 
+var cSystem = script.core.System;
+cLog.trace("inside");
+try
+{
+	if(cSystem.hasCurrentFieldValueChanged(this)){
+		// set up event object
+		var actionName =  cFormHandler.SET_INVESTIGATOR_NAME;
+		var anActionEvent = cActionEvent.createInstance(actionName, this);
+		// deploy event to controller
+		cLog.trace("inside2");
+		cFormHandler.actionPerformed(anActionEvent);
+	}
+}
+catch(exception)
+{
+	cLog.warn("Problem with qual investigator given name ::exit", exception);
+}
 
-// copy data to the attestation area
 
 
-sfPage1.sfAuthSignOfficial.sfHeader.txtGivenNameAttestation = this.rawValue;
+</script>
+                  </event>
+                  <event activity="enter" name="event__enter">
+                     <script contentType="application/x-javascript">
+var cSystem = script.core.System;
+
+cSystem.setCurrentField(this);
 </script>
                   </event>
                </field>
@@ -2608,7 +2663,7 @@ sfPage1.sfAuthSignOfficial.sfHeader.txtGivenNameAttestation = this.rawValue;
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -2632,7 +2687,7 @@ sfPage1.sfAuthSignOfficial.sfHeader.txtGivenNameAttestation = this.rawValue;
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -2641,9 +2696,9 @@ sfPage1.sfAuthSignOfficial.sfHeader.txtGivenNameAttestation = this.rawValue;
                   </ui>
                   <validate nullTest="error"/>
                   <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
+                     <script contentType="application/x-javascript">//this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
 
-sfPage1.sfAuthSignOfficial.sfHeader.txtSurnameAttestation = this.rawValue;
+//sfPage1.sfAuthSignOfficial.sfHeader.txtSurnameAttestation = this.rawValue;
 </script>
                   </event>
                </field>
@@ -2663,7 +2718,7 @@ sfPage1.sfAuthSignOfficial.sfHeader.txtSurnameAttestation = this.rawValue;
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -2673,9 +2728,9 @@ sfPage1.sfAuthSignOfficial.sfHeader.txtSurnameAttestation = this.rawValue;
                   <validate nullTest="error"/>
                   <event activity="exit" name="event__exit">
                      <script contentType="application/x-javascript">
-this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
+//this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
 
-sfPage1.sfAuthSignOfficial.sfHeader.txtTitleAttestation = this.rawValue;
+//sfPage1.sfAuthSignOfficial.sfHeader.txtTitleAttestation = this.rawValue;
 </script>
                   </event>
                </field>
@@ -2705,7 +2760,7 @@ sfPage1.sfAuthSignOfficial.sfHeader.txtTitleAttestation = this.rawValue;
                   </ui>
                   <validate nullTest="error"/>
                   <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
+                     <script contentType="application/x-javascript">//this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
 </script>
                   </event>
                </field>
@@ -2725,7 +2780,7 @@ sfPage1.sfAuthSignOfficial.sfHeader.txtTitleAttestation = this.rawValue;
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -2734,7 +2789,7 @@ sfPage1.sfAuthSignOfficial.sfHeader.txtTitleAttestation = this.rawValue;
                   </ui>
                   <validate nullTest="error"/>
                   <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
+                     <script contentType="application/x-javascript">//this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
 
 </script>
                   </event>
@@ -2755,7 +2810,7 @@ sfPage1.sfAuthSignOfficial.sfHeader.txtTitleAttestation = this.rawValue;
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -2764,7 +2819,7 @@ sfPage1.sfAuthSignOfficial.sfHeader.txtTitleAttestation = this.rawValue;
                   </ui>
                   <validate nullTest="error"/>
                   <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
+                     <script contentType="application/x-javascript">//this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
 </script>
                   </event>
                </field>
@@ -2793,7 +2848,7 @@ sfPage1.sfAuthSignOfficial.sfHeader.txtTitleAttestation = this.rawValue;
                      <edge/>
                   </border>
                   <value>
-                     <text>Canada</text>
+                     <text>CA</text>
                   </value>
                </field>
                <field h="11.43mm" name="ddlProvince" w="50.8mm">
@@ -2823,7 +2878,7 @@ sfPage1.sfAuthSignOfficial.sfHeader.txtTitleAttestation = this.rawValue;
                   <event activity="exit" name="event__exit">
                      <script contentType="application/x-javascript">
 
-this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
+//this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
 </script>
                   </event>
                </field>
@@ -2843,7 +2898,7 @@ this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -2853,8 +2908,8 @@ this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
                   <validate nullTest="error"/>
                   <event activity="exit" name="event__exit">
                      <script contentType="application/x-javascript">
-var cGlobalRequirement = script.core.validation.GlobalRequirement;
-cGlobalRequirement.isPostalcodeValid(this, "CA");//ddlCountry.rawValue);
+//var cGlobalRequirement = script.core.validation.GlobalRequirement;
+//cGlobalRequirement.isPostalcodeValid(this, "CA");//ddlCountry.rawValue);
 </script>
                   </event>
                </field>
@@ -2874,7 +2929,7 @@ cGlobalRequirement.isPostalcodeValid(this, "CA");//ddlCountry.rawValue);
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -2883,8 +2938,8 @@ cGlobalRequirement.isPostalcodeValid(this, "CA");//ddlCountry.rawValue);
                   </ui>
                   <validate nullTest="error"/>
                   <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">var cGlobalRequirement = script.core.validation.GlobalRequirement;
-cGlobalRequirement .isPhoneValid(this, "CA");//ddlCountry.rawValue);
+                     <script contentType="application/x-javascript">//var cGlobalRequirement = script.core.validation.GlobalRequirement;
+//cGlobalRequirement .isPhoneValid(this, "CA");//ddlCountry.rawValue);
 </script>
                   </event>
                </field>
@@ -2904,7 +2959,7 @@ cGlobalRequirement .isPhoneValid(this, "CA");//ddlCountry.rawValue);
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -2928,7 +2983,7 @@ cGlobalRequirement .isPhoneValid(this, "CA");//ddlCountry.rawValue);
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -2937,8 +2992,8 @@ cGlobalRequirement .isPhoneValid(this, "CA");//ddlCountry.rawValue);
                   </ui>
                   <event activity="exit" name="event__exit">
                      <script contentType="application/x-javascript">
-var cGlobalRequirement = script.core.validation.GlobalRequirement;
-cGlobalRequirement .isFaxValid(this, "CA");//ddlCountry.rawValue);
+//var cGlobalRequirement = script.core.validation.GlobalRequirement;
+//cGlobalRequirement .isFaxValid(this, "CA");//ddlCountry.rawValue);
 </script>
                   </event>
                </field>
@@ -2947,7 +3002,7 @@ cGlobalRequirement .isFaxValid(this, "CA");//ddlCountry.rawValue);
                      <corner thickness="0.1753mm"/>
                      <edge/>
                   </border>
-                  <caption placement="top" reserve="3.5136mm">
+                  <caption placement="top" reserve="3.7396mm">
                      <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
                      <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
                      <value>
@@ -2958,7 +3013,7 @@ cGlobalRequirement .isFaxValid(this, "CA");//ddlCountry.rawValue);
                   <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
                   <para vAlign="middle"/>
                   <ui>
-                     <textEdit>
+                     <textEdit hScrollPolicy="off">
                         <border>
                            <edge stroke="lowered"/>
                            <?templateDesigner StyleID aped3?></border>
@@ -2967,12 +3022,14 @@ cGlobalRequirement .isFaxValid(this, "CA");//ddlCountry.rawValue);
                   </ui>
                   <validate nullTest="error"/>
                   <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">var cGlobalRequirement = script.core.validation.GlobalRequirement;
-cGlobalRequirement.isEmailValid(this);
+                     <script contentType="application/x-javascript">//var cGlobalRequirement = script.core.validation.GlobalRequirement;
+//cGlobalRequirement.isEmailValid(this);
 </script>
                   </event>
                </field>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 0?>
+               <keep intact="contentArea"/>
+            </subform>
             <subform w="203.3mm" name="sfREBASectionC" layout="lr-tb" presence="hidden">
                <draw name="lblSectionC" w="203.2mm" h="8.822mm">
                   <ui>
@@ -3615,7 +3672,9 @@ cGlobalRequirement.isEmailValid(this);
 </script>
                   </event>
                </field>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 0?>
+               <keep intact="contentArea"/>
+            </subform>
             <border>
                <edge presence="hidden"/>
                <corner/>
@@ -3718,14 +3777,8 @@ cGlobalRequirement.isEmailValid(this);
                      <edge/>
                      <corner thickness="0.175mm"/>
                   </border>
-                  <event activity="exit" name="event__exit">
-                     <script contentType="application/x-javascript">
-this.resolveNode("script.validation.#variables.formValidation").isFilled(this);
-</script>
-                  </event>
                   <event activity="initialize" name="event__initialize">
                      <script contentType="application/x-javascript">
-
 
 this.rawValue = "dr";
 </script>
@@ -3803,7 +3856,7 @@ this.rawValue = "dr";
                      </textEdit>
                   </ui>
                </field>
-               <exclGroup name="signatureOption" layout="lr-tb" presence="hidden">
+               <exclGroup name="signatureOption" layout="lr-tb">
                   <?templateDesigner itemValuesSpecified 1?>
                   <field w="28mm" h="6mm" name="chkDigitalID">
                      <ui>
@@ -3875,7 +3928,7 @@ this.parent.parent.imgSignature.presence="visible"
                      </event>
                   </field>
                   <?templateDesigner expand 1?></exclGroup>
-               <draw name="Rectangle1" w="119.247mm" h="5.598mm" presence="hidden">
+               <draw name="Rectangle1" w="119.247mm" h="5.598mm">
                   <value>
                      <rectangle>
                         <edge presence="hidden"/>
@@ -3883,7 +3936,7 @@ this.parent.parent.imgSignature.presence="visible"
                      </rectangle>
                   </value>
                </draw>
-               <field name="digSignature" w="110.174mm" h="8.939mm" presence="hidden">
+               <field name="digSignature" w="110.174mm" h="8.939mm">
                   <ui>
                      <signature type="PDF1.6">
                         <border>
@@ -3944,7 +3997,7 @@ xfa.layout.ready;
 </script>
                   </event>
                </field>
-               <field name="imgSignature" w="110.174mm" h="8.938mm" presence="hidden">
+               <field name="imgSignature" w="110.174mm" h="8.938mm">
                   <ui>
                      <imageEdit data="embed"/>
                   </ui>
@@ -4036,6 +4089,7 @@ cCommon.isDateValid(this);
                      <picture>date{YYYY-MM-DD}</picture>
                   </bind>
                </field>
+               <keep intact="contentArea"/>
                <?templateDesigner expand 1?>
             </subform>
             <border>
@@ -4045,7 +4099,7 @@ cCommon.isDateValid(this);
             <margin topInset="0mm"/>
             <keep intact="contentArea"/>
             <subform w="203.2mm" name="sfFinalizeButton">
-               <subform y="11.245mm" w="203.2mm" layout="lr-tb" name="officeUseOnly" presence="hidden">
+               <subform y="11.245mm" w="203.2mm" layout="lr-tb" name="officeUseOnly">
                   <draw name="lblHCUse" w="203.2mm" h="5.2331mm">
                      <ui>
                         <textEdit/>
@@ -4066,7 +4120,8 @@ cCommon.isDateValid(this);
                      <assist role="H2">
                         <speak disable="1"/>
                      </assist>
-                  </draw>
+                     <?renderCache.bounds 573166 12000 0 0 1417 1417 0 0?>
+                     <?renderCache.textRun 22 Health Canada Use Only 0 1417 10417 0 0 0 "Myriad Pro" 1 0 12000 ISO-8859-1?></draw>
                   <field name="numSubmission" w="76.11mm" h="6.985mm">
                      <ui>
                         <numericEdit hScrollPolicy="off">
@@ -4199,13 +4254,33 @@ if (xfa.event.newText &gt; 999999) {
                   </border>
                   <bind match="none"/>
                   <event activity="click" name="event__click">
-                     <script contentType="application/x-javascript">var cDrugApplModel=script.HCeForm.model.HCeFormMain;
-var cCommon = script.HCeForm.model.Common;
-var language = cDrugApplModel.getLanguage();
-var cDateUtil = script.core.util.DateUtil;
-var date = new Date();
+                     <script contentType="application/x-javascript">
+var cFormHandler=	script.HCeForm.control.FormHandler;
+var cActionEvent = script.core.event.ActionEvent;
 var cLog = script.core.util.Log;
+try
+{
+		// set up event object
+		var actionName = cFormHandler.LOCK_FORM;
+		var anActionEvent = cActionEvent.createInstance(actionName, this);
+		// deploy event to controller
+		cFormHandler.actionPerformed(anActionEvent);
+	
+}
+catch(exception)
+{
+	cLog.warn("Problem with finalize ::click", exception);
+}
 
+
+
+
+
+
+
+
+
+/*
 cCommon.formValidationAndLock(this);
 //this.access="readOnly";
 if(this.access == "readOnly"){
@@ -4223,6 +4298,7 @@ if (language == "en") {
 		this.resolveNode("#pageSet.Page1.txtFinalizeDate").rawValue = "Date finalisée " + cDateUtil.toDateString(date);
 	}
 }
+*/
 </script>
                   </event>
                </field>
@@ -4305,7 +4381,7 @@ this.fillColor = "212,208,200";
                   </event>
                </field>
                <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 0?>
+            <?templateDesigner expand 1?>
          </subform>
          <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
          <event activity="initialize" name="event__initialize">
@@ -4318,177 +4394,10 @@ this.fillColor = "212,208,200";
       </subform>
       <subform w="100mm" name="script" layout="tb" presence="hidden">
          <bind match="none"/>
-         <subform usehref="..\..\..\Users\hcuser\Desktop\eForms\Fragments\CoreJavaScript-20130612.xdp#som($template.form1.core)">
+         <subform usehref="..\..\fragments\CoreJavaScript.xdp#som($template.script.core)">
             <bind/>
             <?templateDesigner expand 0?>
          </subform>
-         <subform h="50mm" name="RegulatoryAddresses" w="100mm">
-            <subform h="50mm" name="control" w="100mm">
-               <variables>
-                  <script contentType="application/x-javascript" name="RegulatoryAddressHandler">
-//imports
-var cLog = script.core.util.Log;
-
-
-var cControllerUtil = script.core.util.ControllerUtil;
-var cResourceManager = script.core.lang.ResourceManager;
-var cFormNodeManager = script.core.model.FormNodeManager;
-var cInstanceManagerUtil = script.core.util.InstanceManagerUtil; 
-var cTypeEnforcer=script.core.util.TypeEnforcer;
-var cTypeChecker=script.core.util.TypeChecker;
-var cUiUtil=script.core.util.UiUtil;
-var cStringUtil=script.core.util.StringUtil;
-var cException = script.core.util.Exception;
-
-
-//Globals
-var YES="Yes";
-var NO="No";
-var COUNTRY_CANADA="CA";
-
-
-//Handler name
-var SCRIPT_OBJECT_NAME=					"RegulatoryAddressHandler";
-
-//Action Globals
-var SPONSOR_COUNTRY_CHANGED_ACTION=		"sponsor_country_changed";
-var CLINICAL_COUNTRY_CHANGED_ACTION=		"clinical_country_changed";
-var CTS_COUNTRY_CHANGED_ACTION=		"cts_country_changed";
-var QUI_COUNTRY_CHANGED_ACTION=		"qui_country_changed";
-var REBA_COUNTRY_CHANGED_ACTION=		"reba_country_changed"
-
-
-//FORM NODES (FN)
-
-var SPONSOR_PROVINCE_FN=cFormNodeManager.getFormNodeForKey("sponsorProvince");
-var SPONSOR_POSTAL_CODE_FN=cFormNodeManager.getFormNodeForKey("sponsorPostalCode");
-
-var CLINICAL_PROVINCE_FN=cFormNodeManager.getFormNodeForKey("clinicalProvince");
-var CLINICAL_POSTAL_CODE_FN=cFormNodeManager.getFormNodeForKey("clinicalPostalCode");
-
-var CTS_PROVINCE_FN=cFormNodeManager.getFormNodeForKey("ctsProvince");
-var CTS_POSTAL_CODE_FN=cFormNodeManager.getFormNodeForKey("ctsPostalCode");
-
-
-var QUI_PROVINCE_FN=cFormNodeManager.getFormNodeForKey("quiProvince");
-var QUI_POSTAL_CODE_FN=cFormNodeManager.getFormNodeForKey("quiPostalCode");
-
-var REBA_PROVINCE_FN=cFormNodeManager.getFormNodeForKey("rebaProvince");
-var REBA_POSTAL_CODE_FN=cFormNodeManager.getFormNodeForKey("rebaPostalCode");
-
-
-
-
-_initialize();
-
-
-/* Action Handler
-*
-*
-*
-*/
-function actionPerformed(anEvent)
-{
-	switch(anEvent.getActionCommand())
-	{
-		
-		case SPONSOR_COUNTRY_CHANGED_ACTION:
-				_sponsorInfoCountryChanged(SPONSOR_PROVINCE_FN,SPONSOR_POSTAL_CODE_FN);					
-			break;
-			
-				case CLINICAL_COUNTRY_CHANGED_ACTION:
-				_clinicalCountryChanged(CLINICAL_PROVINCE_FN,CLINICAL_POSTAL_CODE_FN);					
-			break;
-			
-				case CTS_COUNTRY_CHANGED_ACTION:
-				_ctsCountryChanged(CTS_PROVINCE_FN,CTS_POSTAL_CODE_FN);					
-					
-			break;
-				case QUI_COUNTRY_CHANGED_ACTION:
-				_quiCountryChanged(QUI_PROVINCE_FN,QUI_POSTAL_CODE_FN);					
-			break;
-			
-				case REBA_COUNTRY_CHANGED_ACTION:
-				_rebaCountryChanged(REBA_PROVINCE_FN,REBA_POSTAL_CODE_FN);					
-			break;
-			 	 
-						
-		default:
-			throw cException.createInstance(SCRIPT_OBJECT_NAME
-				  + ".actionPerformed() - unrecognized event '" 
-				  + anEvent.getActionCommand() + "'.", "UnsupportedAction");
-	}//switch
-}//end fn
-
-
-/*
-* updates the UI based on the submission type that has been selected
-*
-*
-*
-*
-*/
-
-/*
-*	relies on core delegate for updating address and state based on County
-*	@param province_formNode- the province droplist to update
-*	@param postal_formNode- the postal code textbox to update
-*	@returns null
-*
-*
-*
-**/
-function _applicantCountryChanged(province_formNode,postal_formNode){
-	// Update correct labels to province/state and postal/state code and
-	// clear the value entered in the postal/state code field
-	province_formNode.updateUI();
-	postal_formNode.updateUI();
-	postal_formNode.getNodeInstance().rawValue = null;	
-	//app.alert("test");
-}//end fun
-
-
-
-function _sponsorInfoCountryChanged(province_formNode,postal_formNode){
-
-	//update the province, postal code labels
-	_applicantCountryChanged(province_formNode,postal_formNode);
-	
-}//end fn
-
-function _clinicalCountryChanged(province_formNode,postal_formNode){
-
-	//update the province, postal code labels
-	_applicantCountryChanged(province_formNode,postal_formNode);
-		
-}//end fn
-
-function _ctsCountryChanged(province_formNode,postal_formNode){
-
-	//update the province, postal code labels
-	_applicantCountryChanged(province_formNode,postal_formNode);
-	
-}//end fn
-
-
-function _quiCountryChanged(province_formNode,postal_formNode){
-
-	//update the province, postal code labels
-	_applicantCountryChanged(province_formNode,postal_formNode);
-		
-}//end fn
-
-function _rebaCountryChanged(province_formNode,postal_formNode){
-
-	//update the province, postal code labels
-	_applicantCountryChanged(province_formNode,postal_formNode);
-	
-}//end fn
-
-</script>
-                  <?templateDesigner expand 1?></variables>
-               <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 0?></subform>
          <subform h="50mm" name="HCeForm" w="100mm">
             <subform layout="tb" name="config" w="100mm">
                <keep intact="contentArea"/>
@@ -4501,7 +4410,8 @@ var content = {
 
 formType: "HCeForm",
 formVersion: "00.01.00",
-
+CANADA:	"CA",
+USA:	"US",
 //Overrides
 //NodeValidator_formatValidator: "",
 Log_logLevel: cLog.LEVEL_TRACE,
@@ -4521,19 +4431,42 @@ Log_writeToFile: false,
 
 /** Global Variables **/
 
-var cFormNodeManager = script.core.model.FormNodeManager;
-var cResourceManager = script.core.lang.ResourceManager;
-var cHCeFormModel=script.HCeForm.model.HCeFormMain;
-//var cAddressHandler=script.RegulatoryAddresses.control.RegulatoryAddressHandler;
-//var cDrugFormulationHandler=script.HCeForm.control.part2.DrugFormulationHandler;
-//var cInstructHandler=HCeForm.control.InstructionsHandler;
-//var cDrugNotificationHandler=script.HCeForm.control.part1.DrugNotificationHandler;
-//var cPart2GeneralHandler=script.HCeForm.control.part2.GeneralHandler; 
-var cException = script.core.util.Exception;
+var cFormNodeManager = 	script.core.model.FormNodeManager;
+var cResourceManager = 		script.core.lang.ResourceManager;
+var cHCeFormModel=			script.HCeForm.model.HCeFormMain;
+var cException = 			script.core.util.Exception;
+var cLog = 					script.core.util.Log;
+var cUiUtil=					script.core.util.UiUtil;
+var cFailureReporter=		script.core.validation.FailureReporter;
+
+var cAddressHandler=		script.HCeForm.control.RegulatoryAddressHandler;
+
 //action Global
-var LANGUAGE_CHANGE="language_change";
+var LANGUAGE_CHANGE=				"language_change";
+var INITIALIZE_FORM_ACTION=		"init_form";
+var SET_INVESTIGATOR_NAME=		"set_name";
+var HIDE_INSTRUCTIONS=			"hideInstructions";
+var SHOW_INSTRUCTIONS=			"showInstructions";
+var LOCK_FORM=					"lockForm";
+
+// FORM Nodes
+
+//instructions
+var INSTRUCTIONS_SF_FN=cFormNodeManager.getFormNodeForKey("sfInstructionsContent"); 
+
+//3c investigator
+var QI_GIVEN_NAME_FN=cFormNodeManager.getFormNodeForKey("section3BtxtGivenName"); 
+var QI_SURNAME_FN=cFormNodeManager.getFormNodeForKey("section3BtxtInitials");
+var QI_INITIALS_FN=cFormNodeManager.getFormNodeForKey("section3BtxtSurname");
+var QI_TITLE_FN=cFormNodeManager.getFormNodeForKey("section3BtxtTitle");
+///attestations
+var ATTEST_GIVEN_NAME_FN=cFormNodeManager.getFormNodeForKey("txtGivenNameAttestation");
+var ATTEST_SURNAME_FN=cFormNodeManager.getFormNodeForKey("txtSurnameAttestation");
+var ATTEST_TITLE_FN=cFormNodeManager.getFormNodeForKey("txtTitleAttestation");
 
 
+
+//SCRIPT NAME
 var SCRIPT_OBJECT_NAME="FormHandler";
 
 
@@ -4548,14 +4481,33 @@ function actionPerformed(anEvent)
 {
 	switch(anEvent.getActionCommand())
 	{
+
+		case INITIALIZE_FORM_ACTION:
+			 initialize();
+			break;
+		
 		case LANGUAGE_CHANGE:
-			
 			cHCeFormModel.setLanguage(anEvent.getSource().rawValue);
 			_updateFormLanguage();
 			break;
+		
+		case SET_INVESTIGATOR_NAME:
+				//implemented Oct 27
+				_updateAttestationName();
+			break;
+			
+		case HIDE_INSTRUCTIONS	:
+		case SHOW_INSTRUCTIONS:	
+				 toggleInstructionsVisiblity(anEvent.getActionCommand());
+			break;	
+			
+		case LOCK_FORM:	
+			 _finalizeForm();	
+			 break;
+			
 		default:
 			throw cException.createInstance(SCRIPT_OBJECT_NAME
-				  + ".actionPerformed() - unrecognized event '" 
+				  + ".actionPerformed() - initialize Form '" 
 				  + anEvent.getActionCommand() + "'.", "UnsupportedAction");
 	}
 }
@@ -4571,26 +4523,262 @@ function actionPerformed(anEvent)
 function initialize(){
 	
 	
-	//cInstructHandler.initialize();
-	//cAddressHandler.initialize();
-	//cDrugFormulationHandler.initialize();
-	//cDrugNotificationHandler.initialize();
-	//cPart2GeneralHandler.initialize();
-	_updateFormLanguage();	
+		_updateFormLanguage();	
+		toggleInstructionsVisiblity(HIDE_INSTRUCTIONS);
+		//initialize other controllers
+		cAddressHandler.initialise();
+}
+
+
+
+/********* Private functions *****/
+
+function _initializeFormNodes(){
+
+	try{
+		cControllerUtil.checkFormNode(QI_GIVEN_NAME_FN,SCRIPT_OBJECT_NAME,"QI_GIVEN_NAME_FN");
+		cControllerUtil.checkFormNode(QI_SURNAME_FN,SCRIPT_OBJECT_NAME,"QI_SURNAME_FN");
+		cControllerUtil.checkFormNode(QI_INITIALS_FN,SCRIPT_OBJECT_NAME,"QI_INITIALS_FN");
+		cControllerUtil.checkFormNode(QI_TITLE_FN,SCRIPT_OBJECT_NAME,"QI_TITLE_FN");
+		cControllerUtil.checkFormNode(ATTEST_GIVEN_NAME_FN,SCRIPT_OBJECT_NAME,"ATTEST_GIVEN_NAME_FN");
+		cControllerUtil.checkFormNode(ATTEST_SURNAME_FN,SCRIPT_OBJECT_NAME,"ATTEST_SURNAME_FN");
+		cControllerUtil.checkFormNode(ATTEST_TITLE_FN,SCRIPT_OBJECT_NAME,"ATTEST_TITLE_FN");
+		cControllerUtil.checkFormNode(INSTRUCTIONS_CONTENT_FN,SCRIPT_OBJECT_NAME,"INSTRUCTIONS_CONTENT_FN");
+			
+					
+	 }
+	 catch (exception)
+	{
+		cLog.critical(cResourceManager.get("error_application", SCRIPT_OBJECT_NAME+"._initialize()"), exception);
+	}
+
+}//end fn
+
+
+
+
+
+function _updateFormLanguage()
+{
+	cResourceManager.setCurrentLanguage(cHCeFormModel.getLanguage());
+	cFormNodeManager.getBaseNode().updateUI();
+}
+
+
+function _updateAttestationName(){
+
+	var qi_givenName=QI_GIVEN_NAME_FN.getNodeInstance();
+	var qi_surname=QI_SURNAME_FN.getNodeInstance();
+	var qi_title=QI_TITLE_FN.getNodeInstance();
+	var attest_givenName=ATTEST_GIVEN_NAME_FN.getNodeInstance();
+	var attest_surname=ATTEST_SURNAME_FN.getNodeInstance();
+	var attest_title=ATTEST_TITLE_FN.getNodeInstance();
+		//set the attestation fields to the investigator
+	attest_givenName.rawValue=qi_givenName.rawValue;	
+	attest_surname.rawValue=qi_surname.rawValue;
+	attest_title.rawValue=qi_title.rawValue;
+}
+
+/**
+*	Toggles if the instructions are visible or hidden
+*	@param command- indicates if hidden or visbible, using the class globals
+*	@returns null
+*	@throws Exception if the command is not an expected type
+*/
+function toggleInstructionsVisiblity(command){
+	
+	var instructionsContainerNode;
+	var cException = script.core.util.Exception;
+	instructionsContainerNode=INSTRUCTIONS_SF_FN.getNodeInstance();
+	
+	
+	if(command===HIDE_INSTRUCTIONS){
+		cUiUtil.hide(instructionsContainerNode);
+	}else if(command===SHOW_INSTRUCTIONS){
+		cUiUtil.show(instructionsContainerNode);
+		
+	}else{
+		throw cException.createInstance("InstructionVisiblity function encountered an illegal command. "
+				+"Value: "+command+ "is not a valid command"
+		 );
+	}
+
+}//end toggleInstructionsVisiblity
+
+
+
+function _finalizeForm(){
+
+	var baseNode=cFormNodeManager.getBaseNode();
+	var validationFailures=baseNode.validateNode(null,true);
+	 //cAccessibility.updateColorErrorsForAccessibility(PAGE1_SF_FN.getNodeInstance().parent);
+	 if(validationFailures == null){
+		//_setFinalizeDate();
+		// _lockForm("false");
+		xfa.host.messageBox(cResourceManager.get("finalizeSuccess"),"",3); 
+		//xfa.host.messageBox(cResourceManager.get("finalizeSuccess"),"",3);
+		//xfa.host.messageBox(cResourceManager.get("saveForm"),"",3);
+	}else{
+	
+		xfa.host.messageBox(cFailureReporter.getFailureSummary(validationFailures)); 
+		//xfa.host.messageBox(cResourceManager.get("error_finalizedFail"),"",3); //good
+	
+	}	
+
+}
+</script>
+                  <script contentType="application/x-javascript" name="RegulatoryAddressHandler">
+//imports
+var cLog = script.core.util.Log;
+var cControllerUtil = script.core.util.ControllerUtil;
+var cResourceManager = script.core.lang.ResourceManager;
+var cFormNodeManager = script.core.model.FormNodeManager;
+var cInstanceManagerUtil = script.core.util.InstanceManagerUtil; 
+var cTypeEnforcer=script.core.util.TypeEnforcer;
+var cTypeChecker=script.core.util.TypeChecker;
+var cUiUtil=script.core.util.UiUtil;
+var cStringUtil=script.core.util.StringUtil;
+var cException = script.core.util.Exception;
+var cConfigurationManager = script.core.util.ConfigurationManager;
+var cAddressUtil= script.HCeForm.util.AddressUtil; 
+
+//Globals
+var CANADA=	cConfigurationManager.get("CANADA");
+var  USA=	cConfigurationManager.get("USA");
+
+//Handler name
+var SCRIPT_OBJECT_NAME=					"RegulatoryAddressHandler";
+
+//Action Globals
+var SPONSOR_COUNTRY_CHANGED_ACTION=		"sponsor_country_changed";
+var CLINICAL_COUNTRY_CHANGED_ACTION=	"clinical_country_changed";
+
+
+
+//FORM NODES (FN)
+
+//Sponsor address form nodes
+var SPONSOR_PROVINCE_FN=cFormNodeManager.getFormNodeForKey("sponsorProvince");
+var SPONSOR_POSTAL_CODE_FN=cFormNodeManager.getFormNodeForKey("sponsorPostalCode");
+var SPONSOR_PROVINCE_TXT_FN=cFormNodeManager.getFormNodeForKey("section2BtxtProvince");
+var SPONSOR_COUNTRY_DDL_FN=cFormNodeManager.getFormNodeForKey("sponsorCountry");
+
+//Clinical address form nodes
+var CLINICAL_PROVINCE_FN=cFormNodeManager.getFormNodeForKey("clinicalProvince");
+var CLINICAL_POSTAL_CODE_FN=cFormNodeManager.getFormNodeForKey("clinicalPostalCode");
+var CLINICAL_PROVINCE_TXT_FN=cFormNodeManager.getFormNodeForKey("section2CtxtProvince");
+var CLINICAL_COUNTRY_DDL_FN=cFormNodeManager.getFormNodeForKey("clinicalCountry");
+
+
+
+
+_initializeFormNodes();
+
+
+/* Action Handler
+*
+*
+*
+*/
+function actionPerformed(anEvent)
+{
+	switch(anEvent.getActionCommand())
+	{
+		
+		case SPONSOR_COUNTRY_CHANGED_ACTION:
+		cLog.trace("Country"+anEvent.getSource().rawValue);
+				 cAddressUtil.countryChanged(SPONSOR_PROVINCE_FN,SPONSOR_POSTAL_CODE_FN);
+				 cAddressUtil.setProvinceUIState(anEvent.getSource().rawValue,SPONSOR_PROVINCE_FN.getNodeInstance(),SPONSOR_PROVINCE_TXT_FN.getNodeInstance())	;					
+			break;
+			
+				case CLINICAL_COUNTRY_CHANGED_ACTION:
+				cAddressUtil.countryChanged(CLINICAL_PROVINCE_FN,CLINICAL_POSTAL_CODE_FN);
+				cAddressUtil.setProvinceUIState(anEvent.getSource().rawValue,CLINICAL_PROVINCE_FN.getNodeInstance(),CLINICAL_PROVINCE_TXT_FN.getNodeInstance());					
+			break;
+		
+						
+		default:
+			throw cException.createInstance(SCRIPT_OBJECT_NAME
+				  + ".actionPerformed() - unrecognized event '" 
+				  + anEvent.getActionCommand() + "'.", "UnsupportedAction");
+	}//switch
+}//end fn
+
+
+function initialise(){
+
+	   cAddressUtil.setProvinceUIState(SPONSOR_COUNTRY_DDL_FN.getNodeInstance().rawValue,SPONSOR_PROVINCE_FN.getNodeInstance(),SPONSOR_PROVINCE_TXT_FN.getNodeInstance());
+	   cAddressUtil.setProvinceUIState(CLINICAL_COUNTRY_DDL_FN.getNodeInstance().rawValue,CLINICAL_PROVINCE_FN.getNodeInstance(),CLINICAL_PROVINCE_TXT_FN.getNodeInstance());
 	
 }
 
 
 
+/*
+*	relies on the core delegate for updating  province droplist and postal code labels based on Country
+*	@param province_formNode- the province droplist to update
+*	@param postal_formNode- the postal code textbox to update
+*	@returns null
+*
+*
+*
+**/
+function _countryChanged(provinceDdl_formNode,postal_formNode){
+	// Update correct labels to province/state and postal/state code and
+	// clear the value entered in the postal/state code field
+	provinceDdl_formNode.updateUI();
+	postal_formNode.updateUI();
+}//end fun
+
+
+/*
+*	Toggles between the state textbox and the province droplist
+*   When the country is Canada or the US, shows the droplist, otherwise shows the textbox
+* 	@param countryValue- the value of the country to test against
+*	@param provinceDdlInstance- the adobe node of the province/state droplist
+*	@param provinceTextInstance- the adobe node of the state textbox
+*	@returns null
+*	@requires: CANADA and USA as configuration variables in the form
+*
+*
+**/
+function _setProvinceUIState(countryValue,provinceDdlInstance,provinceTextInstance){
+	if(countryValue===CANADA || countryValue===USA){
+		//make droplist instance visible
+		provinceTextInstance.rawValue="";
+		cUiUtil.hide(provinceTextInstance);
+		cUiUtil.show(provinceDdlInstance);
+	}else{
+		//make text box visible
+		provinceDdlInstance.rawValue=null;
+		cUiUtil.show(provinceTextInstance);
+		cUiUtil.hide(provinceDdlInstance);
+	
+	}
+
+}
+
+function _initializeFormNodes(){
+
+		try{
+		cControllerUtil.checkFormNode(SPONSOR_PROVINCE_FN,SCRIPT_OBJECT_NAME,"SPONSOR_PROVINCE_FN");
+		cControllerUtil.checkFormNode(SPONSOR_POSTAL_CODE_FN,SCRIPT_OBJECT_NAME,"SPONSOR_POSTAL_CODE_FN");
+		cControllerUtil.checkFormNode(SPONSOR_PROVINCE_TXT_FN,SCRIPT_OBJECT_NAME,"SPONSOR_PROVINCE_TXT_FN");
+		cControllerUtil.checkFormNode(CLINICAL_PROVINCE_FN,SCRIPT_OBJECT_NAME,"CLINICAL_PROVINCE_FN");
+		cControllerUtil.checkFormNode(CLINICAL_POSTAL_CODE_FN,SCRIPT_OBJECT_NAME,"CLINICAL_POSTAL_CODE_FN");
+		cControllerUtil.checkFormNode(CLINICAL_PROVINCE_TXT_FN,SCRIPT_OBJECT_NAME,"CLINICAL_PROVINCE_TXT_FN");
+		cControllerUtil.checkFormNode(SPONSOR_COUNTRY_DDL_FN,SCRIPT_OBJECT_NAME,"SPONSOR_COUNTRY_DDL_FN");
+		cControllerUtil.checkFormNode(CLINICAL_COUNTRY_DDL_FN,SCRIPT_OBJECT_NAME,"CLINICAL_COUNTRY_DDL_FN");
+
+
+	 }
+	 catch (exception)
+	{
+		cLog.critical(cResourceManager.get("error_application", SCRIPT_OBJECT_NAME+"._initializeFormNode()"), exception);
+	}
 
 
 
-
-/********* Private functions *****/
-function _updateFormLanguage()
-{
-	cResourceManager.setCurrentLanguage(cHCeFormModel.getLanguage());
-	cFormNodeManager.getBaseNode().updateUI();
 }
 </script>
                   <?templateDesigner expand 1?></variables>
@@ -4639,23 +4827,6 @@ function setLanguage(langValue)
 
 
 
-/**
- * Describes this object. This is implemented in all objects since their
- * toString() cannot be overridden!
- * @return the description of this object.
- */
-function asString()
-{		
-	var bufferArray = []; // Array used to simplify comma delimiting.
-
-	bufferArray[bufferArray.length] = "language = " + getLanguage();
-	//bufferArray[bufferArray.length] = "finalized = " + isFinalized();
-	//bufferArray[bufferArray.length] = "submission Type = " +  getSubType();
-			
-	return "HCeForm[" + bufferArray.join(", ") + "]";		
-}
-
-
 
 
 
@@ -4668,7 +4839,6 @@ function asString()
 
 function _initialize(){
 	 var languageFormNode=cFormNodeManager.getFormNodeForKey("languageChoice");
-	cLog.trace("languageFormNode 1111 is " + languageFormNode);									  
 	
 	
 	 cControllerUtil.checkFormNode(languageFormNode,"form","languageFormNode");
@@ -5268,6 +5438,133 @@ function makeEditable() {
 }
 </script>
                   <?templateDesigner expand 1?></variables>
+               <subform w="100mm" h="50mm" name="delegate">
+                  <variables>
+                     <script contentType="application/x-javascript" name="SponsorPostalCodeDelegate">
+//imports
+var cLog = 							script.core.util.Log;
+var cPostalCodeFormatDelegate=		script.HCeForm.model.delegate.PostalCodeFormatDelegate;
+/*******************************************************************************
+ * Gets a new PostalCodeFormatDelegate. Adobe does not allow object instances
+ * to be created outside of their packaging, so it must be done here.
+ * Note that this is only intended for use by FormNodeFactory. All instances
+ * should be created by that class.
+ * @return the newPostalCodeFormatDelegate instance
+ */
+function createInstance()
+{
+	var oDelegate=  cPostalCodeFormatDelegate.createInstance();
+	oDelegate.setErrorText("error_sponserZipFormat");
+	return oDelegate;
+}
+</script>
+                     <script contentType="application/x-javascript" name="ContactPostalCodeDelegate">
+
+
+//imports
+var cLog = 							script.core.util.Log;
+var cPostalCodeFormatDelegate=		script.HCeForm.model.delegate.PostalCodeFormatDelegate;
+/*******************************************************************************
+ * Gets a new PostalCodeFormatDelegate. Adobe does not allow object instances
+ * to be created outside of their packaging, so it must be done here.
+ * Note that this is only intended for use by FormNodeFactory. All instances
+ * should be created by that class.
+ * @return the newPostalCodeFormatDelegate instance
+ */
+function createInstance()
+{
+	var oDelegate=  cPostalCodeFormatDelegate.createInstance();
+	oDelegate.setErrorText("error_contactZipFormat");
+	return oDelegate;
+}
+</script>
+                     <script usehref="..\..\fragments\delegates\PostalCodeFormatDelegate.xdp#som($template.form1.#subform.#variables.PostalCodeFormatDelegate)"/>
+                     <script usehref="..\..\fragments\delegates\EmailFormatDelegate.xdp#som($template.form1.#subform.#variables.EmailFormatDelegate)"/>
+                     <script contentType="application/x-javascript" name="ContactEmailFormatDelegate">
+
+//imports
+var cLog = 						script.core.util.Log;
+var cEmailFormatDelegate=		script.HCeForm.model.delegate.EmailFormatDelegate;
+/*******************************************************************************
+ * Gets a new PostalCodeFormatDelegate. Adobe does not allow object instances
+ * to be created outside of their packaging, so it must be done here.
+ * Note that this is only intended for use by FormNodeFactory. All instances
+ * should be created by that class.
+ * @return the Delegate instance
+ */
+function createInstance()
+{
+	var oDelegate=  cEmailFormatDelegate.createInstance();
+	oDelegate.setErrorText("error_contactEmail");
+	return oDelegate;
+}
+</script>
+                     <script contentType="application/x-javascript" name="QualInvestEmailFormatDelegate">
+
+
+//imports
+var cLog = 						script.core.util.Log;
+var cEmailFormatDelegate=		script.HCeForm.model.delegate.EmailFormatDelegate;
+/*******************************************************************************
+ * Gets a new PostalCodeFormatDelegate. Adobe does not allow object instances
+ * to be created outside of their packaging, so it must be done here.
+ * Note that this is only intended for use by FormNodeFactory. All instances
+ * should be created by that class.
+ * @return the newPostalCodeFormatDelegate instance
+ */
+function createInstance()
+{
+	var oDelegate=  cEmailFormatDelegate.createInstance();
+	oDelegate.setErrorText("error_qualInvestEmail");
+	return oDelegate;
+	//return null
+}
+</script>
+                     <script usehref="..\..\fragments\delegates\TelephoneFormatDelegate.xdp#som($template.form1.#subform.#variables.TelephoneFormatDelegate)"/>
+                     <script contentType="application/x-javascript" name="ContactPhoneFormatDelegate">
+//imports
+var cLog = 							script.core.util.Log;
+var cPhoneFormatDelegate=		script.HCeForm.model.delegate.TelephoneFormatDelegate;
+
+/*******************************************************************************
+ * Gets a new PostalCodeFormatDelegate. Adobe does not allow object instances
+ * to be created outside of their packaging, so it must be done here.
+ * Note that this is only intended for use by FormNodeFactory. All instances
+ * should be created by that class.
+ * @return the newPostalCodeFormatDelegate instance
+ */
+function createInstance()
+{
+	var oDelegate=   cPhoneFormatDelegate.createInstance();
+	oDelegate.setErrorText("error_contactPhone");
+	oDelegate.setCountryNodeAlias ("clinicalCountry");
+	return oDelegate;
+}
+</script>
+                     <script contentType="application/x-javascript" name="QualInvestPhoneFormatDelegate">
+
+
+//imports
+var cLog = 							script.core.util.Log;
+var cPhoneFormatDelegate=		script.HCeForm.model.delegate.TelephoneFormatDelegate;
+
+/*******************************************************************************
+ * Gets a new PostalCodeFormatDelegate. Adobe does not allow object instances
+ * to be created outside of their packaging, so it must be done here.
+ * Note that this is only intended for use by FormNodeFactory. All instances
+ * should be created by that class.
+ * @return the newPostalCodeFormatDelegate instance
+ */
+function createInstance()
+{
+	var oDelegate=   cPhoneFormatDelegate.createInstance();
+	oDelegate.setErrorText("error_qualInvestPhone");
+	oDelegate.setCountryNodeAlias ("quiCountry");
+	return oDelegate;
+}
+</script>
+                     <?templateDesigner expand 1?></variables>
+                  <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
             <subform h="50mm" name="nodeDefinitions" w="100mm">
                <variables>
@@ -5329,7 +5626,7 @@ lblInstructions: {
 			
 }
 </script>
-                  <script contentType="application/x-javascript" name="RebAttestation">
+                  <script contentType="application/x-javascript" name="main">
 var content = {
 sfPart1: {
 	somExpression: "sfPart1",
@@ -5451,7 +5748,7 @@ sponsorPostalCode: {
 	somExpression: "txtPostalCode",
 	toolTipKey:	"sponsorPostalCodeTT",
 	parentNodeKey: "sfSponsorInfoSectionB",
-	delegate:		"script.core.model.delegate.PostalZipDelegate",
+	delegate:		"script.HCeForm.model.delegate.SponsorPostalCodeDelegate",
 	fieldNumber: "10"},
 
 sfContactInfoSectionC: {
@@ -5552,9 +5849,9 @@ section2CtxtProvince: {
 
 clinicalPostalCode: {
 	somExpression: "txtPostalCode",
-	toolTipKey:	"clinicalPostalCodeTT",
-	parentNodeKey: "sfContactInfoSectionC",
-	delegate:		"script.core.model.delegate.PostalZipDelegate",
+	toolTipKey:		"clinicalPostalCodeTT",
+	parentNodeKey: 	"sfContactInfoSectionC",
+	delegate:		"script.HCeForm.model.delegate.ContactPostalCodeDelegate",
 	fieldNumber: "17"
 	},
 
@@ -5571,6 +5868,7 @@ section2CtxtTelephone: {
 	parentNodeKey: "sfContactInfoSectionC",
 	toolTipKey:	"section2CtxtTelephoneTT",
 	labelKey: "txtTelephone",
+	delegate: "script.HCeForm.model.delegate.ContactPhoneFormatDelegate",
 	fieldNumber: "18"},
 
 section2CtxtExtension: {
@@ -5591,6 +5889,7 @@ section2CtxtEmail: {
 	parentNodeKey: "sfContactInfoSectionC",
 	toolTipKey:	"section2CtxtEmailTT",
 	labelKey: "txtEmail",
+	delegate:	"script.HCeForm.model.delegate.ContactEmailFormatDelegate",
 	fieldNumber: "20"},
 
 sfPart3: {
@@ -5636,7 +5935,7 @@ ctsCountry: {
 	somExpression: "ddlCountry",
 	parentNodeKey: "sfClinicalTrialSectionA",
 	toolTipKey:	"ctsCountryTT",
-	//pickListKey:	"countryList",
+	pickListKey:	"countryList",
 	labelKey: "ddlCountry",
 	fieldNumber: "24"},
 
@@ -5728,7 +6027,7 @@ quiCountry: {
 	somExpression: "ddlCountry",
 	parentNodeKey: "sfQISectionB",
 	toolTipKey:	"quiCountryTT",
-	//pickListKey:	"countryList",
+	pickListKey:	"countryList",
 	labelKey: "ddlCountry",
 	fieldNumber: "34"},
 
@@ -5755,7 +6054,8 @@ section3BtxtTelephone: {
 	somExpression: "txtTelephone",
 	parentNodeKey: "sfQISectionB",
 	toolTipKey:	"section3BtxtTelephoneTT",
-	labelKey: "txtTelephone",
+	labelKey: 	"txtTelephone",
+	delegate:	"script.HCeForm.model.delegate.QualInvestPhoneFormatDelegate",
 	fieldNumber: "37"},
 
 section3BtxtExtension: {
@@ -5776,6 +6076,7 @@ section3BtxtEmail: {
 	parentNodeKey: "sfQISectionB",
 	toolTipKey:	"section3BtxtEmailTT",
 	labelKey: "txtEmail",
+	delegate:"script.HCeForm.model.delegate.QualInvestEmailFormatDelegate",
 	fieldNumber: "39"},
 
 
@@ -6307,10 +6608,7 @@ lblCertificationHeader : "PART 4 - ATTESTATION",
  //lblCertifyPoint:	"In respect of the identified clinical trial, I certify, as the qualified investigator for this site that: \n\n 1. I am a physician or dentist and a member in good standing of a professional medical or dental association as defined in Part C Division 5 of the Food and Drug \n\nRegulations;\n\n2. I will supervise the medical care and medical decisions respecting this clinical trial at this site;\n\n3. I will conduct this clinical trial in accordance with Good Clinical Practices; and\n\n4. I will immediately on discontinuance of the clinical trial by the sponsor, in its entirety or at a clinical trial site, inform both the clinical trial subjects and the Research Ethics Board for this site of the discontinuance, provide them with the reasons for the discontinuance, and advise them in writing of any potential risks to the health of clinical trial subjects or other persons.",
 //txtRepresentative:	"Name, Title and Signature of Research Ethics Board Representative",
 
-submissionList:[
-		["1", "Clinical Trial Application (CTA)"],
-		["2", "Clinical Trial Application Amendment (CTA-A)"]
-		],
+
 salutationList:[
 	["mr", "Mr."],
 ["ms", "Ms."],
@@ -6397,11 +6695,7 @@ lblREBChair:	"Nom du président du comité d'éthique pour la recherche",
 lblCertificationHeader : "PARTIE 4 – ATTESTATION",
 //lblCertifyPoint:	"1. la composition de ce comité d'éthique pour la recherche satisfait aux exigences pertinentes \n\n2. le comité d'éthique pour la recherche exerce ses activités d'une manière conforme aux bonnes pratiques cliniques; \n\n3. le comité d'éthique pour la recherche a examiné et approuvé le formulaire de consentement éclairé et le protocole pour l'essai qui sera mené par le chercheur qualifié susmentionné au lieu d'essai indiqué. L'approbation et les opinions du présent comité ont été consignées par écrit.",
 //txtRepresentative:	"Nom, titre et signature du représentant du comité d'éthique pour la recherche",
-submissionList:[
-		["1", "Demande d'essai clinique (DEC)"],
-		["2", "Modification de demande d'essai clinique (MDEC)"]
-		],
-		
+
 salutationList:[
 ["mr", "M."],
 ["ms", "Mlle"],
@@ -6422,6 +6716,53 @@ lblInstructionsKey: "Ce formulaire contient des champs obligatoires. Pour vous a
 
 }
 </script>
+                  <script contentType="application/x-javascript" name="error_en">
+var content={	
+
+	error_sponserZipFormat:		"For question 10, ",
+	error_contactZipFormat:		"For question 17, ", 
+	error_contactEmail:			"For question 20, ",
+	error_qualInvestEmail:		"For question 39, ",
+	error_contactPhone:			"For question 18",
+	error_qualInvestPhone:		"For question 37",
+}
+</script>
+                  <script contentType="application/x-javascript" name="error_fr">
+
+var content={	
+	
+	error_sponserZipFormat:		"Pour la question 10, ",
+	error_contactZipFormat:		"Pour la question 17, ", 
+	error_contactEmail:			"Pour la question 20, ",
+	error_qualInvestEmail:		"Pour la question 39, ",
+	error_contactPhone:			"Pour la question 18",
+	error_qualInvestPhone:		"Pour la question 37",
+}
+</script>
+                  <script contentType="application/x-javascript" name="droplists_en">
+var content={
+
+		submissionList:[
+		["1", "Clinical Trial Application (CTA)"],
+		["2", "Clinical Trial Application Amendment (CTA-A)"]
+		],
+							
+	}
+</script>
+                  <script contentType="application/x-javascript" name="droplists_fr">
+
+var content={
+
+		submissionList:[
+						["1", "Demande d'essai clinique (DEC)"],
+						["2", "Modification de demande d'essai clinique (MDEC)"]
+						],
+							
+					
+	}
+</script>
+                  <script usehref="..\..\fragments\delegates\resources\errorDelegate_en.xdp#som($template.form1.#subform.#variables.errorDelegate_en)"/>
+                  <script usehref="..\..\fragments\delegates\resources\errorDelegate_fr.xdp#som($template.form1.#subform.#variables.errorDelegate_fr)"/>
                   <?templateDesigner expand 1?></variables>
                <?templateDesigner expand 1?></subform>
             <subform h="50mm" name="util" w="100mm">
@@ -6462,6 +6803,7 @@ function removeSpecificSubformInstance(instanceManager,sfInstance){
 
 
 </script>
+                  <script usehref="..\..\fragments\util\AddressUtil.xdp#som($template.form1.#subform.#variables.AddressUtil)"/>
                   <?templateDesigner expand 1?></variables>
                <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 1?></subform>
@@ -6983,11 +7325,11 @@ app.alert("validate ok");
 }
 </script>
                <?templateDesigner expand 1?></variables>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <variables>
             <script contentType="application/x-javascript" name="nodeDefinition">
 
-
+/*
 
 function nodeDefinition(outputField) {
 
@@ -7080,22 +7422,23 @@ function nodeDefinition(outputField) {
 
     //app.alert(allNode + node4Resource);
 }
-
+*/
 /**
  * testForRoot- determines is a given node is the root node
  *@param oNode- the node to test
  *@returns- boolean, true if a root node
  **/
-function testForRoot(oNode) {
+/*function testForRoot(oNode) {
 
     if (oNode.parent.name === "template" || oNode.parent.name === "form") {
         return true;
     }
     return false;
 }
+*/
 </script>
-            <script usehref="..\..\..\Users\hcuser\Desktop\eForms\Fragments\Accessibility.xdp#som($template.form1.script.#variables.Accessibility)"/>
-            <?templateDesigner expand 0?></variables>
+            <script usehref="..\..\fragments\Accessibility.xdp#som($template.form1.#subform.#variables.Accessibility)"/>
+            <?templateDesigner expand 1?></variables>
          <?templateDesigner expand 1?></subform>
       <variables>
          <script contentType="application/x-javascript" name="Globals">
@@ -7118,29 +7461,46 @@ var finalizedDate = new Date();
       <event activity="initialize" name="event__initialize">
          <script contentType="application/x-javascript">
 
-
+//cFormHandler.initialize();
 var cFormHandler=script.HCeForm.control.FormHandler;
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+var cSystem = script.core.System;
 
-cFormHandler.initialize();
+
+try{
+		// set up event object
+		var actionName = cFormHandler.INITIALIZE_FORM_ACTION;
+		var anActionEvent = cActionEvent.createInstance(actionName, this);
+		// deploy event to controller
+		cFormHandler.actionPerformed(anActionEvent);
+}
+catch(exception)
+{
+	cLog.warn("Problem with  form initialize::initialize", exception);
+}
+
+
+
 </script>
       </event>
       <event activity="preSave" ref="$host" name="event__preSave">
-         <script contentType="application/x-javascript">var cPart2GeneralHandler=script.HCeForm.control.part2.GeneralHandler;
+         <script contentType="application/x-javascript">//var cPart2GeneralHandler=script.HCeForm.control.part2.GeneralHandler;
 
-cPart2GeneralHandler.serializeModels();
+//cPart2GeneralHandler.serializeModels();
 </script>
       </event>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
-      <?templateDesigner expand 1?>
       <event activity="docReady" ref="$host" name="event__docReady">
-         <script contentType="application/x-javascript">if (xfa.host.name != "XFAPresentationAgent") {
-  event.target.zoomType = zoomtype.fitP;
-}
+         <script contentType="application/x-javascript">//if (xfa.host.name != "XFAPresentationAgent") {
+  //event.target.zoomType = zoomtype.fitP;
+//}
 
 </script>
       </event>
+      <?templateDesigner expand 1?>
       <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 292 81 000100080009000A000B000D000E000F0010001100120013001400150016001700180019001A001B001C00220023002400250026002700280029002A002D002E002F00300031003300340035003A003B00420043004400450046004700480049004A004B004C004D004E004F0050005100520053005400550056005700580059005A005B005C005E006F00CB00CE00CF00D2 ’()*,-./0123456789:;ABCDEFGHILMNOPRSTYZabcdefghijklmnopqrstuvwxyz{}–àçéè?>
-      <?renderCache.subset "Myriad Pro" 1 0 ISO-8859-1 4 188 49 0001000A000E000F0010001200130014001500220023002400250026002700280029002A002C002D002F00300031003200330034003500360037004200440045004600470048004A004D004E004F0050005100530054005500560057006F )-./1234ABCDEFGHIKLNOPQRSTUVacdefgilmnoprstuv–?>
+      <?renderCache.subset "Myriad Pro" 1 0 ISO-8859-1 4 196 51 0001000A000E000F0010001200130014001500220023002400250026002700280029002A002C002D002F003000310032003300340035003600370042004400450046004700480049004A004D004E004F0050005100530054005500560057005A006F )-./1234ABCDEFGHIKLNOPQRSTUVacdefghilmnoprstuvy–?>
       <?renderCache.subset "Myriad Pro" 0 1 ISO-8859-1 4 72 19 00010025002700330042004500460048004A004D004E004F0050005300540055005600D2 DFRadegilmnorstuè?>
    </subform>
    <?templateDesigner DefaultPreviewDynamic 1?>
@@ -7161,12 +7521,12 @@ cPart2GeneralHandler.serializeModels();
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner ValidationMessaging noMessages?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 122?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
-   <?templateDesigner SavePDFWithLog 0?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Zoom 114?></template>
+   <?templateDesigner SavePDFWithLog 0?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -7178,13 +7538,12 @@ cPart2GeneralHandler.serializeModels();
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
+         <tagged>0</tagged>
          <fontInfo>
             <embed>0</embed>
          </fontInfo>
-         <tagged>0</tagged>
          <version>1.7</version>
          <adobeExtensionLevel>5</adobeExtensionLevel>
       </pdf>
@@ -7420,15 +7779,15 @@ cPart2GeneralHandler.serializeModels();
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2015-09-04T14:49:08Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2015-10-30T16:22:37Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:7a153e4d-572f-4357-a423-34e440643f0a</xmpMM:DocumentID>
-         <xmpMM:InstanceID>uuid:778d6a1a-20b0-4aaf-99f9-731ce3c1f1b9</xmpMM:InstanceID>
+         <xmpMM:DocumentID>uuid:36d02643-2ddb-48ac-891d-04105192646a</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:476281e0-cbce-42a4-aa75-1c3cb37b799a</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <dc:format>application/pdf</dc:format>
