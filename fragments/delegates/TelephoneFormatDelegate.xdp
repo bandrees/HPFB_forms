@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2015-10-30T16:16:54Z" uuid="68780230-76e2-48ac-a35f-64062cfb49cc">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <?formServer defaultPDFRenderFormat acrobat9.1static?>
+   <subform name="form1" locale="en_CA" layout="tb">
+      <pageSet>
+         <pageArea>
+            <contentArea w="203.2mm" h="249.476mm" x="6.351mm" y="16.198mm" name="contentArea"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+         </pageArea>
+      </pageSet>
+      <subform>
+         <variables>
+            <script contentType="application/x-javascript" name="TelephoneFormatDelegate">
+//
+/*******************************************************************************
+ * An object that responds to information requests sent to a telephone/fax
+ * FormNode.
+ *
+ * Implements FormNodeDelegateInterface.
+ */
+
+//imports
+//imports
+var cLog = script.core.util.Log;
+var cResourceManager = 		script.core.lang.ResourceManager;
+var cConfigurationManager = script.core.util.ConfigurationManager;
+var cUiUtil = 						script.core.util.UiUtil;
+var cValidationFailure = 			script.core.validation.ValidationFailure;
+var cFormNodeManager = 				script.core.model.FormNodeManager;
+
+
+var _TELEPHONE_FORMAT_TYPE = "telephone";
+
+/*******************************************************************************
+ * Gets a new PostalZipDelegate. Adobe does not allow object instances to be
+ * created outside of their packaging, so it must be done here.
+ * Note that this is only intended for use by FormNodeFactory. All instances
+ * should be created by that class.
+ * @return the new PostalZipDelegate instance
+ */
+function createInstance()
+{
+	return new TelephoneFormatDelegateClass();
+}
+
+/**
+ * Class implementation
+ */
+function TelephoneFormatDelegateClass(somExpression)
+{
+	this.className = "TelephoneFormatDelegate";
+	this.errorResourceAlias="";
+	this.northAmerica_errorAlias="error_usPhoneNumError";
+	this.other_errorAlias="error_otherPhoneNumError";
+	this.countryDdlNodeAlias="";
+	this.formNode;
+
+	/**
+	 * Gets this node's default value, which is an internationalized value.
+	 * This returns null since this uses a picklist.
+	 * @param aNode the Adobe Node instance who's default value is required.
+	 * @return a String that contains the internationalized default value for
+	 *		   the passed Node. Null if this is not applicable.
+	 */
+    this.getDefaultValue = function(aNode)
+    {
+    	return null;
+	}
+	
+	/**
+	 * Sets alias 
+	 *
+	 * @param aliasName -the alias of the country set in the nodeDefinitions
+	 */
+	this.setCountryNodeAlias = function(aliasName)
+    {    	
+    		this.countryDdlNodeAlias=aliasName;
+    }
+	/* Sets custom error text 
+	 *
+	 * @param aFormNode the FormNode that is using this delegate.
+	 */
+	this.setErrorText = function(aliasName)
+    {    	
+    		this.errorResourceAlias=aliasName;
+    }
+	
+		
+	/**
+	 * Gets the type of format validation to be applied to data entered into
+	 * this node in the UI.
+	 * @param aNode the Adobe Node instance who's value must conform to a 
+	 *		  specific format.
+	 * @return a String that contains the type of format validation to be
+	 *		   applied to data entered into this node in the UI. These must be
+	 *		   types that are supported by the currently installed 
+	 *		   FormatValidator. Null if this is not applicable.
+	 */
+    this.getFormatType = function(aNode)
+    {
+    	return null;
+	}
+
+	/**
+	 * Gets this node's label to be displayed in the UI, which is an
+	 * internationalized value.
+	 * @param aNode the Adobe Node instance who's label is required.
+	 * @return a String that contains the internationalized UI label for the
+	 *		   passed Node. Null if this is not applicable.
+	 */
+    this.getLabel = function(aNode)
+    {
+    	return null;
+   	}
+
+	/**
+	 * Gets whether this node is mandatory (required).
+	 * @param aNode the Adobe Node instance who's mandatory setting is required.
+	 * @return a boolean - true if the country is Canada or the US, false if it
+	 *		   is any other value, null if there was no node passed.
+	 */
+	this.isMandatory = function(aNode)
+	{
+		return null;
+	}
+		
+	/**
+	 * Gets a string that defines the pick list to be displayed in the UI for
+	 * this node.
+	 * @param aNode the Adobe Node instance who's pick list is required.
+	 * @return a String that contains the definition of the pick list to be
+	 *		   displayed in the UI for this node. The format is:
+	 *		   "displayValue1, code1, displayValue2, code2...". Null if
+	 *		   this is not applicable.
+	 */
+    this.getPickListValues = function(aNode)
+    {
+    	return null;
+	}
+		
+	/**
+	 * Gets this node's tool tip to be displayed in the UI, which is an
+	 * internationalized value. In this case it is null, since these are
+	 * dependant on the subform that the field is in (must be handled by the
+	 * FormNode itself).
+	 * @param aNode the Adobe Node instance who's tool tip is required.
+	 * @return a String that contains the internationalized UI tool tip for the
+	 *		   passed Node. Null if this is not applicable.
+	 */
+    this.getToolTip = function(aNode)
+    {
+    	return null;
+	}
+
+	/**
+	 * Sets the FormNode that is using this delegate. It is mandatory that this
+	 * is set to allow the delegate to access items in the FormNode as required.
+	 * @param aFormNode the FormNode that is using this delegate.
+	 */
+    this.setFormNode = function(aFormNode)
+    {
+    	this.formNode = aFormNode;
+	}
+
+	/**
+	 * Gets whether this delegate is used to validate node instances (e.g.
+	 * mandatory fields, etc.) as well as their child nodes.
+	 * @return a boolean -true if this should be called to perform validation.
+	 */
+	this.isUsedToValidateNodes = function()
+	{
+		return true;
+	}
+	
+	/**
+	 * Dummy function stub so the interface requirements are met.
+	 */
+	this.validateNode = function(aNodeInstance, updateDisplay,
+								 aValidationFailure)
+	{
+		var countryCode=this._getCountryCode(aNodeInstance);
+		var errorAlias=""; //dynamic
+		if(aNodeInstance.isNull){
+			return aValidationFailure;
+		}//if
+		var testPassed=true;
+		var phone = aNodeInstance.rawValue;
+		if (countryCode == "CA" || countryCode == "US") {
+				var reg = /^(?:\+?1[-. ]?)?\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; //(phone leading with 1
+				if (reg.test(phone) == false) {
+						testPassed= false;
+						errorAlias=this.northAmerica_errorAlias;
+				} 
+				else {
+						testPassed= true;
+						var formattedPhoneNumber = phone.replace(reg, "$1-$2-$3");
+						var temp = phone.replace(/[^\d]/g, "");
+						if (temp.length == 11) {
+							formattedPhoneNumber = phone.replace(reg, "1-$1-$2-$3");
+						}//if	
+				}//else	
+		}//if 
+		else {
+				var reg = /^[0-9() .-]+$/;
+				var temp = phone.replace(/[^\d]/g, "");
+				if (temp.length &lt; 9 || temp.length &gt; 18) {
+						testPassed= false;
+						errorAlias=this.other_errorAlias;
+				}//if
+				else{
+					testPassed= true;
+				}//else
+		}//else		
+		if(testPassed===true){
+				cUiUtil.resetColour(aNodeInstance); //In case it previously failed
+		}//if
+		else{
+				this.createFailure(updateDisplay,aValidationFailure,aNodeInstance,errorAlias);
+		}//else
+	
+	return aValidationFailure;
+	}
+			
+    /**
+     * Describes this object. This is implemented in all objects since their
+     * toString() cannot be overridden!
+     * @return the description of this object.
+     */
+    this.asString = function()
+	{
+		var buffer = this.className + "[";
+		
+	    if (this.formNode != null)
+	    {
+	    	buffer += "formNode.somExpression= " + this.formNode.somExpression;
+	    }
+	    else
+	    {
+	    	buffer += "formNode= null";
+	    }
+		buffer += "]";
+		return buffer;
+	}
+	//assumes that a) country field is called ddlCountry  and 
+	//b) has the same parent as phone number
+	this._getCountryCode=function(aNodeInstance){
+		var countryFormNode=cFormNodeManager.getFormNodeForKey(this.countryDdlNodeAlias);
+		if(!countryFormNode) return null;
+		var countryInstance=countryFormNode.getNodeInstance();
+		return(countryInstance.rawValue);
+	}
+	
+	
+	this.createFailure=function(updateDisplay,aValidationFailure,aNodeInstance,baseErrorAlias){
+	
+		var resourceError=this.errorResourceAlias;
+		if(updateDisplay===true){
+					cUiUtil.setColour(aNodeInstance,cConfigurationManager.get("colourError"));
+		}						
+		var errorMsg=cResourceManager.get(resourceError)+cResourceManager.get(baseErrorAlias);			
+		var newValidationFailure = cValidationFailure.createInstance("PhoneFormatValidation",errorMsg);
+		if (aValidationFailure != null)
+		{
+			aValidationFailure.addNestedValidationFailure(newValidationFailure);
+		}
+		else{
+			aValidationFailure = newValidationFailure;
+		}					
+	}//endfn
+	
+}
+
+               
+               
+               
+
+               <?templateDesigner isFragment yes?>
+               <?templateDesigner fragmentTitle TelephoneFormatDelegate?>
+               <?templateDesigner fragmentDescription Checks for telephone number formatting US/Canada and world
+Requires a country droplist needed ddlCountry with the same parent as the phone number?></script>
+         </variables>
+      </subform>
+   </subform>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 122?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+         <version>1.7</version>
+         <adobeExtensionLevel>5</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xmp:MetadataDate>2015-10-30T16:16:54Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xmpMM:DocumentID>uuid:68780230-76e2-48ac-a35f-64062cfb49cc</xmpMM:DocumentID>
+      </rdf:Description>
+      <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <lcd:fragmentCatalog>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <dc:title>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">TelephoneFormatDelegate</rdf:li>
+                     </rdf:Alt>
+                  </dc:title>
+                  <dc:description>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">Checks for telephone number formatting US/Canada and world
+Requires a country droplist needed ddlCountry with the same parent as the phone number</rdf:li>
+                     </rdf:Alt>
+                  </dc:description>
+                  <dc:identifier>$template.form1.#subform.#variables.TelephoneFormatDelegate</dc:identifier>
+                  <lcd:fragmentRole>ScriptObject</lcd:fragmentRole>
+               </rdf:li>
+            </rdf:Seq>
+         </lcd:fragmentCatalog>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_CA" desc="English (Canada)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">D-MMM-YY</datePattern>
+         <datePattern name="short">DD/MM/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">CAD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+      </typefaces>
+   </locale>
+</localeSet></xdp:xdp>
