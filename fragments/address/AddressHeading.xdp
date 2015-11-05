@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <subform name="form1" locale="en_CA" layout="tb">
+      <pageSet>
+         <pageArea>
+            <contentArea w="203.2mm" h="249.476mm" x="6.351mm" y="16.198mm" name="contentArea"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+         </pageArea>
+      </pageSet>
+      <subform w="203.2mm" layout="lr-tb" name="sfAddressHeading">
+         <draw name="lblAddressHeading" w="203.2mm" h="6.604mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text>C. CONTACT FOR THIS CLINICAL TRIAL</text>
+            </value>
+            <font typeface="Myriad Pro" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            <border>
+               <edge/>
+               <corner thickness="0.175mm"/>
+               <fill>
+                  <linear>
+                     <color value="255,255,255"/>
+                  </linear>
+                  <color value="255,255,153"/>
+               </fill>
+            </border>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" vAlign="middle"/>
+            <assist role="H3"/>
+         </draw>
+         <keep intact="contentArea"/>
+         <?templateDesigner expand 1?>
+         <?templateDesigner isFragment yes?>
+         <?templateDesigner fragmentTitle AddressHeading?>
+         <?templateDesigner fragmentDescription Address heading, to be used with the Address Details fragment.?></subform>
+   </subform>
+</template>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <lcd:fragmentCatalog>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <dc:title>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">AddressHeading</rdf:li>
+                     </rdf:Alt>
+                  </dc:title>
+                  <dc:description>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">Address heading, to be used with the Address Details fragment.</rdf:li>
+                     </rdf:Alt>
+                  </dc:description>
+                  <dc:identifier>$template.form1.sfAddressHeading</dc:identifier>
+                  <lcd:fragmentRole>Subform</lcd:fragmentRole>
+               </rdf:li>
+            </rdf:Seq>
+         </lcd:fragmentCatalog>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

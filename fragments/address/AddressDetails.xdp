@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <subform name="form1" locale="en_CA" layout="tb">
+      <pageSet>
+         <pageArea>
+            <contentArea w="203.2mm" h="249.476mm" x="6.351mm" y="16.198mm" name="contentArea"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+         </pageArea>
+      </pageSet>
+      <subform w="203.2mm" name="sfAddressDetails" layout="lr-tb">
+         <field name="ddlSalutation" w="25.4mm" h="11.43mm">
+            <ui>
+               <choiceList>
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption placement="top" reserve="3.175mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Salutation*</text>
+               </value>
+               <font typeface="Myriad Pro" size="8pt"/>
+            </caption>
+            <border>
+               <corner thickness="0.175mm"/>
+               <edge/>
+            </border>
+            <validate nullTest="error"/>
+         </field>
+         <field h="11.43mm" name="txtGivenName" w="35.385mm">
+            <border>
+               <corner thickness="0.1753mm"/>
+               <edge/>
+            </border>
+            <caption placement="top" reserve="3.175mm">
+               <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+               <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+               <value>
+                  <text>Given Name*</text>
+               </value>
+            </caption>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <ui>
+               <textEdit hScrollPolicy="off">
+                  <border>
+                     <edge stroke="lowered"/>
+                     <?templateDesigner StyleID aped3?></border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <validate nullTest="error"/>
+         </field>
+         <field h="11.43mm" name="txtInitials" w="13.97mm">
+            <border>
+               <corner thickness="0.175mm"/>
+               <edge/>
+            </border>
+            <caption placement="top" reserve="3.175mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Initials</text>
+               </value>
+               <font typeface="Myriad Pro" size="8pt"/>
+            </caption>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <ui>
+               <textEdit hScrollPolicy="off">
+                  <border>
+                     <edge stroke="lowered"/>
+                     <?templateDesigner StyleID aped3?></border>
+                  <margin/>
+               </textEdit>
+            </ui>
+         </field>
+         <field h="11.43mm" name="txtSurname" w="54.092mm">
+            <border>
+               <corner thickness="0.1753mm"/>
+               <edge/>
+            </border>
+            <caption placement="top" reserve="3.175mm">
+               <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+               <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+               <value>
+                  <text>17. Surname*</text>
+               </value>
+            </caption>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <ui>
+               <textEdit hScrollPolicy="off">
+                  <border>
+                     <edge stroke="lowered"/>
+                     <?templateDesigner StyleID aped3?></border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <validate nullTest="error"/>
+         </field>
+         <field h="11.43mm" name="txtTitle" w="38.1mm">
+            <border>
+               <corner thickness="0.1753mm"/>
+               <edge/>
+            </border>
+            <caption placement="top" reserve="3.175mm">
+               <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+               <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+               <value>
+                  <text>21. Title*</text>
+               </value>
+            </caption>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <ui>
+               <textEdit hScrollPolicy="off">
+                  <border>
+                     <edge stroke="lowered"/>
+                     <?templateDesigner StyleID aped3?></border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <validate nullTest="error"/>
+         </field>
+         <field h="11.43mm" name="ddlLangPref" w="35.56mm">
+            <border>
+               <corner thickness="0.175mm"/>
+               <edge/>
+            </border>
+            <caption placement="top" reserve="3.175mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>20. Language*</text>
+               </value>
+               <font typeface="Myriad Pro" size="8pt"/>
+            </caption>
+            <font typeface="Myriad Pro"/>
+            <items save="1"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <?templateDesigner StyleID aped3?></border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <validate nullTest="error"/>
+         </field>
+         <field h="13.151mm" name="txtCompanyName" w="203.2mm">
+            <border>
+               <corner thickness="0.175mm"/>
+               <edge/>
+            </border>
+            <caption placement="top" reserve="3.175mm">
+               <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+               <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+               <value>
+                  <text>Company Name (Full Name . No Abbreviations)</text>
+               </value>
+            </caption>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="1mm" leftInset="1.0008mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <ui>
+               <textEdit hScrollPolicy="off">
+                  <border>
+                     <edge stroke="lowered"/>
+                     <?templateDesigner StyleID aped3?></border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <validate nullTest="error"/>
+         </field>
+         <field h="11.233mm" name="txtAddress" w="203.2mm">
+            <border>
+               <corner thickness="0.1753mm"/>
+               <edge/>
+            </border>
+            <caption placement="top" reserve="3.175mm">
+               <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+               <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+               <value>
+                  <text>12. Street/Suite/PO Box*</text>
+               </value>
+            </caption>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <ui>
+               <textEdit hScrollPolicy="off">
+                  <border>
+                     <edge stroke="lowered"/>
+                     <?templateDesigner StyleID aped3?></border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <validate nullTest="error"/>
+         </field>
+         <field h="11.233mm" name="txtCity" w="50.8mm">
+            <border>
+               <corner thickness="0.1753mm"/>
+               <edge/>
+            </border>
+            <caption placement="top" reserve="3.176mm">
+               <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+               <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+               <value>
+                  <text>13. City - Town*</text>
+               </value>
+            </caption>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <ui>
+               <textEdit hScrollPolicy="off">
+                  <border>
+                     <edge stroke="lowered"/>
+                     <?templateDesigner StyleID aped3?></border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <validate nullTest="error"/>
+         </field>
+         <field h="11.233mm" name="ddlCountry" w="50.8mm">
+            <border>
+               <corner thickness="0.1753mm"/>
+               <edge/>
+            </border>
+            <caption placement="top" reserve="3.175mm">
+               <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+               <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+               <value>
+                  <text>15. Country*</text>
+               </value>
+            </caption>
+            <font typeface="Myriad Pro"/>
+            <items/>
+            <items presence="hidden" save="1"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <?templateDesigner StyleID aped3?></border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <validate nullTest="error"/>
+            <event activity="exit" name="event__exit">
+               <script contentType="application/x-javascript">var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+var cAddressHandler = script.HCeForm.control.CommonAddressHandler;
+var cSystem = script.core.System;
+try
+{
+	if(cSystem.hasCurrentFieldValueChanged(this)){
+		// set up event object
+		var actionName =  cAddressHandler.CLINICAL_COUNTRY_CHANGED_ACTION;
+		var anActionEvent = cActionEvent.createInstance(actionName, this,this.rawValue);
+		// deploy event to controller
+		cAddressHandler.actionPerformed(anActionEvent);
+	}
+}
+catch(exception)
+{
+	cLog.warn("Problem with contact country ::exit", exception);
+}
+</script>
+            </event>
+            <event activity="enter" name="event__enter">
+               <script contentType="application/x-javascript">
+var cSystem = script.core.System;
+
+cSystem.setCurrentField(this);
+</script>
+            </event>
+         </field>
+         <field h="11.233mm" name="ddlProvince" w="50.8mm">
+            <border>
+               <corner thickness="0.1753mm"/>
+               <edge/>
+            </border>
+            <caption placement="top" reserve="3.175mm">
+               <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+               <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+               <value>
+                  <text>14. Province - State*</text>
+               </value>
+            </caption>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <ui>
+               <choiceList>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <?templateDesigner StyleID aped3?></border>
+                  <margin/>
+               </choiceList>
+            </ui>
+            <validate nullTest="error"/>
+         </field>
+         <field name="txtProvince" w="50.8mm" h="11.43mm">
+            <ui>
+               <textEdit hScrollPolicy="off">
+                  <border>
+                     <?templateDesigner StyleID aped3?>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font size="8pt" typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="3.175mm" placement="top">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Province/State</text>
+               </value>
+            </caption>
+            <border>
+               <edge/>
+               <corner thickness="0.175mm"/>
+            </border>
+         </field>
+         <field h="11.232mm" name="txtPostalCode" w="50.8mm">
+            <border>
+               <corner thickness="0.1753mm"/>
+               <edge/>
+            </border>
+            <caption placement="top" reserve="3.175mm">
+               <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+               <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+               <value>
+                  <text>16. Postal/ZIP Code*</text>
+               </value>
+            </caption>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <ui>
+               <textEdit hScrollPolicy="off">
+                  <border>
+                     <edge stroke="lowered"/>
+                     <?templateDesigner StyleID aped3?></border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <validate nullTest="error"/>
+         </field>
+         <field h="11.43mm" name="txtTelephone" w="38.1mm">
+            <border>
+               <corner thickness="0.1753mm"/>
+               <edge/>
+            </border>
+            <caption placement="top" reserve="3.175mm">
+               <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+               <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+               <value>
+                  <text>18. Telephone No.*</text>
+               </value>
+            </caption>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <?templateDesigner StyleID aped3?></border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <validate nullTest="error"/>
+         </field>
+         <field h="11.43mm" name="txtExtension" w="17.78mm">
+            <border>
+               <corner thickness="0.1753mm"/>
+               <edge/>
+            </border>
+            <caption placement="top" reserve="3.175mm">
+               <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+               <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+               <value>
+                  <text>Ext.</text>
+               </value>
+            </caption>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <?templateDesigner StyleID aped3?></border>
+                  <margin/>
+               </textEdit>
+            </ui>
+         </field>
+         <field h="11.43mm" name="txtFax" w="38.1mm">
+            <border>
+               <corner thickness="0.1753mm"/>
+               <edge/>
+            </border>
+            <caption placement="top" reserve="3.175mm">
+               <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+               <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+               <value>
+                  <text>19. Fax No.</text>
+               </value>
+            </caption>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <?templateDesigner StyleID aped3?></border>
+                  <margin/>
+               </textEdit>
+            </ui>
+         </field>
+         <field name="txtEmail" w="109.22mm" h="11.43mm">
+            <border>
+               <corner thickness="0.1753mm"/>
+               <edge/>
+            </border>
+            <caption placement="top" reserve="3.175mm">
+               <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+               <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+               <value>
+                  <text>22. Email</text>
+               </value>
+            </caption>
+            <font typeface="Myriad Pro"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <?templateDesigner StyleID aped3?></border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <validate nullTest="error"/>
+         </field>
+         <keep intact="contentArea"/>
+         <?templateDesigner expand 0?>
+         <?templateDesigner isFragment yes?>
+         <?templateDesigner fragmentTitle AddressDetails?>
+         <?templateDesigner fragmentDescription Layout for address that includes contract information?></subform>
+   </subform>
+</template>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <lcd:fragmentCatalog>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <dc:title>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">AddressDetails</rdf:li>
+                     </rdf:Alt>
+                  </dc:title>
+                  <dc:description>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">Layout for address that includes contract information</rdf:li>
+                     </rdf:Alt>
+                  </dc:description>
+                  <dc:identifier>$template.form1.sfAddressDetails</dc:identifier>
+                  <lcd:fragmentRole>Subform</lcd:fragmentRole>
+               </rdf:li>
+            </rdf:Seq>
+         </lcd:fragmentCatalog>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>
