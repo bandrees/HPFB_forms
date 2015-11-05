@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <subform name="form1" locale="en_CA" layout="tb">
+      <pageSet>
+         <pageArea>
+            <contentArea w="203.2mm" h="249.476mm" x="6.351mm" y="16.198mm" name="contentArea"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+         </pageArea>
+      </pageSet>
+      <subform>
+         <variables>
+            <script contentType="application/x-javascript" name="CommonAddressHandler">//imports, core
+var cLog = script.core.util.Log;
+var cResourceManager = script.core.lang.ResourceManager;
+var cFormNodeManager = script.core.model.FormNodeManager;
+var cUiUtil=script.core.util.UiUtil;
+var cException = script.core.util.Exception;
+var cConfigurationManager = script.core.util.ConfigurationManager;
+//imports, utility
+var cAddressUtil= script.HCeForm.util.AddressUtil; 
+
+//Globals
+var LABEL_START=cConfigurationManager.get("LabelStart");
+var LABEL_END=cConfigurationManager.get("LabelEnd");
+
+var CANADA=	cConfigurationManager.get("CANADA");
+var  USA=	cConfigurationManager.get("USA");
+
+
+//Handler name
+var SCRIPT_OBJECT_NAME=					"commonAddressHandler";
+
+//Action Globals
+
+var CLINICAL_COUNTRY_CHANGED_ACTION=	"clinical_country_changed";
+var INITIALISE_COUNTRY_ACTION="country_init";
+
+
+//FORM NODES (FN)
+// address form nodes
+var CLINICAL_CONTACTHEADING_LBL_FN=cFormNodeManager.getFormNodeForKey("sec2lblSectionC");
+var CLINICAL_ADDRESSDETAILS_SF_FN=cFormNodeManager.getFormNodeForKey("sfContactAddressDetails");
+
+//Clinical address form nodes
+var CLINICAL_PROVINCE_FN=cFormNodeManager.getFormNodeForKey("clinicalProvince");
+var CLINICAL_POSTAL_CODE_FN=cFormNodeManager.getFormNodeForKey("clinicalPostalCode");
+var CLINICAL_PROVINCE_TXT_FN=cFormNodeManager.getFormNodeForKey("section2CtxtProvince");
+var CLINICAL_COUNTRY_DDL_FN=cFormNodeManager.getFormNodeForKey("clinicalCountry");
+
+
+_initializeFormNodes();
+
+
+/* Action Handler- Place all actions here
+*
+*
+*
+*/
+function actionPerformed(anEvent)
+{
+	switch(anEvent.getActionCommand())
+	{
+		
+			case CLINICAL_COUNTRY_CHANGED_ACTION:
+				cAddressUtil.countryChanged(CLINICAL_PROVINCE_FN,CLINICAL_POSTAL_CODE_FN);
+				cAddressUtil.setProvinceUIState(anEvent.getSource().rawValue,CLINICAL_PROVINCE_FN.getNodeInstance(),CLINICAL_PROVINCE_TXT_FN.getNodeInstance());					
+			break;
+			
+			case INITIALISE_COUNTRY_ACTION:
+					 _setCountryReadonly("CA",anEvent.getSource());
+			
+			break;
+			
+				
+		default:
+			throw cException.createInstance(SCRIPT_OBJECT_NAME
+				  + ".actionPerformed() - unrecognized event '" 
+				  + anEvent.getActionCommand() + "'.", "UnsupportedAction");
+	}//switch
+}//end fn
+
+
+function initialise(){
+		
+	//set the province UI visibility based on the country value
+	cAddressUtil.setProvinceUIState(CLINICAL_COUNTRY_DDL_FN.getNodeInstance().rawValue,CLINICAL_PROVINCE_FN.getNodeInstance(),CLINICAL_PROVINCE_TXT_FN.getNodeInstance());
+	//update all the tooltips based on the provided label
+	var contactHeadingLabel= cResourceManager.get("lbFor")+CLINICAL_CONTACTHEADING_LBL_FN.getLabel();
+	cAddressUtil.updateAllFieldTooltips(CLINICAL_ADDRESSDETAILS_SF_FN.getNodeInstance(),contactHeadingLabel,LABEL_END);
+}
+
+
+/*
+* Checks to see if a form node exists. If it doesn't exist than throw an exception. Otherwise this will fail silently
+*
+*/
+
+function _initializeFormNodes(){
+
+		try{
+		cControllerUtil.checkFormNode(CLINICAL_CONTACTHEADING_LBL_FN,SCRIPT_OBJECT_NAME,"CLINICAL_CONTACTHEADING_LBL_FN");
+		cControllerUtil.checkFormNode(CLINICAL_ADDRESSDETAILS_SF_FN,SCRIPT_OBJECT_NAME,"CLINICAL_ADDRESSDETAILS_SF_FN");
+		cControllerUtil.checkFormNode(CLINICAL_COUNTRY_DDL_FN,SCRIPT_OBJECT_NAME,"CLINICAL_COUNTRY_DDL_FN");
+		cControllerUtil.checkFormNode(CLINICAL_PROVINCE_FN,SCRIPT_OBJECT_NAME,"CLINICAL_PROVINCE_FN");
+		cControllerUtil.checkFormNode(CLINICAL_POSTAL_CODE_FN,SCRIPT_OBJECT_NAME,"CLINICAL_POSTAL_CODE_FN");
+		cControllerUtil.checkFormNode(CLINICAL_PROVINCE_TXT_FN,SCRIPT_OBJECT_NAME,"CLINICAL_PROVINCE_TXT_FN");
+	 }
+	 catch (exception)
+	{
+		cLog.critical(cResourceManager.get("error_application", SCRIPT_OBJECT_NAME+"._initializeFormNode()"), exception);
+	}
+
+}
+
+
+/*
+* Sets the passed in adobe node to readonly and sets the value of the field
+*@param- countryValue- the saved (rawValue) to set
+*@param- countryInstance- the country Instance to process
+*/
+function _setCountryReadonly(countryValue,countryInstance){
+
+	countryInstance.rawValue=countryValue;
+	var country_FN=cFormNodeManager.getFormNodeForSom(countryInstance.somExpression);		
+	country_FN.lock(countryInstance);
+}
+
+               <?templateDesigner isFragment yes?>
+               <?templateDesigner fragmentTitle CommonAddressHandler?>
+               <?templateDesigner fragmentDescription Used for address handling, will embed into individual forms?></script>
+         </variables>
+      </subform>
+   </subform>
+</template>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <lcd:fragmentCatalog>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <dc:title>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">CommonAddressHandler</rdf:li>
+                     </rdf:Alt>
+                  </dc:title>
+                  <dc:description>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">Used for address handling, will embed into individual forms</rdf:li>
+                     </rdf:Alt>
+                  </dc:description>
+                  <dc:identifier>$template.form1.#subform.#variables.CommonAddressHandler</dc:identifier>
+                  <lcd:fragmentRole>ScriptObject</lcd:fragmentRole>
+               </rdf:li>
+            </rdf:Seq>
+         </lcd:fragmentCatalog>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>
