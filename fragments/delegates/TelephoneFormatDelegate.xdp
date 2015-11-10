@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2015-11-10T15:55:33Z" uuid="721562e8-3106-465b-a2fe-442054d04aec">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2015-11-05T21:28:43Z" uuid="21e02fab-0254-47ac-ab5a-021d61a02c27">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <?formServer allowRenderCaching 0?>
@@ -14,36 +14,30 @@
          <?templateDesigner expand 1?></pageSet>
       <subform>
          <variables>
-            <script contentType="application/x-javascript" name="PostalCodeFormatDelegate">
+            <script contentType="application/x-javascript" name="TelephoneFormatDelegate">
 //
 /*******************************************************************************
- * An object that responds to information requests sent to a postal/zip code
- * FormNode. This determines whether the country is Canada, the US, or other
- * value and responds accordingly.
- * Note that this assumes that the related country node instance is a peer to
- * this one (i.e. has the same parent).
+ * An object that responds to information requests sent to a telephone/fax
+ * FormNode.
  *
  * Implements FormNodeDelegateInterface.
  */
 
 //imports
-var cConfigurationManager = script.core.util.ConfigurationManager;
+//imports
 var cLog = script.core.util.Log;
-var cResourceManager = script.core.lang.ResourceManager;
+var cResourceManager = 		script.core.lang.ResourceManager;
+var cConfigurationManager = script.core.util.ConfigurationManager;
 var cUiUtil = 						script.core.util.UiUtil;
 var cValidationFailure = 			script.core.validation.ValidationFailure;
+var cFormNodeManager = 				script.core.model.FormNodeManager;
 
-//note: These keys are in the core fragment. The base implementation was copied from core
-//for all the label handling
-var _COUNTRY_NODE_NAME = null; //String
-var _COUNTRY_NODE_NAME_KEY = "countryNodeName";
-var _POSTAL_CODE_FORMAT_TYPE = "postalCode";
-var _POSTAL_CODE_LABEL_KEY = "postalCode";
-var _POSTAL_ZIP_CODE_LABEL_KEY = "postalZipCode";
-var _ZIP_CODE_FORMAT_TYPE = "zipCode";
-var _ZIP_CODE_LABEL_KEY = "zipCode";
+
+var _TELEPHONE_FORMAT_TYPE = "telephone";
 var CANADA=	cConfigurationManager.get("CANADA");
 var  USA=	cConfigurationManager.get("USA");
+var PHONE=	1;
+var FAX=		2;
 
 /*******************************************************************************
  * Gets a new PostalZipDelegate. Adobe does not allow object instances to be
@@ -54,37 +48,20 @@ var  USA=	cConfigurationManager.get("USA");
  */
 function createInstance()
 {
-	return new PostalCodeFormatDelegateClass();
-}
-
-//===== PRIVATE ================================================================
-/**
- * Gets the name of the country node. This is lazy loaded from the configuration
- * since the field naming conventions may vary between applications.
- * @return the name of country nodes in this form.
- */
-function _getCountryNodeName()
-{
-	if (_COUNTRY_NODE_NAME == null)
-	{
-		_COUNTRY_NODE_NAME = cConfigurationManager.get(_COUNTRY_NODE_NAME_KEY);
-		if (_COUNTRY_NODE_NAME == null)
-		{
-			cLog.warn("PostalZipDelegate._getCountryNodeName(): '"
-					  + _COUNTRY_NODE_NAME_KEY + "' not found in the configuration");
-		}
-	}
-	return _COUNTRY_NODE_NAME;
+	return new TelephoneFormatDelegateClass();
 }
 
 /**
  * Class implementation
  */
-function PostalCodeFormatDelegateClass(somExpression)
+function TelephoneFormatDelegateClass(somExpression)
 {
-	this.className = "PostalCodeFormatDelegate";
-	this.errorResourceAlias="error_PostalCodeFormat";
-	this.base_errorAlias="error_caPostalCodeFormat";
+	this.className = "TelephoneFormatDelegate";
+	this.errorResourceAlias="";
+	this.northAmerica_errorAlias="error_usPhoneNumError";
+	this.other_errorAlias="error_otherPhoneNumError";
+	this.numberType=PHONE;
+	this.countryDdlNodeAlias="";
 	this.formNode;
 
 	/**
@@ -100,17 +77,48 @@ function PostalCodeFormatDelegateClass(somExpression)
 	}
 	
 	/**
-	 * Sets custom error text 
+	 * Sets alias 
+	 *
+	 * @param aliasName -the alias of the country set in the nodeDefinitions
+	 */
+	this.setCountryNodeAlias = function(aliasName)
+    {    	
+    		this.countryDdlNodeAlias=aliasName;
+    }
+    
+    	/**
+	 * Sets the delegate to treat any error messages a phone messages
+	 *
+	 * 
+	 */
+	this.setAsPhoneNumber = function()
+    {    	
+    		this.numberType=PHONE;
+    		this.northAmerica_errorAlias="error_usPhoneNumError";
+		this.other_errorAlias="error_otherPhoneNumError";
+    }
+    /**
+	 * Sets the delegate to treat any error messages a fax messages
+	 *
+	 * 
+	 */
+	this.setAsFaxNumber = function()
+    {    	
+    		this.numberType=FAX;
+    		this.northAmerica_errorAlias="error_usFaxNumError";
+		this.other_errorAlias="error_otherFaxNumError";	
+    }
+    
+
+	/* Sets custom error text 
 	 *
 	 * @param aFormNode the FormNode that is using this delegate.
 	 */
 	this.setErrorText = function(aliasName)
-    {
-    	
-    	this.errorResourceAlias=aliasName;
+    {    	
+    		this.errorResourceAlias=aliasName;
     }
 	
-
 		
 	/**
 	 * Gets the type of format validation to be applied to data entered into
@@ -125,7 +133,8 @@ function PostalCodeFormatDelegateClass(somExpression)
     this.getFormatType = function(aNode)
     {
     	return null;
-    }
+	}
+
 	/**
 	 * Gets this node's label to be displayed in the UI, which is an
 	 * internationalized value.
@@ -135,37 +144,17 @@ function PostalCodeFormatDelegateClass(somExpression)
 	 */
     this.getLabel = function(aNode)
     {
-    	if (aNode != undefined)
-    	{
-    		var countryValue = this._getCountry(aNode);
-
-			if(countryValue == CANADA)
-			{
-    			return cResourceManager.get(_POSTAL_CODE_LABEL_KEY);
-			}
-			else if(countryValue == USA)
-			{
-    			return cResourceManager.get(_ZIP_CODE_LABEL_KEY);
-			}
-    	}
-    	return cResourceManager.get(_POSTAL_ZIP_CODE_LABEL_KEY);
+    	return null;
    	}
 
 	/**
 	 * Gets whether this node is mandatory (required).
 	 * @param aNode the Adobe Node instance who's mandatory setting is required.
-	 * @return a boolean - true if the country is Canada or the US, false if it
-	 *		   is any other value, null if there was no node passed.
+	 * 	 
 	 */
 	this.isMandatory = function(aNode)
 	{
-    	if (aNode != undefined)
-    	{
-    		var countryValue = this._getCountry(aNode);
-
-			return (countryValue == CANADA || countryValue == USA);
-    	}
-		return null;
+			return null;
 	}
 		
 	/**
@@ -227,48 +216,47 @@ function PostalCodeFormatDelegateClass(somExpression)
 		this.formNode._validateNode(aNodeInstance, updateDisplay,
 									aValidationFailure);
 		
-		
-		if(!aNodeInstance.isNull){
-		
-			var countryNodeValue=aNodeInstance.parent.ddlCountry.rawValue;
-			var regExpress="";
-			var resourceError="";
-			if(countryNodeValue===CANADA){
-				regExpress= /^[a-z]\d[a-z](\s)?\d[a-z]\d\s*$/i ;
-				resourceError=cResourceManager.get(this.base_errorAlias);
-			}else if(countryNodeValue===USA){
-			
-				regExpress=/^\d{5}([-, ]\d{4})?$/
-				resourceError=cResourceManager.get("error_usZipCodeFormat");
-			}else{
-				//not USA or Canada so don't test
-				return aValidationFailure;
-			}
-			if(!regExpress.test(aNodeInstance.rawValue)){
-				
-				if(updateDisplay===true){
-					cUiUtil.setColour(aNodeInstance,
-										cConfigurationManager.get("colourError"))
-				}						
-				var errorMsg=cResourceManager.get(this.errorResourceAlias)+resourceError;						
-				var newValidationFailure = cValidationFailure.createInstance(
-										"PostalCodeValidation",errorMsg);
-				if (aValidationFailure != null)
-				{
-					aValidationFailure.addNestedValidationFailure(newValidationFailure);
-				}
-				else
-				{
-					aValidationFailure = newValidationFailure;
-				}						
-			}else{
-			
+		var countryCode=this._getCountryCode(aNodeInstance);
+		var errorAlias=""; //dynamic
+		if(aNodeInstance.isNull){
+			return aValidationFailure;
+		}//if
+	
+		var testPassed=true;
+		var phone = aNodeInstance.rawValue;
+		if (countryCode == CANADA || countryCode == USA) {
+				var reg = /^(?:\+?1[-. ]?)?\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; //(phone leading with 1
+				if (reg.test(phone) == false) {
+						testPassed= false;
+						errorAlias=this.northAmerica_errorAlias;
+				} 
+				else {
+						testPassed= true;
+						var formattedPhoneNumber = phone.replace(reg, "$1-$2-$3");
+						var temp = phone.replace(/[^\d]/g, "");
+						if (temp.length == 11) {
+							formattedPhoneNumber = phone.replace(reg, "1-$1-$2-$3");
+						}//if	
+				}//else	
+		}//if 
+		else {
+				var reg = /^[0-9() .-]+$/;
+				var temp = phone.replace(/[^\d]/g, "");
+				if (temp.length &lt; 9 || temp.length &gt; 18) {
+						testPassed= false;
+						errorAlias=this.other_errorAlias;
+				}//if
+				else{
+					testPassed= true;
+				}//else
+		}//else		
+		if(testPassed===true){
 				cUiUtil.resetColour(aNodeInstance); //In case it previously failed
-				this.formatZip(countryNodeValue,aNodeInstance)
-			}
-		}			
-		return aValidationFailure;
-
+		}//if
+		else{
+				this.createFailure(updateDisplay,aValidationFailure,aNodeInstance,errorAlias);
+		}//else
+	return aValidationFailure;
 	}
 			
     /**
@@ -291,38 +279,57 @@ function PostalCodeFormatDelegateClass(somExpression)
 		buffer += "]";
 		return buffer;
 	}
-	this.formatZip=function(country,postalCodeInstance){
-		var zipCodeValue=postalCodeInstance.rawValue;
-		var formattedZipCode="";
-		if (country===CANADA){
-		
-			formattedZipCode = (zipCodeValue.substring(0, 3) + " " + zipCodeValue.substring(zipCodeValue.length - 3, zipCodeValue.length)).toUpperCase();
-			postalCodeInstance.rawValue=formattedZipCode ;
-		}	
-	}
-
-
-	//===== PRIVATE ============================================================
-	/**
-	 * Gets the value of a country node. Issues a warning if the country node
-	 * can't be found.
-	 * @param aNode the Adobe Node instance that is being processed.
-	 * @return the value of the related country node in this form.
-	 */
-	this._getCountry = function(aNode)
-	{
-		var countryNode = xfa.resolveNode(aNode.parent.somExpression + "."
-										  + _getCountryNodeName());
-				
-		if (countryNode != null)
-		{
-    		return countryNode.rawValue;
+	//assumes that a) country field is called ddlCountry  and 
+	//b) has the same parent as phone number
+	this._getCountryCode=function(aNodeInstance){
+		var countryValue="";
+		if(!this.countryDdlNodeAlias){
+			//use the parent and use ddlCountry if the alias is not set
+			countryValue=this.parent.ddlCountry;
+		}else{
+			var countryFormNode=cFormNodeManager.getFormNodeForKey(this.countryDdlNodeAlias);
+			if(!countryFormNode) return null;
+			var countryInstance=countryFormNode.getNodeInstance();
+			countryValue=countryInstance.rawValue;
 		}
-		cLog.info("PostalZipDelegate._getCountry couldn't find the country"
-				  + " node for " + aNode.somExpression);
-		return null;
+		return(countryValue);
 	}
-}               
+	
+	
+	this.createFailure=function(updateDisplay,aValidationFailure,aNodeInstance,baseErrorAlias){
+	
+		var resourceError=this.errorResourceAlias;
+		if(updateDisplay===true){
+					cUiUtil.setColour(aNodeInstance,cConfigurationManager.get("colourError"));
+		}						
+		var errorMsg=cResourceManager.get(resourceError)+cResourceManager.get(baseErrorAlias);			
+		var newValidationFailure = cValidationFailure.createInstance("PhoneFormatValidation",errorMsg);
+		if (aValidationFailure != null)
+		{
+			aValidationFailure.addNestedValidationFailure(newValidationFailure);
+		}
+		else{
+			aValidationFailure = newValidationFailure;
+		}					
+	}//endfn
+	
+}
+
+               
+               
+               
+
+               
+               
+               
+
+               
+               
+               
+
+               
+               
+               
 
                
                
@@ -369,28 +376,14 @@ function PostalCodeFormatDelegateClass(somExpression)
                
 
                <?templateDesigner isFragment yes?>
-               <?templateDesigner fragmentTitle PostalCodeFormatDelegate?>
-               <?templateDesigner fragmentDescription Checks the format of US and Canada postal codes
-
-There are mulitple prerequistes to using this delegate:
-
-CANADA - the droplist value of canada defined in config
-USA- the droplist value of usa defined in config
-
-error_caPostalCodeFormat- the error message for canadian postal code format
-error_usZipCodeFormat - the error message for US postal code format
-
-you must define the prefix text to the errors using: this.setErrorText?></script>
+               <?templateDesigner fragmentTitle TelephoneFormatDelegate?>
+               <?templateDesigner fragmentDescription Checks for telephone number formatting US/Canada and world
+Requires a country droplist needed ddlCountry with the same parent as the phone number?></script>
             <?templateDesigner expand 1?></variables>
          <?templateDesigner expand 1?></subform>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
    </subform>
-   <?templateDesigner SaveTaggedPDF 1?>
-   <?templateDesigner SavePDFWithEmbeddedFonts 1?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Zoom 112?>
-   <?templateDesigner FormTargetVersion 30?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
@@ -403,9 +396,12 @@ you must define the prefix text to the errors using: this.setErrorText?></script
    <?PDFPrintOptions duplexMode 0?>
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
-   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner XDPPreviewFormat 19?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?></template>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 121?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -432,14 +428,14 @@ you must define the prefix text to the errors using: this.setErrorText?></script
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2015-11-10T15:55:33Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2015-11-05T21:28:43Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:721562e8-3106-465b-a2fe-442054d04aec</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:21e02fab-0254-47ac-ab5a-021d61a02c27</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
@@ -447,25 +443,16 @@ you must define the prefix text to the errors using: this.setErrorText?></script
                <rdf:li rdf:parseType="Resource">
                   <dc:title>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">PostalCodeFormatDelegate</rdf:li>
+                        <rdf:li xml:lang="x-default">TelephoneFormatDelegate</rdf:li>
                      </rdf:Alt>
                   </dc:title>
                   <dc:description>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">Checks the format of US and Canada postal codes
-
-There are mulitple prerequistes to using this delegate:
-
-CANADA - the droplist value of canada defined in config
-USA- the droplist value of usa defined in config
-
-error_caPostalCodeFormat- the error message for canadian postal code format
-error_usZipCodeFormat - the error message for US postal code format
-
-you must define the prefix text to the errors using: this.setErrorText</rdf:li>
+                        <rdf:li xml:lang="x-default">Checks for telephone number formatting US/Canada and world
+Requires a country droplist needed ddlCountry with the same parent as the phone number</rdf:li>
                      </rdf:Alt>
                   </dc:description>
-                  <dc:identifier>$template.form1.#subform.#variables.PostalCodeFormatDelegate</dc:identifier>
+                  <dc:identifier>$template.form1.#subform.#variables.TelephoneFormatDelegate</dc:identifier>
                   <lcd:fragmentRole>ScriptObject</lcd:fragmentRole>
                </rdf:li>
             </rdf:Seq>
