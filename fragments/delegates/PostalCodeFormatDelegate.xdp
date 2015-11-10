@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2015-11-10T15:27:01Z" uuid="646234ff-0890-4c12-9b9d-60bb304e163d">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2015-11-10T15:55:33Z" uuid="721562e8-3106-465b-a2fe-442054d04aec">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
    <subform name="form1" locale="en_CA" layout="tb">
       <pageSet>
          <pageArea>
             <contentArea w="203.2mm" h="249.476mm" x="6.351mm" y="16.198mm" name="contentArea"/>
             <medium stock="default" short="612pt" long="792pt"/>
-         </pageArea>
-      </pageSet>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
       <subform>
          <variables>
             <script contentType="application/x-javascript" name="PostalCodeFormatDelegate">
@@ -123,7 +125,7 @@ function PostalCodeFormatDelegateClass(somExpression)
     this.getFormatType = function(aNode)
     {
     	return null;
-    	
+    }
 	/**
 	 * Gets this node's label to be displayed in the UI, which is an
 	 * internationalized value.
@@ -362,6 +364,10 @@ function PostalCodeFormatDelegateClass(somExpression)
                
                
 
+               
+               
+               
+
                <?templateDesigner isFragment yes?>
                <?templateDesigner fragmentTitle PostalCodeFormatDelegate?>
                <?templateDesigner fragmentDescription Checks the format of US and Canada postal codes
@@ -375,14 +381,31 @@ error_caPostalCodeFormat- the error message for canadian postal code format
 error_usZipCodeFormat - the error message for US postal code format
 
 you must define the prefix text to the errors using: this.setErrorText?></script>
-         </variables>
-      </subform>
+            <?templateDesigner expand 1?></variables>
+         <?templateDesigner expand 1?></subform>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
    </subform>
    <?templateDesigner SaveTaggedPDF 1?>
    <?templateDesigner SavePDFWithEmbeddedFonts 1?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Zoom 112?></template>
+   <?templateDesigner Zoom 112?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -409,14 +432,14 @@ you must define the prefix text to the errors using: this.setErrorText?></script
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2015-11-10T15:27:01Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2015-11-10T15:55:33Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:646234ff-0890-4c12-9b9d-60bb304e163d</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:721562e8-3106-465b-a2fe-442054d04aec</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
