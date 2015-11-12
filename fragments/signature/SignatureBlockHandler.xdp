@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <subform name="form1" locale="en_CA" layout="tb">
+      <pageSet>
+         <pageArea>
+            <contentArea w="203.2mm" h="249.476mm" x="6.351mm" y="16.198mm" name="contentArea"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+         </pageArea>
+      </pageSet>
+      <subform>
+         <variables>
+            <script contentType="application/x-javascript" name="SignatureBlockHandler">
+var cLog= 						script.core.util.Log;
+var cFormNodeManager=			script.core.model.FormNodeManager;
+var cResourceManager= 			script.core.lang.ResourceManager;
+var cException=					script.core.util.Exception;
+var cConfigManager=				script.core.util.ConfigurationManager;
+var cUiUtil=					script.core.util.UiUtil;
+var cControllerUtil = script.core.util.ControllerUtil;
+var cGeneralUtil=				script.HCeForm.util.General;
+var cFormHandler=				script.HCeForm.control.FormHandler;
+
+var SCRIPT_OBJECT_NAME="SignatureBlockHandler";
+
+var DIGITAL_SIG=	cConfigManager.get("DIGITAL_SIG");
+var	IMAGE_SIG=		cConfigManager.get("IMAGE_SIG");
+
+//action Global variables
+var SIGNATURE_CHOICE_UI=  		"ui_sigtype"; 
+var DIG_SIG_CHANGE=		 		"digSigChange";
+var IMG_SIG_CHANGE=				"imgSigChange";
+var SET_SIGNATURE_DATE_ACTION=	"sig_date";
+
+//FORM NODES
+
+
+//signature
+var	SIG_SF_FN=					cFormNodeManager.getFormNodeForKey("sfSignatureBlock"); //signature block and attestation parent subform
+var DATESIG_DTE_FN=				cFormNodeManager.getFormNodeForKey("ddtSignedOnAttestation");		//date of signature					
+var DIGSIG_SIG_FN=				cFormNodeManager.getFormNodeForKey("digSignature");		//digital signature control
+var IMGSIG_IMG_FN=				cFormNodeManager.getFormNodeForKey("imgSignature");		//image signature control
+var SIGCHOICE_RDO_FN=			cFormNodeManager.getFormNodeForKey("signatureOption");
+	
+
+
+
+_initialiseFormNodes();
+
+
+/* Action Handler
+*
+*
+*
+*/
+
+function actionPerformed(anEvent)
+{
+	switch(anEvent.getActionCommand())
+	{
+		case SIGNATURE_CHOICE_UI:
+				_setSignatureChoice(anEvent.getSource().rawValue);
+		
+			break;	
+			
+		case DIG_SIG_CHANGE:
+		
+			 	_digitalSignatureChanged(anEvent.getSource(),anEvent.getValue());
+			 break;	
+			
+		case IMG_SIG_CHANGE:
+				 _imgSignatureChanged();
+			break;
+		case  SET_SIGNATURE_DATE_ACTION:
+				//used by presign as a way to set the date before the form is saved
+				_setSignatureDate();
+			break;	
+			
+					
+		default:
+			throw cException.createInstance(SCRIPT_OBJECT_NAME
+				  + ".actionPerformed() - unrecognized event '" 
+				  + anEvent.getActionCommand() + "'.", "UnsupportedAction");
+	}
+}
+
+
+
+
+
+/*
+* Called during form initialization. 
+*
+*
+*
+*/
+function initialiseHandler(){
+
+		 setSignatureBlockState();
+	
+}//end fn
+
+
+
+
+function clearSignatures(){
+
+	xfa.host.resetData(DIGSIG_SIG_FN.getNodeInstance().somExpression);
+	xfa.host.resetData(IMGSIG_IMG_FN.getNodeInstance().somExpression);
+
+}
+
+
+/***Private functionality ***/
+function _initialiseFormNodes(){
+
+	try{
+	
+		cControllerUtil.checkFormNode(SIGCHOICE_RDO_FN, SCRIPT_OBJECT_NAME ,"SIGCHOICE_RDO_FN");
+		cControllerUtil.checkFormNode(DIGSIG_SIG_FN, SCRIPT_OBJECT_NAME ,"DIGSIG_SIG_FN");
+		cControllerUtil.checkFormNode(IMGSIG_IMG_FN, SCRIPT_OBJECT_NAME ,"IMGSIG_IMG_FN");
+		cControllerUtil.checkFormNode(DATESIG_DTE_FN, SCRIPT_OBJECT_NAME ,"DATESIG_DTE_FN");
+				
+		cControllerUtil.checkFormNode(SIG_SF_FN,SCRIPT_OBJECT_NAME,"SIG_SF_FN");
+		
+	}
+	catch (exception)
+	{
+		cLog.critical(SCRIPT_OBJECT_NAME+"._initialize()", exception);
+	}
+}
+
+
+
+
+/* Updates the ui based on the Signature choice
+* UI components are slightly awkward
+*/
+function _setSignatureChoice(choiceValue){
+
+	var a_digSig=DIGSIG_SIG_FN.getNodeInstance();
+	var a_imgSig=IMGSIG_IMG_FN.getNodeInstance();
+	var a_dateSig=DATESIG_DTE_FN.getNodeInstance();
+	//always clear date on a change
+	a_dateSig.rawValue="";
+	
+	if(choiceValue===DIGITAL_SIG){
+		cGeneralUtil.hideAndClearNodeInstance(a_imgSig);
+		cUiUtil.show(a_digSig);
+			
+	}else if(choiceValue===IMAGE_SIG){
+		cGeneralUtil.hideAndClearNodeInstance(a_digSig);
+		cUiUtil.show(a_imgSig);
+		
+	}else{
+		cGeneralUtil.hideAndClearNodeInstance(a_digSig);
+		cGeneralUtil.hideAndClearNodeInstance(a_imgSig);
+	}
+}
+
+
+
+
+function _digitalSignatureChanged(a_Sigfld,acroDoc){
+
+var origSOM=a_Sigfld.somExpression;
+var acroSignFld=acroDoc.getField(origSOM.substr(15)); 
+
+	if(acroSignFld.type=="signature"){
+		if(acroSignFld.signatureInfo().date){
+			_setSignatureDate();
+				
+		}else{
+		cLog.trace("clearing the date");
+	 		_setSignatureDate(true);
+	 	}
+	 }
+
+}
+/** updates validation state for image signature**/
+function _imgSignatureChanged(){
+
+	var a_imgSig=IMGSIG_IMG_FN.getNodeInstance();
+	
+	if(a_imgSig.value.image.value){
+		_setSignatureDate();
+		//make it the same as digital signature.
+		app.execMenuItem("SaveAs");
+	}else{
+		cFormHandler.unlockForm();
+		_setSignatureDate(true);
+	
+	}	
+	
+}
+
+// Sets the date of signature
+function _setSignatureDate(clearValue){
+
+	var a_dateSig=DATESIG_DTE_FN.getNodeInstance();
+	if(clearValue===true){
+		a_dateSig.rawValue="";
+	}else{
+		var today=new Date(Date.now());
+		//since core util overrides Grr!
+		a_dateSig.rawValue=today.getFullYear()+"-"
+		+cGeneralUtil.pad(""+(today.getMonth()+1),2,'0')+"-"
+		+cGeneralUtil.pad(""+today.getDate(),2,'0');
+	}
+}//end fn
+
+
+
+function setSignatureBlockState(){
+
+	var a_sigBlock=SIG_SF_FN.getNodeInstance();
+	if(cFormHandler.isFinalized()){
+		cUiUtil.show(a_sigBlock);
+		SIG_SF_FN.unLock();
+		DATESIG_DTE_FN.lock();
+	}else{
+		cGeneralUtil.hideAndClearNodeInstance(a_sigBlock);
+	}
+
+}//fn
+
+/*
+* TODO: needs to move to the general utiltities
+*
+*/
+function createReportInstance(visualState,instanceManager){
+	
+	var newInstance=cGeneralUtil.addSubformInstance(instanceManager);
+	if(newInstance){
+		 	if(visualState!="visible"){
+			cUiUtil.hide(newInstance);
+		}
+	 }
+	return(newInstance);
+}
+
+               <?templateDesigner isFragment yes?>
+               <?templateDesigner fragmentTitle SignatureBlockHandler?>
+               <?templateDesigner fragmentDescription Used to handle the behaviour of a signature block. Tested only with a single signature?></script>
+         </variables>
+      </subform>
+   </subform>
+</template>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <lcd:fragmentCatalog>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <dc:title>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">SignatureBlockHandler</rdf:li>
+                     </rdf:Alt>
+                  </dc:title>
+                  <dc:description>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">Used to handle the behaviour of a signature block. Tested only with a single signature</rdf:li>
+                     </rdf:Alt>
+                  </dc:description>
+                  <dc:identifier>$template.form1.#subform.#variables.SignatureBlockHandler</dc:identifier>
+                  <lcd:fragmentRole>ScriptObject</lcd:fragmentRole>
+               </rdf:li>
+            </rdf:Seq>
+         </lcd:fragmentCatalog>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

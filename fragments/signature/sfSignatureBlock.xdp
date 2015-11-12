@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <subform name="form1" locale="en_CA" layout="tb">
+      <pageSet>
+         <pageArea>
+            <contentArea w="203.2mm" h="249.476mm" x="6.351mm" y="16.198mm" name="contentArea"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+         </pageArea>
+      </pageSet>
+      <subform w="203.2mm" layout="lr-tb" name="sfSignatureBlock">
+         <border>
+            <edge/>
+            <corner thickness="0.175mm"/>
+         </border>
+         <exclGroup name="signatureOption" layout="lr-tb">
+            <?templateDesigner itemValuesSpecified 1?>
+            <field w="28mm" h="6mm" name="chkDigitalID">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <?templateDesigner StyleID apcb4?>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="22mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Digital ID</text>
+                  </value>
+                  <font typeface="Myriad Pro" size="8pt"/>
+               </caption>
+               <value>
+                  <text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+               </value>
+               <items>
+                  <text>DIG_SIG</text>
+               </items>
+            </field>
+            <field w="50.8mm" h="6mm" name="chkDigitalImage">
+               <ui>
+                  <checkButton shape="round">
+                     <border>
+                        <?templateDesigner StyleID apcb4?>
+                        <edge stroke="lowered"/>
+                        <fill/>
+                     </border>
+                  </checkButton>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption placement="right" reserve="44.958mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Image Signature</text>
+                  </value>
+                  <font typeface="Myriad Pro" size="8pt"/>
+               </caption>
+               <items>
+                  <text>IMG_SIG</text>
+               </items>
+            </field>
+            <event activity="change" name="event__change">
+               <script contentType="application/x-javascript">
+
+
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+var cHandler = script.HCeForm.control.SignatureBlockHandler
+var cSystem = script.core.System;
+
+try
+{
+		// set up event object
+		var actionName = cHandler.SIGNATURE_CHOICE_UI;
+		var anActionEvent = cActionEvent.createInstance(actionName,this);
+		// deploy event to controller
+		cHandler.actionPerformed(anActionEvent);
+}
+catch(exception)
+{
+	cLog.warn("Problem with sig type::change", exception);
+}
+</script>
+            </event>
+            <bind match="dataRef" ref="$.attestation_info.signature_type"/>
+            <?templateDesigner expand 1?></exclGroup>
+         <draw name="Rectangle1" w="119.247mm" h="5.598mm">
+            <value>
+               <rectangle>
+                  <edge presence="hidden"/>
+                  <corner radius="5.08mm" presence="hidden"/>
+               </rectangle>
+            </value>
+         </draw>
+         <field name="digSignature" w="110.174mm" h="8.939mm">
+            <ui>
+               <signature>
+                  <border>
+                     <edge stroke="lowered"/>
+                     <?templateDesigner StyleID aped3?></border>
+                  <margin/>
+               </signature>
+            </ui>
+            <font typeface="Myriad Pro" size="8pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="26.8657mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Signature*</text>
+               </value>
+            </caption>
+            <bind match="none"/>
+            <border>
+               <edge/>
+               <corner thickness="0.175mm"/>
+            </border>
+            <event activity="change" name="event__change">
+               <script contentType="application/x-javascript">var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+var cHandler =script.HCeForm.control.SignatureBlockHandler;
+var cSystem = script.core.System;
+
+try
+{
+		// set up event object
+		var actionName = cHandler.DIG_SIG_CHANGE;
+		var anActionEvent = cActionEvent.createInstance(actionName,this,event.target);
+		// deploy event to controller
+		cHandler.actionPerformed(anActionEvent);
+}
+catch(exception)
+{
+	cLog.warn("Problem with dig sig::change", exception);
+}
+
+</script>
+            </event>
+            <event activity="preSign" name="event__preSign">
+               <script contentType="application/x-javascript">
+
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+var cHandler =script.HCeForm.control.SignatureBlockHandler;
+var cSystem = script.core.System;
+
+try
+{
+		// set up event object
+		var actionName = cHandler.SET_SIGNATURE_DATE_ACTION;
+		var anActionEvent = cActionEvent.createInstance(actionName,this);
+		// deploy event to controller
+		cHandler.actionPerformed(anActionEvent);
+}
+catch(exception)
+{
+	cLog.warn("Problem with dig sig::presign", exception);
+}
+</script>
+            </event>
+         </field>
+         <field name="imgSignature" w="110.174mm" h="8.938mm">
+            <ui>
+               <imageEdit data="embed"/>
+            </ui>
+            <caption reserve="18.0746mm">
+               <font size="8pt" typeface="Myriad Pro" baselineShift="0pt"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               <value>
+                  <text>Signature*</text>
+               </value>
+            </caption>
+            <border>
+               <edge/>
+               <corner thickness="0.175mm"/>
+               <edge/>
+               <edge presence="hidden"/>
+               <edge presence="hidden"/>
+               <corner thickness="0.175mm"/>
+               <corner thickness="0.175mm" presence="hidden"/>
+               <corner thickness="0.175mm" presence="hidden"/>
+            </border>
+            <desc>
+               <text name="embeddedHref">Unknown Embedded URI</text>
+            </desc>
+            <margin leftInset="0.381mm" topInset="0.381mm" rightInset="0.381mm" bottomInset="0.381mm"/>
+            <event activity="change" name="event__change">
+               <script contentType="application/x-javascript">
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+var cHandler =script.HCeForm.control.SignatureBlockHandler;
+var cSystem = script.core.System;
+
+try
+{
+
+		// set up event object
+		var actionName = cHandler.IMG_SIG_CHANGE;
+		var anActionEvent = cActionEvent.createInstance(actionName,this);
+		// deploy event to controller
+		cHandler.actionPerformed(anActionEvent);
+	
+}
+catch(exception)
+{
+	cLog.warn("Problem with img sig::change", exception);
+}
+</script>
+            </event>
+            <bind match="dataRef" ref="$.attestation_info.signature_image"/>
+         </field>
+         <draw name="Rectangle2" w="110.937mm" h="8.938mm" presence="hidden">
+            <value>
+               <rectangle>
+                  <edge presence="hidden"/>
+                  <corner radius="5.08mm" presence="hidden"/>
+               </rectangle>
+            </value>
+         </draw>
+         <field name="ddtSignedOnAttestation" w="91.812mm" h="8.939mm" access="readOnly">
+            <ui>
+               <dateTimeEdit hScrollPolicy="off">
+                  <border hand="right">
+                     <?templateDesigner StyleID aped2?>
+                     <edge/>
+                  </border>
+                  <margin/>
+                  <comb numberOfCells="10"/>
+               </dateTimeEdit>
+               <picture>date{YYYY-MM-DD}</picture>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1.0008mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <date/>
+            </value>
+            <caption reserve="33.6933mm">
+               <para vAlign="middle"/>
+               <value>
+                  <text>Date (YYYY-MM-DD)*</text>
+               </value>
+               <font typeface="Myriad Pro" size="8pt"/>
+            </caption>
+            <format>
+               <picture>date{YYYY-MM-DD}</picture>
+            </format>
+            <border>
+               <edge/>
+               <corner thickness="0.175mm"/>
+               <corner thickness="0.175mm" presence="hidden"/>
+               <corner thickness="0.175mm" presence="hidden"/>
+               <edge presence="hidden"/>
+               <edge presence="hidden"/>
+               <edge/>
+            </border>
+            <validate>
+               <picture>date{YYYY-MM-DD}</picture>
+            </validate>
+            <bind match="dataRef" ref="$.attestation_info.attestation_sign_date">
+               <picture>date{YYYY-MM-DD}</picture>
+            </bind>
+            <calculate override="error"/>
+         </field>
+         <keep intact="contentArea"/>
+         <margin topInset="1.27mm" leftInset="0.508mm" bottomInset="1.27mm"/>
+         <bind match="none"/>
+         <?templateDesigner expand 1?>
+         <?templateDesigner isFragment yes?>
+         <?templateDesigner fragmentTitle sfSignatureBlock?>
+         <?templateDesigner fragmentDescription Signature block layout as first used in form 6-7. Works with the signature block handler?></subform>
+   </subform>
+</template>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <lcd:fragmentCatalog>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <dc:title>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">sfSignatureBlock</rdf:li>
+                     </rdf:Alt>
+                  </dc:title>
+                  <dc:description>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">Signature block layout as first used in form 6-7. Works with the signature block handler</rdf:li>
+                     </rdf:Alt>
+                  </dc:description>
+                  <dc:identifier>$template.form1.sfSignatureBlock</dc:identifier>
+                  <lcd:fragmentRole>Subform</lcd:fragmentRole>
+               </rdf:li>
+            </rdf:Seq>
+         </lcd:fragmentCatalog>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>
