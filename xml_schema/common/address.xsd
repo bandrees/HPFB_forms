@@ -16,7 +16,7 @@
 	<!-- ELEMENT TYPE DECLARATIONS -->
 	<!-- ****************************** -->
 		<!-- main xml structure-->
-	<hpfb:complexType name="address_content">
+	<hpfb:complexType name="international_address_content">
 		<hpfb:sequence>
 			<hpfb:element ref="street_address"/>
 			<hpfb:element ref="city"/>
@@ -26,4 +26,15 @@
 			<hpfb:element ref="postal_code"/>
 		</hpfb:sequence>
 	</hpfb:complexType>
+
+	<hpfb:complexType name="can_us_address_content">
+		<hpfb:sequence>
+			<hpfb:element ref="street_address"/>
+			<hpfb:element ref="city"/>
+			<hpfb:element ref="province_lov"/>
+			<hpfb:element ref="country"/>
+			<hpfb:element ref="postal_code"/>
+		</hpfb:sequence>
+	</hpfb:complexType>
+
 </hpfb:schema>
