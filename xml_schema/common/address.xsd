@@ -5,8 +5,6 @@
 	<!-- ****************************** -->
 	<!-- ELEMENT DECLARATIONS -->
 	<!-- ****************************** -->
-	<hpfb:element name="address" type="address_content"/>
-	<hpfb:element name="company_name"/>
 	<hpfb:element name="street_address"/>
 	<hpfb:element name="city"/>
 	<hpfb:element name="province_lov"/>
@@ -20,7 +18,6 @@
 		<!-- main xml structure-->
 	<hpfb:complexType name="address_content">
 		<hpfb:sequence>
-			<hpfb:element ref="company_name"/>
 			<hpfb:element ref="street_address"/>
 			<hpfb:element ref="city"/>
 			<hpfb:element ref="province_lov"/>

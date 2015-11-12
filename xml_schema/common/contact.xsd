@@ -5,7 +5,6 @@
 	<!-- ****************************** -->
 	<!-- ELEMENT DECLARATIONS -->
 	<!-- ****************************** -->
-	<hpfb:element name="contact" type="contact_content"/>
 	<hpfb:element name="salutation" />
 	<hpfb:element name="given_name" />
 	<hpfb:element name="initials" />
