@@ -19,8 +19,12 @@
 		<!-- main xml structure-->
 	<hpfb:complexType name="international_address_content">
 		<hpfb:sequence>
-			<hpfb:element ref="canada_us_address"/>
+			<hpfb:element ref="street_address"/>
+			<hpfb:element ref="city"/>
+			<hpfb:element ref="province_lov"/>
 			<hpfb:element ref="province_text"/>
+			<hpfb:element ref="country"/>
+			<hpfb:element ref="postal_code"/>
 		</hpfb:sequence>
 	</hpfb:complexType>
 
