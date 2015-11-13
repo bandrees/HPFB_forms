@@ -18,16 +18,16 @@
 	<hpfb:element name="common_name"/>
 	<hpfb:element name="sponser_info" type="sponsor_content"/>
 	<hpfb:element name="sponsor_company" />
-	<hpfb:element name="sponsor_address" type="address_content"/>
+	<hpfb:element name="sponsor_address" type="international_address_content"/>
 	<hpfb:element name="trial_contact_info"	type="trial_contact_content"/>
 	<hpfb:element name="trial_contact_company"/>
-	<hpfb:element name="trial_contact_address"	type="address_content"/>
+	<hpfb:element name="trial_contact_address"	type="international_address_content"/>
 	<hpfb:element name="trial_contact"	type="contact_content"/>
 	<hpfb:element name="trial_site_info"	type="trial_site_content"/>
 	<hpfb:element name="trial_site_name"/>
-	<hpfb:element name="trial_site_address" type="address_content"/>
+	<hpfb:element name="trial_site_address" type="can_us_address_content"/>
 	<hpfb:element name="qual_invest_info"	type="qual_invest_info"/>
-	<hpfb:element name="qual_invest_address" type="address_content"/>
+	<hpfb:element name="qual_invest_address" type="can_us_address_content"/>
 	<hpfb:element name="qual_invest_contact" type="contact_content"/>
 	<hpfb:element name="attestation_info" 	type="attest_content" />
 	<hpfb:element name="attestation_salutation"/>

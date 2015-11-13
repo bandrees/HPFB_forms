@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2015-11-10T21:07:49Z" uuid="1c0c5beb-1387-4f7c-99f0-0b8c1ffc524f">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2015-11-13T13:20:03Z" uuid="0ddb4f19-42ef-4e2a-8fef-393166eb51a8">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -24,21 +24,6 @@
                      <speak priority="toolTip"/>
                   </assist>
                </draw>
-               <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">/*
-var cConfigManager=script.core.util.ConfigurationManager;
-var cFormHandler= script.HCeForm.control.FormHandler;
-
-var FRENCH=			cConfigManager.get("FRENCH");
-
-if(cFormHandler.getCurrentLanguage()===FRENCH){
-	this.presence="hidden";
-}else{
-	this.presence="visible";
-}
-*/
-</script>
-               </event>
                <?templateDesigner expand 1?></subform>
             <subform x="6.35mm" y="6.35mm" w="47.625mm" name="sfLogo_fr" layout="tb">
                <bind match="none"/>
@@ -53,19 +38,6 @@ if(cFormHandler.getCurrentLanguage()===FRENCH){
                      <speak priority="toolTip"/>
                   </assist>
                </draw>
-               <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">/*var cConfigManager=script.core.util.ConfigurationManager;
-var cFormHandler= script.HCeForm.control.FormHandler;
-
-var FRENCH=			cConfigManager.get("FRENCH");
-
-if(cFormHandler.getCurrentLanguage()===FRENCH){
-	this.presence="visible";
-}else{
-	this.presence="hidden";
-}*/
-</script>
-               </event>
                <?templateDesigner expand 1?></subform>
             <draw h="6.352mm" name="imgCanada" w="20.744mm" y="268.392mm" x="6.136mm">
                <ui>
@@ -95,13 +67,6 @@ if(cFormHandler.getCurrentLanguage()===FRENCH){
                </assist>
                <event activity="initialize" name="event__initialize">
                   <script contentType="application/x-javascript">
-//relying on updateUI
-//var cResourceManager = 		script.core.lang.ResourceManager;
-//var cUiUtil=				script.core.util.UiUtil;
-//var labelText=				cResourceManager.get("lbApplTitle");
-//cheat
-//cUiUtil.setCaption(this.parent.lblMasterTitle,labelText);
-//
 /*******************************************************************************
  * This updates the FormPage's language when a new instance is created. This is
  * here because there is nowhere to put it on the master page itself.
@@ -176,14 +141,6 @@ this.rawValue=textVal;
                   </value>
                </caption>
                <bind match="dataRef" ref="$.form_version"/>
-               <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
-//var cConfigManager=			script.core.util.ConfigurationManager;
-//this.rawValue=				cConfigManager.get("formVersion");
-//this.access=				"protected";
-
-</script>
-               </event>
             </field>
             <draw name="lblMasterTitle" y="267.931mm" x="123.143mm" w="85.581mm" h="5.588mm" hAlign="right">
                <ui>
@@ -434,31 +391,6 @@ catch(exception)
             <margin bottomInset="5.08mm"/>
             <?templateDesigner expand 0?>
             <bind match="none"/>
-            <field name="Button1" w="28.575mm" h="6mm">
-               <ui>
-                  <button highlight="inverted"/>
-               </ui>
-               <font typeface="Myriad Pro"/>
-               <caption>
-                  <value>
-                     <text>errors</text>
-                  </value>
-                  <para vAlign="middle" hAlign="center"/>
-               </caption>
-               <border hand="right">
-                  <edge stroke="raised"/>
-                  <fill>
-                     <color value="212,208,200"/>
-                  </fill>
-               </border>
-               <bind match="none"/>
-               <event activity="click" name="event__click">
-                  <script contentType="application/x-javascript">
-
-gsdfdsf.sdfsdf-sdfsdf...
-</script>
-               </event>
-            </field>
          </subform>
          <subform w="203.2mm" layout="lr-tb" name="sfInstructionsContent">
             <draw name="lblInstructionsHead" w="8in" h="6.249mm">
@@ -2715,271 +2647,10 @@ catch(exception)
                </field>
                <bind match="none"/>
                <?templateDesigner expand 1?></subform>
-            <subform w="203.2mm" layout="lr-tb" name="sfSignatureBlock">
-               <border>
-                  <edge/>
-                  <corner thickness="0.175mm"/>
-               </border>
-               <exclGroup name="signatureOption" layout="lr-tb">
-                  <?templateDesigner itemValuesSpecified 1?>
-                  <field w="28mm" h="6mm" name="chkDigitalID">
-                     <ui>
-                        <checkButton shape="round">
-                           <border>
-                              <?templateDesigner StyleID apcb4?>
-                              <edge stroke="lowered"/>
-                              <fill/>
-                           </border>
-                        </checkButton>
-                     </ui>
-                     <font typeface="Myriad Pro"/>
-                     <margin leftInset="1mm" rightInset="1mm"/>
-                     <para vAlign="middle"/>
-                     <caption placement="right" reserve="22mm">
-                        <para vAlign="middle"/>
-                        <value>
-                           <text>Digital ID</text>
-                        </value>
-                        <font typeface="Myriad Pro" size="8pt"/>
-                     </caption>
-                     <value>
-                        <text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
-                     </value>
-                     <items>
-                        <text>DIG_SIG</text>
-                     </items>
-                  </field>
-                  <field w="50.8mm" h="6mm" name="chkDigitalImage">
-                     <ui>
-                        <checkButton shape="round">
-                           <border>
-                              <?templateDesigner StyleID apcb4?>
-                              <edge stroke="lowered"/>
-                              <fill/>
-                           </border>
-                        </checkButton>
-                     </ui>
-                     <font typeface="Myriad Pro"/>
-                     <margin leftInset="1mm" rightInset="1mm"/>
-                     <para vAlign="middle"/>
-                     <caption placement="right" reserve="44.958mm">
-                        <para vAlign="middle"/>
-                        <value>
-                           <text>Image Signature</text>
-                        </value>
-                        <font typeface="Myriad Pro" size="8pt"/>
-                     </caption>
-                     <items>
-                        <text>IMG_SIG</text>
-                     </items>
-                  </field>
-                  <event activity="change" name="event__change">
-                     <script contentType="application/x-javascript">
-
-
-var cActionEvent = script.core.event.ActionEvent;
-var cLog = script.core.util.Log;
-var cHandler = script.HCeForm.control.SignatureBlockHandler
-var cSystem = script.core.System;
-
-try
-{
-		// set up event object
-		var actionName = cHandler.SIGNATURE_CHOICE_UI;
-		var anActionEvent = cActionEvent.createInstance(actionName,this);
-		// deploy event to controller
-		cHandler.actionPerformed(anActionEvent);
-}
-catch(exception)
-{
-	cLog.warn("Problem with sig type::change", exception);
-}
-</script>
-                  </event>
-                  <bind match="dataRef" ref="$.attestation_info.signature_type"/>
-                  <?templateDesigner expand 1?></exclGroup>
-               <draw name="Rectangle1" w="119.247mm" h="5.598mm">
-                  <value>
-                     <rectangle>
-                        <edge presence="hidden"/>
-                        <corner radius="5.08mm" presence="hidden"/>
-                     </rectangle>
-                  </value>
-               </draw>
-               <field name="digSignature" w="110.174mm" h="8.939mm">
-                  <ui>
-                     <signature>
-                        <border>
-                           <edge stroke="lowered"/>
-                           <?templateDesigner StyleID aped3?></border>
-                        <margin/>
-                     </signature>
-                  </ui>
-                  <font typeface="Myriad Pro" size="8pt"/>
-                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-                  <para vAlign="middle"/>
-                  <caption reserve="26.8657mm">
-                     <para vAlign="middle"/>
-                     <value>
-                        <text>Signature*</text>
-                     </value>
-                  </caption>
-                  <bind match="none"/>
-                  <border>
-                     <edge/>
-                     <corner thickness="0.175mm"/>
-                  </border>
-                  <event activity="change" name="event__change">
-                     <script contentType="application/x-javascript">var cActionEvent = script.core.event.ActionEvent;
-var cLog = script.core.util.Log;
-var cHandler =script.HCeForm.control.SignatureBlockHandler;
-var cSystem = script.core.System;
-
-try
-{
-		// set up event object
-		var actionName = cHandler.DIG_SIG_CHANGE;
-		var anActionEvent = cActionEvent.createInstance(actionName,this,event.target);
-		// deploy event to controller
-		cHandler.actionPerformed(anActionEvent);
-}
-catch(exception)
-{
-	cLog.warn("Problem with dig sig::change", exception);
-}
-
-</script>
-                  </event>
-                  <event activity="preSign" name="event__preSign">
-                     <script contentType="application/x-javascript">
-
-var cActionEvent = script.core.event.ActionEvent;
-var cLog = script.core.util.Log;
-var cHandler =script.HCeForm.control.SignatureBlockHandler;
-var cSystem = script.core.System;
-
-try
-{
-		// set up event object
-		var actionName = cHandler.SET_SIGNATURE_DATE_ACTION;
-		var anActionEvent = cActionEvent.createInstance(actionName,this);
-		// deploy event to controller
-		cHandler.actionPerformed(anActionEvent);
-}
-catch(exception)
-{
-	cLog.warn("Problem with dig sig::presign", exception);
-}
-</script>
-                  </event>
-               </field>
-               <field name="imgSignature" w="110.174mm" h="8.938mm">
-                  <ui>
-                     <imageEdit data="embed"/>
-                  </ui>
-                  <caption reserve="18.0746mm">
-                     <font size="8pt" typeface="Myriad Pro" baselineShift="0pt"/>
-                     <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
-                     <value>
-                        <text>Signature*</text>
-                     </value>
-                  </caption>
-                  <border>
-                     <edge/>
-                     <corner thickness="0.175mm"/>
-                     <edge/>
-                     <edge presence="hidden"/>
-                     <edge presence="hidden"/>
-                     <corner thickness="0.175mm"/>
-                     <corner thickness="0.175mm" presence="hidden"/>
-                     <corner thickness="0.175mm" presence="hidden"/>
-                  </border>
-                  <desc>
-                     <text name="embeddedHref">Unknown Embedded URI</text>
-                  </desc>
-                  <margin leftInset="0.381mm" topInset="0.381mm" rightInset="0.381mm" bottomInset="0.381mm"/>
-                  <event activity="change" name="event__change">
-                     <script contentType="application/x-javascript">
-var cActionEvent = script.core.event.ActionEvent;
-var cLog = script.core.util.Log;
-var cHandler =script.HCeForm.control.SignatureBlockHandler;
-var cSystem = script.core.System;
-
-try
-{
-
-		// set up event object
-		var actionName = cHandler.IMG_SIG_CHANGE;
-		var anActionEvent = cActionEvent.createInstance(actionName,this);
-		// deploy event to controller
-		cHandler.actionPerformed(anActionEvent);
-	
-}
-catch(exception)
-{
-	cLog.warn("Problem with img sig::change", exception);
-}
-</script>
-                  </event>
-                  <bind match="dataRef" ref="$.attestation_info.signature_image"/>
-               </field>
-               <draw name="Rectangle2" w="110.937mm" h="8.938mm" presence="hidden">
-                  <value>
-                     <rectangle>
-                        <edge presence="hidden"/>
-                        <corner radius="5.08mm" presence="hidden"/>
-                     </rectangle>
-                  </value>
-               </draw>
-               <field name="ddtSignedOnAttestation" w="91.812mm" h="8.939mm" access="readOnly">
-                  <ui>
-                     <dateTimeEdit hScrollPolicy="off">
-                        <border hand="right">
-                           <?templateDesigner StyleID aped2?>
-                           <edge/>
-                        </border>
-                        <margin/>
-                        <comb numberOfCells="10"/>
-                     </dateTimeEdit>
-                     <picture>date{YYYY-MM-DD}</picture>
-                  </ui>
-                  <font typeface="Myriad Pro"/>
-                  <margin topInset="1.0008mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-                  <para vAlign="middle"/>
-                  <value>
-                     <date/>
-                  </value>
-                  <caption reserve="33.6933mm">
-                     <para vAlign="middle"/>
-                     <value>
-                        <text>Date (YYYY-MM-DD)*</text>
-                     </value>
-                     <font typeface="Myriad Pro" size="8pt"/>
-                  </caption>
-                  <format>
-                     <picture>date{YYYY-MM-DD}</picture>
-                  </format>
-                  <border>
-                     <edge/>
-                     <corner thickness="0.175mm"/>
-                     <corner thickness="0.175mm" presence="hidden"/>
-                     <corner thickness="0.175mm" presence="hidden"/>
-                     <edge presence="hidden"/>
-                     <edge presence="hidden"/>
-                     <edge/>
-                  </border>
-                  <validate>
-                     <picture>date{YYYY-MM-DD}</picture>
-                  </validate>
-                  <bind match="dataRef" ref="$.attestation_info.attestation_sign_date">
-                     <picture>date{YYYY-MM-DD}</picture>
-                  </bind>
-                  <calculate override="error"/>
-               </field>
-               <keep intact="contentArea"/>
-               <margin topInset="1.27mm" leftInset="0.508mm" bottomInset="1.27mm"/>
-               <bind match="none"/>
-               <?templateDesigner expand 1?>
+            <subform usehref="..\..\fragments\signature\sfSignatureBlock.xdp#som($template.form1.sfSignatureBlock)">
+               <bind/>
+               <keep/>
+               <?templateDesigner expand 0?>
             </subform>
             <border>
                <edge/>
@@ -2987,8 +2658,8 @@ catch(exception)
             </border>
             <margin topInset="0mm"/>
             <keep intact="contentArea"/>
-            <?templateDesigner expand 0?>
             <bind match="none"/>
+            <?templateDesigner expand 1?>
          </subform>
          <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
          <bind match="none"/>
@@ -2998,7 +2669,8 @@ catch(exception)
          <bind match="none"/>
          <subform usehref="..\..\fragments\CoreJavaScript.xdp#som($template.script.core)">
             <bind/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?>
+         </subform>
          <subform h="50mm" name="HCeForm" w="100mm">
             <subform layout="tb" name="config" w="100mm">
                <keep intact="contentArea"/>
@@ -3011,7 +2683,7 @@ var content = {
 
 formType: "HCeForm",
 errorInd:					"+",
-formVersion: "2.00.11",
+formVersion: "2.00.15",
 CANADA:	"CA",
 USA:	"US",
 DR_SALUT: "dr",
@@ -3104,12 +2776,13 @@ function actionPerformed(anEvent)
 	{
 
 		case INITIALIZE_FORM_ACTION:
-			 initialize();
+			 initializeForm();
 			break;
 		
 		case LANGUAGE_CHANGE:
 			cHCeFormModel.setLanguage(anEvent.getSource().rawValue);
 			_updateFormLanguage();
+			initializeForm()
 			break;
 		
 		case SET_INVESTIGATOR_NAME:
@@ -3152,15 +2825,15 @@ function actionPerformed(anEvent)
 *
 *
 */
-function initialize(){
+function initializeForm(){
 	
 	
 		_updateFormLanguage();	
 		toggleInstructionsVisiblity(HIDE_INSTRUCTIONS);
 		_initializeAttestationNameUI();
 		//initialize other controllers
-		cAddressHandler.initialise();
-		cSignatureHandler.initialise();
+		cAddressHandler.initialiseHandler();
+		cSignatureHandler.initialiseHandler();
 }
 
 
@@ -3169,7 +2842,7 @@ function unlockForm(form_node){
 		form_node=cFormNodeManager.getBaseNode();
 	}
 	form_node.unLock();
-	initialize();
+	initializeForm();
 }//end fn
 
 
@@ -3246,7 +2919,6 @@ function _updateFormLanguage()
 		rootInstance.locale="fr_CA";			
 	}else{
 		rootInstance.locale="en_CA";
-		//xfa.host.title=cResourceManager.get("lbFormTitle");
 	}
 }
 
@@ -3429,7 +3101,7 @@ function actionPerformed(anEvent)
 }//end fn
 
 
-function initialise(){
+function initialiseHandler(){
 		
 	//set the province UI visibility based on the country value
 	cAddressUtil.setProvinceUIState(CLINICAL_COUNTRY_DDL_FN.getNodeInstance().rawValue,CLINICAL_PROVINCE_FN.getNodeInstance(),CLINICAL_PROVINCE_TXT_FN.getNodeInstance());
@@ -3513,239 +3185,7 @@ function _setFieldReadonly(fieldValue,fieldInstance){
                
                
 </script>
-                  <script contentType="application/x-javascript" name="SignatureBlockHandler">
-var cLog= 						script.core.util.Log;
-var cFormNodeManager=			script.core.model.FormNodeManager;
-var cResourceManager= 			script.core.lang.ResourceManager;
-var cException=					script.core.util.Exception;
-var cConfigManager=				script.core.util.ConfigurationManager;
-var cUiUtil=					script.core.util.UiUtil;
-var cControllerUtil = script.core.util.ControllerUtil;
-var cGeneralUtil=				script.HCeForm.util.General;
-var cFormHandler=				script.HCeForm.control.FormHandler;
-
-var SCRIPT_OBJECT_NAME="SignatureBlockHandler";
-
-var NO=				cConfigManager.get("NO");
-var YES=			cConfigManager.get("YES");
-var OTH=			cConfigManager.get("OTH");
-var DIGITAL_SIG=	cConfigManager.get("DIGITAL_SIG");
-var	IMAGE_SIG=		cConfigManager.get("IMAGE_SIG");
-
-//action Global variables
-var SIGNATURE_CHOICE_UI=  		"ui_sigtype"; 
-var DIG_SIG_CHANGE=		 		"digSigChange";
-var IMG_SIG_CHANGE=				"imgSigChange";
-var SET_SIGNATURE_DATE_ACTION=	"sig_date";
-
-//FORM NODES
-
-
-//signature
-var	SIG_SF_FN=					cFormNodeManager.getFormNodeForKey("sfSignatureBlock"); //signature block and attestation parent subform
-var DATESIG_DTE_FN=				cFormNodeManager.getFormNodeForKey("ddtSignedOnAttestation");		//date of signature					
-var DIGSIG_SIG_FN=				cFormNodeManager.getFormNodeForKey("digSignature");		//digital signature control
-var IMGSIG_IMG_FN=				cFormNodeManager.getFormNodeForKey("imgSignature");		//image signature control
-var SIGCHOICE_RDO_FN=			cFormNodeManager.getFormNodeForKey("signatureOption");
-	
-
-
-
-_initialise();
-
-
-/* Action Handler
-*
-*
-*
-*/
-
-function actionPerformed(anEvent)
-{
-	switch(anEvent.getActionCommand())
-	{
-		case SIGNATURE_CHOICE_UI:
-				_setSignatureChoice(anEvent.getSource().rawValue);
-		
-			break;	
-			
-		case DIG_SIG_CHANGE:
-		
-			 	_digitalSignatureChanged(anEvent.getSource(),anEvent.getValue());
-			 break;	
-			
-		case IMG_SIG_CHANGE:
-				 _imgSignatureChanged();
-			break;
-		case  SET_SIGNATURE_DATE_ACTION:
-				//used by presign as a way to set the date before the form is saved
-				_setSignatureDate();
-			break;	
-			
-					
-		default:
-			throw cException.createInstance(SCRIPT_OBJECT_NAME
-				  + ".actionPerformed() - unrecognized event '" 
-				  + anEvent.getActionCommand() + "'.", "UnsupportedAction");
-	}
-}
-
-
-
-
-
-/*
-* Called during form initialization. 
-*
-*
-*
-*/
-function initialise(){
-
-	//_setSignatureChoice(SIGCHOICE_RDO_FN.getNodeInstance().rawValue);
-	 setSignatureBlockState();
-	
-}//end fn
-
-
-
-
-function clearSignatures(){
-
-	xfa.host.resetData(DIGSIG_SIG_FN.getNodeInstance().somExpression);
-	xfa.host.resetData(IMGSIG_IMG_FN.getNodeInstance().somExpression);
-
-}
-
-
-/***Private functionality ***/
-function _initialise(){
-
-	try{
-	
-		cControllerUtil.checkFormNode(SIGCHOICE_RDO_FN, SCRIPT_OBJECT_NAME ,"SIGCHOICE_RDO_FN");
-		cControllerUtil.checkFormNode(DIGSIG_SIG_FN, SCRIPT_OBJECT_NAME ,"DIGSIG_SIG_FN");
-		cControllerUtil.checkFormNode(IMGSIG_IMG_FN, SCRIPT_OBJECT_NAME ,"IMGSIG_IMG_FN");
-		cControllerUtil.checkFormNode(DATESIG_DTE_FN, SCRIPT_OBJECT_NAME ,"DATESIG_DTE_FN");
-				
-		cControllerUtil.checkFormNode(SIG_SF_FN,SCRIPT_OBJECT_NAME,"SIG_SF_FN");
-		
-	}
-	catch (exception)
-	{
-		cLog.critical(SCRIPT_OBJECT_NAME+"._initialize()", exception);
-	}
-}
-
-
-
-
-/* Updates the ui based on the Signature choice
-* UI components are slightly awkward
-*/
-function _setSignatureChoice(choiceValue){
-
-	var a_digSig=DIGSIG_SIG_FN.getNodeInstance();
-	var a_imgSig=IMGSIG_IMG_FN.getNodeInstance();
-	var a_dateSig=DATESIG_DTE_FN.getNodeInstance();
-	//always clear date on a change
-	a_dateSig.rawValue="";
-	
-	if(choiceValue===DIGITAL_SIG){
-		cGeneralUtil.hideAndClearNodeInstance(a_imgSig);
-		cUiUtil.show(a_digSig);
-			
-	}else if(choiceValue===IMAGE_SIG){
-		cGeneralUtil.hideAndClearNodeInstance(a_digSig);
-		cUiUtil.show(a_imgSig);
-		
-	}else{
-		cGeneralUtil.hideAndClearNodeInstance(a_digSig);
-		cGeneralUtil.hideAndClearNodeInstance(a_imgSig);
-	}
-}
-
-
-
-
-function _digitalSignatureChanged(a_Sigfld,acroDoc){
-
-var origSOM=a_Sigfld.somExpression;
-var acroSignFld=acroDoc.getField(origSOM.substr(15)); 
-
-	if(acroSignFld.type=="signature"){
-		if(acroSignFld.signatureInfo().date){
-			_setSignatureDate();
-				
-		}else{
-		cLog.trace("clearing the date");
-	 		_setSignatureDate(true);
-	 	}
-	 }
-
-}
-/** updates validation state for image signature**/
-function _imgSignatureChanged(){
-
-	var a_imgSig=IMGSIG_IMG_FN.getNodeInstance();
-	
-	if(a_imgSig.value.image.value){
-		_setSignatureDate();
-		//make it the same as digital signature.
-		app.execMenuItem("SaveAs");
-	}else{
-		cFormHandler.unlockForm();
-		_setSignatureDate(true);
-	
-	}	
-	
-}
-
-// Sets the date of signature
-function _setSignatureDate(clearValue){
-
-	var a_dateSig=DATESIG_DTE_FN.getNodeInstance();
-	if(clearValue===true){
-		a_dateSig.rawValue="";
-	}else{
-		var today=new Date(Date.now());
-		//since core util overrides Grr!
-		a_dateSig.rawValue=today.getFullYear()+"-"
-		+cGeneralUtil.pad(""+(today.getMonth()+1),2,'0')+"-"
-		+cGeneralUtil.pad(""+today.getDate(),2,'0');
-	}
-}//end fn
-
-
-
-function setSignatureBlockState(){
-
-	var a_sigBlock=SIG_SF_FN.getNodeInstance();
-	if(cFormHandler.isFinalized()){
-		cUiUtil.show(a_sigBlock);
-		SIG_SF_FN.unLock();
-		DATESIG_DTE_FN.lock();
-	}else{
-		cGeneralUtil.hideAndClearNodeInstance(a_sigBlock);
-	}
-
-}//fn
-
-/*
-* TODO: needs to move to the general utiltities
-*
-*/
-function createReportInstance(visualState,instanceManager){
-	
-	var newInstance=cGeneralUtil.addSubformInstance(instanceManager);
-	if(newInstance){
-		 	if(visualState!="visible"){
-			cUiUtil.hide(newInstance);
-		}
-	 }
-	return(newInstance);
-}
-</script>
+                  <script usehref="..\..\fragments\signature\SignatureBlockHandler.xdp#som($template.form1.#subform.#variables.SignatureBlockHandler)"/>
                   <script contentType="application/x-javascript" name="MasterPageHandler">
 
 //Imports
@@ -5173,9 +4613,10 @@ function pad(s, len, chr)
 }//end fn
 
 </script>
+                  <?templateDesigner expand 1?>
                   <script usehref="..\..\fragments\Accessibility.xdp#som($template.form1.#subform.#variables.Accessibility)"/>
                   <script usehref="..\..\fragments\util\AddressUtil.xdp#som($template.form1.#subform.#variables.AddressUtil)"/>
-                  <?templateDesigner expand 1?></variables>
+               </variables>
                <bind match="none"/>
                <?templateDesigner expand 1?></subform>
             <bind match="none"/>
@@ -5187,18 +4628,18 @@ function pad(s, len, chr)
          <?templateDesigner expand 1?></subform>
       <proto/>
       <desc>
-         <text name="version">$RevisionNo: 1.18$</text>
+         <text name="version"> 2.00</text>
          <text name="title">QUALIFIED INVESTIGATOR UNDERTAKING</text>
          <text name="creator">Health Canada</text>
-         <text name="created">$Date: 2015-07-21$</text>
+         <text name="created">2015-07-21</text>
          <text name="department">Health Canada</text>
-         <text name="issued">$Revision date: 2015-07-22$</text>
+         <text name="issued">2015</text>
       </desc>
       <margin leftInset="0mm" topInset="0mm" bottomInset="0mm"/>
       <event activity="initialize" name="event__initialize">
          <script contentType="application/x-javascript">
 
-//cFormHandler.initialize();
+
 var cFormHandler=script.HCeForm.control.FormHandler;
 var cActionEvent = script.core.event.ActionEvent;
 var cLog = script.core.util.Log;
@@ -5221,8 +4662,6 @@ catch(exception)
 
 </script>
       </event>
-      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
-      <?templateDesigner expand 1?>
       <event activity="prePrint" ref="$host" name="event__prePrint">
          <script contentType="application/x-javascript">
 var cFormHandler=	script.HCeForm.control.FormHandler;
@@ -5243,6 +4682,8 @@ catch(exception)
 }
 </script>
       </event>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
       <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 300 82 0001000300080009000A000B000C000D000E000F0010001100120013001400150016001700180019001A001B001C00220023002400250026002700280029002A002D002E002F0030003100320033003400350036003A003B003D00420043004400450046004700480049004A004B004C004D004E004F0050005100520053005400550056005700580059005A005B006F00CE00CF00D2 "’()*+,-./0123456789:;ABCDEFGHILMNOPQRSTUYZ\abcdefghijklmnopqrstuvwxyz–çéè?>
       <?renderCache.subset "Myriad Pro" 1 0 ISO-8859-1 4 188 49 0001000A000E000F0010001200130014001500220023002400250026002700280029002A002C002D002F00300031003200330034003500360037004200440045004600470048004A004D004E004F0050005100530054005500560057006F )-./1234ABCDEFGHIKLNOPQRSTUVacdefgilmnoprstuv–?>
       <?renderCache.subset "Myriad Pro" 0 1 ISO-8859-1 4 64 17 000100330042004500460048004A004D004E004F0050005300540055005600D2 Radegilmnorstuè?>
@@ -5310,6 +4751,7 @@ catch(exception)
       <xdp>
          <packets>*</packets>
       </xdp>
+      <output/>
    </present>
    <psMap>
       <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
@@ -5581,7 +5023,6 @@ catch(exception)
                <street_address/>
                <city/>
                <province_lov/>
-               <province_text/>
                <country/>
                <postal_code/>
             </trial_site_address>
@@ -5591,7 +5032,6 @@ catch(exception)
                <street_address/>
                <city/>
                <province_lov/>
-               <province_text/>
                <country/>
                <postal_code/>
             </qual_invest_address>
@@ -5620,64 +5060,11 @@ catch(exception)
       </QIU>
    </dd:dataDescription>
 </xfa:datasets>
-<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
-   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2015-11-10T21:07:49Z</xmp:MetadataDate>
-         <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
-      </rdf:Description>
-      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
-         <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
-      </rdf:Description>
-      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:1c0c5beb-1387-4f7c-99f0-0b8c1ffc524f</xmpMM:DocumentID>
-         <xmpMM:InstanceID>uuid:602373a6-699f-4c29-85d4-a0b4230fee7b</xmpMM:InstanceID>
-      </rdf:Description>
-      <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
-         <dc:format>application/pdf</dc:format>
-         <dc:date>
-            <rdf:Seq>
-               <rdf:li rdf:parseType="Resource">
-                  <rdf:value>$Date: 2015-07-21$</rdf:value>
-                  <dc:element-refinement>dc:created</dc:element-refinement>
-               </rdf:li>
-               <rdf:li rdf:parseType="Resource">
-                  <rdf:value>$Revision date: 2015-07-22$</rdf:value>
-                  <dc:element-refinement>dc:issued</dc:element-refinement>
-               </rdf:li>
-            </rdf:Seq>
-         </dc:date>
-         <dc:creator>
-            <rdf:Seq>
-               <rdf:li>Health Canada</rdf:li>
-            </rdf:Seq>
-         </dc:creator>
-         <dc:title>
-            <rdf:Alt>
-               <rdf:li xml:lang="x-default">QUALIFIED INVESTIGATOR UNDERTAKING</rdf:li>
-            </rdf:Alt>
-         </dc:title>
-      </rdf:Description>
-      <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
-         <desc:version rdf:parseType="Resource">
-            <rdf:value>$RevisionNo: 1.18$</rdf:value>
-            <desc:ref>/template/subform[1]</desc:ref>
-         </desc:version>
-         <desc:department rdf:parseType="Resource">
-            <rdf:value>Health Canada</rdf:value>
-            <desc:ref>/template/subform[1]</desc:ref>
-         </desc:department>
-      </rdf:Description>
-   </rdf:RDF>
-</x:xmpmeta>
-<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve">
-   <annots/>
-</xfdf>
 <connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
    <xsdConnection name="DataConnection" dataDescription="QIU">
       <uri>..\..\xml_schema\6_7_qualified_investigator_undertake.xsd</uri>
       <rootElement>QIU</rootElement>
-      <?templateDesigner fileDigest shaHash="7KgaTHmVHWKvNW0yjlxHdfoVJJ8="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="Vt4+P0kBdpaEB3j7YreqbJVCY1w="?></xsdConnection>
 </connectionSet>
 <hpfb:schema xmlns:hpfb="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" id="XFASchemaXSD">
    <hpfb:include schemaLocation="#XFAXSDReference"/>
@@ -5697,16 +5084,16 @@ catch(exception)
    <hpfb:element name="common_name"/>
    <hpfb:element name="sponser_info" type="sponsor_content"/>
    <hpfb:element name="sponsor_company"/>
-   <hpfb:element name="sponsor_address" type="address_content"/>
+   <hpfb:element name="sponsor_address" type="international_address_content"/>
    <hpfb:element name="trial_contact_info" type="trial_contact_content"/>
    <hpfb:element name="trial_contact_company"/>
-   <hpfb:element name="trial_contact_address" type="address_content"/>
+   <hpfb:element name="trial_contact_address" type="international_address_content"/>
    <hpfb:element name="trial_contact" type="contact_content"/>
    <hpfb:element name="trial_site_info" type="trial_site_content"/>
    <hpfb:element name="trial_site_name"/>
-   <hpfb:element name="trial_site_address" type="address_content"/>
+   <hpfb:element name="trial_site_address" type="can_us_address_content"/>
    <hpfb:element name="qual_invest_info" type="qual_invest_info"/>
-   <hpfb:element name="qual_invest_address" type="address_content"/>
+   <hpfb:element name="qual_invest_address" type="can_us_address_content"/>
    <hpfb:element name="qual_invest_contact" type="contact_content"/>
    <hpfb:element name="attestation_info" type="attest_content"/>
    <hpfb:element name="attestation_salutation"/>
@@ -5795,16 +5182,26 @@ catch(exception)
    <hpfb:element name="province_text"/>
    <hpfb:element name="country"/>
    <hpfb:element name="postal_code"/>
+   <hpfb:element name="canada_us_address" type="can_us_address_content"/>
    <!-- ****************************** -->
    <!-- ELEMENT TYPE DECLARATIONS -->
    <!-- ****************************** -->
    <!-- main xml structure-->
-   <hpfb:complexType name="address_content">
+   <hpfb:complexType name="international_address_content">
       <hpfb:sequence>
          <hpfb:element ref="street_address"/>
          <hpfb:element ref="city"/>
          <hpfb:element ref="province_lov"/>
          <hpfb:element ref="province_text"/>
+         <hpfb:element ref="country"/>
+         <hpfb:element ref="postal_code"/>
+      </hpfb:sequence>
+   </hpfb:complexType>
+   <hpfb:complexType name="can_us_address_content">
+      <hpfb:sequence>
+         <hpfb:element ref="street_address"/>
+         <hpfb:element ref="city"/>
+         <hpfb:element ref="province_lov"/>
          <hpfb:element ref="country"/>
          <hpfb:element ref="postal_code"/>
       </hpfb:sequence>
@@ -5842,4 +5239,57 @@ catch(exception)
          <hpfb:element ref="email"/>
       </hpfb:sequence>
    </hpfb:complexType>
-</hpfb:schema></xdp:xdp>
+</hpfb:schema>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xmp:MetadataDate>2015-11-13T13:20:03Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xmpMM:DocumentID>uuid:0ddb4f19-42ef-4e2a-8fef-393166eb51a8</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:0a47ca73-bb4d-4a7b-85be-eb4f05dc7a2d</xmpMM:InstanceID>
+      </rdf:Description>
+      <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <dc:format>application/pdf</dc:format>
+         <dc:date>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <rdf:value>2015-07-21</rdf:value>
+                  <dc:element-refinement>dc:created</dc:element-refinement>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <rdf:value>2015</rdf:value>
+                  <dc:element-refinement>dc:issued</dc:element-refinement>
+               </rdf:li>
+            </rdf:Seq>
+         </dc:date>
+         <dc:creator>
+            <rdf:Seq>
+               <rdf:li>Health Canada</rdf:li>
+            </rdf:Seq>
+         </dc:creator>
+         <dc:title>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default">QUALIFIED INVESTIGATOR UNDERTAKING</rdf:li>
+            </rdf:Alt>
+         </dc:title>
+      </rdf:Description>
+      <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <desc:version rdf:parseType="Resource">
+            <rdf:value> 2.00</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+         <desc:department rdf:parseType="Resource">
+            <rdf:value>Health Canada</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:department>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve">
+   <annots/>
+</xfdf></xdp:xdp>
