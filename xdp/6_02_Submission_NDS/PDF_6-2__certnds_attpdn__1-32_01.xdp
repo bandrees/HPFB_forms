@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2015-11-26T15:08:06Z" uuid="7ff31343-289b-422c-9258-2e254cff6420">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2015-11-26T19:01:05Z" uuid="7c6027fc-41f1-4f24-8202-76f558a70660">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -173,7 +173,7 @@ this.rawValue=textVal;
                </caption>
                <bind match="dataRef" ref="$.form_version"/>
             </field>
-            <draw name="lblMasterTitle" y="266.903mm" x="114.699mm" w="94.728mm" h="10.527mm" hAlign="right">
+            <draw name="lblMasterTitle" y="267.931mm" x="114.699mm" w="94.728mm" h="5.588mm" hAlign="right">
                <ui>
                   <textEdit/>
                </ui>
@@ -183,8 +183,8 @@ this.rawValue=textVal;
                <font size="8pt" typeface="Myriad Pro"/>
                <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
                <para vAlign="middle" hAlign="right"/>
-               <?renderCache.bounds 265686 27006 0 0 1417 1417 0 0?>
-               <?renderCache.textRun 5 Title 0 252711 16920 0 0 0 "Myriad Pro" 0 0 8000 ISO-8859-1?></draw>
+               <?renderCache.bounds 265686 13006 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 5 Title 0 252711 9920 0 0 0 "Myriad Pro" 0 0 8000 ISO-8859-1?></draw>
             <?templateDesigner expand 1?></pageArea>
          <?templateDesigner expand 0?></pageSet>
       <subform w="576pt" name="sfPage1" layout="lr-tb">
@@ -424,7 +424,7 @@ catch(exception)
             </border>
             <margin bottomInset="5.08mm"/>
             <bind match="none"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="203.2mm" layout="lr-tb" name="sfInstructionsContent">
             <draw name="lblInstructionsHead" w="8in" h="6.249mm">
                <ui>
@@ -469,14 +469,14 @@ catch(exception)
                   <margin bottomInset="2.54mm" topInset="2.54mm"/>
                   <assist role="LI"/>
                   <bind match="none"/>
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 0?></subform>
                <subform w="203.199mm" name="sfInstruct2" layout="tb">
                   <draw name="lblInstruct2" w="7.999958in" minH="8.931mm">
                      <ui>
                         <textEdit/>
                      </ui>
                      <value>
-                        <text>Once finalized, the fields in the form becomes "locked" (i.e. Fields cannot be modified). In order to modify fields after finalizing, you must press the "Modify" button at the bottom of the form. Following modifications to the desired fields and before printing and signing, please press the "Finalize" button again to re-validate entries.   Alternatively:</text>
+                        <text>Once finalized, the fields in the form becomes "locked" (i.e. Fields cannot be modified). In order to modify fields after finalizing, you must press the "Modify" button at the bottom of the form. Following modifications to the desired fields and before printing and signing, please press the "Finalize" button again to re-validate entries.  Alternatively: </text>
                      </value>
                      <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
                      <margin topInset="0.5002mm" bottomInset="0.5002mm" leftInset="0.5mm" rightInset="0.5mm"/>
@@ -486,60 +486,11 @@ catch(exception)
                         <corner thickness="0.175mm" presence="hidden"/>
                      </border>
                   </draw>
-                  <margin topInset="0mm" bottomInset="2.54mm"/>
+                  <margin topInset="0mm" bottomInset="0mm"/>
                   <assist role="LI"/>
                   <bind match="none"/>
-                  <?templateDesigner expand 1?></subform>
-               <assist role="UL"/>
+                  <?templateDesigner expand 0?></subform>
                <bind match="none"/>
-               <?templateDesigner expand 0?></subform>
-            <subform w="203.199mm" name="sfLetterHeading" layout="tb">
-               <margin topInset="0mm" bottomInset="0mm"/>
-               <bind match="none"/>
-               <draw name="lblInstructionsHead" w="7.999958in" h="6.249mm">
-                  <ui>
-                     <textEdit/>
-                  </ui>
-                  <value>
-                     <text>LETTER SENT TO ASSOCIATIONS</text>
-                  </value>
-                  <font typeface="Myriad Pro" baselineShift="0pt" size="12pt" weight="bold"/>
-                  <margin topInset="0.254mm" bottomInset="0.254mm" leftInset="0.5mm" rightInset="0.5mm"/>
-                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" vAlign="middle"/>
-                  <border>
-                     <edge/>
-                     <corner thickness="0.175mm"/>
-                     <fill>
-                        <linear>
-                           <color value="255,255,255"/>
-                        </linear>
-                        <color value="255,255,153"/>
-                     </fill>
-                  </border>
-                  <assist role="H3"/>
-                  <?renderCache.bounds 573163 16274 0 0 1417 720 0 0?>
-                  <?renderCache.textRun 27 LETTER SENT TO ASSOCIATIONS 0 1417 11857 0 0 0 "Myriad Pro" 1 0 12000 ISO-8859-1?></draw>
-               <?templateDesigner expand 1?></subform>
-            <subform w="203.199mm" name="sfInstruct3" layout="tb">
-               <margin topInset="0mm" bottomInset="0mm"/>
-               <bind match="none"/>
-               <draw name="lblInstruct3" w="7.999958in" h="115.583mm">
-                  <ui>
-                     <textEdit/>
-                  </ui>
-                  <value>
-                     <exData contentType="text/html">
-                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">Drugs Directorate<br/>Tunney's Pasture<br/>OTTAWA, Ontario<br/>K1A 0L2<br/><br/></p><p style="text-decoration:none;letter-spacing:0in">LETTER SENT TO ASSOCIATIONS</p><p style="text-decoration:none;letter-spacing:0in"><br/>June 5, 1995</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">The Submission Certification Form that was issued on March 3, 1995 has been revised as attached. The electronic version of the revised form is available on the Drugs Directorate Bulletin Board.<br/><br/></p><p style="text-decoration:none;letter-spacing:0in"><br/>As stated in the covering letter of the previously issued form, a completed Submission Certification Form is required with all original and solicited information and material related to New Drug Submissions, Supplemental New Drug Submissions and Notifiable Changes. This includes the original submission, submission updates, and responses to Screening Deficiency Notices, Notices of Deficiency, and Notices of Noncompliance.<br/><br/></p><p style="text-decoration:none;letter-spacing:0in"><br/>Please advise your members that only those parts of the form that are applicable to the submission being filed are to be included. For example, a New Drug Submission that includes pre-clinical and clinical studies must include all parts of the form. A New Drug Submission that includes only comparative bioavailability studies must include part 1 of the form. Notifiable Changes should include only the part 1 of the form. If you or your member have any questions about the form or its use, please contact the Submission and Information Policy Division, Bureau of Drug Policy and Coordination, at (613)941- 0827.<br/><br/></p><p style="text-decoration:none;letter-spacing:0in"><br/>o/s<br/><br/></p><p style="text-decoration:none;letter-spacing:0in"><br/>Dann M. Michols<br/>Executive Director<br/>National Pharmaceutical<br/>Strategy<br/><br/>Enclosure<span style="xfa-spacerun:yes"> </span><span style="font-style:italic">d</span></p></body>
-                     </exData>
-                  </value>
-                  <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
-                  <margin topInset="2.54mm" bottomInset="0.5002mm" leftInset="0.5mm" rightInset="0.5mm"/>
-                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" vAlign="middle"/>
-                  <border>
-                     <edge presence="hidden"/>
-                     <corner thickness="0.175mm" presence="hidden"/>
-                  </border>
-               </draw>
                <?templateDesigner expand 1?></subform>
             <border>
                <edge/>
@@ -547,10 +498,69 @@ catch(exception)
             </border>
             <margin topInset="0mm" bottomInset="2.54mm"/>
             <bind match="none"/>
-            <subform name="sfPlaceholder" w="195.48mm" h="38.862mm">
+            <subform w="203.199mm" name="sfInstructListB" layout="tb">
                <bind match="none"/>
-            </subform>
-            <?templateDesigner expand 0?></subform>
+               <assist role="UL"/>
+               <subform w="203.199mm" name="sfInstructB1" layout="tb">
+                  <bind match="none"/>
+                  <assist role="LI"/>
+                  <draw name="lblInstructB1" w="7.999958in" minH="5.08mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>-Save, print, sign and date the completed form;</text>
+                     </value>
+                     <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                     <margin topInset="0.5002mm" bottomInset="0.5002mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para spaceAbove="0.5pt" spaceBelow="0pt" textIndent="0pt" marginLeft="7.2pt" marginRight="0pt" vAlign="middle"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.175mm" presence="hidden"/>
+                     </border>
+                  </draw>
+                  <?templateDesigner expand 1?></subform>
+               <subform w="203.199mm" name="sfInstructB2" layout="tb">
+                  <bind match="none"/>
+                  <assist role="LI"/>
+                  <draw name="lblInstructB2" w="7.999958in" minH="5.08mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>-Scan the signed form, and</text>
+                     </value>
+                     <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                     <margin topInset="0.5002mm" bottomInset="0.5002mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para spaceAbove="0.5pt" spaceBelow="0pt" textIndent="0pt" marginLeft="7.2pt" marginRight="0pt" vAlign="middle"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.175mm" presence="hidden"/>
+                     </border>
+                  </draw>
+                  <?templateDesigner expand 1?></subform>
+               <subform w="203.199mm" name="sfInstructB3" layout="tb">
+                  <bind match="none"/>
+                  <assist role="LI"/>
+                  <draw name="lblInstructB3" w="7.999958in" minH="5.08mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>-Send to Health Canada in electronic format.</text>
+                     </value>
+                     <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                     <margin topInset="0.5002mm" bottomInset="0.5002mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para spaceAbove="0.5pt" spaceBelow="0pt" textIndent="0pt" marginLeft="7.2pt" marginRight="0pt" vAlign="middle"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.175mm" presence="hidden"/>
+                     </border>
+                  </draw>
+                  <?templateDesigner expand 1?></subform>
+               <margin bottomInset="7.62mm"/>
+               <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform y="241.091mm" w="203.199mm" minH="66.15mm" layout="lr-tb" name="sfSubContent">
             <subform w="203.199mm" layout="lr-tb" name="sfSubType">
                <field name="ddlSubmissionType" w="138.774mm" h="9mm">
@@ -603,7 +613,7 @@ catch(exception)
                   </event>
                   <bind match="dataRef" ref="$.application_type"/>
                </field>
-               <field name="txtCertified" w="203.2mm" minH="28.575mm">
+               <field name="txtCertified" w="201.417mm" minH="25.4mm">
                   <ui>
                      <textEdit multiLine="1">
                         <border>
@@ -624,12 +634,18 @@ catch(exception)
                   <border>
                      <edge/>
                      <corner thickness="0.1753mm"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                     <corner thickness="0.1753mm" presence="hidden"/>
+                     <corner thickness="0.1753mm"/>
+                     <corner thickness="0.1753mm" presence="hidden"/>
                   </border>
                   <validate nullTest="error"/>
                   <bind match="dataRef" ref="$.appl_pertaining"/>
                </field>
-               <subform w="203.199mm" name="sfSubmittedBy" layout="tb">
-                  <field name="txtSubmittedBy" w="7.999958in" minH="28.575mm">
+               <subform w="201.668mm" name="sfSubmittedBy" layout="tb">
+                  <field name="txtSubmittedBy" w="201.909mm" minH="25.4mm">
                      <ui>
                         <textEdit multiLine="1">
                            <border>
@@ -650,6 +666,12 @@ catch(exception)
                      <border>
                         <edge/>
                         <corner thickness="0.1753mm"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.1753mm" presence="hidden"/>
+                        <corner thickness="0.1753mm"/>
+                        <corner thickness="0.1753mm" presence="hidden"/>
                      </border>
                      <validate nullTest="error"/>
                      <bind match="dataRef" ref="$.appl_submitted_by"/>
@@ -664,7 +686,7 @@ catch(exception)
                </border>
                <?templateDesigner expand 0?>
                <bind match="none"/>
-               <margin topInset="0.762mm"/>
+               <margin topInset="0.762mm" leftInset="0.762mm"/>
             </subform>
             <subform w="203.199mm" name="sfAttestation" layout="tb">
                <subform w="203.199mm" name="sfAttestHeading" layout="tb">
@@ -695,31 +717,80 @@ catch(exception)
                   <bind match="none"/>
                   <?templateDesigner expand 1?></subform>
                <subform w="202.976mm" name="sfAttestBody" layout="tb">
-                  <subform w="203.037mm" name="sfAttest1" layout="tb">
-                     <draw name="lblAttest1" w="7.993583in" h="14.336mm">
+                  <subform w="203.037mm" name="sfAttest1" layout="lr-tb">
+                     <field name="chkAttest1" w="5.08mm" h="4.826mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge stroke="lowered"/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="0mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <integer>0</integer>
+                        </value>
+                        <items>
+                           <integer>1</integer>
+                           <integer>0</integer>
+                           <integer>2</integer>
+                        </items>
+                        <bind match="dataRef" ref="$.attest_q1"/>
+                     </field>
+                     <draw name="lblAttest1" w="194.31mm" h="14.336mm">
                         <ui>
                            <textEdit/>
                         </ui>
                         <value>
-                           <text>1. All the information and material included in the submission and solicited information are accurate and complete, and that the sectional reports and the comprehensive summaries correctly represent the information and material referred to or included in the submission. No information is false or misleading, no omissions have been made that may affect its accuracy and completeness.</text>
+                           <text>1. All the information and material included in the submission and additional information or material filed to amend the submission are accurate and complete, and  the sectional reports and the comprehensive summaries correctly represent the information and material referred to or included in the submission. No information is false or misleading; no omissions have been made that may affect its accuracy and completeness.</text>
                         </value>
                         <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
                         <margin topInset="0.5002mm" bottomInset="0.5002mm" leftInset="0.5mm" rightInset="0.5mm"/>
-                        <para spaceAbove="0.5pt" spaceBelow="0pt" textIndent="-7.2pt" marginLeft="0pt" marginRight="0pt" vAlign="middle"/>
+                        <para spaceAbove="0.5pt" spaceBelow="0pt" textIndent="-7.2pt" marginLeft="0pt" marginRight="0pt"/>
                         <border>
                            <edge presence="hidden"/>
                            <corner thickness="0.175mm" presence="hidden"/>
                         </border>
-                        <?renderCache.bounds 572704 37801 0 0 1417 1418 0 0?>
-                        <?renderCache.textRun 169 1. All the information and material included in the submission and solicited information are accurate and complete, and that the sectional reports and the comprehensive  0 1417 12968 0 0 0 "Myriad Pro" 0 0 8000 ISO-8859-1?>
-                        <?renderCache.textRun 169 summaries correctly represent the information and material referred to or included in the submission. No information is false or misleading, no omissions have been made  0 8617 22568 0 0 0 "Myriad Pro" 0 0 8000 ISO-8859-1?>
-                        <?renderCache.textRun 46 that may affect its accuracy and completeness. 0 8617 32168 0 0 0 "Myriad Pro" 0 0 8000 ISO-8859-1?></draw>
+                        <assist>
+                           <speak disable="1"/>
+                        </assist>
+                        <?renderCache.bounds 547966 37801 0 0 1417 1418 0 0?>
+                        <?renderCache.textRun 164 1. All the information and material included in the submission and additional information or material filed to amend the submission are accurate and complete, and   0 1417 7918 0 0 0 "Myriad Pro" 0 0 8000 ISO-8859-1?>
+                        <?renderCache.textRun 161 the sectional reports and the comprehensive summaries correctly represent the information and material referred to or included in the submission. No information  0 8617 17518 0 0 0 "Myriad Pro" 0 0 8000 ISO-8859-1?>
+                        <?renderCache.textRun 98 is false or misleading; no omissions have been made that may affect its accuracy and completeness. 0 8617 27118 0 0 0 "Myriad Pro" 0 0 8000 ISO-8859-1?></draw>
                      <keep intact="contentArea"/>
                      <bind match="none"/>
                      <assist role="LI"/>
-                     <?templateDesigner expand 1?></subform>
-                  <subform w="203.199mm" name="sfAttest2" layout="tb">
-                     <draw name="lblAttest2" w="7.999958in" h="8.128mm">
+                     <?templateDesigner expand 1?>
+                     <margin leftInset="0.762mm"/>
+                  </subform>
+                  <subform w="203.199mm" name="sfAttest2" layout="lr-tb">
+                     <field name="chkAttest2" w="5.08mm" h="4.826mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge stroke="lowered"/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="0mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <integer>0</integer>
+                        </value>
+                        <items>
+                           <integer>1</integer>
+                           <integer>0</integer>
+                           <integer>2</integer>
+                        </items>
+                        <bind match="dataRef" ref="$.attest_q2a"/>
+                     </field>
+                     <draw name="lblAttest2" w="194.31mm" h="8.128mm">
                         <ui>
                            <textEdit/>
                         </ui>
@@ -733,14 +804,41 @@ catch(exception)
                            <edge presence="hidden"/>
                            <corner thickness="0.175mm" presence="hidden"/>
                         </border>
-                        <?renderCache.bounds 573163 10102 0 0 1417 1418 0 0?>
+                        <assist>
+                           <speak disable="1"/>
+                        </assist>
+                        <?renderCache.bounds 547966 10102 0 0 1417 1418 0 0?>
                         <?renderCache.textRun 110 2. a) all pivotal studies included in the submission are complete and a final comprehensive analyses provided; 0 1417 8719 0 0 0 "Myriad Pro" 0 0 8000 ISO-8859-1?></draw>
                      <keep intact="contentArea"/>
                      <bind match="none"/>
                      <assist role="LI"/>
-                     <?templateDesigner expand 1?></subform>
-                  <subform w="203.199mm" name="sfAttest3" layout="tb">
-                     <draw name="lblAttest3" w="7.999958in" minH="8.128mm">
+                     <?templateDesigner expand 1?>
+                     <margin leftInset="0.762mm"/>
+                  </subform>
+                  <subform w="203.199mm" name="sfAttest3" layout="lr-tb">
+                     <field name="chkAttest3" w="5.08mm" h="4.826mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge stroke="lowered"/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="0mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <integer>0</integer>
+                        </value>
+                        <items>
+                           <integer>1</integer>
+                           <integer>0</integer>
+                           <integer>2</integer>
+                        </items>
+                        <bind match="dataRef" ref="$.attest_q2b"/>
+                     </field>
+                     <draw name="lblAttest3" w="194.31mm" minH="8.128mm">
                         <ui>
                            <textEdit/>
                         </ui>
@@ -749,18 +847,45 @@ catch(exception)
                         </value>
                         <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
                         <margin topInset="0.5002mm" bottomInset="4.064mm" leftInset="0.5mm" rightInset="0.5mm"/>
-                        <para spaceAbove="0.5pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" vAlign="middle"/>
+                        <para spaceAbove="0.5pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
                         <border>
                            <edge presence="hidden"/>
                            <corner thickness="0.175mm" presence="hidden"/>
                         </border>
+                        <assist>
+                           <speak disable="1"/>
+                        </assist>
                      </draw>
                      <keep intact="contentArea"/>
                      <bind match="none"/>
                      <assist role="LI"/>
-                     <?templateDesigner expand 1?></subform>
-                  <subform w="203.199mm" name="sfAttest4" layout="tb">
-                     <draw name="lblAttest4" w="7.999958in" minH="13.092mm">
+                     <?templateDesigner expand 1?>
+                     <margin leftInset="0.762mm"/>
+                  </subform>
+                  <subform w="203.199mm" name="sfAttest4" layout="lr-tb">
+                     <field name="chkAttest4" w="5.08mm" h="4.826mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge stroke="lowered"/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="0mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <integer>0</integer>
+                        </value>
+                        <items>
+                           <integer>1</integer>
+                           <integer>0</integer>
+                           <integer>2</integer>
+                        </items>
+                        <bind match="dataRef" ref="$.attest_q2c"/>
+                     </field>
+                     <draw name="lblAttest4" w="194.31mm" minH="13.092mm">
                         <ui>
                            <textEdit/>
                         </ui>
@@ -769,14 +894,17 @@ catch(exception)
                         </value>
                         <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
                         <margin topInset="0.5002mm" bottomInset="0.5002mm" leftInset="0.5mm" rightInset="0.5mm"/>
-                        <para spaceAbove="0.5pt" spaceBelow="0pt" textIndent="-14.4pt" marginLeft="0pt" marginRight="0pt" vAlign="middle"/>
+                        <para spaceAbove="0.5pt" spaceBelow="0pt" textIndent="-14.4pt" marginLeft="0pt" marginRight="0pt"/>
                         <border>
                            <edge presence="hidden"/>
                            <corner thickness="0.175mm" presence="hidden"/>
                         </border>
+                        <assist>
+                           <speak disable="1"/>
+                        </assist>
                      </draw>
                      <keep intact="contentArea"/>
-                     <margin bottomInset="2.54mm"/>
+                     <margin bottomInset="2.54mm" leftInset="0.762mm"/>
                      <bind match="none"/>
                      <assist role="LI"/>
                      <?templateDesigner expand 1?></subform>
@@ -1026,7 +1154,7 @@ catch(exception)
                <bind match="none"/>
             </subform>
             <subform w="203.2mm" name="sfFinalizeButton" h="14.652mm">
-               <margin topInset="5.08mm" bottomInset="2.54mm"/>
+               <margin topInset="5.08mm" bottomInset="2.54mm" leftInset="0.762mm"/>
                <field name="btnFinalizeAndLock" w="28.575mm" h="6.35mm" relevant="-print">
                   <ui>
                      <button highlight="inverted"/>
@@ -1693,7 +1821,7 @@ var content = {
 
 formType: 					"QIU",
 errorInd:					"+",
-formVersion: 				"2.00.22",
+formVersion: 				"2.00.25",
 CANADA:						"CA",
 USA:							"US",
 DR_SALUT: 					"dr",
@@ -1791,7 +1919,8 @@ function _setFormVersion(a_versionField){
 function _setLabels(a_sfInstance){
 
 	var titleInstance=TITLE_LBL_FN.getNodeInstance(a_sfInstance);
-	cUiUtil.setCaption(titleInstance,cResourceManager.get(TITLE_LBL_FN.labelKey));	
+	//using a short title
+	cUiUtil.setCaption(titleInstance,cResourceManager.get("lbShortTitle"));	
 }
 
 
@@ -2540,6 +2669,11 @@ var content={
 			parentNodeKey: "sfAttest1",
 			labelKey:		"lbAttest1"},
 		
+		chkAttest1: {
+			somExpression: "chkAttest1",
+			parentNodeKey: "sfAttest1",
+			toolTipKey:		"lbAttest1"},	
+		
 		sfAttest2: {
 			somExpression: "sfAttest2",
 			parentNodeKey: "sfAttestBody"
@@ -2550,6 +2684,11 @@ var content={
 			parentNodeKey: "sfAttest2",
 			labelKey:		"lbAttest2"},
 		
+		chkAttest2: {
+			somExpression: "chkAttest2",
+			parentNodeKey: "sfAttest2",
+			toolTipKey:		"lbAttest2"},		
+		
 		sfAttest3: {
 			somExpression: "sfAttest3",
 			parentNodeKey: "sfAttestBody"},
@@ -2558,6 +2697,11 @@ var content={
 			somExpression:	"lblAttest3",
 			parentNodeKey:	"sfAttest3",
 			labelKey:		"lbAttest3"},
+			
+		chkAttest3: {
+			somExpression: "chkAttest3",
+			parentNodeKey: "sfAttest3",
+			toolTipKey:		"lbAttest3"},		
 		
 		sfAttest4: {
 			somExpression: "sfAttest4",
@@ -2566,7 +2710,12 @@ var content={
 		lblAttest4: {
 			somExpression:	"lblAttest4",
 			parentNodeKey:	"sfAttest4",
-			labelKey:		"lbAttest4"},	
+			labelKey:		"lbAttest4"},
+			
+		chkAttest4: {
+			somExpression: "chkAttest4",
+			parentNodeKey: "sfAttest4",
+			toolTipKey:		"lbAttest4"},			
 			
 		//end attest
 		
@@ -2713,26 +2862,39 @@ var content={
 		somExpression: "lblInstruct2",
 		parentNodeKey: "sfInstruct2",
 		labelKey:		"lbInstruct2"},
-	
-	// letter definitions
-	sfLetterHeading: {
-		somExpression: "sfLetterHeading",
-		parentNodeKey: "sfInstructionsContent"},
 		
-	lblLetterHead: {
-		somExpression:	"lblInstructionsHead",
-		parentNodeKey:	"sfLetterHeading",
-		labelKey:		"lbLetterAssoc"},	
-	
-	
-	sfInstruct3: {
-		somExpression: "sfInstruct3",
+	sfInstructListB: {
+		somExpression: "sfInstructListB",
 		parentNodeKey: "sfInstructionsContent"},
+
+	sfInstructB1: {
+		somExpression: "sfInstructB1",
+		parentNodeKey: "sfInstructListB"},
+
+	lblInstructB1: {
+		somExpression: "lblInstructB1",
+		parentNodeKey: "sfInstructB1",
+		labelKey:		"lbInstructB1"},
 	
-	lblInstruct3: {
-		somExpression: "lblInstruct3",
-		parentNodeKey: "sfInstruct3",
-		labelKey:		"lbInstruct3"},
+	sfInstructB2: {
+		somExpression: "sfInstructB2",
+		parentNodeKey: "sfInstructListB",
+		},
+	
+	lblInstructB2: {
+		somExpression: "lblInstructB2",
+		parentNodeKey: "sfInstructB2",
+		labelKey:		"lbInstructB2"
+		},
+	
+	sfInstructB3: {
+		somExpression: "sfInstructB3",
+		parentNodeKey: "sfInstructListB"},
+	
+	lblInstructB3: {
+		somExpression: "lblInstructB3",
+		parentNodeKey: "sfInstructB3",
+		labelKey:		"lbInstructB3"},	
 	
 	
 }
@@ -2918,9 +3080,11 @@ var content={
 
 	
 	lbInstruct1:		"This form contains mandatory fields. In order to ensure you have completed all appropriate fields, please press the Finalize button at the bottom of the form before printing and signing.",
-	lbInstruct2:		"Once finalized, the fields in the form becomes locked (i.e. Fields cannot be modified). In order to modify fields after finalizing, you must press the Modify button at the bottom of the form. Following modifications to the desired fields and before printing and signing, please press the Finalize button again to re-validate entries.", 
-	lbInstruct3:		"&lt;body xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:xfa=\"http://www.xfa.org/schema/xfa-data/1.0/\"&gt;&lt;p style=\"margin-top:5pt;margin-bottom:5pt;text-decoration:none;letter-spacing:0in\"&gt;This form contains mandatory fields. In order to ensure you have completed all appropriate fields, please press the \"Finalize\" button at the bottom of the form before printing and signing.&lt;br/&gt;&lt;br/&gt;Once finalized, the fields in the form becomes \"locked\" (i.e. Fields cannot be modified). In order to modify fields after finalizing, you must press the \"Modify\" button at the bottom of the form. Following modifications to the desired fields and before printing and signing, please press the \"Finalize\" button again to re-validate entries.&lt;/p&gt;&lt;p style=\"letter-spacing:0in\"&gt;LETTER SENT TO ASSOCIATIONS&lt;/p&gt;&lt;p style=\"letter-spacing:0in\"&gt;Drugs Directorate&lt;br/&gt;Tunney's Pasture&lt;br/&gt;OTTAWA, Ontario&lt;br/&gt;K1A 0L2&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=\"letter-spacing:0in\"&gt;LETTER SENT TO ASSOCIATIONS&lt;/p&gt;&lt;p style=\"letter-spacing:0in\"&gt;&lt;br/&gt;June 5, 1995&lt;/p&gt;&lt;p style=\"letter-spacing:0in\"&gt;&lt;span style=\"xfa-spacerun:yes\"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style=\"letter-spacing:0in\"&gt;The Submission Certification Form that was issued on March 3, 1995 has been revised as attached. The electronic version of the revised form is available on the Drugs Directorate Bulletin Board.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=\"letter-spacing:0in\"&gt;&lt;br/&gt;As stated in the covering letter of the previously issued form, a completed Submission Certification Form is required with all original and solicited information and material related to New Drug Submissions, Supplemental New Drug Submissions and Notifiable Changes. This includes the original submission, submission updates, and responses to Screening Deficiency Notices, Notices of Deficiency, and Notices of Noncompliance.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=\"letter-spacing:0in\"&gt;&lt;br/&gt;Please advise your members that only those parts of the form that are applicable to the submission being filed are to be included. For example, a New Drug Submission that includes pre-clinical and clinical studies must include all parts of the form. A New Drug Submission that includes only comparative bioavailability studies must include part 1 of the form. Notifiable Changes should include only the part 1 of the form. If you or your member have any questions about the form or its use, please contact the Submission and Information Policy Division, Bureau of Drug Policy and Coordination, at (613)941- 0827.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=\"letter-spacing:0in\"&gt;&lt;br/&gt;o/s&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=\"letter-spacing:0in\"&gt;&lt;br/&gt;Dann M. Michols&lt;br/&gt;Executive Director&lt;br/&gt;National Pharmaceutical&lt;br/&gt;Strategy&lt;br/&gt;&lt;br/&gt;Enclosure&lt;/p&gt;&lt;/body&gt;",
- 	lbInstruct3:		 "&lt;body xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:xfa=\"http://www.xfa.org/schema/xfa-data/1.0/\"&gt;&lt;p style=\"text-decoration:none;letter-spacing:0in\"&gt;Drugs Directorate&lt;br/&gt;Tunney's Pasture&lt;br/&gt;OTTAWA, Ontario&lt;br/&gt;K1A 0L2&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=\"text-decoration:none;letter-spacing:0in\"&gt;LETTER SENT TO ASSOCIATIONS&lt;/p&gt;&lt;p style=\"text-decoration:none;letter-spacing:0in\"&gt;&lt;br/&gt;June 5, 1995&lt;/p&gt;&lt;p style=\"text-decoration:none;letter-spacing:0in\"&gt;&lt;span style=\"xfa-spacerun:yes\"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style=\"text-decoration:none;letter-spacing:0in\"&gt;The Submission Certification Form that was issued on March 3, 1995 has been revised as attached. The electronic version of the revised form is available on the Drugs Directorate Bulletin Board.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=\"text-decoration:none;letter-spacing:0in\"&gt;&lt;br/&gt;As stated in the covering letter of the previously issued form, a completed Submission Certification Form is required with all original and solicited information and material related to New Drug Submissions, Supplemental New Drug Submissions and Notifiable Changes. This includes the original submission, submission updates, and responses to Screening Deficiency Notices, Notices of Deficiency, and Notices of Noncompliance.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=\"text-decoration:none;letter-spacing:0in\"&gt;&lt;br/&gt;Please advise your members that only those parts of the form that are applicable to the submission being filed are to be included. For example, a New Drug Submission that includes pre-clinical and clinical studies must include all parts of the form. A New Drug Submission that includes only comparative bioavailability studies must include part 1 of the form. Notifiable Changes should include only the part 1 of the form. If you or your member have any questions about the form or its use, please contact the Submission and Information Policy Division, Bureau of Drug Policy and Coordination, at (613)941- 0827.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=\"text-decoration:none;letter-spacing:0in\"&gt;&lt;br/&gt;o/s&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=\"text-decoration:none;letter-spacing:0in\"&gt;&lt;br/&gt;Dann M. Michols&lt;br/&gt;Executive Director&lt;br/&gt;National Pharmaceutical&lt;br/&gt;Strategy&lt;br/&gt;&lt;br/&gt;Enclosure&lt;/p&gt;&lt;/body&gt;",
+	lbInstruct2:		"Once finalized, the fields in the form becomes locked (i.e. Fields cannot be modified). In order to modify fields after finalizing, you must press the Modify button at the bottom of the form. Following modifications to the desired fields and before printing and signing, please press the Finalize button again to re-validate entries.\n\nAlternatively:\n", 
+	lbInstructB1:		"-Save, print, sign and date the completed form;",
+	lbInstructB2:		"-Scan the signed form, and",
+	lbInstructB3:		"-Send to Health Canada in electronic format.",
+	
 }
 </script>
                   <script contentType="application/x-javascript" name="instruct_fr">
@@ -2928,8 +3092,11 @@ var content={
 var content={
 
 	lbInstruct1:		"Ce formulaire contient des champs obligatoires. Pour vous assurer que vous avez rempli les champs appropriés, cliquez sur le bouton Finalisation au bas du formulaire avant de l'imprimer et de le signer.",
-	lbInstruct2:		"Une fois finalisé, les champs seront verrouiller (les champs ne peuvent plus être modifié). Pour pouvoir modifier les champs après la finalisation, vous devez cliquer sur le bouton Modification au bas du formulaire. Après avoir modifié les champs désirés et avant d'imprimer et de signer, cliquez sur le bouton Finalisation à nouveau afin de valider les entrées.",  
-	lbInstruct3:		  "&lt;body xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:xfa=\"http://www.xfa.org/schema/xfa-data/1.0/\"&gt;&lt;p style=\"tab-interval:0.5in;tab-stops:left 0.333in left 0.667in left 1in left 1.333in left 1.667in left 2in left 2.333in left 2.667in left 3in left 3.333in left 3.667in left 4in left 4.333in left 4.667in left 5in left 5.333in left 5.667in left 6in left 6.333in left 6.667in left 7in left 7.333in left 7.667in left 8in left 8.333in left 8.667in left 9in left 9.333in left 9.667in left 10in left 10.333in;text-decoration:none;letter-spacing:0in\"&gt;Direction Des Médicaments&lt;br/&gt;Pré Tunney's&lt;br/&gt;OTTAWA, Ontario&lt;br/&gt;K1A 0L2&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=\"tab-interval:0.5in;tab-stops:left 0.333in left 0.667in left 1in left 1.333in left 1.667in left 2in left 2.333in left 2.667in left 3in left 3.333in left 3.667in left 4in left 4.333in left 4.667in left 5in left 5.333in left 5.667in left 6in left 6.333in left 6.667in left 7in left 7.333in left 7.667in left 8in left 8.333in left 8.667in left 9in left 9.333in left 9.667in left 10in left 10.333in;text-decoration:none;letter-spacing:0in\"&gt;LETTRE AUX ASSOCIATIONS&lt;/p&gt;&lt;p style=\"tab-interval:0.5in;tab-stops:left 0.333in left 0.667in left 1in left 1.333in left 1.667in left 2in left 2.333in left 2.667in left 3in left 3.333in left 3.667in left 4in left 4.333in left 4.667in left 5in left 5.333in left 5.667in left 6in left 6.333in left 6.667in left 7in left 7.333in left 7.667in left 8in left 8.333in left 8.667in left 9in left 9.333in left 9.667in left 10in left 10.333in;text-decoration:none;letter-spacing:0in\"&gt;&lt;br/&gt;5 juin 1995&lt;/p&gt;&lt;p style=\"tab-interval:0.5in;tab-stops:left 0.333in left 0.667in left 1in left 1.333in left 1.667in left 2in left 2.333in left 2.667in left 3in left 3.333in left 3.667in left 4in left 4.333in left 4.667in left 5in left 5.333in left 5.667in left 6in left 6.333in left 6.667in left 7in left 7.333in left 7.667in left 8in left 8.333in left 8.667in left 9in left 9.333in left 9.667in left 10in left 10.333in;text-decoration:none;letter-spacing:0in\"&gt;&lt;span style=\"xfa-spacerun:yes\"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style=\"tab-interval:0.5in;tab-stops:left 0.333in left 0.667in left 1in left 1.333in left 1.667in left 2in left 2.333in left 2.667in left 3in left 3.333in left 3.667in left 4in left 4.333in left 4.667in left 5in left 5.333in left 5.667in left 6in left 6.333in left 6.667in left 7in left 7.333in left 7.667in left 8in left 8.333in left 8.667in left 9in left 9.333in left 9.667in left 10in left 10.333in;text-decoration:none;letter-spacing:0in\"&gt;Vous trouverez ci-joint la nouvelle version de l'attestation aux présentations. Une version électronique est disponible sur le babillard électronique de la Direction des médicaments.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=\"tab-interval:0.5in;tab-stops:left 0.333in left 0.667in left 1in left 1.333in left 1.667in left 2in left 2.333in left 2.667in left 3in left 3.333in left 3.667in left 4in left 4.333in left 4.667in left 5in left 5.333in left 5.667in left 6in left 6.333in left 6.667in left 7in left 7.333in left 7.667in left 8in left 8.333in left 8.667in left 9in left 9.333in left 9.667in left 10in left 10.333in;text-decoration:none;letter-spacing:0in\"&gt;&lt;br/&gt;Tel que mentionné dans notre lettre d'introduction accompagnant le formulaire du 3 mars dernier, une attestation de présentation complétée doit être soumise avec toute information initiale et sollicitée et les documents se rapportant aux présentations de drogue nouvelle, supplément à une présentation de drogue nouvelle et une modification à déclaration obligatoire. Ceci inclue la présentation initiale, les mises à jour et les réponses à un avis d'insuffisance lors de l'examen préléminaire, avis d'insuffisance et avis de non-conformité.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=\"tab-interval:0.5in;tab-stops:left 0.333in left 0.667in left 1in left 1.333in left 1.667in left 2in left 2.333in left 2.667in left 3in left 3.333in left 3.667in left 4in left 4.333in left 4.667in left 5in left 5.333in left 5.667in left 6in left 6.333in left 6.667in left 7in left 7.333in left 7.667in left 8in left 8.333in left 8.667in left 9in left 9.333in left 9.667in left 10in left 10.333in;text-decoration:none;letter-spacing:0in\"&gt;&lt;br/&gt;Veuillez aviser vos membres que seules les parties de l'attestation applicables à la présentation soumise doivent être incluses. Par exemple, une présentation de drogue nouvelle contenant des données cliniques et pré-cliniques doit contenir toutes les partie de l'attestation. Une présentation de drogue nouvelle ne contenant que des étude comparatives de biodisponibilité, ou une modification à déclaration obligatoire ne contiendront que la partie 1 de l'attestation. Si vous ou un de vos membre avez des questions sur l'attestation ou son usage, communiquez avec la Division des politiques sur les présentations et renseignements, Bureau des politiques sur les médicaments et de la coordination au (613) 941-0827.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=\"tab-interval:0.5in;tab-stops:left 0.333in left 0.667in left 1in left 1.333in left 1.667in left 2in left 2.333in left 2.667in left 3in left 3.333in left 3.667in left 4in left 4.333in left 4.667in left 5in left 5.333in left 5.667in left 6in left 6.333in left 6.667in left 7in left 7.333in left 7.667in left 8in left 8.333in left 8.667in left 9in left 9.333in left 9.667in left 10in left 10.333in;text-decoration:none;letter-spacing:0in\"&gt;&lt;br/&gt;o/s&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=\"tab-interval:0.5in;tab-stops:left 0.333in left 0.667in left 1in left 1.333in left 1.667in left 2in left 2.333in left 2.667in left 3in left 3.333in left 3.667in left 4in left 4.333in left 4.667in left 5in left 5.333in left 5.667in left 6in left 6.333in left 6.667in left 7in left 7.333in left 7.667in left 8in left 8.333in left 8.667in left 9in left 9.333in left 9.667in left 10in left 10.333in;text-decoration:none;letter-spacing:0in\"&gt;&lt;br/&gt;Dann M. Michols&lt;br/&gt;Directeur Exécutif&lt;br/&gt;Stratégie nationale&lt;br/&gt;pharmaceutique&lt;br/&gt;&lt;br/&gt;Pièce jointe&lt;/p&gt;&lt;/body&gt;",
+	lbInstruct2:		"Une fois finalisé, les champs seront verrouiller (les champs ne peuvent plus être modifié). Pour pouvoir modifier les champs après la finalisation, vous devez cliquer sur le bouton Modification au bas du formulaire. Après avoir modifié les champs désirés et avant d'imprimer et de signer, cliquez sur le bouton Finalisation à nouveau afin de valider les entrées.\n\nAlternativement:\n",  
+	lbInstructB1:		"-Enregistrez, imprimez, signez et datez le formulaire rempli;",
+	lbInstructB2:		"-Scannez le formulaire signé et",
+	lbInstructB3:		"-Envoyer a Santé Canada en format électronique.",
+
 }
 </script>
                   <script contentType="application/x-javascript" name="heading_en">
@@ -2937,9 +3104,11 @@ var content={
 var content={
 
 		lbInstructionsHeading: 		"INSTRUCTIONS",		
-		lbApplTitle : 				"DRUGS DIRECTORATE SUBMISSION CERTIFICATION for NEW DRUG SUBMISSIONS (NDSs), SUPPLEMENT TO A NEW DRUG SUBMISSION (S/NDSs), NOTIFIABLE CHANGES (NCs)",	
+		lbApplTitle : 				"SUBMISSION CERTIFICATE for NEW DRUG SUBMISSIONS (NDS), SUPPLEMENT TO A NEW DRUG SUBMISSION (SNDS), SUPPLEMENT ABBREVIATED NEW DRUG SUBMISSIONS (SANDS), ABBREVIATED NEW DRUG SUBMISSIONS (ANDS), NOTIFIABLE CHANGES (NC)",	
 		lbAttest: 					"ATTESTATION",
 		lbLetterAssoc:				"LETTER SENT TO ASSOCIATIONS",
+		lbShortTitle:				"SUBMISSION CERTIFICATION",
+		
 }
 </script>
                   <script contentType="application/x-javascript" name="heading_fr">
@@ -2947,10 +3116,10 @@ var content={
 var content={
 
 	lbInstructionsHeading: 		"INSTRUCTIONS",	
-	lbApplTitle: 				"DIRECTION DES MÉDICAMENTS ATTESTATION AUX PRÉSENTATIONS pour Présentation de drogue nouvelle (PDN), Supplément de à une présentation de drogue nouvelle (S/PDN), Préavis de modification (PM)",
+	lbApplTitle: 				"ATTESTATION AUX PRÉSENTATIONS POUR PRÉSENTATION DE DROGUE NOUVELLE (PDN), SUPPLÉMENT À UNE PRÉSENTATION DE DROGUE NOUVELLE (SPDN), SUPPLÉMENT À UNE PRÉSENTATION ABRÉGÉE DE DROGUE NOUVELLE (PSADN), PRÉSENTATION ABRÉGÉE DE DROGUE NOUVELLE (PADN), PRÉAVIS DE MODIFICATION (PM)",
 	lbAttest: 					"ATTESTATIONS",
 	lbLetterAssoc:				"LETTRE AUX ASSOCIATIONS",
-	
+	lbShortTitle:				"ATTESTATION AUX PRÉSENTATIONS",
 
 
 }
@@ -2968,11 +3137,12 @@ var content={
 		lbGivenName:			"Given Name",
 		lbSurname:		 	"Surname",
 		lbPosition:			"Position Title",
-		lbAttest1:			"1. All the information and material included in the submission and solicited information are accurate and complete, and that the sectional reports and the comprehensive summaries correctly represent the information and material referred to or included in the submission. No information is false or misleading, no omissions have been made that may affect its accuracy and completeness.",
+		lbAttest1:			"1. All the information and material included in the submission and additional information or material filed to amend the submission are accurate and complete, and  the sectional reports and the comprehensive summaries correctly represent the information and material referred to or included in the submission. No information is false or misleading; no omissions have been made that may affect its accuracy and completeness.",
 		lbAttest2:			"2. a) all pivotal studies included in the submission are complete and a final comprehensive analyses provided;",
+		
 		lbAttest3:			"2. b) all pivotal data necessary to support the proposed indications, doses and formulations have been provided;",
-		lbAttest4:			"2. c) the formulation used in the studies (clinical and pharmacokinetic) is identical to that proposed for marketing or evidence that the preparations used in the pivotal clinical efficacy and pharmacokinetic studies are bioequivalent to the preparation to be marketed. The batch of the drug substance or the final formulation used in pre-clinical studies (especially the carcinogenicity studies) is representative of that proposed for marketing, or acceptable evidence and rationale are provided to defend that any variation does not affect the interpretation of data generated in support of both safety and efficacy.",
-
+		
+		lbAttest4:			"2. c) the formulation used in the studies (clinical and pharmacokinetic) is identical to that proposed for marketing, or evidence that the preparations used in the pivotal clinical efficacy and pharmacokinetic studies are bioequivalent to the preparation to be marketed has been provided. The batch of the drug substance or the final formulation used in pre-clinical studies (especially the carcinogenicity studies) is representative of that proposed for marketing, or acceptable evidence and rationale are provided to defend that any variation does not affect the interpretation of data generated in support of both safety and efficacy.",
 		
 
 }
@@ -2991,10 +3161,10 @@ var content={
 	lbGivenName:				 	"Prénom",
 	lbSurname:					"Nom",
 	lbPosition:					"Titre du poste",
-	lbAttest1:					"1. Que tous les renseignements et le matériel que contient la présentation, ainsi que les renseignements sollicités, sont exacts et complets, et que les résumés de sections et les synthèses globaux représentent fidèlement les renseignements et le matériel qui sont compris dans la présentation ou auxquels il est fait renvoi. Aucun renseignement n'est faux ou trompeur, ou ne comporte des omissions qui peuvent avoir une incidence sur son exactitude et son intégralité.",
+	lbAttest1:					"1. Que tous les renseignements et le matériel que contient la présentation, et tous les renseignements additionnels ou matériel déposé pour modifier la présentation sont exacts et complets, et les résumés de sections et les synthèses globaux représentent fidèlement les renseignements et le matériel qui sont compris dans la présentation ou auxquels il est fait renvoi. Aucun renseignement n'est faux ou trompeur, ou ne comporte des omissions qui peuvent avoir une incidence sur son exactitude et son intégralité",
 	lbAttest2:					"2. a) Que toutes les études essentielles que contient la présentation sont complètes et que les analyses finales sont fournies;",
 	lbAttest3:					"2. b) Que toutes les données essentielles à l'appui des indications, des doses et des formulations proposées sont fournies;",
-	lbAttest4:					"2. c) Que la formulation utilisée dans les études (cliniques et pharmacocinétiques) est identique à la formulation proposée pour la mise en marché, ou que la preuve a été faite de la bioéquivalence des préparations utilisées dans les études essentielles de l'efficacité clinique et des études pharmacocinétiques avec la préparation proposée pour la mise en marché. Le lot de la substance médicamenteuse, ou de la préparation finale employé dans les études précliniques (tout particulièrement les études sur le pouvoir carcinogène) est représentatif de la préparation proposée pour la mise en marché, ou des Preuves et raisons acceptables sont fournies pour appuyer le fait que des variations n'affecteront pas l'interprétation des données fournies relativement à la sécurité et l'efficacité.",
+	lbAttest4:					"2. c) Que la formulation utilisée dans les études (cliniques et pharmacocinétiques) est identique à la formulation proposée pour la mise en marché , ou que la preuve a été faite de la bioéquivalence des préparations utilisées dans les études essentielles de l'efficacité clinique et des études pharmacocinétiques avec la préparation proposée pour la mise en marché a été fourni. Le lot de la substance médicamenteuse, ou de la préparation finale employé dans les études précliniques (tout particulièrement les études sur le pouvoir carcinogène) est représentatif de la préparation proposée pour la mise en marché, ou des Preuves et raisons acceptables sont fournies pour appuyer le fait que des variations n'affecteront pas l'interprétation des données fournies relativement à la sécurité et l'efficacité.",
 }
 
 
@@ -3194,8 +3364,9 @@ catch(exception)
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner ValidationMessaging noMessages?>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 105?>
+   <?templateDesigner Zoom 107?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Guidelines h:7668320?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner SavePDFWithLog 0?></template>
@@ -3238,7 +3409,6 @@ catch(exception)
       <xdp>
          <packets>*</packets>
       </xdp>
-      <output/>
    </present>
    <psMap>
       <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
@@ -3464,6 +3634,10 @@ catch(exception)
          <application_type/>
          <appl_pertaining/>
          <appl_submitted_by/>
+         <attest_q1/>
+         <attest_q2a/>
+         <attest_q2b/>
+         <attest_q2c/>
          <smo_attestation_info>
             <attestation_salutation/>
             <attestation_given_name/>
@@ -3489,81 +3663,19 @@ catch(exception)
    <xsdConnection name="DataConnection" dataDescription="DRUG_SUBCERT">
       <uri>..\..\xml_schema\6_2_drug_cert_form.xsd</uri>
       <rootElement>DRUG_SUBCERT</rootElement>
-      <?templateDesigner fileDigest shaHash="a4mHjAVUViXRadCNt/zQivmIDOE="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="g4XcBdpZK3WkeWIzNVfetf6GgJA="?></xsdConnection>
 </connectionSet>
-<hpfb:schema xmlns:hpfb="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" id="XFASchemaXSD">
-   <hpfb:include schemaLocation="#XFAXSDReference"/>
-   <!-- ****************************** -->
-   <!-- ELEMENT DECLARATIONS -->
-   <!-- ****************************** -->
-   <hpfb:element name="DRUG_SUBCERT" type="new_drug_cert_content"/>
-   <hpfb:element name="form_lang"/>
-   <hpfb:element name="form_version"/>
-   <hpfb:element name="application_type"/>
-   <hpfb:element name="appl_pertaining"/>
-   <hpfb:element name="appl_submitted_by"/>
-   <hpfb:element name="smo_attestation_info" type="attest_content"/>
-   <hpfb:element name="seo_attestation_info" type="attest_content"/>
-   <!--Main form structure-->
-   <hpfb:complexType name="new_drug_cert_content">
-      <hpfb:sequence>
-         <hpfb:element ref="form_lang"/>
-         <hpfb:element ref="form_version"/>
-         <hpfb:element name="application_type"/>
-         <hpfb:element name="appl_pertaining"/>
-         <hpfb:element name="appl_submitted_by"/>
-         <hpfb:element name="smo_attestation_info" type="attest_content"/>
-         <hpfb:element name="seo_attestation_info" type="attest_content"/>
-      </hpfb:sequence>
-   </hpfb:complexType>
-</hpfb:schema>
-<hpfb:schema xmlns:hpfb="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" id="XFAXSDReference">
-   <hpfb:include schemaLocation="#XFAXSDReference1"/>
-   <!-- ****************************** -->
-   <!-- ELEMENT DECLARATIONS -->
-   <!-- ****************************** -->
-   <hpfb:element name="attestation_info" type="attest_content"/>
-   <hpfb:element name="attestation_salutation"/>
-   <hpfb:element name="attestation_given_name"/>
-   <hpfb:element name="attestation_surname"/>
-   <hpfb:element name="attestation_title"/>
-   <hpfb:element name="signature_type"/>
-   <hpfb:element name="signature_image"/>
-   <hpfb:element name="attestation_sign_date" type="yyyymmdd_date_content"/>
-   <!-- ****************************** -->
-   <!-- ELEMENT TYPE DECLARATIONS -->
-   <!-- ****************************** -->
-   <!-- main xml structure-->
-   <hpfb:complexType name="attest_content">
-      <hpfb:sequence>
-         <hpfb:element ref="attestation_salutation"/>
-         <hpfb:element ref="attestation_given_name"/>
-         <hpfb:element ref="attestation_surname"/>
-         <hpfb:element ref="attestation_title"/>
-         <hpfb:element ref="signature_type"/>
-         <hpfb:element ref="signature_image"/>
-         <hpfb:element ref="attestation_sign_date"/>
-      </hpfb:sequence>
-   </hpfb:complexType>
-</hpfb:schema>
-<hpfb:schema xmlns:hpfb="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" id="XFAXSDReference1">
-   <hpfb:simpleType name="yyyymmdd_date_content">
-      <hpfb:restriction base="hpfb:date">
-         <hpfb:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
-      </hpfb:restriction>
-   </hpfb:simpleType>
-</hpfb:schema>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2015-11-26T15:08:06Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2015-11-26T19:01:05Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:7ff31343-289b-422c-9258-2e254cff6420</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:7c6027fc-41f1-4f24-8202-76f558a70660</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:5906201c-4a96-4402-9e24-fba4df61df04</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
@@ -3605,4 +3717,74 @@ catch(exception)
 </x:xmpmeta>
 <xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve">
    <annots/>
-</xfdf></xdp:xdp>
+</xfdf>
+<hpfb:schema xmlns:hpfb="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" id="XFASchemaXSD">
+   <hpfb:include schemaLocation="#XFAXSDReference"/>
+   <!-- ****************************** -->
+   <!-- ELEMENT DECLARATIONS -->
+   <!-- ****************************** -->
+   <hpfb:element name="DRUG_SUBCERT" type="new_drug_cert_content"/>
+   <hpfb:element name="form_lang"/>
+   <hpfb:element name="form_version"/>
+   <hpfb:element name="application_type"/>
+   <hpfb:element name="appl_pertaining"/>
+   <hpfb:element name="appl_submitted_by"/>
+   <hpfb:element name="attest_q1"/>
+   <hpfb:element name="attest_q2a"/>
+   <hpfb:element name="attest_q2b"/>
+   <hpfb:element name="attest_q2c"/>
+   <hpfb:element name="smo_attestation_info" type="attest_content"/>
+   <hpfb:element name="seo_attestation_info" type="attest_content"/>
+   <!--Main form structure-->
+   <hpfb:complexType name="new_drug_cert_content">
+      <hpfb:sequence>
+         <hpfb:element ref="form_lang"/>
+         <hpfb:element ref="form_version"/>
+         <hpfb:element ref="application_type"/>
+         <hpfb:element ref="appl_pertaining"/>
+         <hpfb:element ref="appl_submitted_by"/>
+         <hpfb:element ref="attest_q1"/>
+         <hpfb:element ref="attest_q2a"/>
+         <hpfb:element ref="attest_q2b"/>
+         <hpfb:element ref="attest_q2c"/>
+         <hpfb:element ref="smo_attestation_info"/>
+         <hpfb:element ref="seo_attestation_info"/>
+      </hpfb:sequence>
+   </hpfb:complexType>
+</hpfb:schema>
+<hpfb:schema xmlns:hpfb="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" id="XFAXSDReference">
+   <hpfb:include schemaLocation="#XFAXSDReference1"/>
+   <!-- ****************************** -->
+   <!-- ELEMENT DECLARATIONS -->
+   <!-- ****************************** -->
+   <hpfb:element name="attestation_info" type="attest_content"/>
+   <hpfb:element name="attestation_salutation"/>
+   <hpfb:element name="attestation_given_name"/>
+   <hpfb:element name="attestation_surname"/>
+   <hpfb:element name="attestation_title"/>
+   <hpfb:element name="signature_type"/>
+   <hpfb:element name="signature_image"/>
+   <hpfb:element name="attestation_sign_date" type="yyyymmdd_date_content"/>
+   <!-- ****************************** -->
+   <!-- ELEMENT TYPE DECLARATIONS -->
+   <!-- ****************************** -->
+   <!-- main xml structure-->
+   <hpfb:complexType name="attest_content">
+      <hpfb:sequence>
+         <hpfb:element ref="attestation_salutation"/>
+         <hpfb:element ref="attestation_given_name"/>
+         <hpfb:element ref="attestation_surname"/>
+         <hpfb:element ref="attestation_title"/>
+         <hpfb:element ref="signature_type"/>
+         <hpfb:element ref="signature_image"/>
+         <hpfb:element ref="attestation_sign_date"/>
+      </hpfb:sequence>
+   </hpfb:complexType>
+</hpfb:schema>
+<hpfb:schema xmlns:hpfb="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" id="XFAXSDReference1">
+   <hpfb:simpleType name="yyyymmdd_date_content">
+      <hpfb:restriction base="hpfb:date">
+         <hpfb:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+      </hpfb:restriction>
+   </hpfb:simpleType>
+</hpfb:schema></xdp:xdp>
