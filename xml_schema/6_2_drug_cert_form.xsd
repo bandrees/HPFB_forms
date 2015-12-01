@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<hpfb:schema xmlns:hpfb="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<hpfb:include schemaLocation="./common/attestation.xsd" />
+	<!-- ****************************** -->
+	<!-- ELEMENT DECLARATIONS -->
+	<!-- ****************************** -->
+
+	<hpfb:element name="DRUG_SUBCERT" type="new_drug_cert_content"/>
+	<hpfb:element name="form_lang"/>
+	<hpfb:element name="form_version"/>
+	<hpfb:element name="application_type"/>
+	<hpfb:element name="appl_pertaining"/>
+	<hpfb:element name="appl_submitted_by"/>
+	<hpfb:element name="attest_q1"/>
+	<hpfb:element name="attest_q2a"/>
+	<hpfb:element name="attest_q2b"/>
+	<hpfb:element name="attest_q2c"/>
+	<hpfb:element name="smo_attestation_info" 	type="attest_content" />
+	<hpfb:element name="seo_attestation_info" 	type="attest_content" />
+
+	
+	<!--Main form structure-->
+	<hpfb:complexType name="new_drug_cert_content">
+		<hpfb:sequence>
+			<hpfb:element ref="form_lang"/>
+			<hpfb:element ref="form_version"/>
+			<hpfb:element ref="application_type"/>
+			<hpfb:element ref="appl_pertaining"/>
+			<hpfb:element ref="appl_submitted_by"/>
+			<hpfb:element ref="attest_q1"/>
+			<hpfb:element ref="attest_q2a"/>
+			<hpfb:element ref="attest_q2b"/>
+			<hpfb:element ref="attest_q2c"/>
+			<hpfb:element ref="smo_attestation_info"  />
+			<hpfb:element ref="seo_attestation_info"  />
+		</hpfb:sequence>
+	</hpfb:complexType>
+
+</hpfb:schema>

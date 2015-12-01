@@ -1,0 +1,3790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2015-11-26T19:01:05Z" uuid="7c6027fc-41f1-4f24-8202-76f558a70660">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel client?>
+   <subform name="DRUG_SUBCERT" layout="tb" locale="en_CA" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea w="203.2mm" h="249.476mm" x="6.351mm" y="16.198mm" name="contentArea"/>
+            <medium stock="default" short="612pt" long="792pt"/>
+            <subform x="6.35mm" y="6.35mm" w="47.625mm" name="sfLogo_en" layout="tb">
+               <bind match="none"/>
+               <draw h="6.35mm" name="imgHCLogo" w="47.625mm">
+                  <ui>
+                     <imageEdit/>
+                  </ui>
+                  <value>
+                     <image contentType="image/jpeg" href="..\..\FIP logos\HC-SC.jpg"/>
+                  </value>
+                  <?templateDesigner expand 1?>
+                  <assist>
+                     <speak priority="toolTip"/>
+                  </assist>
+               </draw>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+var cFormHandler=script.HCeForm.control.FormHandler;
+var cConfigManager=script.core.util.ConfigurationManager;
+
+var FRENCH=			cConfigManager.get("FRENCH");
+
+if(cFormHandler.getCurrentLanguage()===FRENCH){
+	this.presence="hidden";
+}else{
+	this.presence="visible";
+}
+</script>
+               </event>
+               <?templateDesigner expand 1?></subform>
+            <subform x="6.35mm" y="6.35mm" w="47.625mm" name="sfLogo_fr" layout="tb">
+               <bind match="none"/>
+               <draw name="imgHCLogo_fr" w="47.625mm" h="6.35mm">
+                  <value>
+                     <image href="..\..\FIP logos\SC-HC.jpg" contentType="image/jpeg"/>
+                  </value>
+                  <ui>
+                     <imageEdit/>
+                  </ui>
+                  <assist>
+                     <speak priority="toolTip"/>
+                  </assist>
+               </draw>
+               <?templateDesigner expand 0?>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+var cFormHandler=script.HCeForm.control.FormHandler;
+var cConfigManager=script.core.util.ConfigurationManager;
+
+var FRENCH=			cConfigManager.get("FRENCH");
+
+if(cFormHandler.getCurrentLanguage()===FRENCH){
+	this.presence="visible";
+}else{
+	this.presence="hidden";
+}
+</script>
+               </event>
+            </subform>
+            <draw h="6.352mm" name="imgCanada" w="20.744mm" y="268.392mm" x="6.136mm">
+               <ui>
+                  <imageEdit/>
+               </ui>
+               <value>
+                  <image contentType="image/gif" href="..\..\Images\wordmark.gif"/>
+               </value>
+               <assist>
+                  <speak disable="1"/>
+               </assist>
+            </draw>
+            <field name="eventHandler" y="269.349mm" x="59.189mm" w="10.54mm" h="6.35mm" access="protected" presence="invisible">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden">
+                        <?templateDesigner StyleID aped0?></border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro" size="8pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="none"/>
+               <assist>
+                  <speak disable="1"/>
+               </assist>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+/*******************************************************************************
+ * This updates the FormPage's language when a new instance is created. This is
+ * here because there is nowhere to put it on the master page itself.
+ */
+
+//imports
+var cActionEvent = script.core.event.ActionEvent;
+var cMasterPageHandler = script.HCeForm.control.MasterPageHandler;
+var cSystem = script.core.System;
+
+try
+{
+	// set up event object
+	var actionName = cMasterPageHandler.INITIALIZE_MASTER_PAGE;
+	var anActionEvent = cActionEvent.createInstance(actionName,this, this.parent);
+
+	// deploy event to controller
+	cMasterPageHandler.actionPerformed(anActionEvent);
+}
+catch(exception)
+{
+	cSystem.processUnhandledException(exception);
+}
+
+
+</script>
+               </event>
+            </field>
+            <field access="protected" name="Pages" x="93.955mm" y="267.931mm" minW="18.317mm" minH="5.588mm">
+               <font typeface="Myriad Pro" size="8pt"/>
+               <margin bottomInset="1mm" leftInset="0mm" rightInset="0mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <ui>
+                  <textEdit>
+                     <border presence="hidden">
+                        <?templateDesigner StyleID aped0?></border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind match="none"/>
+               <format>
+                  <picture>9999999</picture>
+               </format>
+               <event activity="ready" ref="$layout" name="event__layout_ready">
+                  <script contentType="application/x-javascript">
+var cResourceManager = 		script.core.lang.ResourceManager;
+
+var textVal="";
+textVal="Page "+xfa.layout.page(this)+" "+cResourceManager.get("lbOfLCText")+" " + xfa.layout.pageCount();
+this.rawValue=textVal;
+</script>
+               </event>
+               <assist>
+                  <speak disable="1"/>
+               </assist>
+            </field>
+            <field name="txtFormVersion" y="267.931mm" x="28.722mm" w="28.707mm" h="5.588mm" access="protected">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro" size="8pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="15.9508mm">
+                  <font size="8pt" typeface="Myriad Pro" baselineShift="0pt"/>
+                  <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <value>
+                     <text>Revision No:</text>
+                  </value>
+               </caption>
+               <bind match="dataRef" ref="$.form_version"/>
+            </field>
+            <draw name="lblMasterTitle" y="267.931mm" x="114.699mm" w="94.728mm" h="5.588mm" hAlign="right">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Title</text>
+               </value>
+               <font size="8pt" typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para vAlign="middle" hAlign="right"/>
+               <?renderCache.bounds 265686 13006 0 0 1417 1417 0 0?>
+               <?renderCache.textRun 5 Title 0 252711 9920 0 0 0 "Myriad Pro" 0 0 8000 ISO-8859-1?></draw>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 0?></pageSet>
+      <subform w="576pt" name="sfPage1" layout="lr-tb">
+         <subform w="203.2mm" name="sfMainHeader" layout="lr-tb">
+            <draw name="lblFormTitle" w="202.993mm" minH="9.42mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>Title</text>
+               </value>
+               <font size="16pt" typeface="Myriad Pro" baselineShift="0pt" weight="bold"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" vAlign="middle"/>
+               <assist role="H1"/>
+            </draw>
+            <exclGroup name="pageLanguage" layout="lr-tb">
+               <field h="6mm" name="chkEnglish" w="23.28mm" locale="en_CA" relevant="-print">
+                  <caption placement="right" reserve="16.812mm">
+                     <font size="8pt" typeface="Myriad Pro"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>English</text>
+                     </value>
+                  </caption>
+                  <font typeface="Myriad Pro"/>
+                  <items>
+                     <text>en</text>
+                  </items>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <ui>
+                     <checkButton shape="round" size="3.5278mm">
+                        <border>
+                           <fill>
+                              <color value="255, 255, 255"/>
+                           </fill>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <bind match="none"/>
+                  <value>
+                     <text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">en</text>
+                  </value>
+               </field>
+               <field h="6mm" name="chkFrancais" w="26.316mm" locale="fr_CA" relevant="-print">
+                  <caption placement="right" reserve="19.81mm">
+                     <font size="8pt" typeface="Myriad Pro"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Français</text>
+                     </value>
+                  </caption>
+                  <font typeface="Myriad Pro"/>
+                  <items>
+                     <text>fr</text>
+                  </items>
+                  <margin leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <ui>
+                     <checkButton shape="round" size="3.5278mm">
+                        <border>
+                           <fill>
+                              <color value="255, 255, 255"/>
+                           </fill>
+                        </border>
+                        <margin/>
+                     </checkButton>
+                  </ui>
+                  <bind match="none"/>
+                  <value>
+                     <text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                  </value>
+               </field>
+               <?templateDesigner itemValuesSpecified 1?>
+               <event activity="change" name="event__change">
+                  <script contentType="application/x-javascript">
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+var cMainHandler = script.HCeForm.control.FormHandler;
+
+try
+{
+	// set up event object
+	var actionName = cMainHandler.LANGUAGE_CHANGE;
+	var anActionEvent = cActionEvent.createInstance(actionName, this, this.rawValue);
+	
+	// deploy event to controller
+	cMainHandler.actionPerformed(anActionEvent);
+}
+catch(exception)
+{
+	cLog.warn("Problem with pageLanguage::change", exception);
+}
+</script>
+               </event>
+               <validate scriptTest="warning"/>
+               <margin leftInset="50.8mm"/>
+               <?templateDesigner expand 0?>
+               <bind match="dataRef" ref="$.form_lang"/>
+            </exclGroup>
+            <bind match="none"/>
+            <?templateDesigner expand 0?></subform>
+         <subform y="15.42mm" w="203.307mm" layout="lr-tb" name="sfPreInstruct">
+            <subform w="203.2mm" layout="lr-tb" name="sfPreInstruct1">
+               <draw name="lblMandatory" w="8in" h="6.35mm" colSpan="2">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>Asterisk (*) denotes a mandatory field.</text>
+                  </value>
+                  <font typeface="Myriad Pro" size="8pt"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <para vAlign="middle"/>
+                  <assist>
+                     <speak disable="1"/>
+                  </assist>
+                  <?renderCache.bounds 573166 15166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 39 Asterisk (*) denotes a mandatory field. 0 1417 11000 0 0 0 "Myriad Pro" 0 0 8000 ISO-8859-1?></draw>
+               <assist role="LI"/>
+               <bind match="none"/>
+               <?templateDesigner expand 0?></subform>
+            <subform y="6.35mm" w="203.307mm" layout="lr-tb" name="sfPreInstruct2">
+               <draw name="lblValidation" w="203.307mm" h="6.35mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>Plus (+) denotes a validation error or missing data.</text>
+                  </value>
+                  <font size="8pt" typeface="Myriad Pro"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para vAlign="middle"/>
+                  <?renderCache.bounds 573469 15166 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 52 Plus (+) denotes a validation error or missing data. 0 1417 11000 0 0 0 "Myriad Pro" 0 0 8000 ISO-8859-1?></draw>
+               <assist role="LI"/>
+               <bind match="none"/>
+               <?templateDesigner expand 1?></subform>
+            <assist role="UL"/>
+            <margin bottomInset="2.54mm"/>
+            <bind match="none"/>
+            <?templateDesigner expand 0?></subform>
+         <subform w="203.2mm" name="sfInstructions" layout="lr-tb">
+            <field name="btnViewInstructions" w="31.75mm" h="6.35mm" relevant="-print">
+               <ui>
+                  <button highlight="inverted"/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <caption>
+                  <value>
+                     <text>Show Instructions</text>
+                  </value>
+                  <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+               </caption>
+               <border hand="right">
+                  <?templateDesigner StyleID apbx2?>
+                  <edge stroke="raised"/>
+                  <fill>
+                     <color value="212,208,200"/>
+                  </fill>
+               </border>
+               <bind match="none"/>
+               <event activity="click" name="event__click">
+                  <script contentType="application/x-javascript">
+var cFormHandler=	script.HCeForm.control.FormHandler;
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+try
+{
+		// set up event object
+		var actionName = cFormHandler.SHOW_INSTRUCTIONS;
+		var anActionEvent = cActionEvent.createInstance(actionName, this);
+		// deploy event to controller
+		cFormHandler.actionPerformed(anActionEvent);
+	
+}
+catch(exception)
+{
+	cLog.warn("Problem with show instructions ::click", exception);
+}
+</script>
+               </event>
+            </field>
+            <draw name="Text6" w="4.576mm" h="6.35mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <?renderCache.bounds 10137 15166 0 0 1417 1417 0 0?></draw>
+            <field name="btnHideInstructions" w="31.75mm" h="6.35mm" relevant="-print">
+               <ui>
+                  <button highlight="inverted"/>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <caption>
+                  <value>
+                     <text>Hide Instructions</text>
+                  </value>
+                  <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+               </caption>
+               <border hand="right">
+                  <?templateDesigner StyleID apbx2?>
+                  <edge stroke="raised"/>
+                  <fill>
+                     <color value="212,208,200"/>
+                  </fill>
+               </border>
+               <bind match="none"/>
+               <event activity="click" name="event__click">
+                  <script contentType="application/x-javascript">var cFormHandler=	script.HCeForm.control.FormHandler;
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+try
+{
+		// set up event object
+		var actionName =  cFormHandler.HIDE_INSTRUCTIONS;
+		var anActionEvent = cActionEvent.createInstance(actionName, this);
+		// deploy event to controller
+		cFormHandler.actionPerformed(anActionEvent);
+	
+}
+catch(exception)
+{
+	cLog.warn("Problem with hide instructions ::click", exception);
+}
+
+</script>
+               </event>
+            </field>
+            <border>
+               <edge presence="hidden"/>
+               <corner presence="hidden" thickness="0.175mm"/>
+            </border>
+            <margin bottomInset="5.08mm"/>
+            <bind match="none"/>
+            <?templateDesigner expand 1?></subform>
+         <subform w="203.2mm" layout="lr-tb" name="sfInstructionsContent">
+            <draw name="lblInstructionsHead" w="8in" h="6.249mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>INSTRUCTIONS</text>
+               </value>
+               <font typeface="Myriad Pro" baselineShift="0pt" size="12pt" weight="bold"/>
+               <margin topInset="0.254mm" bottomInset="0.254mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" vAlign="middle"/>
+               <border>
+                  <edge/>
+                  <corner thickness="0.175mm"/>
+                  <fill>
+                     <linear>
+                        <color value="255,255,255"/>
+                     </linear>
+                     <color value="255,255,153"/>
+                  </fill>
+               </border>
+               <assist role="H2"/>
+               <?renderCache.bounds 573166 16274 0 0 1417 720 0 0?>
+               <?renderCache.textRun 12 INSTRUCTIONS 0 1417 11857 0 0 0 "Myriad Pro" 1 0 12000 ISO-8859-1?></draw>
+            <subform w="203.199mm" minH="59.561mm" layout="lr-tb" name="sfInstructList">
+               <subform w="203.199mm" name="sfInstruct1" layout="tb">
+                  <draw name="lblInstruct1" w="7.999958in" minH="5.116mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>This form contains mandatory fields. In order to ensure you have completed all appropriate fields, please press the \"Finalize\" button at the bottom of the form before printing and signing. </text>
+                     </value>
+                     <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                     <margin topInset="0.5002mm" bottomInset="0.5002mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para spaceAbove="0.5pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" vAlign="middle"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.175mm" presence="hidden"/>
+                     </border>
+                  </draw>
+                  <margin bottomInset="2.54mm" topInset="2.54mm"/>
+                  <assist role="LI"/>
+                  <bind match="none"/>
+                  <?templateDesigner expand 0?></subform>
+               <subform w="203.199mm" name="sfInstruct2" layout="tb">
+                  <draw name="lblInstruct2" w="7.999958in" minH="8.931mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>Once finalized, the fields in the form becomes "locked" (i.e. Fields cannot be modified). In order to modify fields after finalizing, you must press the "Modify" button at the bottom of the form. Following modifications to the desired fields and before printing and signing, please press the "Finalize" button again to re-validate entries.  Alternatively: </text>
+                     </value>
+                     <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                     <margin topInset="0.5002mm" bottomInset="0.5002mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para spaceAbove="0.5pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" vAlign="middle"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.175mm" presence="hidden"/>
+                     </border>
+                  </draw>
+                  <margin topInset="0mm" bottomInset="0mm"/>
+                  <assist role="LI"/>
+                  <bind match="none"/>
+                  <?templateDesigner expand 0?></subform>
+               <bind match="none"/>
+               <?templateDesigner expand 1?></subform>
+            <border>
+               <edge/>
+               <corner thickness="0.175mm"/>
+            </border>
+            <margin topInset="0mm" bottomInset="2.54mm"/>
+            <bind match="none"/>
+            <subform w="203.199mm" name="sfInstructListB" layout="tb">
+               <bind match="none"/>
+               <assist role="UL"/>
+               <subform w="203.199mm" name="sfInstructB1" layout="tb">
+                  <bind match="none"/>
+                  <assist role="LI"/>
+                  <draw name="lblInstructB1" w="7.999958in" minH="5.08mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>-Save, print, sign and date the completed form;</text>
+                     </value>
+                     <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                     <margin topInset="0.5002mm" bottomInset="0.5002mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para spaceAbove="0.5pt" spaceBelow="0pt" textIndent="0pt" marginLeft="7.2pt" marginRight="0pt" vAlign="middle"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.175mm" presence="hidden"/>
+                     </border>
+                  </draw>
+                  <?templateDesigner expand 1?></subform>
+               <subform w="203.199mm" name="sfInstructB2" layout="tb">
+                  <bind match="none"/>
+                  <assist role="LI"/>
+                  <draw name="lblInstructB2" w="7.999958in" minH="5.08mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>-Scan the signed form, and</text>
+                     </value>
+                     <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                     <margin topInset="0.5002mm" bottomInset="0.5002mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para spaceAbove="0.5pt" spaceBelow="0pt" textIndent="0pt" marginLeft="7.2pt" marginRight="0pt" vAlign="middle"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.175mm" presence="hidden"/>
+                     </border>
+                  </draw>
+                  <?templateDesigner expand 1?></subform>
+               <subform w="203.199mm" name="sfInstructB3" layout="tb">
+                  <bind match="none"/>
+                  <assist role="LI"/>
+                  <draw name="lblInstructB3" w="7.999958in" minH="5.08mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>-Send to Health Canada in electronic format.</text>
+                     </value>
+                     <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                     <margin topInset="0.5002mm" bottomInset="0.5002mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para spaceAbove="0.5pt" spaceBelow="0pt" textIndent="0pt" marginLeft="7.2pt" marginRight="0pt" vAlign="middle"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.175mm" presence="hidden"/>
+                     </border>
+                  </draw>
+                  <?templateDesigner expand 1?></subform>
+               <margin bottomInset="7.62mm"/>
+               <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
+         <subform y="241.091mm" w="203.199mm" minH="66.15mm" layout="lr-tb" name="sfSubContent">
+            <subform w="203.199mm" layout="lr-tb" name="sfSubType">
+               <field name="ddlSubmissionType" w="138.774mm" h="9mm">
+                  <ui>
+                     <choiceList>
+                        <border>
+                           <?templateDesigner StyleID aped3?>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </choiceList>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="27.4588mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <text> Type of Submission </text>
+                     </value>
+                     <font size="8pt" typeface="Myriad Pro"/>
+                  </caption>
+                  <validate nullTest="error"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <corner thickness="0.175mm" presence="hidden"/>
+                  </border>
+                  <event activity="exit" name="event__exit">
+                     <script contentType="application/x-javascript">
+
+
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+var cMainHandler = script.HCeForm.control.FormHandler;
+
+try
+{
+	// set up event object
+	var actionName = cMainHandler.SET_SUBMITBY_ACTION;
+	var anActionEvent = cActionEvent.createInstance(actionName, this);
+	
+	// deploy event to controller
+	cMainHandler.actionPerformed(anActionEvent);
+}
+catch(exception)
+{
+	cLog.warn("Problem with subtype::exit", exception);
+}
+</script>
+                  </event>
+                  <bind match="dataRef" ref="$.application_type"/>
+               </field>
+               <field name="txtCertified" w="201.417mm" minH="25.4mm">
+                  <ui>
+                     <textEdit multiLine="1">
+                        <border>
+                           <edge stroke="lowered"/>
+                           <?templateDesigner StyleID aped3?></border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin bottomInset="2.54mm" leftInset="1mm" rightInset="1mm" topInset="2.54mm"/>
+                  <caption placement="top" reserve="3.175mm">
+                     <font baselineShift="0pt" size="8pt" typeface="Myriad Pro"/>
+                     <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt"/>
+                     <value>
+                        <text>We certify that, to the best of our knowledge and belief, with reference to the submission pertaining to:*</text>
+                     </value>
+                  </caption>
+                  <border>
+                     <edge/>
+                     <corner thickness="0.1753mm"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                     <corner thickness="0.1753mm" presence="hidden"/>
+                     <corner thickness="0.1753mm"/>
+                     <corner thickness="0.1753mm" presence="hidden"/>
+                  </border>
+                  <validate nullTest="error"/>
+                  <bind match="dataRef" ref="$.appl_pertaining"/>
+               </field>
+               <subform w="201.668mm" name="sfSubmittedBy" layout="tb">
+                  <field name="txtSubmittedBy" w="201.909mm" minH="25.4mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <?templateDesigner StyleID aped3?></border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                     <caption placement="top" reserve="3.175mm">
+                        <font baselineShift="0pt" size="8pt" typeface="Myriad Pro"/>
+                        <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt"/>
+                        <value>
+                           <text>submitted by:</text>
+                        </value>
+                     </caption>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.1753mm"/>
+                        <edge presence="hidden"/>
+                        <edge/>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.1753mm" presence="hidden"/>
+                        <corner thickness="0.1753mm"/>
+                        <corner thickness="0.1753mm" presence="hidden"/>
+                     </border>
+                     <validate nullTest="error"/>
+                     <bind match="dataRef" ref="$.appl_submitted_by"/>
+                  </field>
+                  <occur min="0"/>
+                  <?templateDesigner expand 1?>
+                  <bind match="none"/>
+               </subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.175mm" presence="hidden"/>
+               </border>
+               <?templateDesigner expand 0?>
+               <bind match="none"/>
+               <margin topInset="0.762mm" leftInset="0.762mm"/>
+            </subform>
+            <subform w="203.199mm" name="sfAttestation" layout="tb">
+               <subform w="203.199mm" name="sfAttestHeading" layout="tb">
+                  <draw name="lblInstructionsHead" w="8in" h="6.249mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>ATTESTATION</text>
+                     </value>
+                     <font typeface="Myriad Pro" baselineShift="0pt" size="12pt" weight="bold"/>
+                     <margin topInset="0.254mm" bottomInset="0.254mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" vAlign="middle"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.175mm"/>
+                        <fill>
+                           <linear>
+                              <color value="255,255,255"/>
+                           </linear>
+                           <color value="255,255,153"/>
+                        </fill>
+                     </border>
+                     <assist role="H2"/>
+                     <?renderCache.bounds 573166 16274 0 0 1417 720 0 0?>
+                     <?renderCache.textRun 11 ATTESTATION 0 1417 11857 0 0 0 "Myriad Pro" 1 0 12000 ISO-8859-1?></draw>
+                  <margin topInset="1.27mm" bottomInset="1.27mm"/>
+                  <bind match="none"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform w="202.976mm" name="sfAttestBody" layout="tb">
+                  <subform w="203.037mm" name="sfAttest1" layout="lr-tb">
+                     <field name="chkAttest1" w="5.08mm" h="4.826mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge stroke="lowered"/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="0mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <integer>0</integer>
+                        </value>
+                        <items>
+                           <integer>1</integer>
+                           <integer>0</integer>
+                           <integer>2</integer>
+                        </items>
+                        <bind match="dataRef" ref="$.attest_q1"/>
+                     </field>
+                     <draw name="lblAttest1" w="194.31mm" h="14.336mm">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <text>1. All the information and material included in the submission and additional information or material filed to amend the submission are accurate and complete, and  the sectional reports and the comprehensive summaries correctly represent the information and material referred to or included in the submission. No information is false or misleading; no omissions have been made that may affect its accuracy and completeness.</text>
+                        </value>
+                        <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                        <margin topInset="0.5002mm" bottomInset="0.5002mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para spaceAbove="0.5pt" spaceBelow="0pt" textIndent="-7.2pt" marginLeft="0pt" marginRight="0pt"/>
+                        <border>
+                           <edge presence="hidden"/>
+                           <corner thickness="0.175mm" presence="hidden"/>
+                        </border>
+                        <assist>
+                           <speak disable="1"/>
+                        </assist>
+                        <?renderCache.bounds 547966 37801 0 0 1417 1418 0 0?>
+                        <?renderCache.textRun 164 1. All the information and material included in the submission and additional information or material filed to amend the submission are accurate and complete, and   0 1417 7918 0 0 0 "Myriad Pro" 0 0 8000 ISO-8859-1?>
+                        <?renderCache.textRun 161 the sectional reports and the comprehensive summaries correctly represent the information and material referred to or included in the submission. No information  0 8617 17518 0 0 0 "Myriad Pro" 0 0 8000 ISO-8859-1?>
+                        <?renderCache.textRun 98 is false or misleading; no omissions have been made that may affect its accuracy and completeness. 0 8617 27118 0 0 0 "Myriad Pro" 0 0 8000 ISO-8859-1?></draw>
+                     <keep intact="contentArea"/>
+                     <bind match="none"/>
+                     <assist role="LI"/>
+                     <?templateDesigner expand 1?>
+                     <margin leftInset="0.762mm"/>
+                  </subform>
+                  <subform w="203.199mm" name="sfAttest2" layout="lr-tb">
+                     <field name="chkAttest2" w="5.08mm" h="4.826mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge stroke="lowered"/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="0mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <integer>0</integer>
+                        </value>
+                        <items>
+                           <integer>1</integer>
+                           <integer>0</integer>
+                           <integer>2</integer>
+                        </items>
+                        <bind match="dataRef" ref="$.attest_q2a"/>
+                     </field>
+                     <draw name="lblAttest2" w="194.31mm" h="8.128mm">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <text>2. a) all pivotal studies included in the submission are complete and a final comprehensive analyses provided;</text>
+                        </value>
+                        <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                        <margin topInset="0.5002mm" bottomInset="4.064mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para spaceAbove="0.5pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" vAlign="middle"/>
+                        <border>
+                           <edge presence="hidden"/>
+                           <corner thickness="0.175mm" presence="hidden"/>
+                        </border>
+                        <assist>
+                           <speak disable="1"/>
+                        </assist>
+                        <?renderCache.bounds 547966 10102 0 0 1417 1418 0 0?>
+                        <?renderCache.textRun 110 2. a) all pivotal studies included in the submission are complete and a final comprehensive analyses provided; 0 1417 8719 0 0 0 "Myriad Pro" 0 0 8000 ISO-8859-1?></draw>
+                     <keep intact="contentArea"/>
+                     <bind match="none"/>
+                     <assist role="LI"/>
+                     <?templateDesigner expand 1?>
+                     <margin leftInset="0.762mm"/>
+                  </subform>
+                  <subform w="203.199mm" name="sfAttest3" layout="lr-tb">
+                     <field name="chkAttest3" w="5.08mm" h="4.826mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge stroke="lowered"/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="0mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <integer>0</integer>
+                        </value>
+                        <items>
+                           <integer>1</integer>
+                           <integer>0</integer>
+                           <integer>2</integer>
+                        </items>
+                        <bind match="dataRef" ref="$.attest_q2b"/>
+                     </field>
+                     <draw name="lblAttest3" w="194.31mm" minH="8.128mm">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <text>2. b) all pivotal data necessary to support the proposed indications, doses and formulations have been provided;</text>
+                        </value>
+                        <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                        <margin topInset="0.5002mm" bottomInset="4.064mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para spaceAbove="0.5pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                        <border>
+                           <edge presence="hidden"/>
+                           <corner thickness="0.175mm" presence="hidden"/>
+                        </border>
+                        <assist>
+                           <speak disable="1"/>
+                        </assist>
+                     </draw>
+                     <keep intact="contentArea"/>
+                     <bind match="none"/>
+                     <assist role="LI"/>
+                     <?templateDesigner expand 1?>
+                     <margin leftInset="0.762mm"/>
+                  </subform>
+                  <subform w="203.199mm" name="sfAttest4" layout="lr-tb">
+                     <field name="chkAttest4" w="5.08mm" h="4.826mm">
+                        <ui>
+                           <checkButton>
+                              <border>
+                                 <edge stroke="lowered"/>
+                                 <fill/>
+                              </border>
+                           </checkButton>
+                        </ui>
+                        <font typeface="Myriad Pro"/>
+                        <margin leftInset="0mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <integer>0</integer>
+                        </value>
+                        <items>
+                           <integer>1</integer>
+                           <integer>0</integer>
+                           <integer>2</integer>
+                        </items>
+                        <bind match="dataRef" ref="$.attest_q2c"/>
+                     </field>
+                     <draw name="lblAttest4" w="194.31mm" minH="13.092mm">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <text>2. c) the formulation used in the studies (clinical and pharmacokinetic) is identical to that proposed for marketing or evidence that the preparations used in the pivotal clinical efficacy and pharmacokinetic studies are bioequivalent to the preparation to be marketed. The batch of the drug substance or the final formulation used in pre-clinical studies (especially the carcinogenicity studies) is representative of that proposed for marketing, or acceptable evidence and rationale are provided to defend that any variation does not affect the interpretation of data generated in support of both safety and efficacy.</text>
+                        </value>
+                        <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                        <margin topInset="0.5002mm" bottomInset="0.5002mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para spaceAbove="0.5pt" spaceBelow="0pt" textIndent="-14.4pt" marginLeft="0pt" marginRight="0pt"/>
+                        <border>
+                           <edge presence="hidden"/>
+                           <corner thickness="0.175mm" presence="hidden"/>
+                        </border>
+                        <assist>
+                           <speak disable="1"/>
+                        </assist>
+                     </draw>
+                     <keep intact="contentArea"/>
+                     <margin bottomInset="2.54mm" leftInset="0.762mm"/>
+                     <bind match="none"/>
+                     <assist role="LI"/>
+                     <?templateDesigner expand 1?></subform>
+                  <keep intact="contentArea"/>
+                  <bind match="none"/>
+                  <assist role="UL"/>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?>
+               <bind match="none"/>
+            </subform>
+            <subform w="203.199mm" name="sfAttestNames" layout="lr-tb">
+               <subform w="203.2mm" layout="lr-tb" name="sfSEOName">
+                  <border>
+                     <edge presence="hidden"/>
+                     <corner thickness="0.175mm" presence="hidden"/>
+                  </border>
+                  <field h="11.43mm" name="ddlSalutation" w="20.32mm">
+                     <caption placement="top" reserve="3.2202mm">
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Salutation*</text>
+                        </value>
+                        <font typeface="Myriad Pro" size="8pt"/>
+                     </caption>
+                     <font typeface="Myriad Pro"/>
+                     <items save="1"/>
+                     <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <ui>
+                        <choiceList>
+                           <border>
+                              <edge stroke="lowered"/>
+                              <?templateDesigner StyleID aped3?></border>
+                           <margin/>
+                        </choiceList>
+                     </ui>
+                     <validate nullTest="error"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.175mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.seo_attestation_info.attestation_salutation"/>
+                  </field>
+                  <field h="11.43mm" name="txtGivenName" w="45.72mm">
+                     <border>
+                        <corner thickness="0.1753mm"/>
+                        <edge/>
+                     </border>
+                     <caption placement="top" reserve="3.1733mm">
+                        <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                        <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+                        <value>
+                           <text>Given Name*</text>
+                        </value>
+                     </caption>
+                     <font typeface="Myriad Pro"/>
+                     <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <ui>
+                        <textEdit hScrollPolicy="off">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <?templateDesigner StyleID aped3?></border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <validate nullTest="error"/>
+                     <keep intact="contentArea"/>
+                     <bind match="dataRef" ref="$.seo_attestation_info.attestation_given_name"/>
+                  </field>
+                  <field h="11.43mm" name="txtSurname" w="63.5mm">
+                     <border>
+                        <corner thickness="0.1753mm"/>
+                        <edge/>
+                     </border>
+                     <caption placement="top" reserve="3.2341mm">
+                        <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                        <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+                        <value>
+                           <text>Surname*</text>
+                        </value>
+                     </caption>
+                     <font typeface="Myriad Pro"/>
+                     <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <ui>
+                        <textEdit hScrollPolicy="off">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <?templateDesigner StyleID aped3?></border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <validate nullTest="error"/>
+                     <keep intact="contentArea"/>
+                     <bind match="dataRef" ref="$.seo_attestation_info.attestation_surname"/>
+                  </field>
+                  <field name="ddlTitle" w="73.66mm" h="11.43mm" access="readOnly">
+                     <ui>
+                        <choiceList>
+                           <border>
+                              <edge stroke="lowered"/>
+                              <?templateDesigner StyleID aped3?></border>
+                           <margin/>
+                        </choiceList>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption placement="top" reserve="3.2341mm">
+                        <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                        <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+                        <value>
+                           <text> Position Title*</text>
+                        </value>
+                     </caption>
+                     <border>
+                        <corner thickness="0.1753mm"/>
+                        <edge/>
+                     </border>
+                     <keep intact="contentArea"/>
+                     <bind match="dataRef" ref="$.seo_attestation_info.attestation_title"/>
+                     <items save="1">
+                        <text>Senior Executive Officer</text>
+                     </items>
+                  </field>
+                  <margin topInset="0mm"/>
+                  <bind match="none"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform w="203.2mm" layout="lr-tb" name="sfSMOName">
+                  <border>
+                     <edge presence="hidden"/>
+                     <corner thickness="0.175mm" presence="hidden"/>
+                  </border>
+                  <field h="11.43mm" name="ddlSalutation" w="20.32mm">
+                     <caption placement="top" reserve="3.2202mm">
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Salutation*</text>
+                        </value>
+                        <font typeface="Myriad Pro" size="8pt"/>
+                     </caption>
+                     <font typeface="Myriad Pro"/>
+                     <items save="1"/>
+                     <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <ui>
+                        <choiceList>
+                           <border>
+                              <edge stroke="lowered"/>
+                              <?templateDesigner StyleID aped3?></border>
+                           <margin/>
+                        </choiceList>
+                     </ui>
+                     <validate nullTest="error"/>
+                     <border>
+                        <edge/>
+                        <corner thickness="0.175mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.smo_attestation_info.attestation_salutation"/>
+                  </field>
+                  <field h="11.43mm" name="txtGivenName" w="45.72mm">
+                     <border>
+                        <corner thickness="0.1753mm"/>
+                        <edge/>
+                     </border>
+                     <caption placement="top" reserve="3.1733mm">
+                        <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                        <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+                        <value>
+                           <text>Given Name*</text>
+                        </value>
+                     </caption>
+                     <font typeface="Myriad Pro"/>
+                     <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <ui>
+                        <textEdit hScrollPolicy="off">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <?templateDesigner StyleID aped3?></border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <validate nullTest="error"/>
+                     <keep intact="contentArea"/>
+                     <bind match="dataRef" ref="$.smo_attestation_info.attestation_given_name"/>
+                  </field>
+                  <field h="11.43mm" name="txtSurname" w="63.5mm">
+                     <border>
+                        <corner thickness="0.1753mm"/>
+                        <edge/>
+                     </border>
+                     <caption placement="top" reserve="3.2341mm">
+                        <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                        <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+                        <value>
+                           <text>Surname*</text>
+                        </value>
+                     </caption>
+                     <font typeface="Myriad Pro"/>
+                     <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <ui>
+                        <textEdit hScrollPolicy="off">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <?templateDesigner StyleID aped3?></border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <validate nullTest="error"/>
+                     <keep intact="contentArea"/>
+                     <bind match="dataRef" ref="$.smo_attestation_info.attestation_surname"/>
+                  </field>
+                  <field name="ddlTitle" w="73.66mm" h="11.43mm" access="readOnly">
+                     <ui>
+                        <choiceList>
+                           <border>
+                              <edge stroke="lowered"/>
+                              <?templateDesigner StyleID aped3?></border>
+                           <margin/>
+                        </choiceList>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption placement="top" reserve="3.2341mm">
+                        <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                        <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+                        <value>
+                           <text> Position Title*</text>
+                        </value>
+                     </caption>
+                     <border>
+                        <corner thickness="0.1753mm"/>
+                        <edge/>
+                     </border>
+                     <keep intact="contentArea"/>
+                     <bind match="dataRef" ref="$.smo_attestation_info.attestation_title"/>
+                  </field>
+                  <margin topInset="0mm"/>
+                  <?templateDesigner expand 0?>
+                  <bind match="none"/>
+               </subform>
+               <?templateDesigner expand 0?>
+               <bind match="none"/>
+            </subform>
+            <subform w="203.2mm" name="sfFinalizeButton" h="14.652mm">
+               <margin topInset="5.08mm" bottomInset="2.54mm" leftInset="0.762mm"/>
+               <field name="btnFinalizeAndLock" w="28.575mm" h="6.35mm" relevant="-print">
+                  <ui>
+                     <button highlight="inverted"/>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <caption>
+                     <value>
+                        <text>Finalize</text>
+                     </value>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                  </caption>
+                  <border hand="right">
+                     <?templateDesigner StyleID apbx2?>
+                     <edge stroke="raised"/>
+                     <fill>
+                        <color value="212,208,200"/>
+                     </fill>
+                  </border>
+                  <bind match="none"/>
+                  <event activity="click" name="event__click">
+                     <script contentType="application/x-javascript">
+var cFormHandler=	script.HCeForm.control.FormHandler;
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+try
+{
+		// set up event object
+		var actionName = cFormHandler.LOCK_FORM;
+		var anActionEvent = cActionEvent.createInstance(actionName, this);
+		// deploy event to controller
+		cFormHandler.actionPerformed(anActionEvent);
+	
+}
+catch(exception)
+{
+	cLog.warn("Problem with finalize ::click", exception);
+}
+
+</script>
+                  </event>
+               </field>
+               <field name="btnModify" w="28.575mm" h="6.35mm" relevant="-print" x="31.175mm">
+                  <ui>
+                     <button highlight="inverted"/>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <caption>
+                     <value>
+                        <text>Modify</text>
+                     </value>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                  </caption>
+                  <border hand="right">
+                     <?templateDesigner StyleID apbx2?>
+                     <edge stroke="raised"/>
+                     <fill>
+                        <color value="212,208,200"/>
+                     </fill>
+                  </border>
+                  <bind match="none"/>
+                  <event activity="click" name="event__click">
+                     <script contentType="application/x-javascript">
+
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+var cHandler=	script.HCeForm.control.FormHandler;
+var cSystem = script.core.System;
+
+
+try{
+		// set up event object
+		var actionName = cHandler.UNLOCK_FORM;
+		var anActionEvent = cActionEvent.createInstance(actionName, this);
+		// deploy event to controller
+		cHandler.actionPerformed(anActionEvent);
+}
+catch(exception)
+{
+	cLog.warn("Problem with  unlock button::click", exception);
+}
+</script>
+                  </event>
+               </field>
+               <bind match="none"/>
+               <?templateDesigner expand 0?></subform>
+            <subform name="sfSignatureBlockSEO" layout="lr-tb" w="203.2mm">
+               <border>
+                  <corner thickness="0.175mm" presence="hidden"/>
+                  <edge presence="hidden"/>
+               </border>
+               <keep intact="contentArea"/>
+               <margin bottomInset="1.27mm" leftInset="0.508mm" topInset="1.27mm"/>
+               <bind match="none"/>
+               <exclGroup layout="lr-tb" name="signatureOption">
+                  <field h="6mm" name="chkDigitalID" w="28mm">
+                     <caption placement="right" reserve="22mm">
+                        <font typeface="Myriad Pro" size="8pt"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Digital ID</text>
+                        </value>
+                     </caption>
+                     <font typeface="Myriad Pro"/>
+                     <items>
+                        <text>DIG_SIG</text>
+                     </items>
+                     <margin leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <ui>
+                        <checkButton shape="round">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                              <?templateDesigner StyleID apcb4?></border>
+                           <margin/>
+                        </checkButton>
+                     </ui>
+                     <value>
+                        <text>DIG_SIG</text>
+                     </value>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden"/>
+                     </border>
+                  </field>
+                  <field h="6mm" name="chkDigitalImage" w="50.8mm">
+                     <caption placement="right" reserve="44.958mm">
+                        <font typeface="Myriad Pro" size="8pt"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Image Signature</text>
+                        </value>
+                     </caption>
+                     <font typeface="Myriad Pro"/>
+                     <items>
+                        <text>IMG_SIG</text>
+                     </items>
+                     <margin leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <ui>
+                        <checkButton shape="round">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                              <?templateDesigner StyleID apcb4?></border>
+                           <margin/>
+                        </checkButton>
+                     </ui>
+                  </field>
+                  <event activity="change" name="event__change">
+                     <script contentType="application/x-javascript">
+
+
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+var cHandler = script.HCeForm.control.SignatureBlockHandler
+var cSystem = script.core.System;
+
+try			
+{
+		// set up event object
+		var actionName = cHandler.SEO_SIGNATURE_CHOICE_UI;
+		var anActionEvent = cActionEvent.createInstance(actionName,this);
+		// deploy event to controller
+		cHandler.actionPerformed(anActionEvent);
+}
+catch(exception)
+{
+	cLog.warn("Problem with sig type::change", exception);
+}
+</script>
+                  </event>
+                  <?templateDesigner itemValuesSpecified 1?>
+                  <?templateDesigner expand 1?>
+                  <bind match="dataRef" ref="$.seo_attestation_info.signature_type"/>
+               </exclGroup>
+               <draw name="Rectangle3" w="50.8mm" h="5.727mm">
+                  <value>
+                     <rectangle>
+                        <edge presence="hidden"/>
+                        <corner radius="5.08mm" presence="hidden"/>
+                     </rectangle>
+                  </value>
+               </draw>
+               <field h="8.939mm" name="digSignature" w="129.743mm">
+                  <border>
+                     <corner thickness="0.175mm"/>
+                     <edge/>
+                     <edge/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                     <corner thickness="0.175mm"/>
+                     <corner thickness="0.175mm"/>
+                     <corner thickness="0.175mm" presence="hidden"/>
+                  </border>
+                  <caption reserve="38.1mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Signature*</text>
+                     </value>
+                  </caption>
+                  <font typeface="Myriad Pro" size="8pt"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <ui>
+                     <signature>
+                        <border>
+                           <edge stroke="lowered"/>
+                           <?templateDesigner StyleID aped3?></border>
+                        <margin/>
+                     </signature>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="change" name="event__change">
+                     <script contentType="application/x-javascript">var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+var cHandler =script.HCeForm.control.SignatureBlockHandler;
+var cSystem = script.core.System;
+
+try
+{
+		// set up event object
+		var actionName = cHandler.SEO_DIG_SIG_CHANGE;
+		var anActionEvent = cActionEvent.createInstance(actionName,this,event.target);
+		// deploy event to controller
+		cHandler.actionPerformed(anActionEvent);
+}
+catch(exception)
+{
+	cLog.warn("Problem with dig sig::change", exception);
+}
+
+</script>
+                  </event>
+                  <event activity="preSign" name="event__preSign">
+                     <script contentType="application/x-javascript">
+
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+var cHandler =script.HCeForm.control.SignatureBlockHandler;
+var cSystem = script.core.System;
+
+try
+{
+		// set up event object
+		var actionName = cHandler.SET_SIGNATURE_DATE_ACTION;
+		var anActionEvent = cActionEvent.createInstance(actionName,this);
+		// deploy event to controller
+		cHandler.actionPerformed(anActionEvent);
+}
+catch(exception)
+{
+	cLog.warn("Problem with dig sig::presign", exception);
+}
+</script>
+                  </event>
+               </field>
+               <field h="8.938mm" name="imgSignature" w="129.743mm">
+                  <border>
+                     <corner thickness="0.175mm"/>
+                     <corner thickness="0.175mm"/>
+                     <corner thickness="0.175mm"/>
+                     <corner presence="hidden" thickness="0.175mm"/>
+                     <edge/>
+                     <edge/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <caption reserve="38.1mm">
+                     <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                     <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+                     <value>
+                        <text>Signature*</text>
+                     </value>
+                  </caption>
+                  <margin bottomInset="0.381mm" leftInset="0.381mm" rightInset="0.381mm" topInset="0.381mm"/>
+                  <ui>
+                     <imageEdit data="embed">
+                        <margin/>
+                     </imageEdit>
+                  </ui>
+                  <desc>
+                     <text name="embeddedHref">Unknown Embedded URI</text>
+                  </desc>
+                  <event activity="change" name="event__change">
+                     <script contentType="application/x-javascript">
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+var cHandler =script.HCeForm.control.SignatureBlockHandler;
+var cSystem = script.core.System;
+
+try
+{
+
+		// set up event object
+		var actionName = cHandler.SEO_IMG_SIG_CHANGE;
+		var anActionEvent = cActionEvent.createInstance(actionName,this);
+		// deploy event to controller
+		cHandler.actionPerformed(anActionEvent);
+	
+}
+catch(exception)
+{
+	cLog.warn("Problem with img sig::change", exception);
+}
+</script>
+                  </event>
+                  <bind match="dataRef" ref="$.seo_attestation_info.signature_image"/>
+               </field>
+               <field access="readOnly" h="8.939mm" name="ddtSignedOnAttestation" w="72.39mm">
+                  <border>
+                     <corner thickness="0.175mm"/>
+                     <corner presence="hidden" thickness="0.175mm"/>
+                     <corner thickness="0.175mm"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <edge/>
+                     <corner presence="hidden" thickness="0.175mm"/>
+                  </border>
+                  <caption reserve="27.94mm">
+                     <font typeface="Myriad Pro" size="8pt"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Date (YYYY-MM-DD)*</text>
+                     </value>
+                  </caption>
+                  <font typeface="Myriad Pro"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1.0008mm"/>
+                  <para vAlign="middle"/>
+                  <ui>
+                     <picture>date{YYYY-MM-DD}</picture>
+                     <dateTimeEdit hScrollPolicy="off">
+                        <border hand="right">
+                           <edge/>
+                           <?templateDesigner StyleID aped2?></border>
+                        <comb numberOfCells="10"/>
+                        <margin/>
+                     </dateTimeEdit>
+                  </ui>
+                  <bind ref="$.seo_attestation_info.attestation_sign_date" match="dataRef">
+                     <picture>date{YYYY-MM-DD}</picture>
+                  </bind>
+                  <format>
+                     <picture>date{YYYY-MM-DD}</picture>
+                  </format>
+                  <validate>
+                     <picture>date{YYYY-MM-DD}</picture>
+                  </validate>
+                  <value>
+                     <date/>
+                  </value>
+               </field>
+               <?templateDesigner expand 0?>
+            </subform>
+            <subform name="sfSignatureBlockSMO" layout="lr-tb" w="203.2mm">
+               <border>
+                  <corner thickness="0.175mm" presence="hidden"/>
+                  <edge presence="hidden"/>
+               </border>
+               <keep intact="contentArea"/>
+               <margin bottomInset="1.27mm" leftInset="0.508mm" topInset="1.27mm"/>
+               <bind match="none"/>
+               <exclGroup layout="lr-tb" name="signatureOption">
+                  <field h="6mm" name="chkDigitalID" w="28mm">
+                     <caption placement="right" reserve="22mm">
+                        <font typeface="Myriad Pro" size="8pt"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Digital ID</text>
+                        </value>
+                     </caption>
+                     <font typeface="Myriad Pro"/>
+                     <items>
+                        <text>DIG_SIG</text>
+                     </items>
+                     <margin leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <ui>
+                        <checkButton shape="round">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                              <?templateDesigner StyleID apcb4?></border>
+                           <margin/>
+                        </checkButton>
+                     </ui>
+                     <value>
+                        <text>DIG_SIG</text>
+                     </value>
+                  </field>
+                  <field h="6mm" name="chkDigitalImage" w="50.8mm">
+                     <caption placement="right" reserve="44.958mm">
+                        <font typeface="Myriad Pro" size="8pt"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Image Signature</text>
+                        </value>
+                     </caption>
+                     <font typeface="Myriad Pro"/>
+                     <items>
+                        <text>IMG_SIG</text>
+                     </items>
+                     <margin leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <ui>
+                        <checkButton shape="round">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                              <?templateDesigner StyleID apcb4?></border>
+                           <margin/>
+                        </checkButton>
+                     </ui>
+                  </field>
+                  <event activity="change" name="event__change">
+                     <script contentType="application/x-javascript">
+
+
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+var cHandler = script.HCeForm.control.SignatureBlockHandler
+var cSystem = script.core.System;
+
+try
+{
+		// set up event object
+		var actionName = cHandler.SMO_SIGNATURE_CHOICE_UI;
+		var anActionEvent = cActionEvent.createInstance(actionName,this);
+		// deploy event to controller
+		cHandler.actionPerformed(anActionEvent);
+}
+catch(exception)
+{
+	cLog.warn("Problem with sig type::change", exception);
+}
+</script>
+                  </event>
+                  <?templateDesigner itemValuesSpecified 1?>
+                  <?templateDesigner expand 1?>
+                  <bind match="dataRef" ref="$.smo_attestation_info.signature_type"/>
+               </exclGroup>
+               <draw h="5.598mm" name="Rectangle1" w="119.247mm">
+                  <value>
+                     <rectangle>
+                        <corner presence="hidden" radius="5.08mm"/>
+                        <edge presence="hidden"/>
+                     </rectangle>
+                  </value>
+                  <ui>
+                     <defaultUi/>
+                  </ui>
+               </draw>
+               <field h="8.939mm" name="digSignature" w="129.743mm">
+                  <border>
+                     <corner thickness="0.175mm"/>
+                     <edge/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner thickness="0.175mm"/>
+                     <corner thickness="0.175mm" presence="hidden"/>
+                     <corner thickness="0.175mm" presence="hidden"/>
+                  </border>
+                  <caption reserve="38.1mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Signature*</text>
+                     </value>
+                  </caption>
+                  <font typeface="Myriad Pro" size="8pt"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <ui>
+                     <signature>
+                        <border>
+                           <edge stroke="lowered"/>
+                           <?templateDesigner StyleID aped3?></border>
+                        <margin/>
+                     </signature>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="change" name="event__change">
+                     <script contentType="application/x-javascript">var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+var cHandler =script.HCeForm.control.SignatureBlockHandler;
+var cSystem = script.core.System;
+
+try
+{
+		// set up event object
+		var actionName = cHandler.SMO_DIG_SIG_CHANGE;
+		var anActionEvent = cActionEvent.createInstance(actionName,this,event.target);
+		// deploy event to controller
+		cHandler.actionPerformed(anActionEvent);
+}
+catch(exception)
+{
+	cLog.warn("Problem with dig sig::change", exception);
+}
+
+</script>
+                  </event>
+                  <event activity="preSign" name="event__preSign">
+                     <script contentType="application/x-javascript">
+
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+var cHandler =script.HCeForm.control.SignatureBlockHandler;
+var cSystem = script.core.System;
+
+try
+{
+		// set up event object
+		var actionName = cHandler.SET_SMOSIGNATURE_DATE_ACTION;
+		var anActionEvent = cActionEvent.createInstance(actionName,this);
+		// deploy event to controller
+		cHandler.actionPerformed(anActionEvent);
+}
+catch(exception)
+{
+	cLog.warn("Problem with dig sig::presign", exception);
+}
+</script>
+                  </event>
+               </field>
+               <field h="8.938mm" name="imgSignature" w="129.743mm">
+                  <border>
+                     <corner thickness="0.175mm"/>
+                     <corner thickness="0.175mm"/>
+                     <corner presence="hidden" thickness="0.175mm"/>
+                     <corner presence="hidden" thickness="0.175mm"/>
+                     <edge/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <caption reserve="38.1mm">
+                     <font typeface="Myriad Pro" baselineShift="0pt" size="8pt"/>
+                     <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+                     <value>
+                        <text>Signature*</text>
+                     </value>
+                  </caption>
+                  <margin bottomInset="0.381mm" leftInset="0.381mm" rightInset="0.381mm" topInset="0.381mm"/>
+                  <ui>
+                     <imageEdit data="embed">
+                        <margin/>
+                     </imageEdit>
+                  </ui>
+                  <desc>
+                     <text name="embeddedHref">Unknown Embedded URI</text>
+                  </desc>
+                  <event activity="change" name="event__change">
+                     <script contentType="application/x-javascript">
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+var cHandler =script.HCeForm.control.SignatureBlockHandler;
+var cSystem = script.core.System;
+
+try
+{
+
+		// set up event object
+		var actionName = cHandler.SMO_IMG_SIG_CHANGE;
+		var anActionEvent = cActionEvent.createInstance(actionName,this);
+		// deploy event to controller
+		cHandler.actionPerformed(anActionEvent);
+	
+}
+catch(exception)
+{
+	cLog.warn("Problem with img sig::change", exception);
+}
+</script>
+                  </event>
+                  <bind match="dataRef" ref="$.smo_attestation_info.signature_image"/>
+               </field>
+               <draw presence="hidden" h="8.938mm" name="Rectangle2" w="110.937mm">
+                  <value>
+                     <rectangle>
+                        <corner presence="hidden" radius="5.08mm"/>
+                        <edge presence="hidden"/>
+                     </rectangle>
+                  </value>
+                  <ui>
+                     <defaultUi/>
+                  </ui>
+               </draw>
+               <field access="readOnly" h="8.939mm" name="ddtSignedOnAttestation" w="72.39mm">
+                  <border>
+                     <corner thickness="0.175mm"/>
+                     <corner presence="hidden" thickness="0.175mm"/>
+                     <corner presence="hidden" thickness="0.175mm"/>
+                     <edge/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge/>
+                     <corner presence="hidden" thickness="0.175mm"/>
+                  </border>
+                  <caption reserve="27.94mm">
+                     <font typeface="Myriad Pro" size="8pt"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Date (YYYY-MM-DD)*</text>
+                     </value>
+                  </caption>
+                  <font typeface="Myriad Pro"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1.0008mm"/>
+                  <para vAlign="middle"/>
+                  <ui>
+                     <picture>date{YYYY-MM-DD}</picture>
+                     <dateTimeEdit hScrollPolicy="off">
+                        <border hand="right">
+                           <edge/>
+                           <?templateDesigner StyleID aped2?></border>
+                        <comb numberOfCells="10"/>
+                        <margin/>
+                     </dateTimeEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.smo_attestation_info.attestation_sign_date">
+                     <picture>date{YYYY-MM-DD}</picture>
+                  </bind>
+                  <format>
+                     <picture>date{YYYY-MM-DD}</picture>
+                  </format>
+                  <validate>
+                     <picture>date{YYYY-MM-DD}</picture>
+                  </validate>
+                  <value>
+                     <date/>
+                  </value>
+               </field>
+               <?templateDesigner expand 0?>
+            </subform>
+            <border>
+               <edge/>
+               <corner thickness="0.175mm"/>
+            </border>
+            <?templateDesigner expand 0?>
+            <bind match="none"/>
+         </subform>
+         <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+         <bind match="none"/>
+         <?templateDesigner expand 1?>
+      </subform>
+      <subform w="100mm" name="script" layout="tb" presence="hidden">
+         <bind match="none"/>
+         <subform usehref="..\..\fragments\CoreJavaScript.xdp#som($template.script.core)">
+            <bind/>
+            <?templateDesigner expand 0?>
+         </subform>
+         <subform h="50mm" name="HCeForm" w="100mm">
+            <subform layout="tb" name="config" w="100mm">
+               <keep intact="contentArea"/>
+               <variables>
+                  <script contentType="application/x-javascript" name="general">
+var cLog = script.core.util.Log;
+
+
+var content = { 
+
+formType: 					"QIU",
+errorInd:					"+",
+formVersion: 				"2.00.25",
+CANADA:						"CA",
+USA:							"US",
+DR_SALUT: 					"dr",
+LabelStart: 					"labelStart",
+LabelEnd:					"labelEnd",
+DIGITAL_SIG:					"DIG_SIG",
+IMAGE_SIG:					"IMG_SIG",
+FRENCH:						"fr",
+ENGLISH:						"en",
+NDS_SUB:						"NDS",
+SEO:							"seo",
+SMO:							"smo",
+
+//Overrides
+//NodeValidator_formatValidator: "",
+Log_logLevel: cLog.LEVEL_TRACE,
+Log_showExceptionDetail: true,
+Log_writeToFile: false,
+
+
+}
+</script>
+                  <?templateDesigner expand 1?></variables>
+               <bind match="none"/>
+               <?templateDesigner expand 1?></subform>
+            <subform layout="tb" name="control" w="100mm">
+               <keep intact="contentArea"/>
+               <variables>
+                  <script contentType="application/x-javascript" name="MasterPageHandler">
+
+//Imports
+var cLog                     = script.core.util.Log;
+var cFormNodeManager         = script.core.model.FormNodeManager;
+var cResourceManager         = script.core.lang.ResourceManager;
+var cException               = script.core.util.Exception;
+var cConfigManager=			script.core.util.ConfigurationManager;
+var cControllerUtil = 		script.core.util.ControllerUtil;
+var cSystem = 				script.core.System;
+var cUiUtil=				script.core.util.UiUtil;
+var cFailureReporter=		script.core.validation.FailureReporter;
+
+var cGeneralUtil=			script.HCeForm.util.General;
+var cFormHandler=			script.HCeForm.control.FormHandler;
+
+
+var INITIALIZE_MASTER_PAGE=		"intialize_masterPage";
+
+
+var FORM_VERSION_TXT_FN=		cFormNodeManager.getFormNodeForKey("mp1Version");	
+var TITLE_LBL_FN=				cFormNodeManager.getFormNodeForKey("mp1Title");	
+
+var FRENCH=			cConfigManager.get("FRENCH");
+var VERSION=		cConfigManager.get("formVersion");
+_initializeFormNodes();
+
+
+/*
+* actionPerformed- central event handler for the overall form functionality
+*
+*
+*/
+function actionPerformed(anEvent)
+{
+	switch(anEvent.getActionCommand())
+	{
+
+
+		case INITIALIZE_MASTER_PAGE:
+			initialize(anEvent.getValue());
+			break;
+			
+				
+		default:
+			throw cException.createInstance(SCRIPT_OBJECT_NAME
+				  + ".actionPerformed() - unrecognized event '" 
+				  + anEvent.getActionCommand() + "'.", "UnsupportedAction");
+	}
+}
+
+
+
+function initialize(a_sfInstance){
+
+	_setFormVersion(FORM_VERSION_TXT_FN.getNodeInstance(a_sfInstance));
+	_setLabels(a_sfInstance);	
+	
+}
+
+function _setFormVersion(a_versionField){
+	a_versionField.rawValue=VERSION;
+	cUiUtil.setCaption(a_versionField,cResourceManager.get(FORM_VERSION_TXT_FN.labelKey));//shouldnt have to do this
+}
+
+//sets the labels since this doesn't seem to work on the master page
+function _setLabels(a_sfInstance){
+
+	var titleInstance=TITLE_LBL_FN.getNodeInstance(a_sfInstance);
+	//using a short title
+	cUiUtil.setCaption(titleInstance,cResourceManager.get("lbShortTitle"));	
+}
+
+
+/***Private functionality ***/
+function _initializeFormNodes(){
+
+	try{
+	
+		cControllerUtil.checkFormNode(FORM_VERSION_TXT_FN, SCRIPT_OBJECT_NAME ,"FORM_VERSION_TXT_FN");
+		cControllerUtil.checkFormNode(TITLE_LBL_FN, SCRIPT_OBJECT_NAME ,"TITLE_LBL_FN");			
+	}
+	catch (exception)
+	{
+		cLog.critical(SCRIPT_OBJECT_NAME+"._initialize()", exception);
+	}
+}
+
+
+
+</script>
+                  <script contentType="application/x-javascript" name="FormHandler">//used for all form functionality that is not generic, since this is a very short form
+
+/** Global Variables **/
+
+var cFormNodeManager = 		script.core.model.FormNodeManager;
+var cResourceManager = 		script.core.lang.ResourceManager;
+var cConfigManager			=script.core.util.ConfigurationManager
+var cException = 			script.core.util.Exception;
+var cLog = 					script.core.util.Log;
+var cUiUtil=				script.core.util.UiUtil;
+var cFailureReporter=		script.core.validation.FailureReporter;
+var cGeneralUtil=			script.HCeForm.util.General;
+
+//form specific
+var cAccessibility=			script.HCeForm.util.Accessibility;
+var cSignatureHandler=		script.HCeForm.control.SignatureBlockHandler;
+
+var FRENCH=					cConfigManager.get("FRENCH");
+var ENGLISH=					cConfigManager.get("ENGLISH");	
+var NDS_SUB=					cConfigManager.get("NDS_SUB");	
+var SEO=						cConfigManager.get("SEO");		
+var SMO=						cConfigManager.get("SMO");
+
+		
+var SCRIPT_OBJECT_NAME=		"FormHandler";
+	
+//action Global
+var LANGUAGE_CHANGE=			"language_change";
+var INITIALIZE_FORM_ACTION=		"init_form";
+var SET_INVESTIGATOR_NAME=		"set_name";
+var HIDE_INSTRUCTIONS=			"hideInstructions";
+var SHOW_INSTRUCTIONS=			"showInstructions";
+var LOCK_FORM=					"lockForm";
+var UNLOCK_FORM=					"unlockForm";
+var SET_SUBMITBY_ACTION=			"setSubmit";
+var INIT_POSITION_TITLES=		"initTitles";
+// FORM Nodes
+//instructions
+var INSTRUCTIONS_SF_FN=	cFormNodeManager.getFormNodeForKey("sfInstructionsContent"); 
+
+//buttons
+var MODIFY_BTN_FN=		cFormNodeManager.getFormNodeForKey("btnModify");
+var FINALIZE_BTN_FN=	cFormNodeManager.getFormNodeForKey("btnFinalizeAndLock");
+
+//language Node
+var LANGUAGE_CHOICE=	cFormNodeManager.getFormNodeForKey("languageChoice");
+
+//submission 
+var SUBMITTEDBY_SF_FN=	cFormNodeManager.getFormNodeForKey("sfSubmittedBy");
+var SMO_DDL_FN=			cFormNodeManager.getFormNodeForKey("ddlTitleSMO");			
+var SEO_DDL_FN=			cFormNodeManager.getFormNodeForKey("ddlTitleSEO");
+
+
+
+//SCRIPT NAME
+
+
+
+/*
+* actionPerformed- central event handler for the overall form functionality
+*
+*
+*/
+function actionPerformed(anEvent)
+{
+	switch(anEvent.getActionCommand())
+	{
+
+		case INITIALIZE_FORM_ACTION:
+			 initializeForm();
+			break;
+		
+		case LANGUAGE_CHANGE:
+			//cHCeFormModel.setLanguage(anEvent.getSource().rawValue);
+			_updateFormLanguage();
+			initializeForm();
+			break;
+		
+		case SET_INVESTIGATOR_NAME:
+				//implemented Oct 27
+				_updateAttestationName();
+			break;
+			
+		case HIDE_INSTRUCTIONS:
+		case SHOW_INSTRUCTIONS:	
+				 toggleInstructionsVisiblity(anEvent.getActionCommand());
+			break;	
+			
+		case LOCK_FORM:
+			var errors=validateForm();
+			if(!errors){
+					xfa.host.messageBox(cResourceManager.get("validation_pass"),cResourceManager.get("validation_title"));
+					lockForm();
+					cSignatureHandler.setSignatureBlockState();	
+			}		
+			 break;
+			 
+		case UNLOCK_FORM:
+				unlockForm();
+				//TODO: add form specific calls here. Example initialize functionality, for elements that should be readonly
+
+			break;	
+			
+		case SET_SUBMITBY_ACTION:
+				_setSubmittedByUI(anEvent.getSource().rawValue);
+		
+			break;	
+		case INIT_POSITION_TITLES:
+				_initPositionTitles();	
+			break;		 
+			
+		default:
+			throw cException.createInstance(SCRIPT_OBJECT_NAME
+				  + ".actionPerformed() - initialize Form '" 
+				  + anEvent.getActionCommand() + "'.", "UnsupportedAction");
+	}
+}
+
+
+
+/*
+* Initializes the form to it's default state
+*
+*
+*
+*/
+function initializeForm(){
+	
+	
+		_updateFormLanguage();	
+		toggleInstructionsVisiblity(HIDE_INSTRUCTIONS);
+		_initPositionTitles();
+		//initialize other controllers
+		cSignatureHandler.initialiseHandler(); 
+		//if not saving state, check if form is finalized
+}
+
+
+function unlockForm(form_node){
+	if(!form_node){
+		form_node=cFormNodeManager.getBaseNode();
+	}
+	form_node.unLock();
+	initializeForm();
+}//end fn
+
+
+function lockForm(){
+		var baseNode=cFormNodeManager.getBaseNode();	
+		baseNode.lock();		
+		MODIFY_BTN_FN.unLock(); //unlock modify button
+	}//end fn
+
+
+//bit of a hack,using the finalize button state
+function isFinalized(){
+
+	if(FINALIZE_BTN_FN.getNodeInstance().access!=="open"){
+		return true;
+	}
+	return false;
+}
+
+
+/*
+* Gets the language value for the user set language question
+*@returns -a string, either en or fr
+*
+*/
+function getCurrentLanguage(){ 
+
+	var langNodeInstance=LANGUAGE_CHOICE.getNodeInstance();
+	if(!langNodeInstance.rawValue){
+		langNodeInstance.rawValue=ENGLISH;		
+	}
+	return(langNodeInstance.rawValue);
+}//end fn
+
+
+//bit of a hack,using the finalize button state. This only works if we automatically remember state, should be manual instaead
+function isFinalized(){
+
+	if(FINALIZE_BTN_FN.getNodeInstance().access!=="open"){
+		return true;
+	}
+	return false;
+}
+
+
+function validateForm(baseNode, nodeInstance){
+
+	if(!baseNode){
+		 baseNode=cFormNodeManager.getBaseNode();
+	}
+	if(!nodeInstance){
+		nodeInstance=xfa.form.nodes.item(0);
+	}
+	
+	var validationFailures=baseNode.validateNode(null,true);
+	
+	cAccessibility.updateColorErrorsForAccessibility(nodeInstance);
+	if(validationFailures!==null){			
+		xfa.host.messageBox(cFailureReporter.getFailureSummary(validationFailures),cResourceManager.get("validation_title")); 
+	}
+	return(validationFailures);
+}//end fn
+
+
+
+
+/********* Private functions *****/
+
+function _initializeFormNodes(){
+
+	try{
+
+		cControllerUtil.checkFormNode(INSTRUCTIONS_CONTENT_FN,SCRIPT_OBJECT_NAME,"INSTRUCTIONS_CONTENT_FN");	
+		cControllerUtil.checkFormNode(MODIFY_BTN_FN,SCRIPT_OBJECT_NAME,"MODIFY_BTN_FN");
+		cControllerUtil.checkFormNode(FINALIZE_BTN_FN,SCRIPT_OBJECT_NAME,"FINALIZE_BTN_FN");
+		cControllerUtil.checkFormNode(LANGUAGE_CHOICE,SCRIPT_OBJECT_NAME,"LANGUAGE_CHOICE");
+		cControllerUtil.checkFormNode(SUBMITTEDBY_SF_FN,SCRIPT_OBJECT_NAME,"SUBMITTEDBY_SF_FN");
+		cControllerUtil.checkFormNode(SMO_DDL_FN,SCRIPT_OBJECT_NAME,"SMO_DDL_FN");
+		cControllerUtil.checkFormNode(SEO_DDL_FN,SCRIPT_OBJECT_NAME,"SEO_DDL_FN");
+	
+	 }
+	 catch (exception)
+	{
+		cLog.critical(cResourceManager.get("error_application", SCRIPT_OBJECT_NAME+".initializeFormNodes()"), exception);
+	}
+
+}//end fn
+
+
+
+
+
+function _updateFormLanguage()
+{
+	
+	cResourceManager.setCurrentLanguage(getCurrentLanguage());
+	cFormNodeManager.getBaseNode().updateUI();
+	var rootInstance=xfa.form.nodes.item(0);
+	if(FRENCH===getCurrentLanguage()){		
+		rootInstance.locale="fr_CA";			
+	}else{
+		rootInstance.locale="en_CA";
+	}
+}
+
+
+/**
+*	Toggles if the instructions are visible or hidden
+*	@param command- indicates if hidden or visbible, using the class globals
+*	@returns null
+*	@throws Exception if the command is not an expected type
+*/
+function toggleInstructionsVisiblity(command){
+	
+	var instructionsContainerNode;
+	var cException = script.core.util.Exception;
+	instructionsContainerNode=INSTRUCTIONS_SF_FN.getNodeInstance();
+	
+	
+	if(command===HIDE_INSTRUCTIONS){
+		cUiUtil.hide(instructionsContainerNode);
+	}else if(command===SHOW_INSTRUCTIONS){
+		cUiUtil.show(instructionsContainerNode);
+		
+	}else{
+		throw cException.createInstance("InstructionVisiblity function encountered an illegal command. "
+				+"Value: "+command+ "is not a valid command"
+		 );
+	}
+
+}//end toggleInstructionsVisiblity
+
+
+function _setSubmittedByUI(subType){
+	
+	if(subType===NDS_SUB){
+		_toggleSubmittedBy("visible");
+	
+	}else{
+			_toggleSubmittedBy("hidden");
+	}
+}
+
+
+function _toggleSubmittedBy(state){
+
+	if(state==="visible"){
+	
+		cGeneralUtil.addSubformInstance(SUBMITTEDBY_SF_FN.getInstanceManager());
+	
+	}else{
+		var sfInstance=SUBMITTEDBY_SF_FN.getNodeInstance();
+		if(sfInstance){
+			cGeneralUtil.removeSubformInstance(sfInstance); //this is inefficient	
+		}
+	}
+}
+
+function _initPositionTitles(){
+
+	SMO_DDL_FN.getNodeInstance().rawValue=SMO;
+	SEO_DDL_FN.getNodeInstance().rawValue=SEO;
+
+}
+</script>
+                  <script contentType="application/x-javascript" name="SignatureBlockHandler">
+var cLog= 						script.core.util.Log;
+var cFormNodeManager=			script.core.model.FormNodeManager;
+var cResourceManager= 			script.core.lang.ResourceManager;
+var cException=					script.core.util.Exception;
+var cConfigManager=				script.core.util.ConfigurationManager;
+var cUiUtil=						script.core.util.UiUtil;
+var cControllerUtil = 			script.core.util.ControllerUtil;
+var cGeneralUtil=				script.HCeForm.util.General;
+var cFormHandler=				script.HCeForm.control.FormHandler;
+
+var SCRIPT_OBJECT_NAME="SignatureBlockHandler";
+
+var DIGITAL_SIG=	cConfigManager.get("DIGITAL_SIG");
+var	IMAGE_SIG=		cConfigManager.get("IMAGE_SIG");
+
+//action Global variables
+var SEO_SIGNATURE_CHOICE_UI=  		"seo_ui_sigtype"; 
+var SMO_SIGNATURE_CHOICE_UI=  		"smo_ui_sigtype"; 
+var SMO_DIG_SIG_CHANGE=		 			"smo_digSigChange";
+var SMO_IMG_SIG_CHANGE=					"smo_imgSigChange";
+var SEO_DIG_SIG_CHANGE=		 			"seo_digSigChange";
+var SEO_IMG_SIG_CHANGE=					"seo_imgSigChange";
+var SET_SIGNATURE_DATE_ACTION=			"sig_date";
+var SET_SMOSIGNATURE_DATE_ACTION=		"smo_sig_date";
+
+//FORM NODES
+
+
+//signature for the SEO
+var	SIG_SF_FN=					cFormNodeManager.getFormNodeForKey("sfSignatureBlockSEO"); //signature block and attestation parent subform
+var DATESIG_DTE_FN=				cFormNodeManager.getFormNodeForKey("ddtSignedOnAttestationSEO");		//date of signature					
+var DIGSIG_SIG_FN=				cFormNodeManager.getFormNodeForKey("digSignatureSEO");		//digital signature control
+var IMGSIG_IMG_FN=				cFormNodeManager.getFormNodeForKey("imgSignatureSEO");		//image signature control
+var SIGCHOICE_RDO_FN=			cFormNodeManager.getFormNodeForKey("signatureOptionSEO");
+	
+
+var	SMO_SIG_SF_FN=					cFormNodeManager.getFormNodeForKey("sfSignatureBlockSMO"); //signature block and attestation parent subform
+var SMO_DATESIG_DTE_FN=				cFormNodeManager.getFormNodeForKey("ddtSignedOnAttestationSMO");		//date of signature					
+var SMO_DIGSIG_SIG_FN=				cFormNodeManager.getFormNodeForKey("digSignatureSMO");		//digital signature control
+var SMO_IMGSIG_IMG_FN=				cFormNodeManager.getFormNodeForKey("imgSignatureSMO");		//image signature control
+var SMO_SIGCHOICE_RDO_FN=			cFormNodeManager.getFormNodeForKey("signatureOptionSMO");
+	
+
+_initialiseFormNodes();
+
+
+/* Action Handler
+*
+*
+*
+*/
+
+function actionPerformed(anEvent)
+{
+	switch(anEvent.getActionCommand())
+	{
+		case SEO_SIGNATURE_CHOICE_UI:
+				_setSEOSignatureChoice(anEvent.getSource().rawValue);
+		
+			break;
+			
+		case SMO_SIGNATURE_CHOICE_UI:
+				_setSMOSignatureChoice(anEvent.getSource().rawValue);
+		
+			break;				
+			
+		case SMO_DIG_SIG_CHANGE:
+			 	_digitalSignatureChanged(anEvent.getSource(),anEvent.getValue(),SMO_DATESIG_DTE_FN.getNodeInstance());
+			 break;	
+			
+		case SMO_IMG_SIG_CHANGE:
+				 _imgSignatureChanged(anEvent.getSource(),SMO_DATESIG_DTE_FN.getNodeInstance());
+			break;
+			
+		case SEO_DIG_SIG_CHANGE:
+			 	_digitalSignatureChanged(anEvent.getSource(),anEvent.getValue(),DATESIG_DTE_FN.getNodeInstance());
+			 break;	
+			
+		case SEO_IMG_SIG_CHANGE:
+				 _imgSignatureChanged(anEvent.getSource(),DATESIG_DTE_FN.getNodeInstance());
+			break;	
+			
+		case  SET_SIGNATURE_DATE_ACTION:
+				//used by presign as a way to set the date before the form is saved
+				_setSignatureDate(false,DATESIG_DTE_FN.getNodeInstance());
+			break;	
+		case  SET_SMOSIGNATURE_DATE_ACTION:
+				//used by presign as a way to set the date before the form is saved
+				_setSignatureDate(false,SMO_DATESIG_DTE_FN.getNodeInstance());
+			break;		
+					
+		default:
+			throw cException.createInstance(SCRIPT_OBJECT_NAME
+				  + ".actionPerformed() - unrecognized event '" 
+				  + anEvent.getActionCommand() + "'.", "UnsupportedAction");
+	}
+}
+
+
+
+
+
+/*
+* Called during form initialization. 
+*
+*
+*
+*/
+function initialiseHandler(){
+
+		 setSignatureBlockState();
+		// _setSMOSignatureChoice(SMO_SIGCHOICE_RDO_FN.getNodeInstance().rawValue);
+		// _setSEOSignatureChoice(SIGCHOICE_RDO_FN.getNodeInstance().rawValue);
+		 
+	
+}//end fn
+
+
+
+
+function clearSignatures(){
+
+	xfa.host.resetData(DIGSIG_SIG_FN.getNodeInstance().somExpression);
+	xfa.host.resetData(IMGSIG_IMG_FN.getNodeInstance().somExpression);
+
+}
+
+
+/***Private functionality ***/
+function _initialiseFormNodes(){
+
+	try{
+	
+		cControllerUtil.checkFormNode(SIGCHOICE_RDO_FN, SCRIPT_OBJECT_NAME ,"SIGCHOICE_RDO_FN");
+		cControllerUtil.checkFormNode(DIGSIG_SIG_FN, SCRIPT_OBJECT_NAME ,"DIGSIG_SIG_FN");
+		cControllerUtil.checkFormNode(IMGSIG_IMG_FN, SCRIPT_OBJECT_NAME ,"IMGSIG_IMG_FN");
+		cControllerUtil.checkFormNode(DATESIG_DTE_FN, SCRIPT_OBJECT_NAME ,"DATESIG_DTE_FN");		
+		cControllerUtil.checkFormNode(SIG_SF_FN,SCRIPT_OBJECT_NAME,"SIG_SF_FN");
+		
+		//smo
+		cControllerUtil.checkFormNode(SMO_SIGCHOICE_RDO_FN, SCRIPT_OBJECT_NAME ,"SMO_SIGCHOICE_RDO_FN");
+		cControllerUtil.checkFormNode(SMO_DIGSIG_SIG_FN, SCRIPT_OBJECT_NAME ,"SMO_DIGSIG_SIG_FN");
+		cControllerUtil.checkFormNode(SMO_IMGSIG_IMG_FN, SCRIPT_OBJECT_NAME ,"SMO_IMGSIG_IMG_FN");
+		cControllerUtil.checkFormNode(SMO_DATESIG_DTE_FN, SCRIPT_OBJECT_NAME ,"SMO_DATESIG_DTE_FN");		
+		cControllerUtil.checkFormNode(SMO_SIG_SF_FN,SCRIPT_OBJECT_NAME,"SMO_SIG_SF_FN");
+		
+	}
+	catch (exception)
+	{
+		cLog.critical(SCRIPT_OBJECT_NAME+"._initialize()", exception);
+	}
+}
+
+
+
+
+/* Updates the ui based on the Signature choice
+* UI components are slightly awkward
+*/
+function _setSignatureChoice(choiceValue,a_digSig,a_imgSig,a_dateSig){
+
+	//always clear date on a change
+	a_dateSig.rawValue="";
+	
+	if(choiceValue===DIGITAL_SIG){
+		cGeneralUtil.hideAndClearNodeInstance(a_imgSig);
+		cUiUtil.show(a_digSig);
+			
+	}else if(choiceValue===IMAGE_SIG){
+		cGeneralUtil.hideAndClearNodeInstance(a_digSig);
+		cUiUtil.show(a_imgSig);
+		
+	}else{
+		cGeneralUtil.hideAndClearNodeInstance(a_digSig);
+		cGeneralUtil.hideAndClearNodeInstance(a_imgSig);
+		//reset the state
+	}
+}
+
+
+
+
+function _digitalSignatureChanged(a_Sigfld,acroDoc,a_dateSig){
+
+var origSOM=a_Sigfld.somExpression;
+var acroSignFld=acroDoc.getField(origSOM.substr(15)); 
+
+	if(acroSignFld.type=="signature"){
+		if(acroSignFld.signatureInfo().date){
+			_setSignatureDate(false,a_dateSig);
+				
+		}else{
+		cLog.trace("clearing the date");
+	 		_setSignatureDate(true,a_dateSig);
+	 	}
+	 }
+
+}
+/** updates validation state for image signature**/
+function _imgSignatureChanged(a_imgSig,a_dateSig){
+
+	
+	if(a_imgSig.value.image.value){
+		_setSignatureDate(false,a_dateSig);
+		//make it the same as digital signature.
+		app.execMenuItem("SaveAs");
+	}else{
+		cFormHandler.unlockForm();
+		_setSignatureDate(true,a_dateSig);
+	
+	}	
+	
+}
+
+// Sets the date of signature
+function _setSignatureDate(clearValue,a_dateSig){
+
+	if(clearValue===true){
+		a_dateSig.rawValue="";
+	}else{
+		var today=new Date(Date.now());
+		//since core util overrides Grr!
+		a_dateSig.rawValue=today.getFullYear()+"-"
+		+cGeneralUtil.pad(""+(today.getMonth()+1),2,'0')+"-"
+		+cGeneralUtil.pad(""+today.getDate(),2,'0');
+	}
+}//end fn
+
+
+
+function setSignatureBlockState(){
+	
+	cLog.trace("setting sig block state");
+	var a_sigBlock=SIG_SF_FN.getNodeInstance();
+	var a_smoSigBlock=SMO_SIG_SF_FN.getNodeInstance();
+	if(cFormHandler.isFinalized()){
+		cUiUtil.show(a_sigBlock);
+		cUiUtil.show(a_smoSigBlock);
+		SIG_SF_FN.unLock();
+		SMO_SIG_SF_FN.unLock();
+		DATESIG_DTE_FN.lock();
+		SMO_DATESIG_DTE_FN.lock();
+	}else{
+		cGeneralUtil.hideAndClearNodeInstance(a_sigBlock);
+		cGeneralUtil.hideAndClearNodeInstance(a_smoSigBlock);
+		_setSMOSignatureChoice(SMO_SIGCHOICE_RDO_FN.getNodeInstance().rawValue);
+		_setSEOSignatureChoice(SIGCHOICE_RDO_FN.getNodeInstance().rawValue);
+	}
+
+}//fn
+
+
+ function _setSEOSignatureChoice(choiceValue){
+
+	var a_digSig=DIGSIG_SIG_FN.getNodeInstance();
+	var a_imgSig=IMGSIG_IMG_FN.getNodeInstance();
+	var a_dateSig=DATESIG_DTE_FN.getNodeInstance();
+	_setSignatureChoice(choiceValue,a_digSig,a_imgSig,a_dateSig);
+
+}
+function _setSMOSignatureChoice(choiceValue){
+
+	var a_digSig=SMO_DIGSIG_SIG_FN.getNodeInstance();
+	var a_imgSig=SMO_IMGSIG_IMG_FN.getNodeInstance();
+	var a_dateSig=SMO_DATESIG_DTE_FN.getNodeInstance();
+	_setSignatureChoice(choiceValue,a_digSig,a_imgSig,a_dateSig);
+
+}              
+               
+               
+</script>
+                  <?templateDesigner expand 1?></variables>
+               <bind match="none"/>
+               <?templateDesigner expand 1?></subform>
+            <subform h="50mm" name="model" w="100mm">
+               <subform w="100mm" h="50mm" name="delegate">
+                  <bind match="none"/>
+                  <?templateDesigner expand 1?></subform>
+               <bind match="none"/>
+               <?templateDesigner expand 0?></subform>
+            <subform h="50mm" name="nodeDefinitions" w="100mm">
+               <variables>
+                  <script contentType="application/x-javascript" name="MasterPage1">
+var content={
+
+	masterPage: {
+		somExpression: "#pageSet",
+		parentNodeKey: "root"},
+
+	//Master Page / Form Page
+	mp1FormPage: {
+		somExpression: "Page1",
+		parentNodeKey: "masterPage"},
+		
+	mp1Version:{
+		somExpression:	"txtFormVersion",
+		parentNodeKey:	"mp1FormPage",
+		labelKey:		"lbVersion"},		
+		
+	mp1SFEnLogo: {
+		somExpression:	"sfLogo_en",
+		parentNodeKey:	"mp1FormPage"},
+					
+	mp1HcLogo: {
+		somExpression:	"imgHCLogo",
+		parentNodeKey:	"mp1SFEnLogo",
+		toolTipKey:		"lbHealthCanada"},
+	
+	mp1SFFrLogo: {
+		somExpression:	"sfLogo_fr",
+		parentNodeKey:	"mp1FormPage"},
+	
+	mp1HcLogoFr: {
+		somExpression:	"imgHCLogo_fr",
+		parentNodeKey:	"mp1SFFrLogo",
+		toolTipKey:		"lbHealthCanada"},	
+
+	
+	mp1Title:  {
+		somExpression:	"lblMasterTitle",
+		parentNodeKey:	"mp1FormPage",
+		labelKey:		"lbApplTitle"},	
+				
+			
+}
+
+
+</script>
+                  <script contentType="application/x-javascript" name="General">	
+var content={
+		root: {
+			somExpression: "xfa.form.DRUG_SUBCERT", //TODO: change the root node name
+		},	
+		sfPage1: {
+			somExpression: "sfPage1",
+			parentNodeKey: "root"},	
+		
+		sfMainHeader: {
+			somExpression: "sfMainHeader",
+			parentNodeKey: "sfPage1"},
+			
+		languageChoice: {
+			somExpression: "pageLanguage",
+			parentNodeKey: "sfMainHeader"},
+			
+		chkEnglish: {
+			somExpression: "chkEnglish",
+			parentNodeKey: "languageChoice"},
+			
+		chkFrancais: {
+			somExpression: "chkFrancais",
+			parentNodeKey: "languageChoice"},		
+		
+		lblFormTitle: {
+			somExpression: "lblFormTitle",
+			parentNodeKey: "sfMainHeader",
+			labelKey:		"lbApplTitle"},
+			
+		
+		sfSubContent	: {
+			somExpression:	"sfSubContent",
+			parentNodeKey:	"sfPage1"
+			},
+		
+		sfSubType: {
+			somExpression:	"sfSubType",
+			parentNodeKey:	"sfSubContent"
+			},
+		
+		//submission type
+		ddlSubmissionType: {
+			somExpression: "ddlSubmissionType",
+			parentNodeKey: "sfSubType",
+			pickListKey:	   "submissionTypeList",
+			labelKey:		"lbSubType"
+			},
+		
+		txtCertified: {
+			somExpression: "txtCertified",
+			parentNodeKey: "sfSubType",
+			labelKey:		"lbCertified"},
+		
+		sfSubmittedBy: {
+			somExpression: "sfSubmittedBy",
+			parentNodeKey: "sfSubType"},
+		
+		txtSubmittedBy: {
+			somExpression: "txtSubmittedBy",
+			parentNodeKey: "sfSubmittedBy",
+			labelKey:		"lbSubmitBy"},
+					
+		//attestation
+	
+		sfAttestation: {
+			somExpression: "sfAttestation",
+			parentNodeKey: "sfSubContent"},
+	
+		sfAttestHeading: {
+			somExpression: "sfAttestHeading",
+			parentNodeKey: "sfAttestation"},
+		
+		lblAttestHead: {
+			somExpression: "lblInstructionsHead",
+			parentNodeKey: "sfAttestHeading"},
+		
+		sfAttestBody: {
+			somExpression: "sfAttestBody",
+			parentNodeKey: "sfAttestation"},
+		
+		sfAttest1: {
+			somExpression: "sfAttest1",
+			parentNodeKey: "sfAttestBody"},
+		
+		lblAttest1: {
+			somExpression: "lblAttest1",
+			parentNodeKey: "sfAttest1",
+			labelKey:		"lbAttest1"},
+		
+		chkAttest1: {
+			somExpression: "chkAttest1",
+			parentNodeKey: "sfAttest1",
+			toolTipKey:		"lbAttest1"},	
+		
+		sfAttest2: {
+			somExpression: "sfAttest2",
+			parentNodeKey: "sfAttestBody"
+			},
+		
+		lblAttest2: {
+			somExpression: "lblAttest2",
+			parentNodeKey: "sfAttest2",
+			labelKey:		"lbAttest2"},
+		
+		chkAttest2: {
+			somExpression: "chkAttest2",
+			parentNodeKey: "sfAttest2",
+			toolTipKey:		"lbAttest2"},		
+		
+		sfAttest3: {
+			somExpression: "sfAttest3",
+			parentNodeKey: "sfAttestBody"},
+		
+		lblAttest3: {
+			somExpression:	"lblAttest3",
+			parentNodeKey:	"sfAttest3",
+			labelKey:		"lbAttest3"},
+			
+		chkAttest3: {
+			somExpression: "chkAttest3",
+			parentNodeKey: "sfAttest3",
+			toolTipKey:		"lbAttest3"},		
+		
+		sfAttest4: {
+			somExpression: "sfAttest4",
+			parentNodeKey: "sfAttestBody"},
+		
+		lblAttest4: {
+			somExpression:	"lblAttest4",
+			parentNodeKey:	"sfAttest4",
+			labelKey:		"lbAttest4"},
+			
+		chkAttest4: {
+			somExpression: "chkAttest4",
+			parentNodeKey: "sfAttest4",
+			toolTipKey:		"lbAttest4"},			
+			
+		//end attest
+		
+		//attest names
+		sfAttestNames: {
+			somExpression: "sfAttestNames",
+			parentNodeKey: "sfSubContent"},
+
+			sfSEOName: {
+				somExpression: "sfSEOName",
+				parentNodeKey: "sfAttestNames"},
+			
+			ddlSalutationSEO: {
+				somExpression: "ddlSalutation",
+				parentNodeKey: "sfSEOName",
+				labelKey:		"lbSalutation",
+				pickListKey:		"salutationList",
+				toolTipKey:		"ttSEOSalut"},
+			
+			txtGivenNameSEO: {
+				somExpression: "txtGivenName",
+				parentNodeKey: "sfSEOName",
+				labelKey:		"lbGivenName",
+				toolTipKey:		"ttSEOGivenName"},
+			
+			txtSurnameSEO: {
+				somExpression: "txtSurname",
+				parentNodeKey: "sfSEOName",
+				labelKey:		"lbSurname",
+				toolTipKey:		"ttSEOSurname"},
+			
+			ddlTitleSEO: {
+				somExpression: "ddlTitle",
+				parentNodeKey: "sfSEOName",
+				labelKey:		"lbPosition",
+				pickListKey:		"postionTitleList",
+				toolTipKey:		"ttSEOTitle"
+				},
+			
+			sfSMOName: {
+				somExpression: "sfSMOName",
+				parentNodeKey: "sfAttestNames"},
+			
+			ddlSalutationSMO: {
+				somExpression: "ddlSalutation",
+				parentNodeKey: "sfSMOName",
+				labelKey:		"lbSalutation",
+				pickListKey:		"salutationList",
+				toolTipKey:		"ttSMOSalut"},
+			
+			txtGivenNameSMO: {
+				somExpression: "txtGivenName",
+				parentNodeKey: "sfSMOName",
+				labelKey:		"lbGivenName",
+				toolTipKey:		"ttSMOGivenName"},
+			
+			txtSurnameSMO: {
+				somExpression: "txtSurname",
+				parentNodeKey: "sfSMOName",
+				labelKey:		"lbSurname",
+				toolTipKey:		"ttSMOSurname"},
+			
+			ddlTitleSMO: {
+				somExpression: "ddlTitle",
+				parentNodeKey: "sfSMOName",
+				labelKey:		"lbPosition",
+				pickListKey:		"postionTitleList",
+				toolTipKey:		"ttSMOTitle"},
+		
+}
+</script>
+                  <script contentType="application/x-javascript" name="Instructions">
+
+var content={
+
+	
+	sfInstructions: {
+			somExpression: "sfInstructions",
+			parentNodeKey: "sfPage1"},
+		
+	btnHideInstructions: {
+			somExpression: "btnHideInstructions",
+			parentNodeKey: "sfInstructions",
+			labelKey:		"lbHideInstruct"},
+		
+	btnViewInstructions: {
+			somExpression:	"btnViewInstructions",
+			parentNodeKey:	"sfInstructions",
+			labelKey:		"lbShowInstruct"},
+	
+	
+	sfPreInstruct: {
+		somExpression: "sfPreInstruct",
+		parentNodeKey: "sfPage1"},
+		
+	sfPreInstruct1: {
+		somExpression: "sfPreInstruct1",
+		parentNodeKey: "sfPreInstruct"},
+	
+	lblMandatory: {
+		somExpression: "lblMandatory",
+		parentNodeKey: "sfPreInstruct1",
+		labelKey:		"lbMandatory"},
+	
+	sfPreInstruct2: {
+		somExpression: "sfPreInstruct2",
+		parentNodeKey: "sfPreInstruct"},
+	
+	lblValidation: {
+		somExpression: "lblValidation",
+		parentNodeKey: "sfPreInstruct2",
+		labelKey:		"lbValidError"},
+			
+	
+	sfInstructionsContent: {
+		somExpression: "sfInstructionsContent",
+		parentNodeKey: "sfPage1"},
+
+	lblInstructionsHead: {
+		somExpression: "lblInstructionsHead",
+		parentNodeKey: "sfInstructionsContent",
+		labelKey:		"lbInstructionsHeading"
+		},
+	
+	
+	sfInstructList: {
+		somExpression: "sfInstructList",
+		parentNodeKey: "sfInstructionsContent"},
+	
+	sfInstruct1: {
+		somExpression: "sfInstruct1",
+		parentNodeKey: "sfInstructList"},
+	
+	lblInstruct1: {
+		somExpression: "lblInstruct1",
+		parentNodeKey: "sfInstruct1",
+		labelKey:		"lbInstruct1"},
+	
+	sfInstruct2: {
+		somExpression: "sfInstruct2",
+		parentNodeKey: "sfInstructList"},
+	
+	lblInstruct2: {
+		somExpression: "lblInstruct2",
+		parentNodeKey: "sfInstruct2",
+		labelKey:		"lbInstruct2"},
+		
+	sfInstructListB: {
+		somExpression: "sfInstructListB",
+		parentNodeKey: "sfInstructionsContent"},
+
+	sfInstructB1: {
+		somExpression: "sfInstructB1",
+		parentNodeKey: "sfInstructListB"},
+
+	lblInstructB1: {
+		somExpression: "lblInstructB1",
+		parentNodeKey: "sfInstructB1",
+		labelKey:		"lbInstructB1"},
+	
+	sfInstructB2: {
+		somExpression: "sfInstructB2",
+		parentNodeKey: "sfInstructListB",
+		},
+	
+	lblInstructB2: {
+		somExpression: "lblInstructB2",
+		parentNodeKey: "sfInstructB2",
+		labelKey:		"lbInstructB2"
+		},
+	
+	sfInstructB3: {
+		somExpression: "sfInstructB3",
+		parentNodeKey: "sfInstructListB"},
+	
+	lblInstructB3: {
+		somExpression: "lblInstructB3",
+		parentNodeKey: "sfInstructB3",
+		labelKey:		"lbInstructB3"},	
+	
+	
+}
+</script>
+                  <script contentType="application/x-javascript" name="Finalize">
+
+var content={
+
+	sfFinalizeButton: {
+		somExpression: "sfFinalizeButton",
+		parentNodeKey: "sfSubContent"}, //TODO: reparent if needed
+	
+	btnFinalizeAndLock: {
+		somExpression: "btnFinalizeAndLock",
+		parentNodeKey: "sfFinalizeButton",
+		labelKey: 		"lbFinalize"},
+	
+	btnModify: {
+		somExpression: "btnModify",
+		parentNodeKey: "sfFinalizeButton",
+		labelKey: 		"lbModify"},
+
+}
+</script>
+                  <script contentType="application/x-javascript" name="Signature">
+
+var content={
+
+		//start signature senior executive officer
+		sfSignatureBlockSEO: {
+			somExpression: "sfSignatureBlockSEO",
+			parentNodeKey: "sfSubContent"},
+
+		signatureOptionSEO: {
+			somExpression: "signatureOption",
+			parentNodeKey: "sfSignatureBlockSEO"},
+		
+		chkDigitalIDSEO: {
+			somExpression: "chkDigitalID",
+			parentNodeKey: "signatureOptionSEO",
+			labelKey:		"lbDigitalID",
+			toolTipKey:		"ttSEODigitalID"},
+		
+		chkDigitalImageSEO: {
+			somExpression:	"chkDigitalImage",
+			parentNodeKey:	"signatureOptionSEO",
+			labelKey:		"lbDigitalImage",
+			toolTipKey:		"ttSEOImage"},
+				
+		digSignatureSEO: {
+			somExpression:	"digSignature",
+			parentNodeKey:	"sfSignatureBlockSEO",
+			labelKey:		"ttSEOSignature",
+			//toolTipKey:		"ttSEOSignature"
+			},
+		
+		imgSignatureSEO: {
+			somExpression: "imgSignature",
+			parentNodeKey: "sfSignatureBlockSEO",
+			labelKey:		"ttSEOSignature",
+			//toolTipKey:		"ttSEOSignature"
+			},
+				
+		ddtSignedOnAttestationSEO: {
+			somExpression: "ddtSignedOnAttestation",
+			parentNodeKey: "sfSignatureBlockSEO",
+			labelKey:		"lbSigDate",
+			toolTipKey:		"ttSMODateSig"	
+			},
+
+		//end senior executive officer
+		//start Senior Medical Officer
+		sfSignatureBlockSMO: {
+			somExpression: "sfSignatureBlockSMO",
+			parentNodeKey: "sfSubContent"},
+		
+		signatureOptionSMO: {
+			somExpression: "signatureOption",
+			parentNodeKey: "sfSignatureBlockSMO",
+			},
+		
+		chkDigitalID: {
+			somExpression: "chkDigitalID",
+			parentNodeKey: "signatureOptionSMO",
+			labelKey:		"lbDigitalID",
+			toolTipKey:		"ttSMODigitalID"	
+			},
+		
+		chkDigitalImage: {
+			somExpression: "chkDigitalImage",
+			parentNodeKey: "signatureOptionSMO",
+			labelKey:		"lbDigitalImage",
+			toolTipKey:		"ttSMOImage"	},
+		
+		digSignatureSMO: {
+			somExpression: "digSignature",
+			parentNodeKey: "sfSignatureBlockSMO",
+			labelKey:		"ttSMOSignature",
+			//toolTipKey:		"ttSMOSignature"	
+			},
+		
+		imgSignatureSMO: {
+			somExpression: "imgSignature",
+			parentNodeKey: "sfSignatureBlockSMO",
+			labelKey:		"ttSMOSignature",
+			//toolTipKey:		"ttSMOSignature"	
+		},
+				
+		ddtSignedOnAttestationSMO: {
+			somExpression: "ddtSignedOnAttestation",
+			parentNodeKey: "sfSignatureBlockSMO",
+			labelKey:		"lbSigDate",
+			toolTipKey:		"ttSMODateSig"},
+		
+}
+</script>
+                  <?templateDesigner expand 1?></variables>
+               <bind match="none"/>
+               <?templateDesigner expand 1?></subform>
+            <subform h="50mm" name="resources" w="100mm">
+               <variables>
+                  <script contentType="application/x-javascript" name="general_en">//nov2015
+var content={
+	
+	lbHideInstruct:		"Hide Instructions",
+	lbShowInstruct:		"Show Instructions",
+	lbOfLCText:			"of",
+	lbMandatory:		"Asterisk symbol (*) denotes a mandatory field.",
+	lbValidError:		"Plus symbol (+) denotes a validation error or missing data.",
+	lbVersion:			"Revision No.:",
+	lbHealthCanada:		"Health Canada",
+ 	lbDate:				"Date formatted as YYYY-MM-DD",
+ 	lbDigitalID:			"Digital ID",
+	lbDigitalImage:		"Image Signature",
+	lbSignature:			"Signature",
+	lbSigDate:			"Signature Date",
+	lbFinalize:			"Finalize",
+	lbModify:			"Modify",
+	validation_title:	"Validation Results",
+	validation_pass:		"This form successfully validated and locked from editing. Please sign the form before submitting to Health Canada.",  //override oore
+	message_saveAs: 		"This form has encountered a problem.", //override oore
+	
+	
+}
+</script>
+                  <script contentType="application/x-javascript" name="general_fr">//nov2015
+var content={
+
+		
+	lbHideInstruct:		"Masquer les instructions",
+	lbShowInstruct:		"Afficher les instructions",
+	lbOfLCText:			"sur",
+	validation_title:	"Résultats de la validation",
+	lbMandatory:		"Astérisque (*)  démontre un champ obligatoire.",
+	lbValidError:		"Symbole plus (+) démontre un champ avec une erreur de validation ou des données manquantes.",
+	lbVersion:			"Revision No.:",
+	lbHealthCanada:		"Santé  Canada",
+	lbSalutation:		"Appel",
+	lbGivenName: 		"Prénom",
+	lbSurname:			"Nom",
+	lbPositionTitle:	"Titre du poste",
+	lbSignature:		"Signature",
+	lbFinalize:			"Finaliser",
+	lbModify:			"Modifier",
+	lbSignature:		"Signature",
+	lbFinalize:			"Finaliser",
+	lbModify:			"Modifier",
+	lbLockSuccess:		"Le formulaire a été validé et verrouiller contre l'édition. Il peut maintenant être imprimé et envoyé à Santé Canada. Pour pouvoir modifier le formulaire, appuyez sur le bouton Modifier.",
+	validation_pass:		"Le formulaire a été validé et verrouiller contre l'édition. S'il vous plaît signer le formulaire avant de le soumettre à Santé Canada.",
+	message_saveAs: 		"Ce formulaire a eu un problème.",
+	//signature specific
+	lbDigitalID:			"ID électronique",
+	lbDigitalImage:		"Image de signature",
+	lbSignature:			"Signature",
+	lbSigDate:			"Date de la signature",
+	
+	//
+}
+</script>
+                  <script contentType="application/x-javascript" name="instruct_en">
+
+var content={ 
+
+	
+	lbInstruct1:		"This form contains mandatory fields. In order to ensure you have completed all appropriate fields, please press the Finalize button at the bottom of the form before printing and signing.",
+	lbInstruct2:		"Once finalized, the fields in the form becomes locked (i.e. Fields cannot be modified). In order to modify fields after finalizing, you must press the Modify button at the bottom of the form. Following modifications to the desired fields and before printing and signing, please press the Finalize button again to re-validate entries.\n\nAlternatively:\n", 
+	lbInstructB1:		"-Save, print, sign and date the completed form;",
+	lbInstructB2:		"-Scan the signed form, and",
+	lbInstructB3:		"-Send to Health Canada in electronic format.",
+	
+}
+</script>
+                  <script contentType="application/x-javascript" name="instruct_fr">
+
+var content={
+
+	lbInstruct1:		"Ce formulaire contient des champs obligatoires. Pour vous assurer que vous avez rempli les champs appropriés, cliquez sur le bouton Finalisation au bas du formulaire avant de l'imprimer et de le signer.",
+	lbInstruct2:		"Une fois finalisé, les champs seront verrouiller (les champs ne peuvent plus être modifié). Pour pouvoir modifier les champs après la finalisation, vous devez cliquer sur le bouton Modification au bas du formulaire. Après avoir modifié les champs désirés et avant d'imprimer et de signer, cliquez sur le bouton Finalisation à nouveau afin de valider les entrées.\n\nAlternativement:\n",  
+	lbInstructB1:		"-Enregistrez, imprimez, signez et datez le formulaire rempli;",
+	lbInstructB2:		"-Scannez le formulaire signé et",
+	lbInstructB3:		"-Envoyer a Santé Canada en format électronique.",
+
+}
+</script>
+                  <script contentType="application/x-javascript" name="heading_en">
+
+var content={
+
+		lbInstructionsHeading: 		"INSTRUCTIONS",		
+		lbApplTitle : 				"SUBMISSION CERTIFICATE for NEW DRUG SUBMISSIONS (NDS), SUPPLEMENT TO A NEW DRUG SUBMISSION (SNDS), SUPPLEMENT ABBREVIATED NEW DRUG SUBMISSIONS (SANDS), ABBREVIATED NEW DRUG SUBMISSIONS (ANDS), NOTIFIABLE CHANGES (NC)",	
+		lbAttest: 					"ATTESTATION",
+		lbLetterAssoc:				"LETTER SENT TO ASSOCIATIONS",
+		lbShortTitle:				"SUBMISSION CERTIFICATION",
+		
+}
+</script>
+                  <script contentType="application/x-javascript" name="heading_fr">
+
+var content={
+
+	lbInstructionsHeading: 		"INSTRUCTIONS",	
+	lbApplTitle: 				"ATTESTATION AUX PRÉSENTATIONS POUR PRÉSENTATION DE DROGUE NOUVELLE (PDN), SUPPLÉMENT À UNE PRÉSENTATION DE DROGUE NOUVELLE (SPDN), SUPPLÉMENT À UNE PRÉSENTATION ABRÉGÉE DE DROGUE NOUVELLE (PSADN), PRÉSENTATION ABRÉGÉE DE DROGUE NOUVELLE (PADN), PRÉAVIS DE MODIFICATION (PM)",
+	lbAttest: 					"ATTESTATIONS",
+	lbLetterAssoc:				"LETTRE AUX ASSOCIATIONS",
+	lbShortTitle:				"ATTESTATION AUX PRÉSENTATIONS",
+
+
+}
+</script>
+                  <script contentType="application/x-javascript" name="body_en">
+
+var content={
+
+		lbCertified: 		"We certify that, to the best of our knowledge and belief, with reference to the submission pertaining to:",
+		lbSubmitBy: 			"submitted by:",
+		lbSeniorOfficer: 	"Senior Executive Officer",
+		lbMedicalOfficer: 	"Senior Medical or Scientific Officer",
+		lbSubType: 			"Type of Submission",
+		lbSalutation:		"Salutation",
+		lbGivenName:			"Given Name",
+		lbSurname:		 	"Surname",
+		lbPosition:			"Position Title",
+		lbAttest1:			"1. All the information and material included in the submission and additional information or material filed to amend the submission are accurate and complete, and  the sectional reports and the comprehensive summaries correctly represent the information and material referred to or included in the submission. No information is false or misleading; no omissions have been made that may affect its accuracy and completeness.",
+		lbAttest2:			"2. a) all pivotal studies included in the submission are complete and a final comprehensive analyses provided;",
+		
+		lbAttest3:			"2. b) all pivotal data necessary to support the proposed indications, doses and formulations have been provided;",
+		
+		lbAttest4:			"2. c) the formulation used in the studies (clinical and pharmacokinetic) is identical to that proposed for marketing, or evidence that the preparations used in the pivotal clinical efficacy and pharmacokinetic studies are bioequivalent to the preparation to be marketed has been provided. The batch of the drug substance or the final formulation used in pre-clinical studies (especially the carcinogenicity studies) is representative of that proposed for marketing, or acceptable evidence and rationale are provided to defend that any variation does not affect the interpretation of data generated in support of both safety and efficacy.",
+		
+
+}
+</script>
+                  <script contentType="application/x-javascript" name="body_fr">
+
+var content={
+
+	
+	lbCertified: 				"Nous attestons, relativement à la présentation suivante:",
+	lbSubmitBy: 					"déposée par:",
+	lbSeniorOfficer: 			"Le premier dirigeant",
+	lbMedicalOfficer: 			"Le directeur médical ou scientifique",
+	lbSubType: 					"Type de soumission",
+	ddlSalutation:				"Appel",
+	lbGivenName:				 	"Prénom",
+	lbSurname:					"Nom",
+	lbPosition:					"Titre du poste",
+	lbAttest1:					"1. Que tous les renseignements et le matériel que contient la présentation, et tous les renseignements additionnels ou matériel déposé pour modifier la présentation sont exacts et complets, et les résumés de sections et les synthèses globaux représentent fidèlement les renseignements et le matériel qui sont compris dans la présentation ou auxquels il est fait renvoi. Aucun renseignement n'est faux ou trompeur, ou ne comporte des omissions qui peuvent avoir une incidence sur son exactitude et son intégralité",
+	lbAttest2:					"2. a) Que toutes les études essentielles que contient la présentation sont complètes et que les analyses finales sont fournies;",
+	lbAttest3:					"2. b) Que toutes les données essentielles à l'appui des indications, des doses et des formulations proposées sont fournies;",
+	lbAttest4:					"2. c) Que la formulation utilisée dans les études (cliniques et pharmacocinétiques) est identique à la formulation proposée pour la mise en marché , ou que la preuve a été faite de la bioéquivalence des préparations utilisées dans les études essentielles de l'efficacité clinique et des études pharmacocinétiques avec la préparation proposée pour la mise en marché a été fourni. Le lot de la substance médicamenteuse, ou de la préparation finale employé dans les études précliniques (tout particulièrement les études sur le pouvoir carcinogène) est représentatif de la préparation proposée pour la mise en marché, ou des Preuves et raisons acceptables sont fournies pour appuyer le fait que des variations n'affecteront pas l'interprétation des données fournies relativement à la sécurité et l'efficacité.",
+}
+
+
+
+
+
+
+</script>
+                  <script contentType="application/x-javascript" name="lov_en">
+
+var content={
+
+	submissionTypeList:[
+		["NDS", "NEW DRUG SUBMISSIONS (NDSs)"],
+		["SNDS", "SUPPLEMENT TO A NEW DRUG SUBMISSION (S/NDSs)"],
+		["SANDS", "SUPPLEMENT ABBREVIATED NEW DRUG SUBMISSIONS (SANDSs)"],
+		["ANDS", "ABBREVIATED NEW DRUG SUBMISSIONS (ANDSs)"],
+		["NC", "NOTIFIABLE CHANGES (NCs)"]],
+		
+	salutationList:[
+		["mr", "Mr."],
+		["ms", "Ms."],
+		["mrs", "Mrs."],
+		["dr","Dr."]],
+		
+	postionTitleList:[
+		["seo", "Senior Executive Officer"],
+		["smo", "Senior Medical or Scientific Officer"],
+		],
+		
+
+}
+</script>
+                  <script contentType="application/x-javascript" name="lov_fr">
+
+var content={
+
+	submissionTypeList:[
+	["NDS", "Présentation de drogue nouvelle (PDN)"],
+	["SNDS", "Présentation abrégée de drogue nouvelle (PADN)"],
+	["SANDS","Supplément à une présentation abrégée de drogue nouvelle (PSADN)"],
+	["ANDS", "Supplément à une présentation de drogue nouvelle (SPDN)"],
+	["NC", "Préavis de modification (PM)"]],
+	
+	
+	salutationList:[
+	["mr", "M."],
+	["ms", "Mlle"],
+	["mrs", "Mme"],
+	["dr","Dre"]],
+	
+	postionTitleList:[
+		["seo", "Le premier dirigeant"],
+		["smo", "Le directeur médical ou scientifique"],
+		],
+
+}
+</script>
+                  <script contentType="application/x-javascript" name="tooltips_en">
+
+var content={
+
+		
+		ttSEOSalut: 			"Senior Executive Officer Salutation",
+		ttSEOGivenName: 		"Senior Executive Officer Given Name",
+		ttSEOSurname: 		"Senior Executive Officer Surname",
+		ttSEOTitle: 			"Senior Executive Officer position title",
+		ttSMOSalut: 			"Senior Medical or Scientific Officer Salutation",
+		ttSMOGivenName: 		"Senior Medical or Scientific Officer Given Name",
+		ttSMOSurname: 		"Senior Medical or Scientific Officer Surname",
+		ttSMOTitle: 			"Senior Medical or Scientific Officer position title",
+		ttSEOSignature:		"Senior Executive Officer Signature",
+		ttSEODateSig:		"Senior Executive Officer Date of Signature",
+		ttSMOSignature:		"Senior Medical or Scientific Officer Signature",
+		ttSMODateSig:		"Senior Medical or Scientific Officer Date of Signature",
+		ttSEODigitalID:		"Senior Executive Officer Digital ID",
+		ttSEOImage:			"Senior Executive Officer Image Signature",
+		ttSMODigitalID:		"Senior Medical or Scientific Officer Digital ID",
+		ttSMOImage:			"Senior Medical or Scientific Officer Image Signature",
+		
+}
+</script>
+                  <script contentType="application/x-javascript" name="tooltips_fr">
+
+var content={
+
+		
+		ttSEOSalut: 			"Le premier dirigeant appel",
+		ttSEOGivenName: 		"Le premier dirigeant prénom",
+		ttSEOSurname: 		"Le premier dirigeant nom",
+		ttSEOTitle: 			"Le premier dirigeant titre du poste",
+		ttSMOSalut: 			"Le directeur médical ou scientifique appel",
+		ttSMOGivenName: 		"Le directeur médical ou scientifique prénom",
+		ttSMOSurname: 		"Le directeur médical ou scientifique nom",
+		ttSMOTitle: 			"Le directeur médical ou scientifique titre du poste",
+		ttSEOSignature:		"Le premier dirigeant signature",
+		ttSEODateSig:		"Le premier dirigeant date de la signature",
+		ttSMOSignature:		"Le directeur médical ou scientifique signature",
+		ttSMODateSig:		"Le directeur médical ou scientifique date de la signature",
+		ttSEODigitalID:		"Le premier dirigeant nom ID électronique",
+		ttSEOImage:			"Le premier dirigeant nom image de signature",
+		ttSMODigitalID:		"Le directeur médical ou scientifique ID électronique",
+		ttSMOImage:			"Le directeur médical ou scientifique image de signature",
+		
+}
+</script>
+                  <?templateDesigner expand 1?></variables>
+               <bind match="none"/>
+               <?templateDesigner expand 1?></subform>
+            <subform h="50mm" name="util" w="100mm">
+               <variables>
+                  <?templateDesigner expand 1?>
+                  <script usehref="..\..\fragments\util\General.xdp#som($template.form1.#subform.#variables.General)"/>
+                  <script usehref="..\..\fragments\Accessibility.xdp#som($template.form1.#subform.#variables.Accessibility)"/>
+               </variables>
+               <bind match="none"/>
+               <?templateDesigner expand 0?></subform>
+            <bind match="none"/>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version"> 2.00.22</text>
+         <text name="title">DRUGS DIRECTORATE SUBMISSION CERTIFICATION for NEW DRUG SUBMISSIONS (NDSs), SUPPLEMENT TO A NEW DRUG SUBMISSION (S/NDSs), NOTIFIABLE CHANGES (NCs)</text>
+         <text name="creator">Health Canada</text>
+         <text name="created">2015-11-21</text>
+         <text name="department">Health Canada</text>
+         <text name="issued">2015</text>
+      </desc>
+      <margin leftInset="0mm" topInset="0mm" bottomInset="0mm"/>
+      <event activity="initialize" name="event__initialize">
+         <script contentType="application/x-javascript">
+var cFormHandler=script.HCeForm.control.FormHandler;
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+var cSystem = script.core.System;
+
+
+try{
+		// set up event object
+		var actionName = cFormHandler.INITIALIZE_FORM_ACTION;
+		var anActionEvent = cActionEvent.createInstance(actionName, this);
+		// deploy event to controller
+		cFormHandler.actionPerformed(anActionEvent);
+}
+catch(exception)
+{
+	cLog.warn("Problem with  form initialize::initialize", exception);
+}
+
+
+
+</script>
+      </event>
+      <event activity="prePrint" ref="$host" name="event__prePrint">
+         <script contentType="application/x-javascript">
+var cFormHandler=	script.HCeForm.control.FormHandler;
+var cActionEvent = script.core.event.ActionEvent;
+var cLog = script.core.util.Log;
+try
+{
+		// set up event object
+		var actionName =  cFormHandler.HIDE_INSTRUCTIONS;
+		var anActionEvent = cActionEvent.createInstance(actionName, this);
+		// deploy event to controller
+		cFormHandler.actionPerformed(anActionEvent);
+	
+}
+catch(exception)
+{
+	cLog.warn("Problem with hide instructions ::preprint", exception);
+}
+</script>
+      </event>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 284 72 000100030009000A000B000C000D000E000F0010001100120013001400150016001700180019001A001B001C00220023002400250026002700280029002A002B002C002D002E002F003000310033003400350038003A003D00420043004400450046004700480049004A004C004D004E004F0050005100520053005400550056005700580059005A005B006800CE "()*+,-./0123456789:;ABCDEFGHIJKLMNOPRSTWY\abcdefghiklmnopqrstuvwxyz'ç?>
+      <?renderCache.subset "Myriad Pro" 1 0 ISO-8859-1 4 64 16 0001002200240026002A002D002F003000330034003500360046004A004D0055 ACEILNORSTUeilt?>
+      <?renderCache.subset "Myriad Pro" 0 1 ISO-8859-1 4 4 1 0045d?>
+   </subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/2.8/?>
+   <?templateDesigner Grid show:0, snap:0, units:0, color:ff8080, origin:(0,0), interval:(125000,125000), objsnap:0, guidesnap:0, pagecentersnap:827642484?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner ValidationMessaging noMessages?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 107?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Guidelines h:7668320?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner SavePDFWithLog 0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <tagged>0</tagged>
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <version>1.7</version>
+         <adobeExtensionLevel>5</adobeExtensionLevel>
+      </pdf>
+      <common>
+         <data>
+            <xsl>
+               <uri/>
+            </xsl>
+            <outputXSL>
+               <uri/>
+            </outputXSL>
+         </data>
+      </common>
+      <script>
+         <runScripts>server</runScripts>
+      </script>
+      <cache>
+         <macroCache/>
+      </cache>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+   </psMap>
+   <acrobat>
+      <common>
+         <validationMessaging>noMessages</validationMessaging>
+      </common>
+   </acrobat>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_CA" desc="English (Canada)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">D-MMM-YY</datePattern>
+         <datePattern name="short">DD/MM/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">CAD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+      </typefaces>
+   </locale>
+   <locale name="fr_CA" desc="French (Canada)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>janvier</month>
+            <month>février</month>
+            <month>mars</month>
+            <month>avril</month>
+            <month>mai</month>
+            <month>juin</month>
+            <month>juillet</month>
+            <month>août</month>
+            <month>septembre</month>
+            <month>octobre</month>
+            <month>novembre</month>
+            <month>décembre</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>janv.</month>
+            <month>févr.</month>
+            <month>mars</month>
+            <month>avr.</month>
+            <month>mai</month>
+            <month>juin</month>
+            <month>juil.</month>
+            <month>août</month>
+            <month>sept.</month>
+            <month>oct.</month>
+            <month>nov.</month>
+            <month>déc.</month>
+         </monthNames>
+         <dayNames>
+            <day>dimanche</day>
+            <day>lundi</day>
+            <day>mardi</day>
+            <day>mercredi</day>
+            <day>jeudi</day>
+            <day>vendredi</day>
+            <day>samedi</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>dim.</day>
+            <day>lun.</day>
+            <day>mar.</day>
+            <day>mer.</day>
+            <day>jeu.</day>
+            <day>ven.</day>
+            <day>sam.</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>av. J.-C.</era>
+            <era>ap. J.-C.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE D MMMM YYYY</datePattern>
+         <datePattern name="long">D MMMM YYYY</datePattern>
+         <datePattern name="med">YY-MM-DD</datePattern>
+         <datePattern name="short">YY-MM-DD</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">HH' h 'MM' min 'SS' s 'Z</timePattern>
+         <timePattern name="long">HH:MM:SS Z</timePattern>
+         <timePattern name="med">HH:MM:SS</timePattern>
+         <timePattern name="short">HH:MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GaMjkHmsSEDFwWxhKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">z,zz9.99 $|(z,zz9.99$)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping"> </numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">CAD</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="DRUG_SUBCERT">
+      <DRUG_SUBCERT>
+         <form_lang/>
+         <form_version/>
+         <application_type/>
+         <appl_pertaining/>
+         <appl_submitted_by/>
+         <attest_q1/>
+         <attest_q2a/>
+         <attest_q2b/>
+         <attest_q2c/>
+         <smo_attestation_info>
+            <attestation_salutation/>
+            <attestation_given_name/>
+            <attestation_surname/>
+            <attestation_title/>
+            <signature_type/>
+            <signature_image/>
+            <attestation_sign_date/>
+         </smo_attestation_info>
+         <seo_attestation_info>
+            <attestation_salutation/>
+            <attestation_given_name/>
+            <attestation_surname/>
+            <attestation_title/>
+            <signature_type/>
+            <signature_image/>
+            <attestation_sign_date/>
+         </seo_attestation_info>
+      </DRUG_SUBCERT>
+   </dd:dataDescription>
+</xfa:datasets>
+<connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
+   <xsdConnection name="DataConnection" dataDescription="DRUG_SUBCERT">
+      <uri>..\..\xml_schema\6_2_drug_cert_form.xsd</uri>
+      <rootElement>DRUG_SUBCERT</rootElement>
+      <?templateDesigner fileDigest shaHash="g4XcBdpZK3WkeWIzNVfetf6GgJA="?></xsdConnection>
+</connectionSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xmp:MetadataDate>2015-11-26T19:01:05Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xmpMM:DocumentID>uuid:7c6027fc-41f1-4f24-8202-76f558a70660</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:5906201c-4a96-4402-9e24-fba4df61df04</xmpMM:InstanceID>
+      </rdf:Description>
+      <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <dc:format>application/pdf</dc:format>
+         <dc:date>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <rdf:value>2015-11-21</rdf:value>
+                  <dc:element-refinement>dc:created</dc:element-refinement>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <rdf:value>2015</rdf:value>
+                  <dc:element-refinement>dc:issued</dc:element-refinement>
+               </rdf:li>
+            </rdf:Seq>
+         </dc:date>
+         <dc:creator>
+            <rdf:Seq>
+               <rdf:li>Health Canada</rdf:li>
+            </rdf:Seq>
+         </dc:creator>
+         <dc:title>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default">DRUGS DIRECTORATE SUBMISSION CERTIFICATION for NEW DRUG SUBMISSIONS (NDSs), SUPPLEMENT TO A NEW DRUG SUBMISSION (S/NDSs), NOTIFIABLE CHANGES (NCs)</rdf:li>
+            </rdf:Alt>
+         </dc:title>
+      </rdf:Description>
+      <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <desc:version rdf:parseType="Resource">
+            <rdf:value> 2.00.22</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+         <desc:department rdf:parseType="Resource">
+            <rdf:value>Health Canada</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:department>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve">
+   <annots/>
+</xfdf>
+<hpfb:schema xmlns:hpfb="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" id="XFASchemaXSD">
+   <hpfb:include schemaLocation="#XFAXSDReference"/>
+   <!-- ****************************** -->
+   <!-- ELEMENT DECLARATIONS -->
+   <!-- ****************************** -->
+   <hpfb:element name="DRUG_SUBCERT" type="new_drug_cert_content"/>
+   <hpfb:element name="form_lang"/>
+   <hpfb:element name="form_version"/>
+   <hpfb:element name="application_type"/>
+   <hpfb:element name="appl_pertaining"/>
+   <hpfb:element name="appl_submitted_by"/>
+   <hpfb:element name="attest_q1"/>
+   <hpfb:element name="attest_q2a"/>
+   <hpfb:element name="attest_q2b"/>
+   <hpfb:element name="attest_q2c"/>
+   <hpfb:element name="smo_attestation_info" type="attest_content"/>
+   <hpfb:element name="seo_attestation_info" type="attest_content"/>
+   <!--Main form structure-->
+   <hpfb:complexType name="new_drug_cert_content">
+      <hpfb:sequence>
+         <hpfb:element ref="form_lang"/>
+         <hpfb:element ref="form_version"/>
+         <hpfb:element ref="application_type"/>
+         <hpfb:element ref="appl_pertaining"/>
+         <hpfb:element ref="appl_submitted_by"/>
+         <hpfb:element ref="attest_q1"/>
+         <hpfb:element ref="attest_q2a"/>
+         <hpfb:element ref="attest_q2b"/>
+         <hpfb:element ref="attest_q2c"/>
+         <hpfb:element ref="smo_attestation_info"/>
+         <hpfb:element ref="seo_attestation_info"/>
+      </hpfb:sequence>
+   </hpfb:complexType>
+</hpfb:schema>
+<hpfb:schema xmlns:hpfb="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" id="XFAXSDReference">
+   <hpfb:include schemaLocation="#XFAXSDReference1"/>
+   <!-- ****************************** -->
+   <!-- ELEMENT DECLARATIONS -->
+   <!-- ****************************** -->
+   <hpfb:element name="attestation_info" type="attest_content"/>
+   <hpfb:element name="attestation_salutation"/>
+   <hpfb:element name="attestation_given_name"/>
+   <hpfb:element name="attestation_surname"/>
+   <hpfb:element name="attestation_title"/>
+   <hpfb:element name="signature_type"/>
+   <hpfb:element name="signature_image"/>
+   <hpfb:element name="attestation_sign_date" type="yyyymmdd_date_content"/>
+   <!-- ****************************** -->
+   <!-- ELEMENT TYPE DECLARATIONS -->
+   <!-- ****************************** -->
+   <!-- main xml structure-->
+   <hpfb:complexType name="attest_content">
+      <hpfb:sequence>
+         <hpfb:element ref="attestation_salutation"/>
+         <hpfb:element ref="attestation_given_name"/>
+         <hpfb:element ref="attestation_surname"/>
+         <hpfb:element ref="attestation_title"/>
+         <hpfb:element ref="signature_type"/>
+         <hpfb:element ref="signature_image"/>
+         <hpfb:element ref="attestation_sign_date"/>
+      </hpfb:sequence>
+   </hpfb:complexType>
+</hpfb:schema>
+<hpfb:schema xmlns:hpfb="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" id="XFAXSDReference1">
+   <hpfb:simpleType name="yyyymmdd_date_content">
+      <hpfb:restriction base="hpfb:date">
+         <hpfb:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+      </hpfb:restriction>
+   </hpfb:simpleType>
+</hpfb:schema></xdp:xdp>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<hpfb:schema xmlns:hpfb="http://www.w3.org/2001/XMLSchema" 	
+			elementFormDefault="qualified" >
+	<hpfb:include schemaLocation="data_types.xsd" />
+
+	<!-- ****************************** -->
+	<!-- ELEMENT DECLARATIONS -->
+	<!-- ****************************** -->
+	<hpfb:element name="attestation_info" 	type="attest_content" />
+	<hpfb:element name="attestation_salutation"/>
+	<hpfb:element name="attestation_given_name"/>
+	<hpfb:element name="attestation_surname"/>
+	<hpfb:element name="attestation_title"/>
+	<hpfb:element name="signature_type"/>
+	<hpfb:element name="signature_image"/>
+	<hpfb:element name="attestation_sign_date" type="yyyymmdd_date_content"/>
+
+	<!-- ****************************** -->
+	<!-- ELEMENT TYPE DECLARATIONS -->
+	<!-- ****************************** -->
+		<!-- main xml structure-->
+	<hpfb:complexType name="attest_content">
+		<hpfb:sequence>
+			<hpfb:element ref="attestation_salutation"/>
+			<hpfb:element ref="attestation_given_name"/>
+			<hpfb:element ref="attestation_surname"/>
+			<hpfb:element ref="attestation_title"/>
+			<hpfb:element ref="signature_type"/>
+			<hpfb:element ref="signature_image"/>
+			<hpfb:element ref="attestation_sign_date"/>
+		</hpfb:sequence>
+	</hpfb:complexType>
+	
+
+</hpfb:schema>
