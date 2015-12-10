@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2015-09-22T13:49:55Z" uuid="7ba90d7a-25a7-4cb2-bf8c-2b0068cf3a4f">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2015-12-08T14:58:48Z" uuid="698f2ad6-072c-4f15-a84d-12be16496382">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -282,7 +282,7 @@ if (language === "en") {
 </script>
                </event>
             </field>
-            <?templateDesigner expand 1?></pageArea>
+            <?templateDesigner expand 0?></pageArea>
          <?templateDesigner expand 1?></pageSet>
       <subform name="sfPage1" layout="lr-tb" w="203.2mm">
          <subform w="203.41mm" name="sfMainHeader" layout="lr-tb">
@@ -13577,9 +13577,9 @@ cAccessibility.updateColorErrorsForAccessibility(PAGE1_SF_FN.getNodeInstance().p
          <?templateDesigner expand 1?></subform>
       <subform w="100mm" name="script" layout="tb" presence="hidden">
          <bind match="none"/>
-         <subform usehref=".\Fragments\CoreJavaScript.xdp#som($template.form1.core)">
+         <subform usehref="..\..\fragments\CoreJavaScript.xdp#som($template.script.core)">
             <bind/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform usehref=".\Fragments\InfrastructureDomainJavaScript.xdp#som($template.script.infrastructureDomain)">
             <bind/>
             <?templateDesigner expand 0?>
@@ -19108,7 +19108,7 @@ else if (node.className == "field")
    }
 }
 </script>
-            <script usehref=".\Fragments\Accessibility.xdp#som($template.form1.script.#variables.Accessibility)"/>
+            <script usehref="..\..\fragments\Accessibility.xdp#som($template.form1.#subform.#variables.Accessibility)"/>
             <?templateDesigner expand 1?></variables>
          <?templateDesigner expand 1?></subform>
       <proto/>
@@ -19146,12 +19146,7 @@ cFormHandler.initialize();
    <?templateDesigner DefaultPreviewDynamic 1?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/2.8/?>
    <?templateDesigner Grid show:0, snap:0, units:0, color:ff8080, origin:(0,0), interval:(125000,125000), objsnap:0, guidesnap:0, pagecentersnap:827642484?>
-   <?templateDesigner SaveTaggedPDF 0?>
-   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner SavePDFWithLog 0?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Zoom 139?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -19166,7 +19161,12 @@ cFormHandler.initialize();
    <?templateDesigner XDPPreviewFormat 20?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner ValidationMessaging noMessages?></template>
+   <?templateDesigner ValidationMessaging noMessages?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 139?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -19178,7 +19178,6 @@ cFormHandler.initialize();
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -19198,7 +19197,6 @@ cFormHandler.initialize();
       <xdp>
          <packets>*</packets>
       </xdp>
-      <output/>
    </present>
    <psMap>
       <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
@@ -19523,14 +19521,14 @@ cFormHandler.initialize();
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2015-09-22T13:49:55Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2015-12-08T14:58:48Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:7ba90d7a-25a7-4cb2-bf8c-2b0068cf3a4f</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:698f2ad6-072c-4f15-a84d-12be16496382</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:69e6bbf6-63ea-40f9-b998-ee3fef886ea6</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">

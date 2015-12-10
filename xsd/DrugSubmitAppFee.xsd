@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<hpfb:schema xmlns:hpfb="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<!-- ****************************** -->
+	<!-- ELEMENT DECLARATIONS  VERSION 1.0--> 
+	<!-- ****************************** -->
+
+	<hpfb:element name="Appl" type="fee_content"/>
+	<hpfb:element name="language" type="language_content"/>
+	<hpfb:element name="version" type="hpfb:decimal"/>
+	<!-- Product content -->
+	<hpfb:element name="product_details" type="product_content"/>
+ 	<hpfb:element name="product_name"  type="char_1_2000_Content" />
+	<hpfb:element name="company_name" type="char_1_2000_Content"/>
+	<hpfb:element name="same_as_sponsor" type="YES_NO_Content"/>
+        <!-- Sponsor address content -->
+        <hpfb:element name="sponsor_address" type="sponsor_address_content"/>
+	<hpfb:element name="sponsor_street"  type="char_1_2000_Content" />
+	<hpfb:element name="sponsor_city" type="char_1_2000_Content"/>
+	<hpfb:element name="sponsor_country" type="char_1_2000_Content"/>
+	<hpfb:element name="sponsor_province_state"  type="char_1_2000_Content" />
+	<hpfb:element name="sponsor_txtprovince"  type="char_1_2000_Content" />
+	<hpfb:element name="sponsor_postal_code" type="char_1_2000_Content"/>
+        <!-- Sponsor contact content -->
+        <hpfb:element name="sponsor_contact" type="sponsor_contact_content"/>
+	<hpfb:element name="sponsor_Salutation"  type="char_1_2000_Content" />
+	<hpfb:element name="sponsor_given_name" type="char_1_2000_Content"/>
+	<hpfb:element name="sponsor_initial" type="char_1_2000_Content"/>
+	<hpfb:element name="sponsor_surname" type="char_1_2000_Content"/>
+	<hpfb:element name="sponsor_title"  type="char_1_2000_Content" />
+	<hpfb:element name="sponsor_language" type="char_1_2000_Content"/>
+ 	<hpfb:element name="sponsor_telephone"  type="char_1_2000_Content" />
+ 	<hpfb:element name="sponsor_ext"  type="char_1_2000_Content" />
+	<hpfb:element name="sponsor_fax" type="char_1_2000_Content"/>
+	<hpfb:element name="sponsor_email" type="char_1_2000_Content"/>
+        <!-- Billing address content -->
+        <hpfb:element name="billing_address" type="billing_address_content"/>
+	<hpfb:element name="billing_street"  type="char_1_2000_Content" />
+	<hpfb:element name="billing_city" type="char_1_2000_Content"/>
+	<hpfb:element name="billing_country" type="char_1_2000_Content"/>
+	<hpfb:element name="billing_province_state"  type="char_1_2000_Content" />
+	<hpfb:element name="billing_txtprovince"  type="char_1_2000_Content" />
+	<hpfb:element name="billing_postal_code" type="char_1_2000_Content"/>
+        <!-- Billing contact content -->
+        <hpfb:element name="billing_contact" type="billing_contact_content"/>
+	<hpfb:element name="billing_Salutation"  type="char_1_2000_Content" />
+	<hpfb:element name="billing_given_name" type="char_1_2000_Content"/>
+	<hpfb:element name="billing_initial" type="char_1_2000_Content"/>
+	<hpfb:element name="billing_surname" type="char_1_2000_Content"/>
+	<hpfb:element name="billing_title"  type="char_1_2000_Content" />
+	<hpfb:element name="billing_language" type="char_1_2000_Content"/>
+ 	<hpfb:element name="billing_telephone"  type="char_1_2000_Content" />
+ 	<hpfb:element name="billing_ext"  type="char_1_2000_Content" />
+	<hpfb:element name="billing_fax" type="char_1_2000_Content"/>
+	<hpfb:element name="billing_email" type="char_1_2000_Content"/>
+	<!--Payment methods content -->
+	<hpfb:element name="payment_method" type="payment_method_content"/>
+	<hpfb:element name="cheque_choice" type="YES_NO_Content"/>
+	<hpfb:element name="credit_card_choice" type="YES_NO_Content"/>
+	<hpfb:element name="bank_draft_choice" type="YES_NO_Content"/>
+	<hpfb:element name="existing_credit_choice" type="YES_NO_Content"/>
+	<hpfb:element name="bank_wire_choice" type="YES_NO_Content"/>
+	<hpfb:element name="money_order_choice" type="YES_NO_Content"/>
+
+        <!-- Submission Scope content -->
+        <hpfb:element name="submission_scope" type="submission_scope_content"/>
+	<hpfb:element name="dosage"  type="char_1_2000_Content" />
+	<hpfb:element name="route" type="char_1_2000_Content"/>
+	<hpfb:element name="condition" type="char_1_2000_Content"/>
+	<hpfb:element name="strength"  type="char_1_2000_Content" />
+	<hpfb:element name="other" type="char_1_2000_Content"/>
+
+	<!-- certification and details-->
+	<hpfb:element name="certification" type="certification_content"/>
+	<hpfb:element name="certified_amount" type="number_content_0_10_b"/>		
+	<hpfb:element name="signing_official" type="char_1_2000_Content"/>
+	<hpfb:element name="signature_choice" type="signatureType_content"/>		
+	<hpfb:element name="image_signature"/>
+	<hpfb:element name="date_signature" type="yyyymmdd_date_Content"/>				
+
+	<!-- ****************************** -->
+	<!-- ELEMENT TYPE DECLARATIONS -->
+	<!-- ****************************** -->
+		<!-- main form structure-->
+		<hpfb:complexType name="fee_content">
+		<hpfb:sequence>
+			<hpfb:element ref="language"/>
+			<hpfb:element ref="version"/>
+			<hpfb:element ref="product_details"/>
+      			<hpfb:element ref="sponsor_address"/>
+			<hpfb:element ref="sponsor_contact"/>
+			<hpfb:element ref="billing_address"/>
+			<hpfb:element ref="billing_contact"/>
+		        <hpfb:element ref="submission_scope"/>
+			<hpfb:element ref="payment_method"/>
+			<hpfb:element ref="certification"/>
+		</hpfb:sequence>
+	</hpfb:complexType>
+
+     	<hpfb:complexType name="product_content">
+		<hpfb:sequence>
+			<hpfb:element ref="product_name"/>
+			<hpfb:element ref="company_name"/>
+			<hpfb:element ref="same_as_sponsor"/>
+		</hpfb:sequence>
+	</hpfb:complexType>
+	
+	<hpfb:complexType name="sponsor_address_content">
+		<hpfb:sequence>
+			<hpfb:element ref="sponsor_street"/>
+			<hpfb:element ref="sponsor_city"/>
+			<hpfb:element ref="sponsor_country"/>
+			<hpfb:element ref="sponsor_province_state"/>
+			<hpfb:element name="sponsor_txtprovince"/>
+			<hpfb:element ref="sponsor_postal_code"/>
+		</hpfb:sequence>
+	</hpfb:complexType>
+	
+    	<hpfb:complexType name="sponsor_contact_content">
+		<hpfb:sequence>
+			<hpfb:element ref="sponsor_Salutation"/>
+			<hpfb:element ref="sponsor_title"/>
+			<hpfb:element ref="sponsor_given_name"/>
+			<hpfb:element ref="sponsor_initial"/>
+			<hpfb:element ref="sponsor_surname"/>
+			<hpfb:element name="sponsor_language"/>
+ 	                <hpfb:element name="sponsor_telephone"/>
+ 	                <hpfb:element name="sponsor_ext"/>
+                        <hpfb:element name="sponsor_fax"/>
+			<hpfb:element ref="sponsor_email"/>
+		</hpfb:sequence>
+	</hpfb:complexType>
+
+        	<hpfb:complexType name="billing_address_content">
+		<hpfb:sequence>
+			<hpfb:element ref="billing_street"/>
+			<hpfb:element ref="billing_city"/>
+			<hpfb:element ref="billing_country"/>
+			<hpfb:element ref="billing_province_state"/>
+			<hpfb:element name="billing_txtprovince"/>
+			<hpfb:element ref="billing_postal_code"/>
+		</hpfb:sequence>
+	</hpfb:complexType>
+
+    	<hpfb:complexType name="billing_contact_content">
+		<hpfb:sequence>
+			<hpfb:element ref="billing_Salutation"/>
+			<hpfb:element ref="billing_title"/>
+			<hpfb:element ref="billing_given_name"/>
+			<hpfb:element ref="billing_initial"/>
+			<hpfb:element ref="billing_surname"/>
+			<hpfb:element name="billing_language"/>
+ 	                <hpfb:element name="billing_telephone"/>
+ 	                <hpfb:element name="billing_ext"/>
+                        <hpfb:element name="billing_fax"/>
+			<hpfb:element ref="billing_email"/>
+		</hpfb:sequence>
+	</hpfb:complexType>
+
+	<hpfb:complexType name="submission_scope_content">
+		<hpfb:sequence>
+                               <hpfb:element name="dosage"/>
+	                       <hpfb:element name="route"/>
+	                       <hpfb:element name="condition"/>
+	                       <hpfb:element name="strength"/>
+	                       <hpfb:element name="other"/>
+                 </hpfb:sequence>
+	</hpfb:complexType>
+	
+	<hpfb:complexType name="payment_method_content">
+		<hpfb:sequence>
+		<hpfb:element ref="cheque_choice"/>
+		<hpfb:element ref="credit_card_choice"/>
+		<hpfb:element ref="bank_draft_choice"/>
+		<hpfb:element ref="existing_credit_choice"/>
+		<hpfb:element ref="bank_wire_choice"/>
+		<hpfb:element ref="money_order_choice"/>
+    		</hpfb:sequence>
+	</hpfb:complexType>
+	
+	<hpfb:complexType name="certification_content">
+		<hpfb:sequence>
+			<hpfb:element ref="certified_amount"/>
+			<hpfb:element ref="signing_official"/>
+			<hpfb:element ref="signature_choice"/>
+			<hpfb:element ref="image_signature"/>
+			<hpfb:element ref="date_signature"/>
+		</hpfb:sequence>
+	</hpfb:complexType>
+
+
+	<hpfb:simpleType name="char_1_2000_Content">
+		<hpfb:restriction base="hpfb:string">
+		<hpfb:minLength value="1"/>
+		<hpfb:maxLength value="2000"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>
+	
+	<!-- allows for leading zeros-->
+	<hpfb:simpleType name="number_Content_5_5">
+		<hpfb:restriction base="hpfb:string">
+			<hpfb:pattern value="[0-9]{5,5}"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>
+	 
+	<hpfb:simpleType name="number_Content_1_15">
+		<hpfb:restriction base="hpfb:string">
+			<hpfb:pattern value="[0-9]{1,15}"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>
+
+
+	<hpfb:simpleType name="number_content_0_10">
+		<hpfb:restriction base="hpfb:decimal">
+		<hpfb:minInclusive value="0"/>
+			<hpfb:maxInclusive value="99999999"/>
+		<hpfb:fractionDigits value="2"/></hpfb:restriction>
+	</hpfb:simpleType>
+	<hpfb:simpleType name="number_content_0_10_b">
+		<hpfb:restriction base="hpfb:string">
+		<hpfb:pattern value="[0-9]{0-9}.[0-9]{2}"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>
+
+	<hpfb:simpleType name="integer_Content_0_99">
+		<hpfb:restriction base="hpfb:integer">
+		<hpfb:minInclusive value="0"/>
+		<hpfb:maxInclusive value="99"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>
+
+
+	<hpfb:simpleType name="YES_NO_Content">
+		<hpfb:restriction base="hpfb:string">
+			<hpfb:pattern value="[y|Y]{1}|[n|N]{1}"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>
+
+	<hpfb:simpleType name="language_content">
+		<hpfb:restriction base="hpfb:string">
+			<hpfb:pattern value="[en]{2}|[fr]{2}"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>
+
+	<hpfb:simpleType name="yyyymmdd_date_Content">
+	<hpfb:restriction base="hpfb:date">
+		<hpfb:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+	</hpfb:restriction>
+	</hpfb:simpleType>
+
+	<hpfb:simpleType name="dmfnumber_Content">
+		<hpfb:restriction base="hpfb:string">
+			<hpfb:pattern value="[0-9]{4}-[0-9]{2}"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>
+
+	<hpfb:simpleType name="year_content">
+		<hpfb:restriction base="hpfb:gYear">
+		</hpfb:restriction>
+	</hpfb:simpleType>
+
+		<hpfb:simpleType name="ccType_content">
+		<hpfb:restriction base="hpfb:string">
+			<hpfb:enumeration value="VISA"/>
+			<hpfb:enumeration value="MC"/>
+			<hpfb:enumeration value="AMEX"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>	
+
+	<hpfb:simpleType name="month_content">
+		<hpfb:restriction base="hpfb:string">
+			<hpfb:enumeration value="01"/>
+			<hpfb:enumeration value="02"/>
+			<hpfb:enumeration value="03"/>
+			<hpfb:enumeration value="04"/>
+			<hpfb:enumeration value="05"/>
+			<hpfb:enumeration value="06"/>
+			<hpfb:enumeration value="07"/>
+			<hpfb:enumeration value="08"/>
+			<hpfb:enumeration value="09"/>
+			<hpfb:enumeration value="10"/>
+			<hpfb:enumeration value="11"/>
+			<hpfb:enumeration value="12"/>
+		</hpfb:restriction>
+	</hpfb:simpleType>
+	
+	<hpfb:simpleType name="signatureType_content">
+		<hpfb:restriction base="hpfb:string">
+			<hpfb:enumeration value="DIG_SIG"/>
+			<hpfb:enumeration value="IMG_SIG"/>
+			
+		</hpfb:restriction>
+	</hpfb:simpleType>	
+
+
+
+
+</hpfb:schema>
+
+
+
+
+
+
+
+
+
